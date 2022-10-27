@@ -31,19 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHomeAdmin));
             this.panel_Trai = new System.Windows.Forms.Panel();
             this.grb_Menu = new System.Windows.Forms.GroupBox();
+            this.btn_ThucDon = new Guna.UI2.WinForms.Guna2Button();
             this.btn_TrangChu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_HoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.btn_DoanhThu = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_NhapHang = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_CaiDat = new Guna.UI2.WinForms.Guna2Button();
             this.btn_TaiKhoan = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_CaiDat = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_NhapHang = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_ThucDon = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel_Trai.SuspendLayout();
             this.grb_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Trai
@@ -75,6 +77,32 @@
             this.grb_Menu.TabIndex = 2;
             this.grb_Menu.TabStop = false;
             this.grb_Menu.Text = "Quản Lý";
+            // 
+            // btn_ThucDon
+            // 
+            this.btn_ThucDon.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThucDon.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_ThucDon.BorderRadius = 24;
+            this.btn_ThucDon.BorderThickness = 1;
+            this.btn_ThucDon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_ThucDon.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btn_ThucDon.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn_ThucDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThucDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThucDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ThucDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ThucDon.FillColor = System.Drawing.Color.LightCoral;
+            this.btn_ThucDon.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThucDon.ForeColor = System.Drawing.Color.Black;
+            this.btn_ThucDon.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThucDon.Image")));
+            this.btn_ThucDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_ThucDon.Location = new System.Drawing.Point(30, 299);
+            this.btn_ThucDon.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ThucDon.Name = "btn_ThucDon";
+            this.btn_ThucDon.Size = new System.Drawing.Size(194, 51);
+            this.btn_ThucDon.TabIndex = 16;
+            this.btn_ThucDon.Text = "Thực đơn";
+            this.btn_ThucDon.UseTransparentBackground = true;
             // 
             // btn_TrangChu
             // 
@@ -155,6 +183,58 @@
             this.btn_DoanhThu.Text = "Doanh thu";
             this.btn_DoanhThu.UseTransparentBackground = true;
             // 
+            // btn_NhapHang
+            // 
+            this.btn_NhapHang.BackColor = System.Drawing.Color.Transparent;
+            this.btn_NhapHang.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_NhapHang.BorderRadius = 24;
+            this.btn_NhapHang.BorderThickness = 1;
+            this.btn_NhapHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_NhapHang.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btn_NhapHang.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn_NhapHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NhapHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_NhapHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_NhapHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_NhapHang.FillColor = System.Drawing.Color.LightCoral;
+            this.btn_NhapHang.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NhapHang.ForeColor = System.Drawing.Color.Black;
+            this.btn_NhapHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_NhapHang.Image")));
+            this.btn_NhapHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_NhapHang.Location = new System.Drawing.Point(31, 382);
+            this.btn_NhapHang.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_NhapHang.Name = "btn_NhapHang";
+            this.btn_NhapHang.Size = new System.Drawing.Size(194, 51);
+            this.btn_NhapHang.TabIndex = 12;
+            this.btn_NhapHang.Text = "Nhập Hàng";
+            this.btn_NhapHang.UseTransparentBackground = true;
+            // 
+            // btn_CaiDat
+            // 
+            this.btn_CaiDat.BackColor = System.Drawing.Color.Transparent;
+            this.btn_CaiDat.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_CaiDat.BorderRadius = 24;
+            this.btn_CaiDat.BorderThickness = 1;
+            this.btn_CaiDat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_CaiDat.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btn_CaiDat.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn_CaiDat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_CaiDat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_CaiDat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_CaiDat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_CaiDat.FillColor = System.Drawing.Color.LightCoral;
+            this.btn_CaiDat.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CaiDat.ForeColor = System.Drawing.Color.Black;
+            this.btn_CaiDat.Image = ((System.Drawing.Image)(resources.GetObject("btn_CaiDat.Image")));
+            this.btn_CaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_CaiDat.Location = new System.Drawing.Point(31, 560);
+            this.btn_CaiDat.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CaiDat.Name = "btn_CaiDat";
+            this.btn_CaiDat.Size = new System.Drawing.Size(194, 51);
+            this.btn_CaiDat.TabIndex = 12;
+            this.btn_CaiDat.Text = "Cài đặt";
+            this.btn_CaiDat.UseTransparentBackground = true;
+            // 
             // btn_TaiKhoan
             // 
             this.btn_TaiKhoan.BackColor = System.Drawing.Color.Transparent;
@@ -202,91 +282,24 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_CaiDat
-            // 
-            this.btn_CaiDat.BackColor = System.Drawing.Color.Transparent;
-            this.btn_CaiDat.BorderColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_CaiDat.BorderRadius = 24;
-            this.btn_CaiDat.BorderThickness = 1;
-            this.btn_CaiDat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_CaiDat.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btn_CaiDat.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btn_CaiDat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CaiDat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CaiDat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_CaiDat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_CaiDat.FillColor = System.Drawing.Color.LightCoral;
-            this.btn_CaiDat.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CaiDat.ForeColor = System.Drawing.Color.Black;
-            this.btn_CaiDat.Image = ((System.Drawing.Image)(resources.GetObject("btn_CaiDat.Image")));
-            this.btn_CaiDat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_CaiDat.Location = new System.Drawing.Point(31, 560);
-            this.btn_CaiDat.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_CaiDat.Name = "btn_CaiDat";
-            this.btn_CaiDat.Size = new System.Drawing.Size(194, 51);
-            this.btn_CaiDat.TabIndex = 12;
-            this.btn_CaiDat.Text = "Cài đặt";
-            this.btn_CaiDat.UseTransparentBackground = true;
-            // 
-            // btn_NhapHang
-            // 
-            this.btn_NhapHang.BackColor = System.Drawing.Color.Transparent;
-            this.btn_NhapHang.BorderColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_NhapHang.BorderRadius = 24;
-            this.btn_NhapHang.BorderThickness = 1;
-            this.btn_NhapHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_NhapHang.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btn_NhapHang.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btn_NhapHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_NhapHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_NhapHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_NhapHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_NhapHang.FillColor = System.Drawing.Color.LightCoral;
-            this.btn_NhapHang.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NhapHang.ForeColor = System.Drawing.Color.Black;
-            this.btn_NhapHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_NhapHang.Image")));
-            this.btn_NhapHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_NhapHang.Location = new System.Drawing.Point(31, 382);
-            this.btn_NhapHang.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_NhapHang.Name = "btn_NhapHang";
-            this.btn_NhapHang.Size = new System.Drawing.Size(194, 51);
-            this.btn_NhapHang.TabIndex = 12;
-            this.btn_NhapHang.Text = "Nhập Hàng";
-            this.btn_NhapHang.UseTransparentBackground = true;
-            // 
-            // btn_ThucDon
-            // 
-            this.btn_ThucDon.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ThucDon.BorderColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_ThucDon.BorderRadius = 24;
-            this.btn_ThucDon.BorderThickness = 1;
-            this.btn_ThucDon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_ThucDon.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btn_ThucDon.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btn_ThucDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ThucDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ThucDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_ThucDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_ThucDon.FillColor = System.Drawing.Color.LightCoral;
-            this.btn_ThucDon.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThucDon.ForeColor = System.Drawing.Color.Black;
-            this.btn_ThucDon.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThucDon.Image")));
-            this.btn_ThucDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_ThucDon.Location = new System.Drawing.Point(30, 299);
-            this.btn_ThucDon.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ThucDon.Name = "btn_ThucDon";
-            this.btn_ThucDon.Size = new System.Drawing.Size(194, 51);
-            this.btn_ThucDon.TabIndex = 16;
-            this.btn_ThucDon.Text = "Thực đơn";
-            this.btn_ThucDon.UseTransparentBackground = true;
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(279, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(593, 832);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(211, 178);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "cc";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormHomeAdmin
             // 
@@ -301,6 +314,7 @@
             this.panel_Trai.PerformLayout();
             this.grb_Menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -319,5 +333,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_NhapHang;
         private Guna.UI2.WinForms.Guna2Button btn_CaiDat;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }
