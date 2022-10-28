@@ -21,5 +21,40 @@ namespace CakeL_T
         {
             return;
         }
+
+        private void btn_DoanhThu_Click(object sender, EventArgs e)
+        {
+            panel_DoanhThu.Visible = true;
+            panel_TaiKhoan.Visible = false;
+            panel_HoaDon.Visible = false;
+        }
+
+        private void btn_HoaDon_Click(object sender, EventArgs e)
+        {
+            panel_HoaDon.Visible = true;
+            panel_DoanhThu.Visible = false;
+            panel_TaiKhoan.Visible = false;
+            
+        }
+
+        private void btn_ThucDon_Click(object sender, EventArgs e)
+        {
+            panel_TaiKhoan.Visible = true;
+            panel_DoanhThu.Visible = false;           
+            panel_HoaDon.Visible = false;
+        }
+
+        private void btn_TaiKhoan_Click(object sender, EventArgs e)
+        {
+            panel_TaiKhoan.Visible = true;
+            panel_DoanhThu.Visible = false;
+            panel_HoaDon.Visible = false;
+        }
+
+        private void btThemTK_Click(object sender, EventArgs e)
+        {
+            FormRegister frm =new FormRegister();
+            frm.ShowDialog();
+        }
     }
 }
