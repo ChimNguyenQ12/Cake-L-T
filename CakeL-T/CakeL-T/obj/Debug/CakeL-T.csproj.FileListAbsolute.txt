@@ -97,3 +97,5 @@ D:\CAke\CakeL-T\CakeL-T\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\CAke\CakeL-T\CakeL-T\bin\Debug\System.Threading.AccessControl.xml
 D:\CAke\CakeL-T\CakeL-T\obj\Debug\CakeL-T.csproj.Fody.CopyLocal.cache
 D:\CAke\CakeL-T\CakeL-T\obj\Debug\CakeL-T.csproj.CopyComplete
+D:\Winform\CakeLT\CakeL-T\CakeL-T\bin\Debug\EntityFramework.xml
+D:\Winform\CakeLT\CakeL-T\CakeL-T\bin\Debug\EntityFramework.SqlServer.xml

@@ -125,6 +125,7 @@
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(304, 32);
             this.txt_MatKhau.TabIndex = 2;
+            this.txt_MatKhau.UseSystemPasswordChar = true;
             // 
             // btn_DangNhap
             // 
@@ -137,6 +138,7 @@
             this.btn_DangNhap.TabIndex = 3;
             this.btn_DangNhap.Text = "Đăng Nhập";
             this.btn_DangNhap.UseVisualStyleBackColor = false;
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // FormLogin
             // 

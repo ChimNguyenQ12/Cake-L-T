@@ -15,6 +15,7 @@ namespace CakeL_T
         public FormHomeAdmin()
         {
             InitializeComponent();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +56,18 @@ namespace CakeL_T
         {
             FormRegister frm =new FormRegister();
             frm.ShowDialog();
+        }
+
+        private void panel_TaiKhoan_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void FormHomeAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to quit?", "Cake L&T", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

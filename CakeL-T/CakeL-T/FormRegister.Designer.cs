@@ -61,6 +61,7 @@
             this.btn_DangKy.TabIndex = 10;
             this.btn_DangKy.Text = "Đăng Ký";
             this.btn_DangKy.UseVisualStyleBackColor = false;
+            this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
             // txt_MatKhau
             // 
@@ -70,6 +71,8 @@
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(304, 32);
             this.txt_MatKhau.TabIndex = 8;
+            this.txt_MatKhau.UseSystemPasswordChar = true;
+            this.txt_MatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MatKhau_KeyPress);
             // 
             // txt_TenDangNhap
             // 
@@ -79,6 +82,7 @@
             this.txt_TenDangNhap.Name = "txt_TenDangNhap";
             this.txt_TenDangNhap.Size = new System.Drawing.Size(304, 32);
             this.txt_TenDangNhap.TabIndex = 9;
+            this.txt_TenDangNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TenDangNhap_KeyPress);
             // 
             // label4
             // 
@@ -165,6 +169,8 @@
             this.txt_NhapLaiMatKhau.Name = "txt_NhapLaiMatKhau";
             this.txt_NhapLaiMatKhau.Size = new System.Drawing.Size(304, 32);
             this.txt_NhapLaiMatKhau.TabIndex = 8;
+            this.txt_NhapLaiMatKhau.UseSystemPasswordChar = true;
+            this.txt_NhapLaiMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NhapLaiMatKhau_KeyPress);
             // 
             // label6
             // 
@@ -205,6 +211,7 @@
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.Size = new System.Drawing.Size(304, 32);
             this.txt_SDT.TabIndex = 8;
+            this.txt_SDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SDT_KeyPress);
             // 
             // label8
             // 
