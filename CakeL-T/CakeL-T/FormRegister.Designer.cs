@@ -69,9 +69,9 @@
             this.txt_MatKhau.Location = new System.Drawing.Point(391, 206);
             this.txt_MatKhau.Multiline = true;
             this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.PasswordChar = '*';
             this.txt_MatKhau.Size = new System.Drawing.Size(304, 32);
             this.txt_MatKhau.TabIndex = 8;
-            this.txt_MatKhau.UseSystemPasswordChar = true;
             this.txt_MatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MatKhau_KeyPress);
             // 
             // txt_TenDangNhap
@@ -167,9 +167,9 @@
             this.txt_NhapLaiMatKhau.Location = new System.Drawing.Point(391, 286);
             this.txt_NhapLaiMatKhau.Multiline = true;
             this.txt_NhapLaiMatKhau.Name = "txt_NhapLaiMatKhau";
+            this.txt_NhapLaiMatKhau.PasswordChar = '*';
             this.txt_NhapLaiMatKhau.Size = new System.Drawing.Size(304, 32);
             this.txt_NhapLaiMatKhau.TabIndex = 8;
-            this.txt_NhapLaiMatKhau.UseSystemPasswordChar = true;
             this.txt_NhapLaiMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NhapLaiMatKhau_KeyPress);
             // 
             // label6

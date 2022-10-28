@@ -123,9 +123,9 @@
             this.txt_MatKhau.Location = new System.Drawing.Point(419, 242);
             this.txt_MatKhau.Multiline = true;
             this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.PasswordChar = '*';
             this.txt_MatKhau.Size = new System.Drawing.Size(304, 32);
             this.txt_MatKhau.TabIndex = 2;
-            this.txt_MatKhau.UseSystemPasswordChar = true;
             // 
             // btn_DangNhap
             // 

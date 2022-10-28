@@ -102,6 +102,7 @@ namespace CakeL_T
 
         private void txt_MatKhau_KeyPress(object sender, KeyPressEventArgs e)
         {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
             if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
             {
                 e.Handled = true;
@@ -114,6 +115,7 @@ namespace CakeL_T
 
         private void txt_NhapLaiMatKhau_KeyPress(object sender, KeyPressEventArgs e)
         {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
             if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
             {
                 e.Handled = true;
