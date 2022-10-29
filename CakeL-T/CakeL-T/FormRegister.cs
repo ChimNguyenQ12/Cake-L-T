@@ -8,12 +8,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BLL;
 namespace CakeL_T
 {
     public partial class FormRegister : Form
     {
-        CakeEntities cakeEntities = new CakeEntities();
+        //CakeEntities cakeEntities = new CakeEntities();
 
         public FormRegister()
         {
@@ -22,53 +22,58 @@ namespace CakeL_T
 
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
-            string userName = txt_TenDangNhap.Text;
-            string passWord = txt_MatKhau.Text;
+            string username = txt_TenDangNhap.Text;
+            string password = txt_MatKhau.Text;
             string repeatPW = txt_NhapLaiMatKhau.Text;
-            string address  = txt_DiaChi.Text;
+            string address = txt_DiaChi.Text;
             string fullname = txt_HoTen.Text;
-            string phone    = txt_SDT.Text;
-
-            if (passWord == "" || userName == "" || repeatPW == "" || address == "" || fullname == "" || phone == "")
+            string phone = txt_SDT.Text;
+            string pattern = @"^([\+]?33[-]?|[0])?[1-9][0-9]{8}$";
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+            Match match = regex.Match(phone);
+            
+            if (password == "" || username == "" || repeatPW == "" || address == "" || fullname == "" || phone == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
             }
-            else if (passWord != repeatPW)
+            else if (txt_TenDangNhap.Text.Length < 4 || txt_TenDangNhap.Text.Length > 16)
+            {
+                MessageBox.Show("Tên đăng nhập chứa ít nhất 4 ký tự và nhiều nhất 16 ký tự");
+            }
+            else if (txt_MatKhau.Text.Length < 6 || txt_MatKhau.Text.Length > 20)
+            {
+                MessageBox.Show("Mật khẩu chứa ít nhất 6 ký tự và nhiều nhất 20 ký tự");
+            }
+            else if (!match.Success)
+            {
+                MessageBox.Show("Số điện thoại không phù hợp");
+            }
+            else if (password != repeatPW)
             {
                 MessageBox.Show("Mật khẩu không trùng khớp!");
             }
-            else if (cakeEntities.TaiKhoans.Any(x => x.TenTK == userName))
-            {
-                MessageBox.Show("Tài khoản đã tồn tại");
-            }
-            else if (cakeEntities.TaiKhoans.Any(x => x.SoDienThoai == phone))
-            {
-                MessageBox.Show("Số điện thoại đã tồn tại");
-            }
             else
             {
-                try
+                RegisterBUS registerBUS = new RegisterBUS();
+                if (registerBUS.Register(username, password, address, fullname, phone) == "success")
                 {
-                    cakeEntities.TaiKhoans.Add(new TaiKhoan()
-                    {
-                        TenTK = userName,
-                        MatKhau = passWord,
-                        DiaChi = address,
-                        HoTen = fullname,
-                        SoDienThoai = phone,
-                        TrangThai = true,
-                        LoaiTK = false
-                    });
-                    cakeEntities.SaveChanges();
-                    MessageBox.Show("Tạo tài khoản thành công");
+                    MessageBox.Show("Tạo tài khoản thành công!");
                     this.Hide();
                     var formLogin = new FormLogin();
                     formLogin.Closed += (s, args) => this.Close();
                     formLogin.Show();
                 }
-                catch (Exception)
+                else if (registerBUS.Register(username, password, address, fullname, phone) == "error")
                 {
-                    MessageBox.Show("Có gì đó không đúng :(");
+                    MessageBox.Show("Có gì đó không ổn :/");
+                }
+                else if (registerBUS.Register(username, password, address, fullname, phone) == "Username already exists")
+                {
+                    MessageBox.Show("Tài khoản đã tồn tại!");
+                }
+                else if (registerBUS.Register(username, password, address, fullname, phone) == "Phone number already exists")
+                {
+                    MessageBox.Show("Số điện thoại tồn tại!");
                 }
             }
         }
@@ -83,7 +88,7 @@ namespace CakeL_T
             {
                 if (Char.IsDigit(e.KeyChar))
                 {
-                    if (txt_SDT.Text.Length > 10)
+                    if (txt_SDT.Text.Length > 9)
                     {
                         e.Handled = true;
                     }
@@ -117,6 +122,10 @@ namespace CakeL_T
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
             if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
+            {
+                e.Handled = true;
+            }
+            if (txt_SDT.Text.Length > 20)
             {
                 e.Handled = true;
             }

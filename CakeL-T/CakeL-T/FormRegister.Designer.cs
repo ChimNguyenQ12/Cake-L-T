@@ -59,7 +59,7 @@
             this.btn_DangKy.Name = "btn_DangKy";
             this.btn_DangKy.Size = new System.Drawing.Size(188, 52);
             this.btn_DangKy.TabIndex = 10;
-            this.btn_DangKy.Text = "Đăng Ký";
+            this.btn_DangKy.Text = "Tạo Tài Khoản ";
             this.btn_DangKy.UseVisualStyleBackColor = false;
             this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
@@ -113,9 +113,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.label2.Location = new System.Drawing.Point(536, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 43);
+            this.label2.Size = new System.Drawing.Size(229, 43);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Đăng Ký";
+            this.label2.Text = "Tạo Tài Khoản";
             // 
             // panel1
             // 

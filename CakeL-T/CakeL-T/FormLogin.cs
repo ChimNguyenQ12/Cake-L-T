@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace CakeL_T
 {
     public partial class FormLogin : Form
     {
-        CakeEntities cakeEntities = new CakeEntities(); 
         public FormLogin()
         {
             InitializeComponent();
@@ -29,28 +29,24 @@ namespace CakeL_T
             }
             else
             {
-                try
-                {
-                    int countStaff = cakeEntities.TaiKhoans.Count(acc => acc.TenTK == userName && acc.MatKhau == passWord && acc.LoaiTK == false && acc.TrangThai == true);
-                    int countAdmin = cakeEntities.TaiKhoans.Count(acc => acc.TenTK == userName && acc.MatKhau == passWord && acc.LoaiTK == true && acc.TrangThai == true);
-                    if (countStaff == 1)
-                    {
-                        FormHomeStaff formHomeStaff = new FormHomeStaff();
-                        formHomeStaff.Show();
-                    }
-                    else if (countAdmin == 1)
-                    {
-                        FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
-                        formHomeAdmin.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tài khoản không tồn tại!");
-                    }
-                }
-                catch (Exception)
+                LoginBUS loginBUS = new LoginBUS();
+                if (loginBUS.checkLogin(userName, passWord) == "error")
                 {
                     MessageBox.Show("Có gì đó không ổn :/");
+                }
+                else if (loginBUS.checkLogin(userName, passWord) == "admin")
+                {
+                    FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
+                    formHomeAdmin.Show();
+                }
+                else if (loginBUS.checkLogin(userName, passWord) == "staff")
+                {
+                    FormHomeStaff formHomeStaff = new FormHomeStaff();
+                    formHomeStaff.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản không tồn tại!");
                 }
             }
         }

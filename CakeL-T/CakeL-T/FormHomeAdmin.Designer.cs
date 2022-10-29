@@ -48,18 +48,6 @@
             this.btXoaTK = new System.Windows.Forms.Button();
             this.btSuaTK = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panelReportDSBan = new Guna.UI2.WinForms.Guna2Panel();
-            this.btReportTaiKhoan = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.btCaiDatMK = new System.Windows.Forms.Button();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.numLoaiTaiKhoan = new System.Windows.Forms.NumericUpDown();
-            this.label31 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.txt_TenTaiKHoan = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
             this.dgv_TaiKhoan = new System.Windows.Forms.DataGridView();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -109,6 +97,20 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel_Trai.SuspendLayout();
             this.grb_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,10 +118,6 @@
             this.panel_HoaDon.SuspendLayout();
             this.panel_TaiKhoan.SuspendLayout();
             this.panel30.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numLoaiTaiKhoan)).BeginInit();
-            this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TaiKhoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -135,6 +133,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Trai
@@ -183,7 +183,6 @@
             this.btn_ThucDon.FillColor = System.Drawing.Color.LightCoral;
             this.btn_ThucDon.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThucDon.ForeColor = System.Drawing.Color.Black;
-            this.btn_ThucDon.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThucDon.Image")));
             this.btn_ThucDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_ThucDon.Location = new System.Drawing.Point(30, 299);
             this.btn_ThucDon.Margin = new System.Windows.Forms.Padding(2);
@@ -209,7 +208,7 @@
             this.btn_TrangChu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_TrangChu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_TrangChu.FillColor = System.Drawing.Color.LightCoral;
-            this.btn_TrangChu.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TrangChu.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btn_TrangChu.ForeColor = System.Drawing.Color.Black;
             this.btn_TrangChu.Image = ((System.Drawing.Image)(resources.GetObject("btn_TrangChu.Image")));
             this.btn_TrangChu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -262,7 +261,7 @@
             this.btn_DoanhThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_DoanhThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_DoanhThu.FillColor = System.Drawing.Color.LightCoral;
-            this.btn_DoanhThu.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DoanhThu.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btn_DoanhThu.ForeColor = System.Drawing.Color.Black;
             this.btn_DoanhThu.Image = ((System.Drawing.Image)(resources.GetObject("btn_DoanhThu.Image")));
             this.btn_DoanhThu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -300,6 +299,7 @@
             this.btn_NhapHang.TabIndex = 12;
             this.btn_NhapHang.Text = "Nhập Hàng";
             this.btn_NhapHang.UseTransparentBackground = true;
+            this.btn_NhapHang.Visible = false;
             // 
             // btn_CaiDat
             // 
@@ -416,9 +416,9 @@
             // 
             // panel_TaiKhoan
             // 
+            this.panel_TaiKhoan.Controls.Add(this.groupBox3);
             this.panel_TaiKhoan.Controls.Add(this.panel30);
             this.panel_TaiKhoan.Controls.Add(this.label17);
-            this.panel_TaiKhoan.Controls.Add(this.panel25);
             this.panel_TaiKhoan.Controls.Add(this.panel29);
             this.panel_TaiKhoan.Controls.Add(this.pictureBox8);
             this.panel_TaiKhoan.Controls.Add(this.pictureBox9);
@@ -428,18 +428,16 @@
             this.panel_TaiKhoan.Name = "panel_TaiKhoan";
             this.panel_TaiKhoan.Size = new System.Drawing.Size(695, 832);
             this.panel_TaiKhoan.TabIndex = 10;
-            this.panel_TaiKhoan.Visible = false;
-            this.panel_TaiKhoan.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_TaiKhoan_Paint);
             // 
             // panel30
             // 
             this.panel30.Controls.Add(this.btThemTK);
             this.panel30.Controls.Add(this.btXoaTK);
             this.panel30.Controls.Add(this.btSuaTK);
-            this.panel30.Location = new System.Drawing.Point(25, 599);
+            this.panel30.Location = new System.Drawing.Point(383, 600);
             this.panel30.Margin = new System.Windows.Forms.Padding(2);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(258, 64);
+            this.panel30.Size = new System.Drawing.Size(301, 64);
             this.panel30.TabIndex = 17;
             // 
             // btThemTK
@@ -450,7 +448,7 @@
             this.btThemTK.Location = new System.Drawing.Point(10, 11);
             this.btThemTK.Margin = new System.Windows.Forms.Padding(2);
             this.btThemTK.Name = "btThemTK";
-            this.btThemTK.Size = new System.Drawing.Size(68, 41);
+            this.btThemTK.Size = new System.Drawing.Size(80, 41);
             this.btThemTK.TabIndex = 4;
             this.btThemTK.Text = "Thêm";
             this.btThemTK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -462,10 +460,10 @@
             this.btXoaTK.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoaTK.Image = ((System.Drawing.Image)(resources.GetObject("btXoaTK.Image")));
             this.btXoaTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoaTK.Location = new System.Drawing.Point(88, 11);
+            this.btXoaTK.Location = new System.Drawing.Point(113, 11);
             this.btXoaTK.Margin = new System.Windows.Forms.Padding(2);
             this.btXoaTK.Name = "btXoaTK";
-            this.btXoaTK.Size = new System.Drawing.Size(68, 41);
+            this.btXoaTK.Size = new System.Drawing.Size(78, 41);
             this.btXoaTK.TabIndex = 5;
             this.btXoaTK.Text = "Xóa";
             this.btXoaTK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -476,10 +474,10 @@
             this.btSuaTK.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSuaTK.Image = ((System.Drawing.Image)(resources.GetObject("btSuaTK.Image")));
             this.btSuaTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSuaTK.Location = new System.Drawing.Point(170, 11);
+            this.btSuaTK.Location = new System.Drawing.Point(207, 11);
             this.btSuaTK.Margin = new System.Windows.Forms.Padding(2);
             this.btSuaTK.Name = "btSuaTK";
-            this.btSuaTK.Size = new System.Drawing.Size(68, 41);
+            this.btSuaTK.Size = new System.Drawing.Size(78, 41);
             this.btSuaTK.TabIndex = 6;
             this.btSuaTK.Text = "Sửa";
             this.btSuaTK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -495,147 +493,6 @@
             this.label17.Size = new System.Drawing.Size(377, 28);
             this.label17.TabIndex = 14;
             this.label17.Text = "QUẢN LÝ THÔNG TIN TÀI KHOẢN";
-            // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.panelReportDSBan);
-            this.panel25.Controls.Add(this.btReportTaiKhoan);
-            this.panel25.Controls.Add(this.label25);
-            this.panel25.Controls.Add(this.label30);
-            this.panel25.Controls.Add(this.btCaiDatMK);
-            this.panel25.Controls.Add(this.panel26);
-            this.panel25.Controls.Add(this.panel28);
-            this.panel25.Location = new System.Drawing.Point(372, 195);
-            this.panel25.Margin = new System.Windows.Forms.Padding(2);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(314, 391);
-            this.panel25.TabIndex = 16;
-            // 
-            // panelReportDSBan
-            // 
-            this.panelReportDSBan.AutoSize = true;
-            this.panelReportDSBan.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelReportDSBan.Location = new System.Drawing.Point(260, 456);
-            this.panelReportDSBan.Margin = new System.Windows.Forms.Padding(2);
-            this.panelReportDSBan.Name = "panelReportDSBan";
-            this.panelReportDSBan.Size = new System.Drawing.Size(0, 0);
-            this.panelReportDSBan.TabIndex = 18;
-            // 
-            // btReportTaiKhoan
-            // 
-            this.btReportTaiKhoan.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReportTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btReportTaiKhoan.Image")));
-            this.btReportTaiKhoan.Location = new System.Drawing.Point(107, 319);
-            this.btReportTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
-            this.btReportTaiKhoan.Name = "btReportTaiKhoan";
-            this.btReportTaiKhoan.Size = new System.Drawing.Size(108, 41);
-            this.btReportTaiKhoan.TabIndex = 8;
-            this.btReportTaiKhoan.Text = "Report";
-            this.btReportTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btReportTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btReportTaiKhoan.UseVisualStyleBackColor = true;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(80, 63);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(182, 18);
-            this.label25.TabIndex = 20;
-            this.label25.Text = "Loại tài khoản = 0: Nhân viên";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(80, 36);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(200, 18);
-            this.label30.TabIndex = 19;
-            this.label30.Text = "Loại tài khoản = 1: Quản trị viên";
-            // 
-            // btCaiDatMK
-            // 
-            this.btCaiDatMK.BackColor = System.Drawing.Color.Transparent;
-            this.btCaiDatMK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btCaiDatMK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btCaiDatMK.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCaiDatMK.Location = new System.Drawing.Point(107, 264);
-            this.btCaiDatMK.Margin = new System.Windows.Forms.Padding(2);
-            this.btCaiDatMK.Name = "btCaiDatMK";
-            this.btCaiDatMK.Size = new System.Drawing.Size(115, 29);
-            this.btCaiDatMK.TabIndex = 18;
-            this.btCaiDatMK.Text = "Cài đặt lại MK";
-            this.btCaiDatMK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btCaiDatMK.UseVisualStyleBackColor = false;
-            // 
-            // panel26
-            // 
-            this.panel26.Controls.Add(this.numLoaiTaiKhoan);
-            this.panel26.Controls.Add(this.label31);
-            this.panel26.Location = new System.Drawing.Point(14, 173);
-            this.panel26.Margin = new System.Windows.Forms.Padding(2);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(285, 40);
-            this.panel26.TabIndex = 17;
-            // 
-            // numLoaiTaiKhoan
-            // 
-            this.numLoaiTaiKhoan.Location = new System.Drawing.Point(111, 12);
-            this.numLoaiTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
-            this.numLoaiTaiKhoan.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numLoaiTaiKhoan.Name = "numLoaiTaiKhoan";
-            this.numLoaiTaiKhoan.Size = new System.Drawing.Size(44, 20);
-            this.numLoaiTaiKhoan.TabIndex = 6;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(9, 11);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(95, 18);
-            this.label31.TabIndex = 4;
-            this.label31.Text = "Loại tài khoản:";
-            // 
-            // panel28
-            // 
-            this.panel28.Controls.Add(this.txt_TenTaiKHoan);
-            this.panel28.Controls.Add(this.label33);
-            this.panel28.Location = new System.Drawing.Point(14, 113);
-            this.panel28.Margin = new System.Windows.Forms.Padding(2);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(285, 40);
-            this.panel28.TabIndex = 15;
-            // 
-            // txt_TenTaiKHoan
-            // 
-            this.txt_TenTaiKHoan.BackColor = System.Drawing.Color.White;
-            this.txt_TenTaiKHoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenTaiKHoan.Location = new System.Drawing.Point(111, 10);
-            this.txt_TenTaiKHoan.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_TenTaiKHoan.Name = "txt_TenTaiKHoan";
-            this.txt_TenTaiKHoan.Size = new System.Drawing.Size(163, 21);
-            this.txt_TenTaiKHoan.TabIndex = 6;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(9, 11);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(90, 18);
-            this.label33.TabIndex = 4;
-            this.label33.Text = "Tên tài khoản:";
             // 
             // panel29
             // 
@@ -1154,6 +1011,147 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox15);
+            this.groupBox3.Controls.Add(this.textBox14);
+            this.groupBox3.Controls.Add(this.pictureBox11);
+            this.groupBox3.Controls.Add(this.textBox13);
+            this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.textBox11);
+            this.groupBox3.Controls.Add(this.textBox10);
+            this.groupBox3.Controls.Add(this.label23);
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(383, 193);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(300, 393);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thông tin tài khoản";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(17, 149);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(97, 18);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Tên Tài Khoản:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(16, 188);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(99, 18);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Tên Nhân Viên:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(16, 224);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(74, 18);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Mật Khẩu:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(16, 255);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(54, 18);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Địa Chỉ:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(16, 290);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(95, 18);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Số Điện Thoại:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(16, 328);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(74, 18);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Trạng Thái:";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(128, 142);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(155, 25);
+            this.textBox10.TabIndex = 1;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(128, 181);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(155, 25);
+            this.textBox11.TabIndex = 2;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Location = new System.Drawing.Point(128, 217);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(155, 25);
+            this.textBox12.TabIndex = 2;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Location = new System.Drawing.Point(128, 249);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(155, 25);
+            this.textBox13.TabIndex = 2;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(128, 286);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(155, 25);
+            this.textBox14.TabIndex = 2;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(128, 321);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(155, 25);
+            this.textBox15.TabIndex = 2;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(113, 19);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(143, 99);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 0;
+            this.pictureBox11.TabStop = false;
+            // 
             // FormHomeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1175,13 +1173,6 @@
             this.panel_TaiKhoan.ResumeLayout(false);
             this.panel_TaiKhoan.PerformLayout();
             this.panel30.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numLoaiTaiKhoan)).EndInit();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
             this.panel29.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TaiKhoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -1199,6 +1190,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1271,19 +1265,21 @@
         private System.Windows.Forms.Button btXoaTK;
         private System.Windows.Forms.Button btSuaTK;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel panel25;
-        private Guna.UI2.WinForms.Guna2Panel panelReportDSBan;
-        private System.Windows.Forms.Button btReportTaiKhoan;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button btCaiDatMK;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.NumericUpDown numLoaiTaiKhoan;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.TextBox txt_TenTaiKHoan;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.DataGridView dgv_TaiKhoan;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
     }
 }
