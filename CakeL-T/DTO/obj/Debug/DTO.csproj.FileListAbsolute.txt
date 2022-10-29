@@ -1,0 +1,6 @@
+D:\Winform\CakeLT\CakeL-T\DTO\bin\Debug\DTO.dll
+D:\Winform\CakeLT\CakeL-T\DTO\bin\Debug\DTO.pdb
+D:\Winform\CakeLT\CakeL-T\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Winform\CakeLT\CakeL-T\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Winform\CakeLT\CakeL-T\DTO\obj\Debug\DTO.dll
+D:\Winform\CakeLT\CakeL-T\DTO\obj\Debug\DTO.pdb

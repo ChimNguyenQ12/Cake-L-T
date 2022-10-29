@@ -1,0 +1,9 @@
+D:\Winform\CakeLT\CakeL-T\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Winform\CakeLT\CakeL-T\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Winform\CakeLT\CakeL-T\DAL\bin\Debug\DAL.dll
+D:\Winform\CakeLT\CakeL-T\DAL\bin\Debug\DAL.pdb
+D:\Winform\CakeLT\CakeL-T\DAL\bin\Debug\DTO.dll
+D:\Winform\CakeLT\CakeL-T\DAL\bin\Debug\DTO.pdb
+D:\Winform\CakeLT\CakeL-T\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Winform\CakeLT\CakeL-T\DAL\obj\Debug\DAL.dll
+D:\Winform\CakeLT\CakeL-T\DAL\obj\Debug\DAL.pdb

@@ -428,6 +428,11 @@
             this.panel_TaiKhoan.Name = "panel_TaiKhoan";
             this.panel_TaiKhoan.Size = new System.Drawing.Size(695, 832);
             this.panel_TaiKhoan.TabIndex = 10;
+<<<<<<< HEAD
+=======
+            this.panel_TaiKhoan.Visible = false;
+            this.panel_TaiKhoan.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_TaiKhoan_Paint);
+>>>>>>> 1f5e7a67808b8993baac5d1164a70a801e3803d7
             // 
             // panel30
             // 
@@ -1161,6 +1166,7 @@
             this.Controls.Add(this.panel_Trai);
             this.Name = "FormHomeAdmin";
             this.Text = "FormHomeAdmin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHomeAdmin_FormClosing);
             this.panel_Trai.ResumeLayout(false);
             this.panel_Trai.PerformLayout();
             this.grb_Menu.ResumeLayout(false);
