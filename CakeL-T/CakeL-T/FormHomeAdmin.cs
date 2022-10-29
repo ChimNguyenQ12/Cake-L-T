@@ -32,23 +32,21 @@ namespace CakeL_T
         private void btn_HoaDon_Click(object sender, EventArgs e)
         {
             panel_HoaDon.Visible = true;
-            panel_DoanhThu.Visible = false;
+            panel_DoanhThu.Visible = true;
             panel_TaiKhoan.Visible = false;
-            
+
         }
 
         private void btn_ThucDon_Click(object sender, EventArgs e)
         {
-            panel_TaiKhoan.Visible = true;
-            panel_DoanhThu.Visible = false;           
-            panel_HoaDon.Visible = false;
+           
         }
 
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
         {
             panel_TaiKhoan.Visible = true;
-            panel_DoanhThu.Visible = false;
-            panel_HoaDon.Visible = false;
+            panel_DoanhThu.Visible = true;
+            panel_HoaDon.Visible = true;
         }
 
         private void btThemTK_Click(object sender, EventArgs e)
