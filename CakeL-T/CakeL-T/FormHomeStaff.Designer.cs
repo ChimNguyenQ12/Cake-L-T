@@ -42,7 +42,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btInHoaDon = new System.Windows.Forms.Button();
             this.btThanhToan = new System.Windows.Forms.Button();
-            this.picMoMo = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.numGiamGia = new System.Windows.Forms.NumericUpDown();
@@ -62,12 +61,15 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel_Trai.SuspendLayout();
             this.grb_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_LapHoaDon.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMoMo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGiamGia)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDemMon)).BeginInit();
@@ -76,6 +78,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Trai
@@ -233,6 +239,10 @@
             // 
             // panel_LapHoaDon
             // 
+            this.panel_LapHoaDon.Controls.Add(this.pictureBox4);
+            this.panel_LapHoaDon.Controls.Add(this.pictureBox3);
+            this.panel_LapHoaDon.Controls.Add(this.pictureBox2);
+            this.panel_LapHoaDon.Controls.Add(this.dataGridView1);
             this.panel_LapHoaDon.Controls.Add(this.panel12);
             this.panel_LapHoaDon.Controls.Add(this.panel4);
             this.panel_LapHoaDon.Controls.Add(this.panel23);
@@ -252,22 +262,21 @@
             this.panel12.Controls.Add(this.label16);
             this.panel12.Controls.Add(this.btInHoaDon);
             this.panel12.Controls.Add(this.btThanhToan);
-            this.panel12.Controls.Add(this.picMoMo);
             this.panel12.Controls.Add(this.label11);
             this.panel12.Controls.Add(this.txtTotalPrice);
             this.panel12.Controls.Add(this.numGiamGia);
             this.panel12.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel12.Location = new System.Drawing.Point(49, 691);
+            this.panel12.Location = new System.Drawing.Point(6, 691);
             this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(494, 91);
+            this.panel12.Size = new System.Drawing.Size(741, 91);
             this.panel12.TabIndex = 15;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(145, 11);
+            this.label16.Location = new System.Drawing.Point(299, 19);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(86, 18);
@@ -292,31 +301,20 @@
             // 
             this.btThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btThanhToan.Image")));
-            this.btThanhToan.Location = new System.Drawing.Point(381, 20);
+            this.btThanhToan.Location = new System.Drawing.Point(616, 20);
             this.btThanhToan.Margin = new System.Windows.Forms.Padding(2);
             this.btThanhToan.Name = "btThanhToan";
-            this.btThanhToan.Size = new System.Drawing.Size(111, 53);
+            this.btThanhToan.Size = new System.Drawing.Size(110, 53);
             this.btThanhToan.TabIndex = 9;
             this.btThanhToan.Text = "Thanh toán";
             this.btThanhToan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btThanhToan.UseVisualStyleBackColor = false;
             // 
-            // picMoMo
-            // 
-            this.picMoMo.Image = ((System.Drawing.Image)(resources.GetObject("picMoMo.Image")));
-            this.picMoMo.Location = new System.Drawing.Point(634, 11);
-            this.picMoMo.Margin = new System.Windows.Forms.Padding(2);
-            this.picMoMo.Name = "picMoMo";
-            this.picMoMo.Size = new System.Drawing.Size(51, 42);
-            this.picMoMo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMoMo.TabIndex = 2;
-            this.picMoMo.TabStop = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(145, 50);
+            this.label11.Location = new System.Drawing.Point(299, 58);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 18);
@@ -325,11 +323,11 @@
             // 
             // txtTotalPrice
             // 
-            this.txtTotalPrice.Location = new System.Drawing.Point(246, 44);
+            this.txtTotalPrice.Location = new System.Drawing.Point(400, 52);
             this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.ReadOnly = true;
-            this.txtTotalPrice.Size = new System.Drawing.Size(90, 29);
+            this.txtTotalPrice.Size = new System.Drawing.Size(125, 29);
             this.txtTotalPrice.TabIndex = 7;
             this.txtTotalPrice.Tag = "";
             this.txtTotalPrice.Text = "0";
@@ -337,10 +335,10 @@
             // 
             // numGiamGia
             // 
-            this.numGiamGia.Location = new System.Drawing.Point(246, 11);
+            this.numGiamGia.Location = new System.Drawing.Point(400, 19);
             this.numGiamGia.Margin = new System.Windows.Forms.Padding(2);
             this.numGiamGia.Name = "numGiamGia";
-            this.numGiamGia.Size = new System.Drawing.Size(60, 29);
+            this.numGiamGia.Size = new System.Drawing.Size(80, 29);
             this.numGiamGia.TabIndex = 4;
             this.numGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -352,10 +350,10 @@
             this.panel4.Controls.Add(this.cbDanhMucMon);
             this.panel4.Controls.Add(this.numDemMon);
             this.panel4.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(48, 182);
+            this.panel4.Location = new System.Drawing.Point(367, 182);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(496, 93);
+            this.panel4.Size = new System.Drawing.Size(381, 93);
             this.panel4.TabIndex = 16;
             // 
             // cbMonAn
@@ -413,17 +411,17 @@
             this.panel23.BackColor = System.Drawing.Color.LightCoral;
             this.panel23.Controls.Add(this.label7);
             this.panel23.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel23.Location = new System.Drawing.Point(49, 125);
+            this.panel23.Location = new System.Drawing.Point(368, 125);
             this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(495, 53);
+            this.panel23.Size = new System.Drawing.Size(380, 53);
             this.panel23.TabIndex = 17;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(87, 13);
+            this.label7.Location = new System.Drawing.Point(37, 11);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(312, 33);
             this.label7.TabIndex = 13;
@@ -433,10 +431,10 @@
             // 
             this.panel20.Controls.Add(this.lvHoaDon);
             this.panel20.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel20.Location = new System.Drawing.Point(48, 279);
+            this.panel20.Location = new System.Drawing.Point(367, 279);
             this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(496, 396);
+            this.panel20.Size = new System.Drawing.Size(381, 396);
             this.panel20.TabIndex = 14;
             // 
             // lvHoaDon
@@ -454,7 +452,7 @@
             this.lvHoaDon.Location = new System.Drawing.Point(0, 0);
             this.lvHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.lvHoaDon.Name = "lvHoaDon";
-            this.lvHoaDon.Size = new System.Drawing.Size(496, 396);
+            this.lvHoaDon.Size = new System.Drawing.Size(381, 396);
             this.lvHoaDon.TabIndex = 1;
             this.lvHoaDon.UseCompatibleStateImageBehavior = false;
             this.lvHoaDon.View = System.Windows.Forms.View.Details;
@@ -462,12 +460,12 @@
             // TenMon
             // 
             this.TenMon.Text = "Tên món";
-            this.TenMon.Width = 154;
+            this.TenMon.Width = 98;
             // 
             // Soluong
             // 
             this.Soluong.Text = "Số lượng";
-            this.Soluong.Width = 114;
+            this.Soluong.Width = 82;
             // 
             // Dongia
             // 
@@ -492,7 +490,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(233, 22);
+            this.pictureBox6.Location = new System.Drawing.Point(239, 22);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(152, 68);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -508,6 +506,38 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 10;
             this.pictureBox7.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 279);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(356, 396);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(6, 148);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(111, 85);
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(129, 148);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(111, 85);
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(251, 148);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(111, 85);
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
             // 
             // FormHomeStaff
             // 
@@ -525,7 +555,6 @@
             this.panel_LapHoaDon.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMoMo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGiamGia)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numDemMon)).EndInit();
@@ -535,6 +564,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -558,7 +591,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btInHoaDon;
         private System.Windows.Forms.Button btThanhToan;
-        private System.Windows.Forms.PictureBox picMoMo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTotalPrice;
         private System.Windows.Forms.NumericUpDown numGiamGia;
@@ -574,5 +606,9 @@
         private System.Windows.Forms.ColumnHeader Soluong;
         private System.Windows.Forms.ColumnHeader Dongia;
         private System.Windows.Forms.ColumnHeader Thanhtien;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

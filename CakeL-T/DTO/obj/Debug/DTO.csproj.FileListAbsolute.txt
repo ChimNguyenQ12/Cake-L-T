@@ -4,3 +4,9 @@ D:\Winform\CakeLT\CakeL-T\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
 D:\Winform\CakeLT\CakeL-T\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Winform\CakeLT\CakeL-T\DTO\obj\Debug\DTO.dll
 D:\Winform\CakeLT\CakeL-T\DTO\obj\Debug\DTO.pdb
+D:\Cake\CakeL-T\DTO\bin\Debug\DTO.dll
+D:\Cake\CakeL-T\DTO\bin\Debug\DTO.pdb
+D:\Cake\CakeL-T\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\Cake\CakeL-T\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Cake\CakeL-T\DTO\obj\Debug\DTO.dll
+D:\Cake\CakeL-T\DTO\obj\Debug\DTO.pdb

@@ -7,3 +7,12 @@ D:\Winform\CakeLT\CakeL-T\DAL\bin\Debug\DTO.pdb
 D:\Winform\CakeLT\CakeL-T\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Winform\CakeLT\CakeL-T\DAL\obj\Debug\DAL.dll
 D:\Winform\CakeLT\CakeL-T\DAL\obj\Debug\DAL.pdb
+D:\Cake\CakeL-T\DAL\bin\Debug\DAL.dll
+D:\Cake\CakeL-T\DAL\bin\Debug\DAL.pdb
+D:\Cake\CakeL-T\DAL\bin\Debug\DTO.dll
+D:\Cake\CakeL-T\DAL\bin\Debug\DTO.pdb
+D:\Cake\CakeL-T\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Cake\CakeL-T\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Cake\CakeL-T\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Cake\CakeL-T\DAL\obj\Debug\DAL.dll
+D:\Cake\CakeL-T\DAL\obj\Debug\DAL.pdb
