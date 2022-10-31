@@ -28,6 +28,8 @@ namespace CakeL_T
             panel_DoanhThu.Visible = true;
             panel_TaiKhoan.Visible = false;
             panel_HoaDon.Visible = false;
+            panel_TrangChu.Visible = false;
+            panel_Banh.Visible = false;
         }
 
         private void btn_HoaDon_Click(object sender, EventArgs e)
@@ -35,19 +37,20 @@ namespace CakeL_T
             panel_HoaDon.Visible = true;
             panel_DoanhThu.Visible = true;
             panel_TaiKhoan.Visible = false;
+            panel_TrangChu.Visible = false;
+            panel_Banh.Visible = false;
 
         }
 
-        private void btn_ThucDon_Click(object sender, EventArgs e)
-        {
-           
-        }
+
 
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
         {
             panel_TaiKhoan.Visible = true;
             panel_DoanhThu.Visible = true;
             panel_HoaDon.Visible = true;
+            panel_TrangChu.Visible = false;
+            panel_Banh.Visible = false;
         }
 
         private void btThemTK_Click(object sender, EventArgs e)
@@ -68,6 +71,31 @@ namespace CakeL_T
             }
         }
 
+        private void btn_TrangChu_Click(object sender, EventArgs e)
+        {
+            panel_TaiKhoan.Visible = true;
+            panel_DoanhThu.Visible = true;
+            panel_HoaDon.Visible = true;
+            panel_TrangChu.Visible = true;
+            panel_Banh.Visible = false;
+        }
 
+        private void btn_Banh_Click(object sender, EventArgs e)
+        {
+            panel_TaiKhoan.Visible = true;
+            panel_DoanhThu.Visible = true;
+            panel_HoaDon.Visible = true;
+            panel_TrangChu.Visible = true;
+            panel_Banh.Visible = true;
+        }
+
+        private void FormHomeAdmin_Load(object sender, EventArgs e)
+        {
+            panel_TaiKhoan.Visible = true;
+            panel_DoanhThu.Visible = true;
+            panel_HoaDon.Visible = true;
+            panel_TrangChu.Visible = true;
+            panel_Banh.Visible = false;
+        }
     }
 }
