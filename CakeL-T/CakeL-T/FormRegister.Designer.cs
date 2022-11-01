@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegister));
             this.btn_DangKy = new System.Windows.Forms.Button();
-            this.txt_MatKhau = new System.Windows.Forms.TextBox();
-            this.txt_TenDangNhap = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,19 +37,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_NhapLaiMatKhau = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_HoTen = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_SDT = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_DiaChi = new System.Windows.Forms.TextBox();
+            this.txt_TenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_NhapLaiMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_HoTen = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_DangKy
             // 
+            this.btn_DangKy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_DangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
             this.btn_DangKy.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangKy.ForeColor = System.Drawing.Color.White;
@@ -63,29 +66,11 @@
             this.btn_DangKy.UseVisualStyleBackColor = false;
             this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_MatKhau.Location = new System.Drawing.Point(391, 206);
-            this.txt_MatKhau.Multiline = true;
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.PasswordChar = '*';
-            this.txt_MatKhau.Size = new System.Drawing.Size(304, 32);
-            this.txt_MatKhau.TabIndex = 8;
-            this.txt_MatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MatKhau_KeyPress);
-            // 
-            // txt_TenDangNhap
-            // 
-            this.txt_TenDangNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_TenDangNhap.Location = new System.Drawing.Point(391, 123);
-            this.txt_TenDangNhap.Multiline = true;
-            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
-            this.txt_TenDangNhap.Size = new System.Drawing.Size(304, 32);
-            this.txt_TenDangNhap.TabIndex = 9;
-            this.txt_TenDangNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TenDangNhap_KeyPress);
-            // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
@@ -97,6 +82,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
@@ -108,6 +96,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
@@ -152,6 +143,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
@@ -161,19 +155,11 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Nhập Lại Mật Khẩu";
             // 
-            // txt_NhapLaiMatKhau
-            // 
-            this.txt_NhapLaiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_NhapLaiMatKhau.Location = new System.Drawing.Point(391, 286);
-            this.txt_NhapLaiMatKhau.Multiline = true;
-            this.txt_NhapLaiMatKhau.Name = "txt_NhapLaiMatKhau";
-            this.txt_NhapLaiMatKhau.PasswordChar = '*';
-            this.txt_NhapLaiMatKhau.Size = new System.Drawing.Size(304, 32);
-            this.txt_NhapLaiMatKhau.TabIndex = 8;
-            this.txt_NhapLaiMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NhapLaiMatKhau_KeyPress);
-            // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
@@ -183,17 +169,11 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Họ và tên";
             // 
-            // txt_HoTen
-            // 
-            this.txt_HoTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_HoTen.Location = new System.Drawing.Point(391, 363);
-            this.txt_HoTen.Multiline = true;
-            this.txt_HoTen.Name = "txt_HoTen";
-            this.txt_HoTen.Size = new System.Drawing.Size(304, 32);
-            this.txt_HoTen.TabIndex = 8;
-            // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
@@ -203,18 +183,11 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Số điện thoại";
             // 
-            // txt_SDT
-            // 
-            this.txt_SDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_SDT.Location = new System.Drawing.Point(391, 449);
-            this.txt_SDT.Multiline = true;
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(304, 32);
-            this.txt_SDT.TabIndex = 8;
-            this.txt_SDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SDT_KeyPress);
-            // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(26)))), ((int)(((byte)(74)))));
@@ -224,27 +197,162 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Địa chỉ";
             // 
+            // txt_TenDangNhap
+            // 
+            this.txt_TenDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_TenDangNhap.BorderRadius = 15;
+            this.txt_TenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TenDangNhap.DefaultText = "";
+            this.txt_TenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TenDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TenDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenDangNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenDangNhap.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_TenDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenDangNhap.Location = new System.Drawing.Point(397, 126);
+            this.txt_TenDangNhap.Name = "txt_TenDangNhap";
+            this.txt_TenDangNhap.PasswordChar = '\0';
+            this.txt_TenDangNhap.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txt_TenDangNhap.PlaceholderText = "Nhập tên tài khoản";
+            this.txt_TenDangNhap.SelectedText = "";
+            this.txt_TenDangNhap.Size = new System.Drawing.Size(315, 41);
+            this.txt_TenDangNhap.TabIndex = 11;
+            // 
+            // txt_MatKhau
+            // 
+            this.txt_MatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_MatKhau.BorderRadius = 15;
+            this.txt_MatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MatKhau.DefaultText = "";
+            this.txt_MatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_MatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_MatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MatKhau.Location = new System.Drawing.Point(397, 206);
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.PasswordChar = '\0';
+            this.txt_MatKhau.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_MatKhau.PlaceholderText = "Nhập Mật Khẩu";
+            this.txt_MatKhau.SelectedText = "";
+            this.txt_MatKhau.Size = new System.Drawing.Size(315, 41);
+            this.txt_MatKhau.TabIndex = 11;
+            // 
+            // txt_NhapLaiMatKhau
+            // 
+            this.txt_NhapLaiMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_NhapLaiMatKhau.BorderRadius = 15;
+            this.txt_NhapLaiMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_NhapLaiMatKhau.DefaultText = "";
+            this.txt_NhapLaiMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_NhapLaiMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_NhapLaiMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NhapLaiMatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NhapLaiMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NhapLaiMatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_NhapLaiMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NhapLaiMatKhau.Location = new System.Drawing.Point(397, 283);
+            this.txt_NhapLaiMatKhau.Name = "txt_NhapLaiMatKhau";
+            this.txt_NhapLaiMatKhau.PasswordChar = '\0';
+            this.txt_NhapLaiMatKhau.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_NhapLaiMatKhau.PlaceholderText = "Nhập lại mật khẩu";
+            this.txt_NhapLaiMatKhau.SelectedText = "";
+            this.txt_NhapLaiMatKhau.Size = new System.Drawing.Size(315, 41);
+            this.txt_NhapLaiMatKhau.TabIndex = 11;
+            // 
+            // txt_HoTen
+            // 
+            this.txt_HoTen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_HoTen.BorderRadius = 15;
+            this.txt_HoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_HoTen.DefaultText = "";
+            this.txt_HoTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_HoTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_HoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_HoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_HoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_HoTen.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_HoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_HoTen.Location = new System.Drawing.Point(397, 369);
+            this.txt_HoTen.Name = "txt_HoTen";
+            this.txt_HoTen.PasswordChar = '\0';
+            this.txt_HoTen.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_HoTen.PlaceholderText = "Nhập họ và tên nhân viên";
+            this.txt_HoTen.SelectedText = "";
+            this.txt_HoTen.Size = new System.Drawing.Size(315, 41);
+            this.txt_HoTen.TabIndex = 11;
+            // 
+            // txt_SDT
+            // 
+            this.txt_SDT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_SDT.BorderRadius = 15;
+            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SDT.DefaultText = "";
+            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Location = new System.Drawing.Point(397, 449);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.PasswordChar = '\0';
+            this.txt_SDT.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_SDT.PlaceholderText = "Nhập số điện thoại";
+            this.txt_SDT.SelectedText = "";
+            this.txt_SDT.Size = new System.Drawing.Size(315, 41);
+            this.txt_SDT.TabIndex = 11;
+            // 
             // txt_DiaChi
             // 
-            this.txt_DiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_DiaChi.Location = new System.Drawing.Point(391, 537);
-            this.txt_DiaChi.Multiline = true;
+            this.txt_DiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_DiaChi.BorderRadius = 15;
+            this.txt_DiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_DiaChi.DefaultText = "";
+            this.txt_DiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_DiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_DiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DiaChi.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DiaChi.Location = new System.Drawing.Point(397, 537);
             this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(304, 32);
-            this.txt_DiaChi.TabIndex = 8;
+            this.txt_DiaChi.PasswordChar = '\0';
+            this.txt_DiaChi.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_DiaChi.PlaceholderText = "Nhập địa chỉ nhân viên";
+            this.txt_DiaChi.SelectedText = "";
+            this.txt_DiaChi.Size = new System.Drawing.Size(315, 41);
+            this.txt_DiaChi.TabIndex = 11;
             // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 743);
-            this.Controls.Add(this.btn_DangKy);
             this.Controls.Add(this.txt_DiaChi);
             this.Controls.Add(this.txt_SDT);
             this.Controls.Add(this.txt_HoTen);
             this.Controls.Add(this.txt_NhapLaiMatKhau);
             this.Controls.Add(this.txt_MatKhau);
             this.Controls.Add(this.txt_TenDangNhap);
+            this.Controls.Add(this.btn_DangKy);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -267,8 +375,6 @@
         #endregion
 
         private System.Windows.Forms.Button btn_DangKy;
-        private System.Windows.Forms.TextBox txt_MatKhau;
-        private System.Windows.Forms.TextBox txt_TenDangNhap;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -276,12 +382,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_NhapLaiMatKhau;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_HoTen;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_SDT;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_DiaChi;
+        private Guna.UI2.WinForms.Guna2TextBox txt_TenDangNhap;
+        private Guna.UI2.WinForms.Guna2TextBox txt_MatKhau;
+        private Guna.UI2.WinForms.Guna2TextBox txt_NhapLaiMatKhau;
+        private Guna.UI2.WinForms.Guna2TextBox txt_HoTen;
+        private Guna.UI2.WinForms.Guna2TextBox txt_SDT;
+        private Guna.UI2.WinForms.Guna2TextBox txt_DiaChi;
     }
 }

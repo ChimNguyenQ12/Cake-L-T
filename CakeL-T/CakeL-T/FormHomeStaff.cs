@@ -16,5 +16,17 @@ namespace CakeL_T
         {
             InitializeComponent();
         }
+
+        private void btn_CaiLaiMK_Click(object sender, EventArgs e)
+        {
+            FormCaiLaiMK formCaiLaiMK = new FormCaiLaiMK();
+            formCaiLaiMK.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            FormCaiDat formCaiDat = new FormCaiDat();
+            formCaiDat.ShowDialog();
+        }
     }
 }

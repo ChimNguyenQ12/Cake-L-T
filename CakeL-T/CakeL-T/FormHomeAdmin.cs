@@ -25,11 +25,8 @@ namespace CakeL_T
 
         private void btn_DoanhThu_Click(object sender, EventArgs e)
         {
-            panel_DoanhThu.Visible = true;
-            panel_TaiKhoan.Visible = false;
-            panel_HoaDon.Visible = false;
-            panel_TrangChu.Visible = false;
-            panel_Banh.Visible = false;
+            FormDoanhThuVaReprot formDoanhThuVaReprot = new FormDoanhThuVaReprot();
+            formDoanhThuVaReprot.ShowDialog();
         }
 
         private void btn_HoaDon_Click(object sender, EventArgs e)
@@ -96,6 +93,12 @@ namespace CakeL_T
             panel_HoaDon.Visible = true;
             panel_TrangChu.Visible = true;
             panel_Banh.Visible = false;
+        }
+
+        private void btn_CaiDat_Click(object sender, EventArgs e)
+        {
+            FormCaiDat formCaiDat = new FormCaiDat();
+            formCaiDat.ShowDialog();
         }
     }
 }

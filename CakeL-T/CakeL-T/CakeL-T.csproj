@@ -233,6 +233,30 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCaiDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCaiDat.Designer.cs">
+      <DependentUpon>FormCaiDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCaiLaiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCaiLaiMK.Designer.cs">
+      <DependentUpon>FormCaiLaiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoanhThu.Designer.cs">
+      <DependentUpon>FormDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoanhThuVaReprot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoanhThuVaReprot.Designer.cs">
+      <DependentUpon>FormDoanhThuVaReprot.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,8 +281,31 @@
     <Compile Include="FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lang\MyResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCaiDat.resx">
+      <DependentUpon>FormCaiDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCaiLaiMK.resx">
+      <DependentUpon>FormCaiLaiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoanhThu.resx">
+      <DependentUpon>FormDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoanhThuVaReprot.resx">
+      <DependentUpon>FormDoanhThuVaReprot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHomeAdmin.resx">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -272,6 +319,12 @@
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="lang\MyResources.en-US.resx" />
+    <EmbeddedResource Include="lang\MyResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lang\MyResources.vi-VN.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

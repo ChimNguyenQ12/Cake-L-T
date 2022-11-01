@@ -161,3 +161,13 @@ D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL-T.csproj.Fody.CopyLocal.cache
 D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL-T.csproj.CopyComplete
 D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL-T.exe
 D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL-T.pdb
+D:\DAWIN\CakeL-T\CakeL-T\bin\Debug\en-US\CakeL-T.resources.dll
+D:\DAWIN\CakeL-T\CakeL-T\bin\Debug\vi-VN\CakeL-T.resources.dll
+D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL_T.FormCaiDat.resources
+D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL_T.FormDoanhThu.resources
+D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL_T.FormDoanhThuVaReprot.resources
+D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL_T.lang.MyResources.resources
+D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL_T.lang.MyResources.en-US.resources
+D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\CakeL_T.lang.MyResources.vi-VN.resources
+D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\en-US\CakeL-T.resources.dll
+D:\DAWIN\CakeL-T\CakeL-T\obj\Debug\vi-VN\CakeL-T.resources.dll
