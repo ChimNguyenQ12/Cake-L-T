@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,12 +16,47 @@ namespace CakeL_T
         public FormHomeAdmin()
         {
             InitializeComponent();
-
+            LoadData();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadData()
         {
-            return;
+            AdminBUS adminBUS = new AdminBUS();
+            dgv_TaiKhoan.DataSource = adminBUS.GetAccounts();
+        }
+
+        private void Clear()
+        {
+            txtDiaChi.Text = "";
+            txtMK.Text = "";
+            txtSDT.Text = "";
+            txtTenNV.Text = "";
+            txtTrangThai.Text = "";
+            txtTenTK.Text = "";
+        }
+
+        private void GetAccountById(int id)
+        {
+            AdminBUS adminBUS = new AdminBUS();
+            var accountById = adminBUS.GetAccountById(id);
+            if (accountById == null)
+            {
+                MessageBox.Show("Có gì đó không ổn");
+            }
+        }
+
+        private void UpdateAccount(int id, string fullname, string username, string password, string address, string phone)
+        {
+            AdminBUS adminBUS = new AdminBUS();
+            adminBUS.UpdateAccountById(id, fullname, username, password, address, phone);
+            LoadData();
+        }
+
+        private void DeleteAccount(int id)
+        {
+            AdminBUS adminBUS = new AdminBUS();
+            adminBUS.DeleteAccountById(id);
+            LoadData();
         }
 
         private void btn_DoanhThu_Click(object sender, EventArgs e)
@@ -68,6 +104,40 @@ namespace CakeL_T
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
 
+        private void btnLoadData_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void dgv_TaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgv_TaiKhoan.Rows[e.RowIndex];
+            txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
+            txtMK.Text = row.Cells["MatKhau"].Value.ToString();
+            txtTenNV.Text = row.Cells["HoTen"].Value.ToString();
+            txtSDT.Text = row.Cells["SoDienThoai"].Value.ToString();
+            txtTenTK.Text = row.Cells["TenTK"].Value.ToString();
+        }
+
+        private void btSuaTK_Click(object sender, EventArgs e)
+        {
+            var row = dgv_TaiKhoan.SelectedRows[0];
+            var cell = row.Cells["Id"];
+            int idSelected = Convert.ToInt32(cell.Value);
+            UpdateAccount(idSelected,  txtTenNV.Text, txtTenTK.Text, txtMK.Text, txtDiaChi.Text, txtSDT.Text);
+        }
+
+        private void btXoaTK_Click(object sender, EventArgs e)
+        {
+            var row = dgv_TaiKhoan.SelectedRows[0];
+            var cell = row.Cells["Id"];
+            int idSelected = Convert.ToInt32(cell.Value);
+            DeleteAccount(idSelected);
+        }
     }
 }
