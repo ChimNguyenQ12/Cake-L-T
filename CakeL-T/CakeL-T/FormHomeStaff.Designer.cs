@@ -45,6 +45,14 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_tenTK = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Luong = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_TenNV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_MaNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -89,14 +97,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.txt_MaNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_TenNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_Luong = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_tenTK = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel_Trai.SuspendLayout();
             this.grb_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarNV1)).BeginInit();
@@ -345,9 +345,9 @@
             this.btn_CaiLaiMK.ForeColor = System.Drawing.Color.White;
             this.btn_CaiLaiMK.Location = new System.Drawing.Point(275, 588);
             this.btn_CaiLaiMK.Name = "btn_CaiLaiMK";
-            this.btn_CaiLaiMK.Size = new System.Drawing.Size(180, 45);
+            this.btn_CaiLaiMK.Size = new System.Drawing.Size(211, 45);
             this.btn_CaiLaiMK.TabIndex = 16;
-            this.btn_CaiLaiMK.Text = "Cài Lại Mật Khẩu";
+            this.btn_CaiLaiMK.Text = "Đặt Lại Mật Khẩu";
             this.btn_CaiLaiMK.Click += new System.EventHandler(this.btn_CaiLaiMK_Click);
             // 
             // pictureBox1
@@ -406,10 +406,157 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông TIn Nhân Viên";
             // 
+            // dtp_NgaySinh
+            // 
+            this.dtp_NgaySinh.Location = new System.Drawing.Point(130, 244);
+            this.dtp_NgaySinh.Name = "dtp_NgaySinh";
+            this.dtp_NgaySinh.Size = new System.Drawing.Size(200, 20);
+            this.dtp_NgaySinh.TabIndex = 3;
+            // 
+            // txt_MatKhau
+            // 
+            this.txt_MatKhau.BorderRadius = 15;
+            this.txt_MatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MatKhau.DefaultText = "";
+            this.txt_MatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_MatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_MatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MatKhau.Location = new System.Drawing.Point(500, 244);
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.PasswordChar = '\0';
+            this.txt_MatKhau.PlaceholderText = "";
+            this.txt_MatKhau.SelectedText = "";
+            this.txt_MatKhau.Size = new System.Drawing.Size(215, 32);
+            this.txt_MatKhau.TabIndex = 2;
+            // 
+            // txt_tenTK
+            // 
+            this.txt_tenTK.BorderRadius = 15;
+            this.txt_tenTK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_tenTK.DefaultText = "";
+            this.txt_tenTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_tenTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_tenTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_tenTK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_tenTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_tenTK.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_tenTK.Location = new System.Drawing.Point(500, 175);
+            this.txt_tenTK.Name = "txt_tenTK";
+            this.txt_tenTK.PasswordChar = '\0';
+            this.txt_tenTK.PlaceholderText = "";
+            this.txt_tenTK.SelectedText = "";
+            this.txt_tenTK.Size = new System.Drawing.Size(215, 32);
+            this.txt_tenTK.TabIndex = 2;
+            // 
+            // txt_Luong
+            // 
+            this.txt_Luong.BorderRadius = 15;
+            this.txt_Luong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Luong.DefaultText = "";
+            this.txt_Luong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Luong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Luong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Luong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Luong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Luong.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Luong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Luong.Location = new System.Drawing.Point(500, 127);
+            this.txt_Luong.Name = "txt_Luong";
+            this.txt_Luong.PasswordChar = '\0';
+            this.txt_Luong.PlaceholderText = "";
+            this.txt_Luong.SelectedText = "";
+            this.txt_Luong.Size = new System.Drawing.Size(215, 32);
+            this.txt_Luong.TabIndex = 2;
+            // 
+            // txt_DiaChi
+            // 
+            this.txt_DiaChi.BorderRadius = 15;
+            this.txt_DiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_DiaChi.DefaultText = "";
+            this.txt_DiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_DiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_DiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DiaChi.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DiaChi.Location = new System.Drawing.Point(130, 357);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.PasswordChar = '\0';
+            this.txt_DiaChi.PlaceholderText = "";
+            this.txt_DiaChi.SelectedText = "";
+            this.txt_DiaChi.Size = new System.Drawing.Size(215, 32);
+            this.txt_DiaChi.TabIndex = 2;
+            // 
+            // txt_SDT
+            // 
+            this.txt_SDT.BorderRadius = 15;
+            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SDT.DefaultText = "";
+            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Location = new System.Drawing.Point(130, 297);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.PasswordChar = '\0';
+            this.txt_SDT.PlaceholderText = "";
+            this.txt_SDT.SelectedText = "";
+            this.txt_SDT.Size = new System.Drawing.Size(215, 32);
+            this.txt_SDT.TabIndex = 2;
+            // 
+            // txt_TenNV
+            // 
+            this.txt_TenNV.BorderRadius = 15;
+            this.txt_TenNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TenNV.DefaultText = "";
+            this.txt_TenNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TenNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TenNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenNV.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenNV.Location = new System.Drawing.Point(130, 175);
+            this.txt_TenNV.Name = "txt_TenNV";
+            this.txt_TenNV.PasswordChar = '\0';
+            this.txt_TenNV.PlaceholderText = "";
+            this.txt_TenNV.SelectedText = "";
+            this.txt_TenNV.Size = new System.Drawing.Size(215, 32);
+            this.txt_TenNV.TabIndex = 2;
+            // 
+            // txt_MaNV
+            // 
+            this.txt_MaNV.BorderRadius = 15;
+            this.txt_MaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MaNV.DefaultText = "";
+            this.txt_MaNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_MaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_MaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MaNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MaNV.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MaNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MaNV.Location = new System.Drawing.Point(130, 127);
+            this.txt_MaNV.Name = "txt_MaNV";
+            this.txt_MaNV.PasswordChar = '\0';
+            this.txt_MaNV.PlaceholderText = "";
+            this.txt_MaNV.SelectedText = "";
+            this.txt_MaNV.Size = new System.Drawing.Size(215, 32);
+            this.txt_MaNV.TabIndex = 2;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(403, 258);
+            this.label9.Location = new System.Drawing.Point(403, 252);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 1;
@@ -418,7 +565,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(403, 202);
+            this.label8.Location = new System.Drawing.Point(401, 194);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 1;
@@ -884,153 +1031,6 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 10;
             this.pictureBox7.TabStop = false;
-            // 
-            // txt_MaNV
-            // 
-            this.txt_MaNV.BorderRadius = 15;
-            this.txt_MaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MaNV.DefaultText = "";
-            this.txt_MaNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_MaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_MaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MaNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MaNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MaNV.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MaNV.Location = new System.Drawing.Point(130, 127);
-            this.txt_MaNV.Name = "txt_MaNV";
-            this.txt_MaNV.PasswordChar = '\0';
-            this.txt_MaNV.PlaceholderText = "";
-            this.txt_MaNV.SelectedText = "";
-            this.txt_MaNV.Size = new System.Drawing.Size(215, 32);
-            this.txt_MaNV.TabIndex = 2;
-            // 
-            // txt_TenNV
-            // 
-            this.txt_TenNV.BorderRadius = 15;
-            this.txt_TenNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TenNV.DefaultText = "";
-            this.txt_TenNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_TenNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_TenNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TenNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TenNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenNV.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenNV.Location = new System.Drawing.Point(130, 175);
-            this.txt_TenNV.Name = "txt_TenNV";
-            this.txt_TenNV.PasswordChar = '\0';
-            this.txt_TenNV.PlaceholderText = "";
-            this.txt_TenNV.SelectedText = "";
-            this.txt_TenNV.Size = new System.Drawing.Size(215, 32);
-            this.txt_TenNV.TabIndex = 2;
-            // 
-            // txt_SDT
-            // 
-            this.txt_SDT.BorderRadius = 15;
-            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_SDT.DefaultText = "";
-            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SDT.Location = new System.Drawing.Point(130, 297);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.PasswordChar = '\0';
-            this.txt_SDT.PlaceholderText = "";
-            this.txt_SDT.SelectedText = "";
-            this.txt_SDT.Size = new System.Drawing.Size(215, 32);
-            this.txt_SDT.TabIndex = 2;
-            // 
-            // txt_DiaChi
-            // 
-            this.txt_DiaChi.BorderRadius = 15;
-            this.txt_DiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_DiaChi.DefaultText = "";
-            this.txt_DiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_DiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_DiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DiaChi.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DiaChi.Location = new System.Drawing.Point(130, 357);
-            this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.PasswordChar = '\0';
-            this.txt_DiaChi.PlaceholderText = "";
-            this.txt_DiaChi.SelectedText = "";
-            this.txt_DiaChi.Size = new System.Drawing.Size(215, 32);
-            this.txt_DiaChi.TabIndex = 2;
-            // 
-            // txt_Luong
-            // 
-            this.txt_Luong.BorderRadius = 15;
-            this.txt_Luong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Luong.DefaultText = "";
-            this.txt_Luong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Luong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Luong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Luong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Luong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Luong.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Luong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Luong.Location = new System.Drawing.Point(488, 120);
-            this.txt_Luong.Name = "txt_Luong";
-            this.txt_Luong.PasswordChar = '\0';
-            this.txt_Luong.PlaceholderText = "";
-            this.txt_Luong.SelectedText = "";
-            this.txt_Luong.Size = new System.Drawing.Size(215, 32);
-            this.txt_Luong.TabIndex = 2;
-            // 
-            // txt_tenTK
-            // 
-            this.txt_tenTK.BorderRadius = 15;
-            this.txt_tenTK.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_tenTK.DefaultText = "";
-            this.txt_tenTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_tenTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_tenTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_tenTK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_tenTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_tenTK.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_tenTK.Location = new System.Drawing.Point(488, 183);
-            this.txt_tenTK.Name = "txt_tenTK";
-            this.txt_tenTK.PasswordChar = '\0';
-            this.txt_tenTK.PlaceholderText = "";
-            this.txt_tenTK.SelectedText = "";
-            this.txt_tenTK.Size = new System.Drawing.Size(215, 32);
-            this.txt_tenTK.TabIndex = 2;
-            // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.BorderRadius = 15;
-            this.txt_MatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MatKhau.DefaultText = "";
-            this.txt_MatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_MatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_MatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MatKhau.Location = new System.Drawing.Point(488, 239);
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.PasswordChar = '\0';
-            this.txt_MatKhau.PlaceholderText = "";
-            this.txt_MatKhau.SelectedText = "";
-            this.txt_MatKhau.Size = new System.Drawing.Size(215, 32);
-            this.txt_MatKhau.TabIndex = 2;
-            // 
-            // dtp_NgaySinh
-            // 
-            this.dtp_NgaySinh.Location = new System.Drawing.Point(130, 244);
-            this.dtp_NgaySinh.Name = "dtp_NgaySinh";
-            this.dtp_NgaySinh.Size = new System.Drawing.Size(200, 20);
-            this.dtp_NgaySinh.TabIndex = 3;
             // 
             // FormHomeStaff
             // 

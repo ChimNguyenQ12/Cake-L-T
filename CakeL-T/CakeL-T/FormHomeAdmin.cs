@@ -13,6 +13,7 @@ namespace CakeL_T
 {
     public partial class FormHomeAdmin : Form
     {
+        string fileName;
         public FormHomeAdmin()
         {
             InitializeComponent();
@@ -27,12 +28,12 @@ namespace CakeL_T
 
         private void Clear()
         {
-            txtDiaChi.Text = "";
-            txtMK.Text = "";
-            txtSDT.Text = "";
-            txtTenNV.Text = "";
-            txtTrangThai.Text = "";
-            txtTenTK.Text = "";
+            txt_DiaChi.Text = "";
+            txt_MatKhau.Text = "";
+            txt_SDT.Text = "";
+            txt_TenNV.Text = "";
+            txt_TrangThai.Text = "";
+            txt_TenTK.Text = "";
         }
 
         private void GetAccountById(int id)
@@ -59,6 +60,11 @@ namespace CakeL_T
             LoadData();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            return;
+        }
+
         private void btn_DoanhThu_Click(object sender, EventArgs e)
         {
             FormDoanhThuVaReprot formDoanhThuVaReprot = new FormDoanhThuVaReprot();
@@ -72,10 +78,7 @@ namespace CakeL_T
             panel_TaiKhoan.Visible = false;
             panel_TrangChu.Visible = false;
             panel_Banh.Visible = false;
-
         }
-
-
 
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
         {
@@ -90,12 +93,14 @@ namespace CakeL_T
         {
             FormRegister frm =new FormRegister();
             frm.ShowDialog();
+            LoadData();
         }
 
         private void panel_TaiKhoan_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
         private void FormHomeAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Cake L&T", MessageBoxButtons.YesNo) == DialogResult.No)
@@ -104,42 +109,6 @@ namespace CakeL_T
             }
         }
 
-<<<<<<< HEAD
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
-        private void btnLoadData_Click(object sender, EventArgs e)
-        {
-            LoadData();
-        }
-
-        private void dgv_TaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = this.dgv_TaiKhoan.Rows[e.RowIndex];
-            txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
-            txtMK.Text = row.Cells["MatKhau"].Value.ToString();
-            txtTenNV.Text = row.Cells["HoTen"].Value.ToString();
-            txtSDT.Text = row.Cells["SoDienThoai"].Value.ToString();
-            txtTenTK.Text = row.Cells["TenTK"].Value.ToString();
-        }
-
-        private void btSuaTK_Click(object sender, EventArgs e)
-        {
-            var row = dgv_TaiKhoan.SelectedRows[0];
-            var cell = row.Cells["Id"];
-            int idSelected = Convert.ToInt32(cell.Value);
-            UpdateAccount(idSelected,  txtTenNV.Text, txtTenTK.Text, txtMK.Text, txtDiaChi.Text, txtSDT.Text);
-        }
-
-        private void btXoaTK_Click(object sender, EventArgs e)
-        {
-            var row = dgv_TaiKhoan.SelectedRows[0];
-            var cell = row.Cells["Id"];
-            int idSelected = Convert.ToInt32(cell.Value);
-            DeleteAccount(idSelected);
-=======
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
             panel_TaiKhoan.Visible = true;
@@ -171,7 +140,54 @@ namespace CakeL_T
         {
             FormCaiDat formCaiDat = new FormCaiDat();
             formCaiDat.ShowDialog();
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void btnLoadData_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btn_XoaTK_Click(object sender, EventArgs e)
+        {
+            var row = dgv_TaiKhoan.SelectedRows[0];
+            var cell = row.Cells["Id"];
+            int idSelected = Convert.ToInt32(cell.Value);
+            DeleteAccount(idSelected);
+        }
+
+        private void btn_SuaTK_Click(object sender, EventArgs e)
+        {
+            var row = dgv_TaiKhoan.SelectedRows[0];
+            var cell = row.Cells["Id"];
+            int idSelected = Convert.ToInt32(cell.Value);
+            UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txt_SDT.Text);
+        }
+
+        private void dgv_TaiKhoan_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgv_TaiKhoan.Rows[e.RowIndex];
+            txt_DiaChi.Text = row.Cells["DiaChi"].Value.ToString();
+            txt_MatKhau.Text = row.Cells["MatKhau"].Value.ToString();
+            txt_TenNV.Text = row.Cells["HoTen"].Value.ToString();
+            txt_SDT.Text = row.Cells["SoDienThoai"].Value.ToString();
+            txt_TenTK.Text = row.Cells["TenTK"].Value.ToString();
+        }
+
+        private void pb_AvatarTK_Click(object sender, EventArgs e)
+        {
+            using(OpenFileDialog dialog = new OpenFileDialog() { Filter = "JPEG|*.jpg", ValidateNames = true, Multiselect = false })
+            {
+               if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = dialog.FileName;
+
+                }
+            }
         }
     }
 }

@@ -21,10 +21,10 @@ namespace BLL
         {
             try
             {
-            List<TaiKhoan> accountById = new List<TaiKhoan>();
-            AdminDAL adminDAL = new AdminDAL();
-            accountById =  adminDAL.GetAccountById(id);
-            return accountById;
+                List<TaiKhoan> accountById = new List<TaiKhoan>();
+                AdminDAL adminDAL = new AdminDAL();
+                accountById = adminDAL.GetAccountById(id);
+                return accountById;
             }
             catch (Exception)
             {
@@ -36,8 +36,8 @@ namespace BLL
         {
             try
             {
-               AdminDAL adminDAL = new AdminDAL();
-               adminDAL.UpdateAccountById(id, fullname, username, password, address, phone);
+                AdminDAL adminDAL = new AdminDAL();
+                adminDAL.UpdateAccountById(id, fullname, username, password, address, phone);
             }
             catch (Exception)
             {

@@ -220,6 +220,7 @@
             this.txt_TenDangNhap.SelectedText = "";
             this.txt_TenDangNhap.Size = new System.Drawing.Size(315, 41);
             this.txt_TenDangNhap.TabIndex = 11;
+            this.txt_TenDangNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TenDangNhap_KeyPress);
             // 
             // txt_MatKhau
             // 
@@ -238,12 +239,13 @@
             this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MatKhau.Location = new System.Drawing.Point(397, 206);
             this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.PasswordChar = '\0';
+            this.txt_MatKhau.PasswordChar = '*';
             this.txt_MatKhau.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txt_MatKhau.PlaceholderText = "Nhập Mật Khẩu";
             this.txt_MatKhau.SelectedText = "";
             this.txt_MatKhau.Size = new System.Drawing.Size(315, 41);
             this.txt_MatKhau.TabIndex = 11;
+            this.txt_MatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MatKhau_KeyPress);
             // 
             // txt_NhapLaiMatKhau
             // 
@@ -262,12 +264,13 @@
             this.txt_NhapLaiMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_NhapLaiMatKhau.Location = new System.Drawing.Point(397, 283);
             this.txt_NhapLaiMatKhau.Name = "txt_NhapLaiMatKhau";
-            this.txt_NhapLaiMatKhau.PasswordChar = '\0';
+            this.txt_NhapLaiMatKhau.PasswordChar = '*';
             this.txt_NhapLaiMatKhau.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txt_NhapLaiMatKhau.PlaceholderText = "Nhập lại mật khẩu";
             this.txt_NhapLaiMatKhau.SelectedText = "";
             this.txt_NhapLaiMatKhau.Size = new System.Drawing.Size(315, 41);
             this.txt_NhapLaiMatKhau.TabIndex = 11;
+            this.txt_NhapLaiMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NhapLaiMatKhau_KeyPress);
             // 
             // txt_HoTen
             // 
@@ -316,6 +319,7 @@
             this.txt_SDT.SelectedText = "";
             this.txt_SDT.Size = new System.Drawing.Size(315, 41);
             this.txt_SDT.TabIndex = 11;
+            this.txt_SDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SDT_KeyPress);
             // 
             // txt_DiaChi
             // 

@@ -31,3 +31,15 @@ D:\DAWIN\CakeL-T\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\DAWIN\CakeL-T\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\DAWIN\CakeL-T\DAL\obj\Debug\DAL.dll
 D:\DAWIN\CakeL-T\DAL\obj\Debug\DAL.pdb
+D:\Winform\CakeL-T\DAL\bin\Debug\DAL.dll.config
+D:\Winform\CakeL-T\DAL\bin\Debug\DAL.dll
+D:\Winform\CakeL-T\DAL\bin\Debug\DAL.pdb
+D:\Winform\CakeL-T\DAL\bin\Debug\EntityFramework.dll
+D:\Winform\CakeL-T\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Winform\CakeL-T\DAL\bin\Debug\EntityFramework.xml
+D:\Winform\CakeL-T\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Winform\CakeL-T\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Winform\CakeL-T\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Winform\CakeL-T\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Winform\CakeL-T\DAL\obj\Debug\DAL.dll
+D:\Winform\CakeL-T\DAL\obj\Debug\DAL.pdb

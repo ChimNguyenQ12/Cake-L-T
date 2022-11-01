@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHomeAdmin));
             this.panel_Trai = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.grb_Menu = new System.Windows.Forms.GroupBox();
             this.btn_Banh = new Guna.UI2.WinForms.Guna2Button();
             this.btn_TrangChu = new Guna.UI2.WinForms.Guna2Button();
@@ -38,23 +39,12 @@
             this.btn_NhapHang = new Guna.UI2.WinForms.Guna2Button();
             this.btn_CaiDat = new Guna.UI2.WinForms.Guna2Button();
             this.btn_TaiKhoan = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.lb_TenNV = new System.Windows.Forms.Label();
             this.pb_Avatar = new System.Windows.Forms.PictureBox();
             this.panel_DoanhThu = new System.Windows.Forms.Panel();
             this.panel_HoaDon = new System.Windows.Forms.Panel();
             this.panel_TaiKhoan = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-            this.btnLoadData = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.txtTrangThai = new System.Windows.Forms.TextBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtMK = new System.Windows.Forms.TextBox();
-            this.txtTenNV = new System.Windows.Forms.TextBox();
-            this.txtTenTK = new System.Windows.Forms.TextBox();
-=======
             this.panel_TrangChu = new System.Windows.Forms.Panel();
             this.panel_Banh = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -65,6 +55,11 @@
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_LoaiBanh = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_DonGia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_SoLuong = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_TenBanh = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_MaBanh = new Guna.UI2.WinForms.Guna2TextBox();
             this.pb_Banh = new System.Windows.Forms.PictureBox();
             this.dtp_NgayHH = new System.Windows.Forms.DateTimePicker();
             this.dtp_NgaySX = new System.Windows.Forms.DateTimePicker();
@@ -82,10 +77,15 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.txt_TrangThai = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_TenNV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_TenTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.pb_AvatarTK = new System.Windows.Forms.PictureBox();
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -98,6 +98,7 @@
             this.btn_SuaTK = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
+            this.btnLoadData = new System.Windows.Forms.Button();
             this.dgv_TaiKhoan = new System.Windows.Forms.DataGridView();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -132,39 +133,13 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.txt_MaBanh = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_TenBanh = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_SoLuong = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_DonGia = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_LoaiBanh = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_TenTK = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_TenNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_TrangThai = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-<<<<<<< HEAD
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-=======
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
             this.panel_Trai.SuspendLayout();
             this.grb_Menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
             this.panel_DoanhThu.SuspendLayout();
             this.panel_HoaDon.SuspendLayout();
             this.panel_TaiKhoan.SuspendLayout();
-<<<<<<< HEAD
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-=======
             this.panel_TrangChu.SuspendLayout();
             this.panel_Banh.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -179,10 +154,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarTK)).BeginInit();
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
             this.panel30.SuspendLayout();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TaiKhoan)).BeginInit();
@@ -195,13 +168,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongKe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-=======
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
             this.SuspendLayout();
             // 
             // panel_Trai
@@ -217,6 +183,13 @@
             this.panel_Trai.Size = new System.Drawing.Size(279, 832);
             this.panel_Trai.TabIndex = 0;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(180, 68);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(8, 20);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
             // grb_Menu
             // 
             this.grb_Menu.Controls.Add(this.btn_Banh);
@@ -226,6 +199,7 @@
             this.grb_Menu.Controls.Add(this.btn_NhapHang);
             this.grb_Menu.Controls.Add(this.btn_CaiDat);
             this.grb_Menu.Controls.Add(this.btn_TaiKhoan);
+            this.grb_Menu.Controls.Add(this.pictureBox12);
             this.grb_Menu.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_Menu.ForeColor = System.Drawing.Color.Black;
             this.grb_Menu.Location = new System.Drawing.Point(12, 171);
@@ -425,6 +399,19 @@
             this.btn_TaiKhoan.UseTransparentBackground = true;
             this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(-392, 119);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(568, 300);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 0;
+            this.pictureBox12.TabStop = false;
+            // 
             // lb_TenNV
             // 
             this.lb_TenNV.AutoSize = true;
@@ -473,11 +460,7 @@
             // 
             // panel_TaiKhoan
             // 
-<<<<<<< HEAD
-            this.panel_TaiKhoan.Controls.Add(this.btnLoadData);
-=======
             this.panel_TaiKhoan.Controls.Add(this.panel_TrangChu);
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
             this.panel_TaiKhoan.Controls.Add(this.groupBox3);
             this.panel_TaiKhoan.Controls.Add(this.panel30);
             this.panel_TaiKhoan.Controls.Add(this.label17);
@@ -491,28 +474,6 @@
             this.panel_TaiKhoan.Size = new System.Drawing.Size(695, 832);
             this.panel_TaiKhoan.TabIndex = 10;
             // 
-<<<<<<< HEAD
-            // btnLoadData
-            // 
-            this.btnLoadData.Location = new System.Drawing.Point(9, 595);
-            this.btnLoadData.Name = "btnLoadData";
-            this.btnLoadData.Size = new System.Drawing.Size(75, 27);
-            this.btnLoadData.TabIndex = 3;
-            this.btnLoadData.Text = "Refresh";
-            this.btnLoadData.UseVisualStyleBackColor = true;
-            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnClear);
-            this.groupBox3.Controls.Add(this.txtTrangThai);
-            this.groupBox3.Controls.Add(this.txtSDT);
-            this.groupBox3.Controls.Add(this.pictureBox11);
-            this.groupBox3.Controls.Add(this.txtDiaChi);
-            this.groupBox3.Controls.Add(this.txtMK);
-            this.groupBox3.Controls.Add(this.txtTenNV);
-            this.groupBox3.Controls.Add(this.txtTenTK);
-=======
             // panel_TrangChu
             // 
             this.panel_TrangChu.Controls.Add(this.panel_Banh);
@@ -522,9 +483,7 @@
             this.panel_TrangChu.Controls.Add(this.pictureBox14);
             this.panel_TrangChu.Controls.Add(this.pictureBox13);
             this.panel_TrangChu.Controls.Add(this.label24);
-            this.panel_TrangChu.Controls.Add(this.pictureBox12);
-            this.panel_TrangChu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_TrangChu.Location = new System.Drawing.Point(0, 0);
+            this.panel_TrangChu.Location = new System.Drawing.Point(682, 47);
             this.panel_TrangChu.Name = "panel_TrangChu";
             this.panel_TrangChu.Size = new System.Drawing.Size(695, 832);
             this.panel_TrangChu.TabIndex = 19;
@@ -537,8 +496,7 @@
             this.panel_Banh.Controls.Add(this.pictureBox20);
             this.panel_Banh.Controls.Add(this.groupBox4);
             this.panel_Banh.Controls.Add(this.dgv_Banh);
-            this.panel_Banh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Banh.Location = new System.Drawing.Point(0, 0);
+            this.panel_Banh.Location = new System.Drawing.Point(257, 454);
             this.panel_Banh.Name = "panel_Banh";
             this.panel_Banh.Size = new System.Drawing.Size(695, 832);
             this.panel_Banh.TabIndex = 5;
@@ -665,6 +623,106 @@
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin bánh";
+            // 
+            // txt_LoaiBanh
+            // 
+            this.txt_LoaiBanh.BorderRadius = 15;
+            this.txt_LoaiBanh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_LoaiBanh.DefaultText = "";
+            this.txt_LoaiBanh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_LoaiBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_LoaiBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_LoaiBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_LoaiBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_LoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_LoaiBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_LoaiBanh.Location = new System.Drawing.Point(422, 25);
+            this.txt_LoaiBanh.Name = "txt_LoaiBanh";
+            this.txt_LoaiBanh.PasswordChar = '\0';
+            this.txt_LoaiBanh.PlaceholderText = "";
+            this.txt_LoaiBanh.SelectedText = "";
+            this.txt_LoaiBanh.Size = new System.Drawing.Size(138, 31);
+            this.txt_LoaiBanh.TabIndex = 4;
+            // 
+            // txt_DonGia
+            // 
+            this.txt_DonGia.BorderRadius = 15;
+            this.txt_DonGia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_DonGia.DefaultText = "";
+            this.txt_DonGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_DonGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_DonGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DonGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DonGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DonGia.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DonGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DonGia.Location = new System.Drawing.Point(129, 148);
+            this.txt_DonGia.Name = "txt_DonGia";
+            this.txt_DonGia.PasswordChar = '\0';
+            this.txt_DonGia.PlaceholderText = "";
+            this.txt_DonGia.SelectedText = "";
+            this.txt_DonGia.Size = new System.Drawing.Size(166, 31);
+            this.txt_DonGia.TabIndex = 4;
+            // 
+            // txt_SoLuong
+            // 
+            this.txt_SoLuong.BorderRadius = 15;
+            this.txt_SoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SoLuong.DefaultText = "";
+            this.txt_SoLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_SoLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_SoLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SoLuong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SoLuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SoLuong.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SoLuong.Location = new System.Drawing.Point(129, 105);
+            this.txt_SoLuong.Name = "txt_SoLuong";
+            this.txt_SoLuong.PasswordChar = '\0';
+            this.txt_SoLuong.PlaceholderText = "";
+            this.txt_SoLuong.SelectedText = "";
+            this.txt_SoLuong.Size = new System.Drawing.Size(166, 31);
+            this.txt_SoLuong.TabIndex = 4;
+            // 
+            // txt_TenBanh
+            // 
+            this.txt_TenBanh.BorderRadius = 15;
+            this.txt_TenBanh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TenBanh.DefaultText = "";
+            this.txt_TenBanh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TenBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TenBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenBanh.Location = new System.Drawing.Point(129, 67);
+            this.txt_TenBanh.Name = "txt_TenBanh";
+            this.txt_TenBanh.PasswordChar = '\0';
+            this.txt_TenBanh.PlaceholderText = "";
+            this.txt_TenBanh.SelectedText = "";
+            this.txt_TenBanh.Size = new System.Drawing.Size(166, 31);
+            this.txt_TenBanh.TabIndex = 4;
+            // 
+            // txt_MaBanh
+            // 
+            this.txt_MaBanh.BorderRadius = 15;
+            this.txt_MaBanh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MaBanh.DefaultText = "";
+            this.txt_MaBanh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_MaBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_MaBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MaBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MaBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MaBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MaBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MaBanh.Location = new System.Drawing.Point(129, 24);
+            this.txt_MaBanh.Name = "txt_MaBanh";
+            this.txt_MaBanh.PasswordChar = '\0';
+            this.txt_MaBanh.PlaceholderText = "";
+            this.txt_MaBanh.SelectedText = "";
+            this.txt_MaBanh.Size = new System.Drawing.Size(166, 31);
+            this.txt_MaBanh.TabIndex = 4;
             // 
             // pb_Banh
             // 
@@ -849,24 +907,12 @@
             this.label24.TabIndex = 1;
             this.label24.Text = "Cake Shop L - T";
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(71, 40);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(568, 300);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 0;
-            this.pictureBox12.TabStop = false;
-            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.btnClear);
             this.groupBox3.Controls.Add(this.txt_TrangThai);
             this.groupBox3.Controls.Add(this.txt_SDT);
             this.groupBox3.Controls.Add(this.txt_DiaChi);
@@ -874,7 +920,6 @@
             this.groupBox3.Controls.Add(this.txt_TenNV);
             this.groupBox3.Controls.Add(this.txt_TenTK);
             this.groupBox3.Controls.Add(this.pb_AvatarTK);
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.label21);
@@ -884,84 +929,146 @@
             this.groupBox3.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(383, 193);
             this.groupBox3.Name = "groupBox3";
-<<<<<<< HEAD
-            this.groupBox3.Size = new System.Drawing.Size(300, 393);
-=======
             this.groupBox3.Size = new System.Drawing.Size(300, 397);
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin tài khoản";
             // 
-<<<<<<< HEAD
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(219, 360);
+            this.btnClear.Location = new System.Drawing.Point(218, 354);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 27);
-            this.btnClear.TabIndex = 3;
+            this.btnClear.Size = new System.Drawing.Size(75, 29);
+            this.btnClear.TabIndex = 20;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // txtTrangThai
+            // txt_TrangThai
             // 
-            this.txtTrangThai.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTrangThai.Location = new System.Drawing.Point(128, 321);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(155, 25);
-            this.txtTrangThai.TabIndex = 2;
+            this.txt_TrangThai.BorderRadius = 15;
+            this.txt_TrangThai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TrangThai.DefaultText = "";
+            this.txt_TrangThai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TrangThai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TrangThai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TrangThai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TrangThai.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TrangThai.ForeColor = System.Drawing.Color.Black;
+            this.txt_TrangThai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TrangThai.Location = new System.Drawing.Point(121, 321);
+            this.txt_TrangThai.Name = "txt_TrangThai";
+            this.txt_TrangThai.PasswordChar = '\0';
+            this.txt_TrangThai.PlaceholderText = "";
+            this.txt_TrangThai.SelectedText = "";
+            this.txt_TrangThai.Size = new System.Drawing.Size(173, 27);
+            this.txt_TrangThai.TabIndex = 1;
             // 
-            // txtSDT
+            // txt_SDT
             // 
-            this.txtSDT.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(128, 286);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(155, 25);
-            this.txtSDT.TabIndex = 2;
+            this.txt_SDT.BorderRadius = 15;
+            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SDT.DefaultText = "";
+            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SDT.ForeColor = System.Drawing.Color.Black;
+            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Location = new System.Drawing.Point(121, 288);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.PasswordChar = '\0';
+            this.txt_SDT.PlaceholderText = "";
+            this.txt_SDT.SelectedText = "";
+            this.txt_SDT.Size = new System.Drawing.Size(173, 27);
+            this.txt_SDT.TabIndex = 1;
             // 
-            // pictureBox11
+            // txt_DiaChi
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(113, 19);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(143, 99);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 0;
-            this.pictureBox11.TabStop = false;
+            this.txt_DiaChi.BorderRadius = 15;
+            this.txt_DiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_DiaChi.DefaultText = "";
+            this.txt_DiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_DiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_DiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_DiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DiaChi.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DiaChi.ForeColor = System.Drawing.Color.Black;
+            this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_DiaChi.Location = new System.Drawing.Point(121, 255);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.PasswordChar = '\0';
+            this.txt_DiaChi.PlaceholderText = "";
+            this.txt_DiaChi.SelectedText = "";
+            this.txt_DiaChi.Size = new System.Drawing.Size(173, 27);
+            this.txt_DiaChi.TabIndex = 1;
             // 
-            // txtDiaChi
+            // txt_MatKhau
             // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(128, 249);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(155, 25);
-            this.txtDiaChi.TabIndex = 2;
+            this.txt_MatKhau.BorderRadius = 15;
+            this.txt_MatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MatKhau.DefaultText = "";
+            this.txt_MatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_MatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_MatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MatKhau.ForeColor = System.Drawing.Color.Black;
+            this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_MatKhau.Location = new System.Drawing.Point(120, 215);
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.PasswordChar = '\0';
+            this.txt_MatKhau.PlaceholderText = "";
+            this.txt_MatKhau.SelectedText = "";
+            this.txt_MatKhau.Size = new System.Drawing.Size(173, 27);
+            this.txt_MatKhau.TabIndex = 1;
             // 
-            // txtMK
+            // txt_TenNV
             // 
-            this.txtMK.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(128, 217);
-            this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(155, 25);
-            this.txtMK.TabIndex = 2;
+            this.txt_TenNV.BorderRadius = 15;
+            this.txt_TenNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TenNV.DefaultText = "";
+            this.txt_TenNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TenNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TenNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenNV.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenNV.ForeColor = System.Drawing.Color.Black;
+            this.txt_TenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenNV.Location = new System.Drawing.Point(120, 179);
+            this.txt_TenNV.Name = "txt_TenNV";
+            this.txt_TenNV.PasswordChar = '\0';
+            this.txt_TenNV.PlaceholderText = "";
+            this.txt_TenNV.SelectedText = "";
+            this.txt_TenNV.Size = new System.Drawing.Size(173, 27);
+            this.txt_TenNV.TabIndex = 1;
             // 
-            // txtTenNV
+            // txt_TenTK
             // 
-            this.txtTenNV.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNV.Location = new System.Drawing.Point(128, 181);
-            this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(155, 25);
-            this.txtTenNV.TabIndex = 2;
+            this.txt_TenTK.BorderRadius = 15;
+            this.txt_TenTK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TenTK.DefaultText = "";
+            this.txt_TenTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TenTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TenTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenTK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenTK.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenTK.ForeColor = System.Drawing.Color.Black;
+            this.txt_TenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenTK.Location = new System.Drawing.Point(120, 143);
+            this.txt_TenTK.Name = "txt_TenTK";
+            this.txt_TenTK.PasswordChar = '\0';
+            this.txt_TenTK.PlaceholderText = "";
+            this.txt_TenTK.SelectedText = "";
+            this.txt_TenTK.Size = new System.Drawing.Size(173, 27);
+            this.txt_TenTK.TabIndex = 1;
             // 
-            // txtTenTK
-            // 
-            this.txtTenTK.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTK.Location = new System.Drawing.Point(128, 142);
-            this.txtTenTK.Name = "txtTenTK";
-            this.txtTenTK.Size = new System.Drawing.Size(155, 25);
-            this.txtTenTK.TabIndex = 1;
-=======
             // pb_AvatarTK
             // 
             this.pb_AvatarTK.Image = ((System.Drawing.Image)(resources.GetObject("pb_AvatarTK.Image")));
@@ -971,7 +1078,7 @@
             this.pb_AvatarTK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_AvatarTK.TabIndex = 0;
             this.pb_AvatarTK.TabStop = false;
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
+            this.pb_AvatarTK.Click += new System.EventHandler(this.pb_AvatarTK_Click);
             // 
             // label23
             // 
@@ -1047,52 +1154,6 @@
             this.panel30.Size = new System.Drawing.Size(301, 64);
             this.panel30.TabIndex = 17;
             // 
-<<<<<<< HEAD
-            // btThemTK
-            // 
-            this.btThemTK.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemTK.Image = ((System.Drawing.Image)(resources.GetObject("btThemTK.Image")));
-            this.btThemTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThemTK.Location = new System.Drawing.Point(10, 11);
-            this.btThemTK.Margin = new System.Windows.Forms.Padding(2);
-            this.btThemTK.Name = "btThemTK";
-            this.btThemTK.Size = new System.Drawing.Size(80, 41);
-            this.btThemTK.TabIndex = 4;
-            this.btThemTK.Text = "Thêm";
-            this.btThemTK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btThemTK.UseVisualStyleBackColor = true;
-            this.btThemTK.Click += new System.EventHandler(this.btThemTK_Click);
-            // 
-            // btXoaTK
-            // 
-            this.btXoaTK.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoaTK.Image = ((System.Drawing.Image)(resources.GetObject("btXoaTK.Image")));
-            this.btXoaTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoaTK.Location = new System.Drawing.Point(113, 11);
-            this.btXoaTK.Margin = new System.Windows.Forms.Padding(2);
-            this.btXoaTK.Name = "btXoaTK";
-            this.btXoaTK.Size = new System.Drawing.Size(78, 41);
-            this.btXoaTK.TabIndex = 5;
-            this.btXoaTK.Text = "Xóa";
-            this.btXoaTK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btXoaTK.UseVisualStyleBackColor = true;
-            this.btXoaTK.Click += new System.EventHandler(this.btXoaTK_Click);
-            // 
-            // btSuaTK
-            // 
-            this.btSuaTK.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSuaTK.Image = ((System.Drawing.Image)(resources.GetObject("btSuaTK.Image")));
-            this.btSuaTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSuaTK.Location = new System.Drawing.Point(207, 11);
-            this.btSuaTK.Margin = new System.Windows.Forms.Padding(2);
-            this.btSuaTK.Name = "btSuaTK";
-            this.btSuaTK.Size = new System.Drawing.Size(78, 41);
-            this.btSuaTK.TabIndex = 6;
-            this.btSuaTK.Text = "Sửa";
-            this.btSuaTK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSuaTK.UseVisualStyleBackColor = true;
-            this.btSuaTK.Click += new System.EventHandler(this.btSuaTK_Click);
-=======
             // btn_ThemTK
             // 
             this.btn_ThemTK.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1121,6 +1182,7 @@
             this.btn_XoaTK.Text = "Xóa";
             this.btn_XoaTK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_XoaTK.UseVisualStyleBackColor = true;
+            this.btn_XoaTK.Click += new System.EventHandler(this.btn_XoaTK_Click);
             // 
             // btn_SuaTK
             // 
@@ -1135,7 +1197,7 @@
             this.btn_SuaTK.Text = "Sửa";
             this.btn_SuaTK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_SuaTK.UseVisualStyleBackColor = true;
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
+            this.btn_SuaTK.Click += new System.EventHandler(this.btn_SuaTK_Click);
             // 
             // label17
             // 
@@ -1156,12 +1218,22 @@
             this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel29.Controls.Add(this.btnLoadData);
             this.panel29.Controls.Add(this.dgv_TaiKhoan);
-            this.panel29.Location = new System.Drawing.Point(9, 195);
+            this.panel29.Location = new System.Drawing.Point(9, 196);
             this.panel29.Margin = new System.Windows.Forms.Padding(2);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(359, 395);
+            this.panel29.Size = new System.Drawing.Size(359, 408);
             this.panel29.TabIndex = 15;
+            // 
+            // btnLoadData
+            // 
+            this.btnLoadData.Location = new System.Drawing.Point(3, 383);
+            this.btnLoadData.Name = "btnLoadData";
+            this.btnLoadData.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadData.TabIndex = 20;
+            this.btnLoadData.Text = "Refresh";
+            this.btnLoadData.UseVisualStyleBackColor = true;
             // 
             // dgv_TaiKhoan
             // 
@@ -1169,7 +1241,7 @@
             this.dgv_TaiKhoan.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_TaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_TaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_TaiKhoan.Location = new System.Drawing.Point(3, 2);
+            this.dgv_TaiKhoan.Location = new System.Drawing.Point(3, 17);
             this.dgv_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TaiKhoan.MultiSelect = false;
             this.dgv_TaiKhoan.Name = "dgv_TaiKhoan";
@@ -1178,9 +1250,9 @@
             this.dgv_TaiKhoan.RowHeadersWidth = 51;
             this.dgv_TaiKhoan.RowTemplate.Height = 24;
             this.dgv_TaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_TaiKhoan.Size = new System.Drawing.Size(354, 389);
+            this.dgv_TaiKhoan.Size = new System.Drawing.Size(354, 364);
             this.dgv_TaiKhoan.TabIndex = 0;
-            this.dgv_TaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick);
+            this.dgv_TaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick_1);
             // 
             // pictureBox8
             // 
@@ -1564,318 +1636,6 @@
             this.pictureBox7.TabIndex = 3;
             this.pictureBox7.TabStop = false;
             // 
-            // txt_MaBanh
-            // 
-            this.txt_MaBanh.BorderRadius = 15;
-            this.txt_MaBanh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MaBanh.DefaultText = "";
-            this.txt_MaBanh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_MaBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_MaBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MaBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MaBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MaBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MaBanh.Location = new System.Drawing.Point(129, 24);
-            this.txt_MaBanh.Name = "txt_MaBanh";
-            this.txt_MaBanh.PasswordChar = '\0';
-            this.txt_MaBanh.PlaceholderText = "";
-            this.txt_MaBanh.SelectedText = "";
-            this.txt_MaBanh.Size = new System.Drawing.Size(166, 31);
-            this.txt_MaBanh.TabIndex = 4;
-            // 
-            // txt_TenBanh
-            // 
-            this.txt_TenBanh.BorderRadius = 15;
-            this.txt_TenBanh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TenBanh.DefaultText = "";
-            this.txt_TenBanh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_TenBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_TenBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TenBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TenBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenBanh.Location = new System.Drawing.Point(129, 67);
-            this.txt_TenBanh.Name = "txt_TenBanh";
-            this.txt_TenBanh.PasswordChar = '\0';
-            this.txt_TenBanh.PlaceholderText = "";
-            this.txt_TenBanh.SelectedText = "";
-            this.txt_TenBanh.Size = new System.Drawing.Size(166, 31);
-            this.txt_TenBanh.TabIndex = 4;
-            // 
-            // txt_SoLuong
-            // 
-            this.txt_SoLuong.BorderRadius = 15;
-            this.txt_SoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_SoLuong.DefaultText = "";
-            this.txt_SoLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_SoLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_SoLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SoLuong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SoLuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SoLuong.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SoLuong.Location = new System.Drawing.Point(129, 105);
-            this.txt_SoLuong.Name = "txt_SoLuong";
-            this.txt_SoLuong.PasswordChar = '\0';
-            this.txt_SoLuong.PlaceholderText = "";
-            this.txt_SoLuong.SelectedText = "";
-            this.txt_SoLuong.Size = new System.Drawing.Size(166, 31);
-            this.txt_SoLuong.TabIndex = 4;
-            // 
-            // txt_DonGia
-            // 
-            this.txt_DonGia.BorderRadius = 15;
-            this.txt_DonGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_DonGia.DefaultText = "";
-            this.txt_DonGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_DonGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_DonGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DonGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DonGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DonGia.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DonGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DonGia.Location = new System.Drawing.Point(129, 148);
-            this.txt_DonGia.Name = "txt_DonGia";
-            this.txt_DonGia.PasswordChar = '\0';
-            this.txt_DonGia.PlaceholderText = "";
-            this.txt_DonGia.SelectedText = "";
-            this.txt_DonGia.Size = new System.Drawing.Size(166, 31);
-            this.txt_DonGia.TabIndex = 4;
-            // 
-            // txt_LoaiBanh
-            // 
-            this.txt_LoaiBanh.BorderRadius = 15;
-            this.txt_LoaiBanh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_LoaiBanh.DefaultText = "";
-            this.txt_LoaiBanh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_LoaiBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_LoaiBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_LoaiBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_LoaiBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_LoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_LoaiBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_LoaiBanh.Location = new System.Drawing.Point(422, 25);
-            this.txt_LoaiBanh.Name = "txt_LoaiBanh";
-            this.txt_LoaiBanh.PasswordChar = '\0';
-            this.txt_LoaiBanh.PlaceholderText = "";
-            this.txt_LoaiBanh.SelectedText = "";
-            this.txt_LoaiBanh.Size = new System.Drawing.Size(138, 31);
-            this.txt_LoaiBanh.TabIndex = 4;
-            // 
-            // txt_TenTK
-            // 
-            this.txt_TenTK.BorderRadius = 15;
-            this.txt_TenTK.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TenTK.DefaultText = "";
-            this.txt_TenTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_TenTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_TenTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TenTK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TenTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenTK.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenTK.Location = new System.Drawing.Point(120, 143);
-            this.txt_TenTK.Name = "txt_TenTK";
-            this.txt_TenTK.PasswordChar = '\0';
-            this.txt_TenTK.PlaceholderText = "";
-            this.txt_TenTK.SelectedText = "";
-            this.txt_TenTK.Size = new System.Drawing.Size(173, 27);
-            this.txt_TenTK.TabIndex = 1;
-            // 
-            // txt_TenNV
-            // 
-            this.txt_TenNV.BorderRadius = 15;
-            this.txt_TenNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TenNV.DefaultText = "";
-            this.txt_TenNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_TenNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_TenNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TenNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TenNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenNV.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenNV.Location = new System.Drawing.Point(120, 179);
-            this.txt_TenNV.Name = "txt_TenNV";
-            this.txt_TenNV.PasswordChar = '\0';
-            this.txt_TenNV.PlaceholderText = "";
-            this.txt_TenNV.SelectedText = "";
-            this.txt_TenNV.Size = new System.Drawing.Size(173, 27);
-            this.txt_TenNV.TabIndex = 1;
-            // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.BorderRadius = 15;
-            this.txt_MatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MatKhau.DefaultText = "";
-            this.txt_MatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_MatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_MatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MatKhau.Location = new System.Drawing.Point(120, 215);
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.PasswordChar = '\0';
-            this.txt_MatKhau.PlaceholderText = "";
-            this.txt_MatKhau.SelectedText = "";
-            this.txt_MatKhau.Size = new System.Drawing.Size(173, 27);
-            this.txt_MatKhau.TabIndex = 1;
-            // 
-            // txt_DiaChi
-            // 
-            this.txt_DiaChi.BorderRadius = 15;
-            this.txt_DiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_DiaChi.DefaultText = "";
-            this.txt_DiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_DiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_DiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_DiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DiaChi.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DiaChi.Location = new System.Drawing.Point(121, 255);
-            this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.PasswordChar = '\0';
-            this.txt_DiaChi.PlaceholderText = "";
-            this.txt_DiaChi.SelectedText = "";
-            this.txt_DiaChi.Size = new System.Drawing.Size(173, 27);
-            this.txt_DiaChi.TabIndex = 1;
-            // 
-            // txt_SDT
-            // 
-            this.txt_SDT.BorderRadius = 15;
-            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_SDT.DefaultText = "";
-            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SDT.Location = new System.Drawing.Point(121, 288);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.PasswordChar = '\0';
-            this.txt_SDT.PlaceholderText = "";
-            this.txt_SDT.SelectedText = "";
-            this.txt_SDT.Size = new System.Drawing.Size(173, 27);
-            this.txt_SDT.TabIndex = 1;
-            // 
-            // txt_TrangThai
-            // 
-            this.txt_TrangThai.BorderRadius = 15;
-            this.txt_TrangThai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TrangThai.DefaultText = "";
-            this.txt_TrangThai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_TrangThai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_TrangThai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TrangThai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_TrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TrangThai.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TrangThai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TrangThai.Location = new System.Drawing.Point(121, 321);
-            this.txt_TrangThai.Name = "txt_TrangThai";
-            this.txt_TrangThai.PasswordChar = '\0';
-            this.txt_TrangThai.PlaceholderText = "";
-            this.txt_TrangThai.SelectedText = "";
-            this.txt_TrangThai.Size = new System.Drawing.Size(173, 27);
-            this.txt_TrangThai.TabIndex = 1;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 68);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-<<<<<<< HEAD
-            this.dateTimePicker1.Size = new System.Drawing.Size(115, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(282, 248);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 75);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Đến\r\n\r\n\r\n";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(335, 776);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 25);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Tổng doanh thu:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(66, 248);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 50);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Từ ngày:\r\n\r\n";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 198);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(330, 50);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Chọn thời gian muốn xem thống kê: \r\n\r\n";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(156, 135);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(341, 33);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Thống Kê Doanh Thu Cake L&T";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(479, 22);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(152, 68);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(271, 22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(152, 68);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(71, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(152, 68);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-=======
-            this.dateTimePicker1.Size = new System.Drawing.Size(8, 20);
-            this.dateTimePicker1.TabIndex = 3;
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
-            // 
             // FormHomeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1890,17 +1650,13 @@
             this.panel_Trai.ResumeLayout(false);
             this.panel_Trai.PerformLayout();
             this.grb_Menu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();
             this.panel_DoanhThu.ResumeLayout(false);
             this.panel_HoaDon.ResumeLayout(false);
             this.panel_HoaDon.PerformLayout();
             this.panel_TaiKhoan.ResumeLayout(false);
             this.panel_TaiKhoan.PerformLayout();
-<<<<<<< HEAD
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-=======
             this.panel_TrangChu.ResumeLayout(false);
             this.panel_TrangChu.PerformLayout();
             this.panel_Banh.ResumeLayout(false);
@@ -1917,11 +1673,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarTK)).EndInit();
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
             this.panel30.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TaiKhoan)).EndInit();
@@ -1936,13 +1690,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongKe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-=======
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
             this.ResumeLayout(false);
 
         }
@@ -2004,27 +1751,13 @@
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.DataGridView dgv_TaiKhoan;
         private System.Windows.Forms.GroupBox groupBox3;
-<<<<<<< HEAD
-        private System.Windows.Forms.TextBox txtTrangThai;
-        private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtMK;
-        private System.Windows.Forms.TextBox txtTenNV;
-        private System.Windows.Forms.TextBox txtTenTK;
-=======
         private System.Windows.Forms.PictureBox pb_AvatarTK;
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-<<<<<<< HEAD
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnLoadData;
-=======
         private System.Windows.Forms.Panel panel_TrangChu;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.PictureBox pictureBox15;
@@ -2065,6 +1798,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_MatKhau;
         private Guna.UI2.WinForms.Guna2TextBox txt_TenNV;
         private Guna.UI2.WinForms.Guna2TextBox txt_TenTK;
->>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnLoadData;
     }
 }

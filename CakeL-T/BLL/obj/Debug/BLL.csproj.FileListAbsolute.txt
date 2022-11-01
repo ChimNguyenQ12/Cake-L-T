@@ -35,3 +35,16 @@ D:\DAWIN\CakeL-T\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\DAWIN\CakeL-T\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\DAWIN\CakeL-T\BLL\obj\Debug\BLL.dll
 D:\DAWIN\CakeL-T\BLL\obj\Debug\BLL.pdb
+D:\Winform\CakeL-T\BLL\bin\Debug\BLL.dll.config
+D:\Winform\CakeL-T\BLL\bin\Debug\BLL.dll
+D:\Winform\CakeL-T\BLL\bin\Debug\BLL.pdb
+D:\Winform\CakeL-T\BLL\bin\Debug\DAL.dll
+D:\Winform\CakeL-T\BLL\bin\Debug\EntityFramework.dll
+D:\Winform\CakeL-T\BLL\bin\Debug\DAL.pdb
+D:\Winform\CakeL-T\BLL\bin\Debug\DAL.dll.config
+D:\Winform\CakeL-T\BLL\bin\Debug\EntityFramework.xml
+D:\Winform\CakeL-T\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Winform\CakeL-T\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Winform\CakeL-T\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Winform\CakeL-T\BLL\obj\Debug\BLL.dll
+D:\Winform\CakeL-T\BLL\obj\Debug\BLL.pdb
