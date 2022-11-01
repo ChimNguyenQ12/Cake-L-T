@@ -22,3 +22,16 @@ D:\Winform\CakeLT\CakeL-T\BLL\bin\Debug\BLL.dll.config
 D:\Winform\CakeLT\CakeL-T\BLL\bin\Debug\EntityFramework.dll
 D:\Winform\CakeLT\CakeL-T\BLL\bin\Debug\DAL.dll.config
 D:\Winform\CakeLT\CakeL-T\BLL\bin\Debug\EntityFramework.xml
+D:\DAWIN\CakeL-T\BLL\bin\Debug\BLL.dll.config
+D:\DAWIN\CakeL-T\BLL\bin\Debug\BLL.dll
+D:\DAWIN\CakeL-T\BLL\bin\Debug\BLL.pdb
+D:\DAWIN\CakeL-T\BLL\bin\Debug\DAL.dll
+D:\DAWIN\CakeL-T\BLL\bin\Debug\EntityFramework.dll
+D:\DAWIN\CakeL-T\BLL\bin\Debug\DAL.pdb
+D:\DAWIN\CakeL-T\BLL\bin\Debug\DAL.dll.config
+D:\DAWIN\CakeL-T\BLL\bin\Debug\EntityFramework.xml
+D:\DAWIN\CakeL-T\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\DAWIN\CakeL-T\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\DAWIN\CakeL-T\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\DAWIN\CakeL-T\BLL\obj\Debug\BLL.dll
+D:\DAWIN\CakeL-T\BLL\obj\Debug\BLL.pdb

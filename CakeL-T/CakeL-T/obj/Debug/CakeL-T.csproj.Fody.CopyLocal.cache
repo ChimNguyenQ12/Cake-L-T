@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\Winform\CakeLT\CakeL-T\BLL\bin\Debug\BLL.dll.config
 D:\Winform\CakeLT\CakeL-T\DAL\bin\Debug\DAL.dll.config
 D:\Winform\CakeLT\CakeL-T\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.xml
@@ -33,3 +34,45 @@ D:\Winform\CakeLT\CakeL-T\packages\System.ServiceModel.Syndication.6.0.0\lib\net
 D:\Winform\CakeLT\CakeL-T\packages\System.ServiceProcess.ServiceController.6.0.0\lib\net461\System.ServiceProcess.ServiceController.xml
 D:\Winform\CakeLT\CakeL-T\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.xml
 D:\Winform\CakeLT\CakeL-T\packages\System.Threading.AccessControl.6.0.0\lib\net461\System.Threading.AccessControl.xml
+=======
+D:\DAWIN\CakeL-T\BLL\bin\Debug\BLL.dll.config
+D:\DAWIN\CakeL-T\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.xml
+D:\DAWIN\CakeL-T\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.xml
+D:\DAWIN\CakeL-T\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.xml
+D:\DAWIN\CakeL-T\packages\Microsoft.Win32.Registry.AccessControl.6.0.0\lib\net461\Microsoft.Win32.Registry.AccessControl.xml
+D:\DAWIN\CakeL-T\packages\Microsoft.Win32.SystemEvents.6.0.0\lib\net461\Microsoft.Win32.SystemEvents.xml
+D:\DAWIN\CakeL-T\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.xml
+D:\DAWIN\CakeL-T\packages\RestSharpSigned.105.2.3\lib\net46\RestSharp.xml
+C:\Program Files (x86)\Syncfusion\Essential Studio\Windows\20.1.0.55\Assemblies\4.6\Syncfusion.Grid.Grouping.Windows.xml
+C:\Program Files (x86)\Syncfusion\Essential Studio\Windows\20.1.0.55\Assemblies\4.6\Syncfusion.Grid.Windows.xml
+C:\Program Files (x86)\Syncfusion\Essential Studio\Windows\20.1.0.55\Assemblies\4.6\Syncfusion.Grouping.Base.xml
+C:\Program Files (x86)\Syncfusion\Essential Studio\Windows\20.1.0.55\Assemblies\4.6\Syncfusion.Shared.Base.xml
+C:\Program Files (x86)\Syncfusion\Essential Studio\Windows\20.1.0.55\Assemblies\4.6\Syncfusion.Shared.Windows.xml
+D:\DAWIN\CakeL-T\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.xml
+D:\DAWIN\CakeL-T\packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.xml
+D:\DAWIN\CakeL-T\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.xml
+D:\DAWIN\CakeL-T\packages\System.Data.Odbc.6.0.0\lib\net461\System.Data.Odbc.xml
+D:\DAWIN\CakeL-T\packages\System.Data.OleDb.6.0.0\lib\net461\System.Data.OleDb.xml
+D:\DAWIN\CakeL-T\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.xml
+D:\DAWIN\CakeL-T\packages\System.Diagnostics.EventLog.6.0.0\lib\net461\System.Diagnostics.EventLog.xml
+D:\DAWIN\CakeL-T\packages\System.Diagnostics.PerformanceCounter.6.0.0\lib\net461\System.Diagnostics.PerformanceCounter.xml
+D:\DAWIN\CakeL-T\packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.xml
+D:\DAWIN\CakeL-T\packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.xml
+D:\DAWIN\CakeL-T\packages\System.IO.Packaging.6.0.0\lib\net461\System.IO.Packaging.xml
+D:\DAWIN\CakeL-T\packages\System.IO.Ports.6.0.0\lib\net461\System.IO.Ports.xml
+D:\DAWIN\CakeL-T\packages\System.Memory.4.5.4\lib\net461\System.Memory.xml
+D:\DAWIN\CakeL-T\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.xml
+D:\DAWIN\CakeL-T\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.xml
+D:\DAWIN\CakeL-T\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.xml
+D:\DAWIN\CakeL-T\packages\System.Security.Cryptography.Cng.5.0.0\lib\net47\System.Security.Cryptography.Cng.xml
+D:\DAWIN\CakeL-T\packages\System.Security.Cryptography.Pkcs.6.0.0\lib\net461\System.Security.Cryptography.Pkcs.xml
+D:\DAWIN\CakeL-T\packages\System.Security.Cryptography.ProtectedData.6.0.0\lib\net461\System.Security.Cryptography.ProtectedData.xml
+D:\DAWIN\CakeL-T\packages\System.Security.Cryptography.Xml.6.0.0\lib\net461\System.Security.Cryptography.Xml.xml
+D:\DAWIN\CakeL-T\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.xml
+D:\DAWIN\CakeL-T\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.xml
+D:\DAWIN\CakeL-T\packages\System.ServiceModel.Syndication.6.0.0\lib\net461\System.ServiceModel.Syndication.xml
+D:\DAWIN\CakeL-T\packages\System.ServiceProcess.ServiceController.6.0.0\lib\net461\System.ServiceProcess.ServiceController.xml
+D:\DAWIN\CakeL-T\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.xml
+D:\DAWIN\CakeL-T\packages\System.Threading.AccessControl.6.0.0\lib\net461\System.Threading.AccessControl.xml
+D:\DAWIN\CakeL-T\BLL\bin\Debug\DAL.dll.config
+>>>>>>> 8dac3a808d950c9116c0dcfd30aaca3c0cc2e716
