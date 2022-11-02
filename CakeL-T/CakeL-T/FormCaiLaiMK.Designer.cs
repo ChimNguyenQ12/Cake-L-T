@@ -122,7 +122,10 @@
             this.Controls.Add(this.txt_MKMoi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCaiLaiMK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCaiLaiMK";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -131,6 +131,7 @@
             this.txt_MatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_MatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_MatKhau.ForeColor = System.Drawing.Color.Black;
             this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MatKhau.Location = new System.Drawing.Point(425, 252);
             this.txt_MatKhau.Name = "txt_MatKhau";
@@ -139,7 +140,7 @@
             this.txt_MatKhau.PlaceholderText = "Nhập Mật Khẩu";
             this.txt_MatKhau.SelectedText = "";
             this.txt_MatKhau.Size = new System.Drawing.Size(290, 41);
-            this.txt_MatKhau.TabIndex = 4;
+            this.txt_MatKhau.TabIndex = 1;
             // 
             // txt_TenDangNhap
             // 
@@ -163,7 +164,7 @@
             this.txt_TenDangNhap.PlaceholderText = "Nhập Tài Khoản";
             this.txt_TenDangNhap.SelectedText = "";
             this.txt_TenDangNhap.Size = new System.Drawing.Size(290, 41);
-            this.txt_TenDangNhap.TabIndex = 4;
+            this.txt_TenDangNhap.TabIndex = 0;
             // 
             // guna2Button1
             // 
@@ -181,7 +182,7 @@
             this.guna2Button1.Location = new System.Drawing.Point(473, 351);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 5;
+            this.guna2Button1.TabIndex = 2;
             this.guna2Button1.Text = "Đăng Nhập";
             // 
             // FormLogin
@@ -196,6 +197,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.Text = "FormLogin";
             this.panel1.ResumeLayout(false);

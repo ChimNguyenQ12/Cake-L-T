@@ -97,6 +97,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel_chinh = new System.Windows.Forms.Panel();
             this.panel_Trai.SuspendLayout();
             this.grb_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarNV1)).BeginInit();
@@ -181,6 +182,7 @@
             this.btn_TaiKhoan.TabIndex = 17;
             this.btn_TaiKhoan.Text = "Tài khoản";
             this.btn_TaiKhoan.UseTransparentBackground = true;
+            this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
             // 
             // btn_TrangChu
             // 
@@ -208,6 +210,7 @@
             this.btn_TrangChu.TabIndex = 15;
             this.btn_TrangChu.Text = "Trang chủ";
             this.btn_TrangChu.UseTransparentBackground = true;
+            this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
             // 
             // btn_HoaDon
             // 
@@ -234,6 +237,7 @@
             this.btn_HoaDon.TabIndex = 14;
             this.btn_HoaDon.Text = "Hóa đơn";
             this.btn_HoaDon.UseTransparentBackground = true;
+            this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
             // 
             // guna2Button1
             // 
@@ -322,6 +326,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel_chinh);
             this.panel1.Controls.Add(this.btn_CaiLaiMK);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox8);
@@ -343,7 +348,7 @@
             this.btn_CaiLaiMK.FillColor = System.Drawing.Color.LightCoral;
             this.btn_CaiLaiMK.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CaiLaiMK.ForeColor = System.Drawing.Color.White;
-            this.btn_CaiLaiMK.Location = new System.Drawing.Point(275, 588);
+            this.btn_CaiLaiMK.Location = new System.Drawing.Point(275, 623);
             this.btn_CaiLaiMK.Name = "btn_CaiLaiMK";
             this.btn_CaiLaiMK.Size = new System.Drawing.Size(211, 45);
             this.btn_CaiLaiMK.TabIndex = 16;
@@ -353,7 +358,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(505, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(505, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(152, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -363,7 +368,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(303, 38);
+            this.pictureBox8.Location = new System.Drawing.Point(303, 73);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(152, 68);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -373,7 +378,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(97, 38);
+            this.pictureBox9.Location = new System.Drawing.Point(97, 73);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(152, 68);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -399,7 +404,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pb_AvatarNV2);
-            this.groupBox1.Location = new System.Drawing.Point(17, 136);
+            this.groupBox1.Location = new System.Drawing.Point(17, 171);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(727, 411);
             this.groupBox1.TabIndex = 1;
@@ -1032,6 +1037,14 @@
             this.pictureBox7.TabIndex = 10;
             this.pictureBox7.TabStop = false;
             // 
+            // panel_chinh
+            // 
+            this.panel_chinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_chinh.Location = new System.Drawing.Point(0, 0);
+            this.panel_chinh.Name = "panel_chinh";
+            this.panel_chinh.Size = new System.Drawing.Size(771, 843);
+            this.panel_chinh.TabIndex = 13;
+            // 
             // FormHomeStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1041,6 +1054,7 @@
             this.Controls.Add(this.panel_Trai);
             this.Name = "FormHomeStaff";
             this.Text = "FormHome";
+            this.Load += new System.EventHandler(this.FormHomeStaff_Load);
             this.panel_Trai.ResumeLayout(false);
             this.panel_Trai.PerformLayout();
             this.grb_Menu.ResumeLayout(false);
@@ -1150,5 +1164,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_SDT;
         private Guna.UI2.WinForms.Guna2TextBox txt_TenNV;
         private Guna.UI2.WinForms.Guna2TextBox txt_MaNV;
+        private System.Windows.Forms.Panel panel_chinh;
     }
 }

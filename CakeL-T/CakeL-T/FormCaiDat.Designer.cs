@@ -48,6 +48,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "Chuyển đổi";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // rbn_VietNam
             // 
@@ -79,7 +80,10 @@
             this.Controls.Add(this.rbn_English);
             this.Controls.Add(this.rbn_VietNam);
             this.Controls.Add(this.guna2Button1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCaiDat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCaiDat";
             this.ResumeLayout(false);
             this.PerformLayout();

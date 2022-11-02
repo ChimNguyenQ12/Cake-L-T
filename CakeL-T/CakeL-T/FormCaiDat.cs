@@ -16,5 +16,13 @@ namespace CakeL_T
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if(rbn_English.Checked)
+            {
+               
+            }
+        }
     }
 }

@@ -61,7 +61,7 @@
             this.btn_DangKy.Location = new System.Drawing.Point(507, 609);
             this.btn_DangKy.Name = "btn_DangKy";
             this.btn_DangKy.Size = new System.Drawing.Size(188, 52);
-            this.btn_DangKy.TabIndex = 10;
+            this.btn_DangKy.TabIndex = 6;
             this.btn_DangKy.Text = "Tạo Tài Khoản ";
             this.btn_DangKy.UseVisualStyleBackColor = false;
             this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
@@ -219,7 +219,7 @@
             this.txt_TenDangNhap.PlaceholderText = "Nhập tên tài khoản";
             this.txt_TenDangNhap.SelectedText = "";
             this.txt_TenDangNhap.Size = new System.Drawing.Size(315, 41);
-            this.txt_TenDangNhap.TabIndex = 11;
+            this.txt_TenDangNhap.TabIndex = 0;
             this.txt_TenDangNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TenDangNhap_KeyPress);
             // 
             // txt_MatKhau
@@ -244,7 +244,7 @@
             this.txt_MatKhau.PlaceholderText = "Nhập Mật Khẩu";
             this.txt_MatKhau.SelectedText = "";
             this.txt_MatKhau.Size = new System.Drawing.Size(315, 41);
-            this.txt_MatKhau.TabIndex = 11;
+            this.txt_MatKhau.TabIndex = 1;
             this.txt_MatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MatKhau_KeyPress);
             // 
             // txt_NhapLaiMatKhau
@@ -269,7 +269,7 @@
             this.txt_NhapLaiMatKhau.PlaceholderText = "Nhập lại mật khẩu";
             this.txt_NhapLaiMatKhau.SelectedText = "";
             this.txt_NhapLaiMatKhau.Size = new System.Drawing.Size(315, 41);
-            this.txt_NhapLaiMatKhau.TabIndex = 11;
+            this.txt_NhapLaiMatKhau.TabIndex = 2;
             this.txt_NhapLaiMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NhapLaiMatKhau_KeyPress);
             // 
             // txt_HoTen
@@ -294,7 +294,7 @@
             this.txt_HoTen.PlaceholderText = "Nhập họ và tên nhân viên";
             this.txt_HoTen.SelectedText = "";
             this.txt_HoTen.Size = new System.Drawing.Size(315, 41);
-            this.txt_HoTen.TabIndex = 11;
+            this.txt_HoTen.TabIndex = 3;
             // 
             // txt_SDT
             // 
@@ -310,6 +310,7 @@
             this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_SDT.ForeColor = System.Drawing.Color.Black;
             this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_SDT.Location = new System.Drawing.Point(397, 449);
             this.txt_SDT.Name = "txt_SDT";
@@ -318,7 +319,7 @@
             this.txt_SDT.PlaceholderText = "Nhập số điện thoại";
             this.txt_SDT.SelectedText = "";
             this.txt_SDT.Size = new System.Drawing.Size(315, 41);
-            this.txt_SDT.TabIndex = 11;
+            this.txt_SDT.TabIndex = 4;
             this.txt_SDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SDT_KeyPress);
             // 
             // txt_DiaChi
@@ -343,7 +344,7 @@
             this.txt_DiaChi.PlaceholderText = "Nhập địa chỉ nhân viên";
             this.txt_DiaChi.SelectedText = "";
             this.txt_DiaChi.Size = new System.Drawing.Size(315, 41);
-            this.txt_DiaChi.TabIndex = 11;
+            this.txt_DiaChi.TabIndex = 5;
             // 
             // FormRegister
             // 
@@ -365,6 +366,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegister";
