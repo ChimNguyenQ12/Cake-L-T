@@ -375,10 +375,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel29.Controls.Add(this.dgv_TaiKhoan);
-            this.panel29.Location = new System.Drawing.Point(29, 522);
+            this.panel29.Location = new System.Drawing.Point(29, 528);
             this.panel29.Margin = new System.Windows.Forms.Padding(2);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(643, 287);
+            this.panel29.Size = new System.Drawing.Size(643, 281);
             this.panel29.TabIndex = 23;
             // 
             // dgv_TaiKhoan
@@ -390,7 +390,7 @@
             this.dgv_TaiKhoan.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_TaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_TaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_TaiKhoan.Location = new System.Drawing.Point(3, 16);
+            this.dgv_TaiKhoan.Location = new System.Drawing.Point(3, 2);
             this.dgv_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TaiKhoan.Name = "dgv_TaiKhoan";
             this.dgv_TaiKhoan.ReadOnly = true;
@@ -398,7 +398,7 @@
             this.dgv_TaiKhoan.RowHeadersWidth = 51;
             this.dgv_TaiKhoan.RowTemplate.Height = 24;
             this.dgv_TaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_TaiKhoan.Size = new System.Drawing.Size(638, 271);
+            this.dgv_TaiKhoan.Size = new System.Drawing.Size(638, 279);
             this.dgv_TaiKhoan.TabIndex = 0;
             this.dgv_TaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick);
             this.dgv_TaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick);
@@ -513,7 +513,7 @@
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(29, 493);
+            this.btnRefresh.Location = new System.Drawing.Point(29, 499);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(79, 25);

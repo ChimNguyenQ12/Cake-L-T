@@ -74,6 +74,7 @@
             this.btn_TimHD = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.dgvLoaiBanh = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -574,11 +575,11 @@
             this.dgv_Banh.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_Banh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Banh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Banh.Location = new System.Drawing.Point(31, 507);
+            this.dgv_Banh.Location = new System.Drawing.Point(31, 535);
             this.dgv_Banh.Name = "dgv_Banh";
             this.dgv_Banh.RowHeadersVisible = false;
             this.dgv_Banh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Banh.Size = new System.Drawing.Size(632, 297);
+            this.dgv_Banh.Size = new System.Drawing.Size(632, 269);
             this.dgv_Banh.TabIndex = 0;
             this.dgv_Banh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Banh_CellContentClick);
             this.dgv_Banh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Banh_CellContentClick);
@@ -815,12 +816,29 @@
             this.dgvLoaiBanh.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvLoaiBanh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvLoaiBanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoaiBanh.Location = new System.Drawing.Point(31, 507);
+            this.dgvLoaiBanh.Location = new System.Drawing.Point(31, 535);
             this.dgvLoaiBanh.Name = "dgvLoaiBanh";
             this.dgvLoaiBanh.RowHeadersVisible = false;
             this.dgvLoaiBanh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLoaiBanh.Size = new System.Drawing.Size(632, 297);
+            this.dgvLoaiBanh.Size = new System.Drawing.Size(632, 269);
             this.dgvLoaiBanh.TabIndex = 0;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(31, 506);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(76, 24);
+            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // USBanhAdmin
             // 
@@ -829,6 +847,7 @@
             this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox20);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.gbChucNangLoaiBanh);
             this.Controls.Add(this.dgv_Banh);
             this.Controls.Add(this.dgvLoaiBanh);
@@ -901,5 +920,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvLoaiBanh;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

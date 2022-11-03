@@ -179,5 +179,11 @@ namespace CakeL_T
             txt_SoLuong.Text = row.Cells["SoLuong"].Value.ToString();
             txt_TenBanh.Text = row.Cells["TenBanh"].Value.ToString();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadData();
+
+        }
     }
 }

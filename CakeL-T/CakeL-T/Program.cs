@@ -16,7 +16,7 @@ namespace CakeL_T
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormHomeStaff());
+            Application.Run(new FormHomeAdmin());
         }
     }
 }
