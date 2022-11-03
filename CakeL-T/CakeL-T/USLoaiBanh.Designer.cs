@@ -1,6 +1,6 @@
 ﻿namespace CakeL_T
 {
-    partial class USBanhAdmin
+    partial class USLoaiBanh
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USBanhAdmin));
-            this.btn_ThemBanh = new System.Windows.Forms.Button();
-            this.btn_XoaBanh = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USLoaiBanh));
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_SuaBanh = new System.Windows.Forms.Button();
+            this.btn_XoaBanh = new System.Windows.Forms.Button();
+            this.btn_ThemBanh = new System.Windows.Forms.Button();
+            this.txt_TimBanh = new System.Windows.Forms.TextBox();
+            this.btn_ReportHD = new System.Windows.Forms.Button();
+            this.btn_TimHD = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
@@ -52,53 +57,34 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.dgv_Banh = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_TimBanh = new System.Windows.Forms.TextBox();
-            this.btn_ReportHD = new System.Windows.Forms.Button();
-            this.btn_TimHD = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Banh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_ThemBanh
+            // groupBox2
             // 
-            this.btn_ThemBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ThemBanh.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemBanh.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemBanh.Image")));
-            this.btn_ThemBanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThemBanh.Location = new System.Drawing.Point(191, 86);
-            this.btn_ThemBanh.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ThemBanh.Name = "btn_ThemBanh";
-            this.btn_ThemBanh.Size = new System.Drawing.Size(80, 28);
-            this.btn_ThemBanh.TabIndex = 0;
-            this.btn_ThemBanh.Text = "Thêm";
-            this.btn_ThemBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ThemBanh.UseVisualStyleBackColor = true;
-            // 
-            // btn_XoaBanh
-            // 
-            this.btn_XoaBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_XoaBanh.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XoaBanh.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaBanh.Image")));
-            this.btn_XoaBanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_XoaBanh.Location = new System.Drawing.Point(293, 86);
-            this.btn_XoaBanh.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_XoaBanh.Name = "btn_XoaBanh";
-            this.btn_XoaBanh.Size = new System.Drawing.Size(78, 28);
-            this.btn_XoaBanh.TabIndex = 1;
-            this.btn_XoaBanh.Text = "Xóa";
-            this.btn_XoaBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_XoaBanh.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.btn_SuaBanh);
+            this.groupBox2.Controls.Add(this.btn_XoaBanh);
+            this.groupBox2.Controls.Add(this.btn_ThemBanh);
+            this.groupBox2.Controls.Add(this.txt_TimBanh);
+            this.groupBox2.Controls.Add(this.btn_ReportHD);
+            this.groupBox2.Controls.Add(this.btn_TimHD);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(27, 358);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(640, 124);
+            this.groupBox2.TabIndex = 33;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chức năng";
             // 
             // btn_SuaBanh
             // 
@@ -117,17 +103,98 @@
             this.btn_SuaBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_SuaBanh.UseVisualStyleBackColor = true;
             // 
+            // btn_XoaBanh
+            // 
+            this.btn_XoaBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_XoaBanh.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XoaBanh.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaBanh.Image")));
+            this.btn_XoaBanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_XoaBanh.Location = new System.Drawing.Point(293, 86);
+            this.btn_XoaBanh.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_XoaBanh.Name = "btn_XoaBanh";
+            this.btn_XoaBanh.Size = new System.Drawing.Size(78, 28);
+            this.btn_XoaBanh.TabIndex = 1;
+            this.btn_XoaBanh.Text = "Xóa";
+            this.btn_XoaBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_XoaBanh.UseVisualStyleBackColor = true;
+            // 
+            // btn_ThemBanh
+            // 
+            this.btn_ThemBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ThemBanh.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThemBanh.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemBanh.Image")));
+            this.btn_ThemBanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ThemBanh.Location = new System.Drawing.Point(191, 86);
+            this.btn_ThemBanh.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ThemBanh.Name = "btn_ThemBanh";
+            this.btn_ThemBanh.Size = new System.Drawing.Size(80, 28);
+            this.btn_ThemBanh.TabIndex = 0;
+            this.btn_ThemBanh.Text = "Thêm";
+            this.btn_ThemBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ThemBanh.UseVisualStyleBackColor = true;
+            // 
+            // txt_TimBanh
+            // 
+            this.txt_TimBanh.Location = new System.Drawing.Point(218, 39);
+            this.txt_TimBanh.Name = "txt_TimBanh";
+            this.txt_TimBanh.Size = new System.Drawing.Size(257, 29);
+            this.txt_TimBanh.TabIndex = 0;
+            // 
+            // btn_ReportHD
+            // 
+            this.btn_ReportHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ReportHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportHD.Image")));
+            this.btn_ReportHD.Location = new System.Drawing.Point(483, 80);
+            this.btn_ReportHD.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ReportHD.Name = "btn_ReportHD";
+            this.btn_ReportHD.Size = new System.Drawing.Size(109, 34);
+            this.btn_ReportHD.TabIndex = 5;
+            this.btn_ReportHD.Text = "Report";
+            this.btn_ReportHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ReportHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ReportHD.UseVisualStyleBackColor = true;
+            // 
+            // btn_TimHD
+            // 
+            this.btn_TimHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_TimHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimHD.Image")));
+            this.btn_TimHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_TimHD.Location = new System.Drawing.Point(483, 39);
+            this.btn_TimHD.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_TimHD.Name = "btn_TimHD";
+            this.btn_TimHD.Size = new System.Drawing.Size(109, 29);
+            this.btn_TimHD.TabIndex = 1;
+            this.btn_TimHD.Text = "Tìm Kiếm";
+            this.btn_TimHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_TimHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_TimHD.UseVisualStyleBackColor = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(34, 50);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(180, 18);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Nhập thông tin loại bánh:";
+            // 
             // pictureBox18
             // 
             this.pictureBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(480, 29);
+            this.pictureBox18.Location = new System.Drawing.Point(476, 29);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(152, 68);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 23;
+            this.pictureBox18.TabIndex = 32;
             this.pictureBox18.TabStop = false;
             // 
             // pictureBox19
@@ -136,11 +203,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(278, 29);
+            this.pictureBox19.Location = new System.Drawing.Point(274, 29);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(152, 68);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox19.TabIndex = 22;
+            this.pictureBox19.TabIndex = 31;
             this.pictureBox19.TabStop = false;
             // 
             // pictureBox20
@@ -149,11 +216,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(72, 29);
+            this.pictureBox20.Location = new System.Drawing.Point(68, 29);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(152, 68);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox20.TabIndex = 21;
+            this.pictureBox20.TabIndex = 30;
             this.pictureBox20.TabStop = false;
             // 
             // groupBox4
@@ -177,10 +244,10 @@
             this.groupBox4.Controls.Add(this.label26);
             this.groupBox4.Controls.Add(this.label25);
             this.groupBox4.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(31, 115);
+            this.groupBox4.Location = new System.Drawing.Point(27, 115);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(632, 237);
-            this.groupBox4.TabIndex = 20;
+            this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin bánh";
             // 
@@ -433,79 +500,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Banh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Banh.Location = new System.Drawing.Point(31, 507);
+            this.dgv_Banh.Location = new System.Drawing.Point(27, 507);
             this.dgv_Banh.Name = "dgv_Banh";
             this.dgv_Banh.Size = new System.Drawing.Size(632, 297);
-            this.dgv_Banh.TabIndex = 0;
+            this.dgv_Banh.TabIndex = 28;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.btn_SuaBanh);
-            this.groupBox2.Controls.Add(this.btn_XoaBanh);
-            this.groupBox2.Controls.Add(this.btn_ThemBanh);
-            this.groupBox2.Controls.Add(this.txt_TimBanh);
-            this.groupBox2.Controls.Add(this.btn_ReportHD);
-            this.groupBox2.Controls.Add(this.btn_TimHD);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(31, 358);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(640, 124);
-            this.groupBox2.TabIndex = 27;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chức năng";
-            // 
-            // txt_TimBanh
-            // 
-            this.txt_TimBanh.Location = new System.Drawing.Point(218, 39);
-            this.txt_TimBanh.Name = "txt_TimBanh";
-            this.txt_TimBanh.Size = new System.Drawing.Size(257, 29);
-            this.txt_TimBanh.TabIndex = 0;
-            // 
-            // btn_ReportHD
-            // 
-            this.btn_ReportHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ReportHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportHD.Image")));
-            this.btn_ReportHD.Location = new System.Drawing.Point(483, 80);
-            this.btn_ReportHD.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ReportHD.Name = "btn_ReportHD";
-            this.btn_ReportHD.Size = new System.Drawing.Size(109, 34);
-            this.btn_ReportHD.TabIndex = 5;
-            this.btn_ReportHD.Text = "Report";
-            this.btn_ReportHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ReportHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ReportHD.UseVisualStyleBackColor = true;
-            // 
-            // btn_TimHD
-            // 
-            this.btn_TimHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_TimHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TimHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimHD.Image")));
-            this.btn_TimHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TimHD.Location = new System.Drawing.Point(483, 39);
-            this.btn_TimHD.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_TimHD.Name = "btn_TimHD";
-            this.btn_TimHD.Size = new System.Drawing.Size(109, 29);
-            this.btn_TimHD.TabIndex = 1;
-            this.btn_TimHD.Text = "Tìm Kiếm";
-            this.btn_TimHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_TimHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_TimHD.UseVisualStyleBackColor = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(34, 50);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(150, 18);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Nhập thông tin bánh:";
-            // 
-            // USBanhAdmin
+            // USLoaiBanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -515,9 +515,10 @@
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.dgv_Banh);
-            this.Name = "USBanhAdmin";
+            this.Name = "USLoaiBanh";
             this.Size = new System.Drawing.Size(695, 832);
-            this.Load += new System.EventHandler(this.BanhAdmin_Load);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
@@ -525,16 +526,20 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Banh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_ThemBanh;
-        private System.Windows.Forms.Button btn_XoaBanh;
+
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_SuaBanh;
+        private System.Windows.Forms.Button btn_XoaBanh;
+        private System.Windows.Forms.Button btn_ThemBanh;
+        private System.Windows.Forms.TextBox txt_TimBanh;
+        private System.Windows.Forms.Button btn_ReportHD;
+        private System.Windows.Forms.Button btn_TimHD;
+        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
@@ -555,10 +560,5 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DataGridView dgv_Banh;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_TimBanh;
-        private System.Windows.Forms.Button btn_ReportHD;
-        private System.Windows.Forms.Button btn_TimHD;
-        private System.Windows.Forms.Label label16;
     }
 }

@@ -53,7 +53,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_TimHD = new System.Windows.Forms.TextBox();
+            this.txt_TimTK = new System.Windows.Forms.TextBox();
             this.btn_ReportHD = new System.Windows.Forms.Button();
             this.btn_TimHD = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -420,7 +420,7 @@
             this.groupBox2.Controls.Add(this.btn_SuaTK);
             this.groupBox2.Controls.Add(this.btn_XoaTK);
             this.groupBox2.Controls.Add(this.btn_ThemTK);
-            this.groupBox2.Controls.Add(this.txt_TimHD);
+            this.groupBox2.Controls.Add(this.txt_TimTK);
             this.groupBox2.Controls.Add(this.btn_ReportHD);
             this.groupBox2.Controls.Add(this.btn_TimHD);
             this.groupBox2.Controls.Add(this.label16);
@@ -432,12 +432,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
-            // txt_TimHD
+            // txt_TimTK
             // 
-            this.txt_TimHD.Location = new System.Drawing.Point(218, 39);
-            this.txt_TimHD.Name = "txt_TimHD";
-            this.txt_TimHD.Size = new System.Drawing.Size(257, 29);
-            this.txt_TimHD.TabIndex = 0;
+            this.txt_TimTK.Location = new System.Drawing.Point(218, 39);
+            this.txt_TimTK.Name = "txt_TimTK";
+            this.txt_TimTK.Size = new System.Drawing.Size(257, 29);
+            this.txt_TimTK.TabIndex = 0;
             // 
             // btn_ReportHD
             // 
@@ -473,11 +473,11 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(34, 50);
+            this.label16.Location = new System.Drawing.Point(35, 50);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(170, 18);
+            this.label16.Size = new System.Drawing.Size(181, 18);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Nhập thông tin hóa đơn:";
+            this.label16.Text = "Nhập thông tin tài khoản:";
             // 
             // USTaiKhoanAdmin
             // 
@@ -533,7 +533,7 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_TimHD;
+        private System.Windows.Forms.TextBox txt_TimTK;
         private System.Windows.Forms.Button btn_ReportHD;
         private System.Windows.Forms.Button btn_TimHD;
         private System.Windows.Forms.Label label16;
