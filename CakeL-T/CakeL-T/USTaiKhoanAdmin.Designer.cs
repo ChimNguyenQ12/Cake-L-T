@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USTaiKhoanAdmin));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_TrangThai = new Guna.UI2.WinForms.Guna2TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,6 +58,7 @@
             this.btn_ReportHD = new System.Windows.Forms.Button();
             this.btn_TimHD = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarTK)).BeginInit();
             this.panel29.SuspendLayout();
@@ -73,6 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.txt_TrangThai);
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.txt_SDT);
             this.groupBox3.Controls.Add(this.txt_DiaChi);
             this.groupBox3.Controls.Add(this.txt_MatKhau);
@@ -104,14 +107,29 @@
             this.txt_TrangThai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_TrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TrangThai.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TrangThai.ForeColor = System.Drawing.Color.Black;
             this.txt_TrangThai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TrangThai.Location = new System.Drawing.Point(424, 167);
+            this.txt_TrangThai.Location = new System.Drawing.Point(417, 173);
             this.txt_TrangThai.Name = "txt_TrangThai";
             this.txt_TrangThai.PasswordChar = '\0';
             this.txt_TrangThai.PlaceholderText = "";
             this.txt_TrangThai.SelectedText = "";
             this.txt_TrangThai.Size = new System.Drawing.Size(160, 31);
             this.txt_TrangThai.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(606, 188);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 30);
+            this.button1.TabIndex = 1;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txt_SDT
             // 
@@ -124,8 +142,9 @@
             this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SDT.ForeColor = System.Drawing.Color.Black;
             this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SDT.Location = new System.Drawing.Point(422, 119);
+            this.txt_SDT.Location = new System.Drawing.Point(417, 130);
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.PasswordChar = '\0';
             this.txt_SDT.PlaceholderText = "";
@@ -144,8 +163,9 @@
             this.txt_DiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_DiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_DiaChi.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DiaChi.ForeColor = System.Drawing.Color.Black;
             this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DiaChi.Location = new System.Drawing.Point(424, 76);
+            this.txt_DiaChi.Location = new System.Drawing.Point(417, 87);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.PasswordChar = '\0';
             this.txt_DiaChi.PlaceholderText = "";
@@ -164,14 +184,16 @@
             this.txt_MatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_MatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MatKhau.ForeColor = System.Drawing.Color.Black;
             this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MatKhau.Location = new System.Drawing.Point(423, 36);
+            this.txt_MatKhau.Location = new System.Drawing.Point(113, 167);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.PasswordChar = '\0';
             this.txt_MatKhau.PlaceholderText = "";
             this.txt_MatKhau.SelectedText = "";
             this.txt_MatKhau.Size = new System.Drawing.Size(160, 31);
             this.txt_MatKhau.TabIndex = 2;
+            this.txt_MatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MatKhau_KeyPress);
             // 
             // txt_TenNV
             // 
@@ -184,8 +206,9 @@
             this.txt_TenNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_TenNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TenNV.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenNV.ForeColor = System.Drawing.Color.Black;
             this.txt_TenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenNV.Location = new System.Drawing.Point(120, 179);
+            this.txt_TenNV.Location = new System.Drawing.Point(417, 44);
             this.txt_TenNV.Name = "txt_TenNV";
             this.txt_TenNV.PasswordChar = '\0';
             this.txt_TenNV.PlaceholderText = "";
@@ -202,14 +225,16 @@
             this.txt_TenTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_TenTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_TenTK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenTK.FillColor = System.Drawing.Color.Gainsboro;
             this.txt_TenTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TenTK.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
             this.txt_TenTK.ForeColor = System.Drawing.Color.Black;
             this.txt_TenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenTK.Location = new System.Drawing.Point(120, 143);
+            this.txt_TenTK.Location = new System.Drawing.Point(113, 130);
             this.txt_TenTK.Name = "txt_TenTK";
             this.txt_TenTK.PasswordChar = '\0';
             this.txt_TenTK.PlaceholderText = "";
+            this.txt_TenTK.ReadOnly = true;
             this.txt_TenTK.SelectedText = "";
             this.txt_TenTK.Size = new System.Drawing.Size(160, 31);
             this.txt_TenTK.TabIndex = 0;
@@ -229,7 +254,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(319, 177);
+            this.label23.Location = new System.Drawing.Point(312, 182);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(74, 18);
             this.label23.TabIndex = 0;
@@ -239,7 +264,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(319, 129);
+            this.label22.Location = new System.Drawing.Point(312, 137);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(95, 18);
             this.label22.TabIndex = 0;
@@ -249,7 +274,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(319, 86);
+            this.label21.Location = new System.Drawing.Point(312, 97);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(54, 18);
             this.label21.TabIndex = 0;
@@ -259,7 +284,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(319, 45);
+            this.label20.Location = new System.Drawing.Point(10, 173);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(74, 18);
             this.label20.TabIndex = 0;
@@ -269,7 +294,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(16, 188);
+            this.label19.Location = new System.Drawing.Point(310, 57);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(99, 18);
             this.label19.TabIndex = 0;
@@ -279,7 +304,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(17, 149);
+            this.label18.Location = new System.Drawing.Point(10, 137);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(97, 18);
             this.label18.TabIndex = 0;
@@ -362,15 +387,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_TaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_TaiKhoan.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_TaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_TaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TaiKhoan.Location = new System.Drawing.Point(3, 16);
             this.dgv_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TaiKhoan.Name = "dgv_TaiKhoan";
             this.dgv_TaiKhoan.ReadOnly = true;
+            this.dgv_TaiKhoan.RowHeadersVisible = false;
             this.dgv_TaiKhoan.RowHeadersWidth = 51;
             this.dgv_TaiKhoan.RowTemplate.Height = 24;
+            this.dgv_TaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_TaiKhoan.Size = new System.Drawing.Size(638, 271);
             this.dgv_TaiKhoan.TabIndex = 0;
+            this.dgv_TaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick);
             this.dgv_TaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick);
             // 
             // pictureBox8
@@ -479,12 +509,27 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Nhập thông tin tài khoản:";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(29, 493);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(79, 25);
+            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // USTaiKhoanAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.panel29);
             this.Controls.Add(this.pictureBox8);
@@ -537,5 +582,7 @@
         private System.Windows.Forms.Button btn_ReportHD;
         private System.Windows.Forms.Button btn_TimHD;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

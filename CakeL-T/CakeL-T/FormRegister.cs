@@ -34,11 +34,11 @@ namespace CakeL_T
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
             }
-            else if (txt_TenDangNhap.Text.Length < 4)
+            else if (txt_TenDangNhap.Text.Length < 4  || txt_TenDangNhap.Text.Length > 16)
             {
                 MessageBox.Show("Tên đăng nhập chứa ít nhất 4 ký tự và nhiều nhất 16 ký tự");
             }
-            else if (txt_MatKhau.Text.Length < 6)
+            else if (txt_MatKhau.Text.Length < 6 || txt_MatKhau.Text.Length > 20)
             {
                 MessageBox.Show("Mật khẩu chứa ít nhất 6 ký tự và nhiều nhất 20 ký tự");
             }
@@ -101,11 +101,6 @@ namespace CakeL_T
             {
                 e.Handled = true;
             }
-            if(txt_TenDangNhap.Text.Length > 16)
-            {
-                MessageBox.Show("Tên đăng nhập chứa ít nhất 4 ký tự và nhiều nhất 16 ký tự");
-                e.Handled = true;
-            }
         }
 
         private void txt_MatKhau_KeyPress(object sender, KeyPressEventArgs e)
@@ -113,11 +108,6 @@ namespace CakeL_T
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
             if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
             {
-                e.Handled = true;
-            }
-            if (txt_MatKhau.Text.Length > 20)
-            {
-                MessageBox.Show("Mật khẩu chứa ít nhất 4 ký tự và nhiều nhất 16 ký tự");
                 e.Handled = true;
             }
             //if (Control.IsKeyLocked(Keys.CapsLock))
@@ -131,11 +121,6 @@ namespace CakeL_T
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
             if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
             {
-                e.Handled = true;
-            }
-            if (txt_NhapLaiMatKhau.Text.Length > 20)
-            {
-                MessageBox.Show("Mật khẩu chứa ít nhất 4 ký tự và nhiều nhất 16 ký tự");
                 e.Handled = true;
             }
         }

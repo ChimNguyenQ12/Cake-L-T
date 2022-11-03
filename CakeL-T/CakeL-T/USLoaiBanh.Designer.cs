@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USLoaiBanh));
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbChucNangBanh = new System.Windows.Forms.GroupBox();
             this.btn_SuaBanh = new System.Windows.Forms.Button();
             this.btn_XoaBanh = new System.Windows.Forms.Button();
             this.btn_ThemBanh = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.gbBanh = new System.Windows.Forms.GroupBox();
             this.txt_LoaiBanh = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_DonGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_SoLuong = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,34 +57,34 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.dgv_Banh = new System.Windows.Forms.DataGridView();
-            this.groupBox2.SuspendLayout();
+            this.gbChucNangBanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.gbBanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Banh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // gbChucNangBanh
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gbChucNangBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.btn_SuaBanh);
-            this.groupBox2.Controls.Add(this.btn_XoaBanh);
-            this.groupBox2.Controls.Add(this.btn_ThemBanh);
-            this.groupBox2.Controls.Add(this.txt_TimBanh);
-            this.groupBox2.Controls.Add(this.btn_ReportHD);
-            this.groupBox2.Controls.Add(this.btn_TimHD);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(27, 358);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(640, 124);
-            this.groupBox2.TabIndex = 33;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chức năng";
+            this.gbChucNangBanh.Controls.Add(this.btn_SuaBanh);
+            this.gbChucNangBanh.Controls.Add(this.btn_XoaBanh);
+            this.gbChucNangBanh.Controls.Add(this.btn_ThemBanh);
+            this.gbChucNangBanh.Controls.Add(this.txt_TimBanh);
+            this.gbChucNangBanh.Controls.Add(this.btn_ReportHD);
+            this.gbChucNangBanh.Controls.Add(this.btn_TimHD);
+            this.gbChucNangBanh.Controls.Add(this.label16);
+            this.gbChucNangBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbChucNangBanh.Location = new System.Drawing.Point(27, 358);
+            this.gbChucNangBanh.Name = "gbChucNangBanh";
+            this.gbChucNangBanh.Size = new System.Drawing.Size(640, 124);
+            this.gbChucNangBanh.TabIndex = 33;
+            this.gbChucNangBanh.TabStop = false;
+            this.gbChucNangBanh.Text = "Chức năng";
             // 
             // btn_SuaBanh
             // 
@@ -223,33 +223,33 @@
             this.pictureBox20.TabIndex = 30;
             this.pictureBox20.TabStop = false;
             // 
-            // groupBox4
+            // gbBanh
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gbBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.txt_LoaiBanh);
-            this.groupBox4.Controls.Add(this.txt_DonGia);
-            this.groupBox4.Controls.Add(this.txt_SoLuong);
-            this.groupBox4.Controls.Add(this.txt_TenBanh);
-            this.groupBox4.Controls.Add(this.txt_MaBanh);
-            this.groupBox4.Controls.Add(this.pb_Banh);
-            this.groupBox4.Controls.Add(this.dtp_NgayHH);
-            this.groupBox4.Controls.Add(this.dtp_NgaySX);
-            this.groupBox4.Controls.Add(this.label31);
-            this.groupBox4.Controls.Add(this.label30);
-            this.groupBox4.Controls.Add(this.label29);
-            this.groupBox4.Controls.Add(this.label28);
-            this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Controls.Add(this.label26);
-            this.groupBox4.Controls.Add(this.label25);
-            this.groupBox4.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(27, 115);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(632, 237);
-            this.groupBox4.TabIndex = 29;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin bánh";
+            this.gbBanh.Controls.Add(this.txt_LoaiBanh);
+            this.gbBanh.Controls.Add(this.txt_DonGia);
+            this.gbBanh.Controls.Add(this.txt_SoLuong);
+            this.gbBanh.Controls.Add(this.txt_TenBanh);
+            this.gbBanh.Controls.Add(this.txt_MaBanh);
+            this.gbBanh.Controls.Add(this.pb_Banh);
+            this.gbBanh.Controls.Add(this.dtp_NgayHH);
+            this.gbBanh.Controls.Add(this.dtp_NgaySX);
+            this.gbBanh.Controls.Add(this.label31);
+            this.gbBanh.Controls.Add(this.label30);
+            this.gbBanh.Controls.Add(this.label29);
+            this.gbBanh.Controls.Add(this.label28);
+            this.gbBanh.Controls.Add(this.label27);
+            this.gbBanh.Controls.Add(this.label26);
+            this.gbBanh.Controls.Add(this.label25);
+            this.gbBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbBanh.Location = new System.Drawing.Point(27, 115);
+            this.gbBanh.Name = "gbBanh";
+            this.gbBanh.Size = new System.Drawing.Size(632, 237);
+            this.gbBanh.TabIndex = 29;
+            this.gbBanh.TabStop = false;
+            this.gbBanh.Text = "Thông tin bánh";
             // 
             // txt_LoaiBanh
             // 
@@ -509,21 +509,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbChucNangBanh);
             this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox20);
-            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.gbBanh);
             this.Controls.Add(this.dgv_Banh);
             this.Name = "USLoaiBanh";
             this.Size = new System.Drawing.Size(695, 832);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbChucNangBanh.ResumeLayout(false);
+            this.gbChucNangBanh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.gbBanh.ResumeLayout(false);
+            this.gbBanh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Banh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).EndInit();
             this.ResumeLayout(false);
@@ -532,7 +532,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbChucNangBanh;
         private System.Windows.Forms.Button btn_SuaBanh;
         private System.Windows.Forms.Button btn_XoaBanh;
         private System.Windows.Forms.Button btn_ThemBanh;
@@ -543,7 +543,7 @@
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox gbBanh;
         private Guna.UI2.WinForms.Guna2TextBox txt_LoaiBanh;
         private Guna.UI2.WinForms.Guna2TextBox txt_DonGia;
         private Guna.UI2.WinForms.Guna2TextBox txt_SoLuong;

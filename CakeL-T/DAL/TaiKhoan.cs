@@ -22,5 +22,7 @@ namespace DAL
         public string DiaChi { get; set; }
         public string HoTen { get; set; }
         public string SoDienThoai { get; set; }
+        public string HinhAnh { get; set; }
+        public bool TrangThaiXoa { get; set; }
     }
 }

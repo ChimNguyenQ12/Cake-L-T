@@ -46,10 +46,10 @@ namespace CakeL_T
             }
         }
 
-        private void UpdateAccount(int id, string fullname, string username, string password, string address, string phone)
+        private void UpdateAccount(int id, string fullname, string username, string password, string address, string phone, string image)
         {
             AdminBUS adminBUS = new AdminBUS();
-            adminBUS.UpdateAccountById(id, fullname, username, password, address, phone);
+            adminBUS.UpdateAccountById(id, fullname, username, password, address, phone, image);
             LoadData();
         }
 
@@ -110,11 +110,6 @@ namespace CakeL_T
             FormRegister frm =new FormRegister();
             frm.ShowDialog();
             LoadData();
-        }
-
-        private void panel_TaiKhoan_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void FormHomeAdmin_FormClosing(object sender, FormClosingEventArgs e)
@@ -206,7 +201,7 @@ namespace CakeL_T
             var row = dgv_TaiKhoan.SelectedRows[0];
             var cell = row.Cells["Id"];
             int idSelected = Convert.ToInt32(cell.Value);
-            UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txt_SDT.Text);
+            UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txt_SDT.Text, pb_AvatarTK.ToString());
         }
 
         private void dgv_TaiKhoan_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

@@ -13,7 +13,7 @@ namespace DAL
             List<TaiKhoan> listAccount = new List<TaiKhoan>();
             using (CakeEntities cakeEntities = new CakeEntities())
             {
-                var tbAccount = cakeEntities.TaiKhoans.Where(x => x.TrangThai == true).ToList();
+                var tbAccount = cakeEntities.TaiKhoans.Where(x => x.TrangThaiXoa == false).ToList();
                 foreach (var i in tbAccount)
                 {
                     TaiKhoan account = new TaiKhoan();
@@ -25,6 +25,7 @@ namespace DAL
                     account.LoaiTK = i.LoaiTK;
                     account.SoDienThoai = i.SoDienThoai;
                     account.TrangThai = i.TrangThai;
+                    //account.TrangThaiXoa = i.TrangThaiXoa;
 
                     listAccount.Add(account);
                 }
@@ -43,7 +44,7 @@ namespace DAL
 
         }
 
-        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone)
+        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, string image)
         {
             using (CakeEntities cakeEntities = new CakeEntities())
             {
@@ -53,6 +54,7 @@ namespace DAL
                 accountCurrent.DiaChi = address;
                 accountCurrent.SoDienThoai = phone;
                 accountCurrent.TenTK = username;
+                accountCurrent.HinhAnh = image;
 
                 cakeEntities.SaveChanges();
             }
@@ -64,7 +66,7 @@ namespace DAL
             using (CakeEntities cakeEntities = new CakeEntities())
             {
                 var accountCurrent = cakeEntities.TaiKhoans.Where(x => x.Id == id).FirstOrDefault();
-                accountCurrent.TrangThai = false;
+                accountCurrent.TrangThaiXoa = true;
                 cakeEntities.SaveChanges();
             }
 

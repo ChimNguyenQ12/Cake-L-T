@@ -4,9 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f1f50a08211e4ca584e7b74e552d352f" Name="Diagram1">
-        <EntityTypeShape EntityType="CakeModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-      </Diagram>
+      <Diagram DiagramId="d0fd5441ce5047c9aea4ec74ec049b9b" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.TaiKhoan" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="5.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.Banh" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="Model.CTHoaDon" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.HinhAnh" Width="1.5" PointX="5.25" PointY="1.625" />
+        <EntityTypeShape EntityType="Model.HoaDon" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.KhachHang" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.LoaiBanh" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="Model.NhanVien" Width="1.5" PointX="8.75" PointY="6.75" />
+        <AssociationConnector Association="Model.FK_Banh_LoaiBanh" />
+        <AssociationConnector Association="Model.FK_HinhAnh_Banh" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

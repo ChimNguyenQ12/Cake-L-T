@@ -32,12 +32,12 @@ namespace BLL
             }
         }
 
-        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone)
+        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, string image)
         {
             try
             {
                 AdminDAL adminDAL = new AdminDAL();
-                adminDAL.UpdateAccountById(id, fullname, username, password, address, phone);
+                adminDAL.UpdateAccountById(id, fullname, username, password, address, phone, image);
             }
             catch (Exception)
             {

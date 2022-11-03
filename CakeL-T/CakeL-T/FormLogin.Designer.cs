@@ -156,6 +156,7 @@
             this.txt_TenDangNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_TenDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TenDangNhap.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_TenDangNhap.ForeColor = System.Drawing.Color.Black;
             this.txt_TenDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TenDangNhap.Location = new System.Drawing.Point(425, 162);
             this.txt_TenDangNhap.Name = "txt_TenDangNhap";
@@ -184,6 +185,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 2;
             this.guna2Button1.Text = "Đăng Nhập";
+            this.guna2Button1.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // FormLogin
             // 
