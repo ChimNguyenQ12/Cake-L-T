@@ -26,5 +26,10 @@ namespace CakeL_T
         {
             InitializeComponent();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

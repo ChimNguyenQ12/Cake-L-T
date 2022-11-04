@@ -705,7 +705,6 @@
             resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Name = "btnClear";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txt_TrangThai
             // 
@@ -820,7 +819,6 @@
             resources.ApplyResources(this.pb_AvatarTK, "pb_AvatarTK");
             this.pb_AvatarTK.Name = "pb_AvatarTK";
             this.pb_AvatarTK.TabStop = false;
-            this.pb_AvatarTK.Click += new System.EventHandler(this.pb_AvatarTK_Click);
             // 
             // label23
             // 
@@ -872,14 +870,12 @@
             resources.ApplyResources(this.btn_XoaTK, "btn_XoaTK");
             this.btn_XoaTK.Name = "btn_XoaTK";
             this.btn_XoaTK.UseVisualStyleBackColor = true;
-            this.btn_XoaTK.Click += new System.EventHandler(this.btn_XoaTK_Click);
             // 
             // btn_SuaTK
             // 
             resources.ApplyResources(this.btn_SuaTK, "btn_SuaTK");
             this.btn_SuaTK.Name = "btn_SuaTK";
             this.btn_SuaTK.UseVisualStyleBackColor = true;
-            this.btn_SuaTK.Click += new System.EventHandler(this.btn_SuaTK_Click);
             // 
             // label17
             // 
@@ -912,7 +908,6 @@
             this.dgv_TaiKhoan.RowHeadersVisible = false;
             this.dgv_TaiKhoan.RowTemplate.Height = 24;
             this.dgv_TaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_TaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick_1);
             // 
             // pictureBox8
             // 

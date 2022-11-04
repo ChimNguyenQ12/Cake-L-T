@@ -84,5 +84,20 @@ namespace BLL
             }
             return "success";
         }
+
+        public List<Banh> SearchCake(string key)
+        {
+            try
+            {
+                List<Banh> cakeSearch = new List<Banh>();
+                BanhDAL banhDAL = new BanhDAL();
+                cakeSearch = banhDAL.SearchCake(key);
+                return cakeSearch;
+            }
+            catch (Exception)
+            {
+                throw new Exception("error");
+            }
+        }
     }
 }

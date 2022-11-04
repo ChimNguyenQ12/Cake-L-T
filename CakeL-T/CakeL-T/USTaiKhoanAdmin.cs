@@ -13,6 +13,7 @@ namespace CakeL_T
 {
     public partial class USTaiKhoanAdmin : UserControl
     {
+        AdminBUS adminBUS = new AdminBUS();
         string fileName;
         private static USTaiKhoanAdmin instance;
         public static USTaiKhoanAdmin Instance
@@ -31,29 +32,31 @@ namespace CakeL_T
         }
         private void LoadData()
         {
+            txtTimSDT.Text = "";
+            txt_TimTK.Text = "Tìm kiếm tài khoản...";
             AdminBUS adminBUS = new AdminBUS();
             dgv_TaiKhoan.DataSource = adminBUS.GetAccounts();
             dgv_TaiKhoan.Columns["Id"].Visible = false;
             dgv_TaiKhoan.Columns["HinhAnh"].Visible = false;
+            dgv_TaiKhoan.Columns["TrangThaiXoa"].Visible = false;
             DataGridViewRow row = this.dgv_TaiKhoan.Rows[0];
             txt_DiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             txt_MatKhau.Text = row.Cells["MatKhau"].Value.ToString();
             txt_TenNV.Text = row.Cells["HoTen"].Value.ToString();
-            txt_SDT.Text = row.Cells["SoDienThoai"].Value.ToString();
+            txtTimTen.Text = row.Cells["SoDienThoai"].Value.ToString();
             txt_TenTK.Text = row.Cells["TenTK"].Value.ToString();
         }
 
         private void Clear()
         {
             txt_DiaChi.Text = "";
-            txt_SDT.Text = "";
+            txtTimTen.Text = "";
             txt_TenNV.Text = "";
-            txt_TrangThai.Text = "";
+            radioTimActive.Checked = true;
         }
 
         private void GetAccountById(int id)
         {
-            AdminBUS adminBUS = new AdminBUS();
             var accountById = adminBUS.GetAccountById(id);
             if (accountById == null)
             {
@@ -61,16 +64,14 @@ namespace CakeL_T
             }
         }
 
-        private void UpdateAccount(int id, string fullname, string username, string password, string address, string phone, string image)
+        private void UpdateAccount(int id, string fullname, string username, string password, string address, string phone, string image, bool status)
         {
-            AdminBUS adminBUS = new AdminBUS();
-            adminBUS.UpdateAccountById(id, fullname, username, password, address, phone, image);
+            adminBUS.UpdateAccountById(id, fullname, username, password, address, phone, image, status);
             LoadData();
         }
 
         private void DeleteAccount(int id)
         {
-            AdminBUS adminBUS = new AdminBUS();
             adminBUS.DeleteAccountById(id);
             LoadData();
         }
@@ -87,17 +88,13 @@ namespace CakeL_T
             var row = dgv_TaiKhoan.SelectedRows[0];
             var cell = row.Cells["Id"];
             int idSelected = Convert.ToInt32(cell.Value);
-            var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản này?",
-                                     "Xác nhận xóa!!",
-                                     MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa tài khoản {txt_TenTK.Text}?",
+                                     "Xác nhận xóa",
+                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (confirmResult == DialogResult.Yes)
             {
                 DeleteAccount(idSelected);
-                MessageBox.Show("Xóa tài khoản thành công");
-            }
-            else
-            {
-               
+                MessageBox.Show($"Tài khoản {txt_TenTK.Text} đã được xóa","Xóa tài khoản");
             }
         }
 
@@ -117,7 +114,18 @@ namespace CakeL_T
                 var cell = row.Cells["Id"];
                 int idSelected = Convert.ToInt32(cell.Value);
                 string image = pb_AvatarTK.ToString();
-                UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txt_SDT.Text, image);
+                bool status;
+                if (radioTimActive.Checked)
+                {
+                    status = true;
+                    UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txtTimTen.Text, image, status);
+                }
+                else if( radioTimUnactive.Checked)
+                {
+                    status = false;
+                    UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txtTimTen.Text, image, status);
+                }
+                MessageBox.Show($"Sửa tài khoản {txt_TenTK.Text} thành công!", "Sửa tài khoản");
             }
         }
 
@@ -127,8 +135,15 @@ namespace CakeL_T
             txt_DiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             txt_MatKhau.Text = row.Cells["MatKhau"].Value.ToString();
             txt_TenNV.Text = row.Cells["HoTen"].Value.ToString();
-            txt_SDT.Text = row.Cells["SoDienThoai"].Value.ToString();
+            txtTimTen.Text = row.Cells["SoDienThoai"].Value.ToString();
             txt_TenTK.Text = row.Cells["TenTK"].Value.ToString();
+            txt_SDT.Text = row.Cells["SoDienThoai"].Value.ToString();
+            if (Convert.ToBoolean(row.Cells["TrangThai"].Value) == true)
+            {
+                radioActive.Checked = true;
+            }
+            else 
+            radioUnactive.Checked =  true;
         }
 
         private void pb_AvatarTK_Click(object sender, EventArgs e)
@@ -160,6 +175,50 @@ namespace CakeL_T
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void txt_TimTK_TextChanged(object sender, EventArgs e)
+        {
+            dgv_TaiKhoan.DataSource = adminBUS.SearchAccount(txt_TimTK.Text);
+        }
+
+        private void btnEyes_MouseDown(object sender, MouseEventArgs e)
+        {
+            txt_MatKhau.PasswordChar = (char)0;
+        }
+
+        private void btnEyes_MouseUp(object sender, MouseEventArgs e)
+        {
+            txt_MatKhau.PasswordChar = '*';
+        }
+
+        private void dgv_TaiKhoan_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 2 && e.Value != null)
+            {
+                e.Value = new String('*', e.Value.ToString().Length);
+            }
+        }
+
+        private void txt_TimTK_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txt_TimTK.Text == "Tìm kiếm tài khoản...")
+                txt_TimTK.Text = "";
+        }
+
+        private void btn_TimTK_Click(object sender, EventArgs e)
+        {
+            bool status;
+            if(radioTimActive.Checked == true)
+            {
+                status = true;
+                dgv_TaiKhoan.DataSource = adminBUS.SearchAccountMulti(txtTimTen.Text,txtTimSDT.Text, status);
+            }
+            else
+            {
+                status = false;
+                dgv_TaiKhoan.DataSource = adminBUS.SearchAccountMulti(txtTimTen.Text, txtTimSDT.Text, status);
+            }
         }
     }
 }

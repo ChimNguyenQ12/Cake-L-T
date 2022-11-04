@@ -8,11 +8,11 @@ namespace DAL
 {
     public class BanhDAL
     {
+        CakeEntities cakeEntities = new CakeEntities();
         public List<Banh> GetCakes()
         {
             List<Banh> listCake = new List<Banh>();
-            using (CakeEntities cakeEntities = new CakeEntities())
-            {
+           
                 var tbCake = cakeEntities.Banhs.Where(x => x.TrangThaiXoa == false).ToList();
                 foreach (var i in tbCake)
                 {
@@ -28,26 +28,20 @@ namespace DAL
                     cake.TrangThaiXoa = i.TrangThaiXoa;
 
                     listCake.Add(cake);
-                }
             }
             return listCake;
         }
 
         public List<Banh> GetCakeById(int code)
         {
-            List<Banh> cake = new List<Banh>();
-            using (CakeEntities cakeEntities = new CakeEntities())
-            {
+                List<Banh> cake = new List<Banh>();
                 cake = cakeEntities.Banhs.Where(x => x.MaBanh == code).ToList();
-            }
-            return cake;
+                return cake;
 
         }
 
         public void UpdateCakeById(int code, int category, string name, int quanity, int price, DateTime dateManu, DateTime dateExpire, string image)
         {
-            using (CakeEntities cakeEntities = new CakeEntities())
-            {
                 var cakeCurrent = cakeEntities.Banhs.Where(x => x.MaBanh == code).FirstOrDefault();
                 cakeCurrent.LoaiBanh = category;
                 cakeCurrent.TenBanh = name;
@@ -58,25 +52,17 @@ namespace DAL
                 cakeCurrent.HinhAnh = image;
 
                 cakeEntities.SaveChanges();
-            }
-
         }
 
         public void DeleteCakeById(int code)
         {
-            using (CakeEntities cakeEntities = new CakeEntities())
-            {
                 var cakeCurrent = cakeEntities.Banhs.Where(x => x.MaBanh == code).FirstOrDefault();
                 cakeCurrent.TrangThaiXoa = true;
                 cakeEntities.SaveChanges();
-            }
-
         }
 
         public string AddCake(int code, int category, string name, int quanity, int price, DateTime dateManu, DateTime dateExpire, string image)
         {
-            using (CakeEntities cakeEntities = new CakeEntities())
-            {
                 cakeEntities.Banhs.Add(new Banh()
                 {
                     MaBanh = code,
@@ -90,8 +76,15 @@ namespace DAL
                     HinhAnh = image
                 });
                 cakeEntities.SaveChanges();
-            }
             return "success";
+        }
+
+        public List<Banh> SearchCake(string key)
+        {
+            List<Banh> accountBanh = new List<Banh>();
+            accountBanh = cakeEntities.Banhs.Where(x => x.TenBanh.Contains(key) && x.TrangThaiXoa == false)
+                                                .ToList();
+            return accountBanh;
         }
     }
 }

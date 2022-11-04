@@ -8,11 +8,10 @@ namespace DAL
 {
     public class AdminDAL
     {
+        CakeEntities cakeEntities = new CakeEntities();
         public List<TaiKhoan> GetAccounts()
         {
             List<TaiKhoan> listAccount = new List<TaiKhoan>();
-            using (CakeEntities cakeEntities = new CakeEntities())
-            {
                 var tbAccount = cakeEntities.TaiKhoans.Where(x => x.TrangThaiXoa == false).ToList();
                 foreach (var i in tbAccount)
                 {
@@ -25,29 +24,23 @@ namespace DAL
                     account.LoaiTK = i.LoaiTK;
                     account.SoDienThoai = i.SoDienThoai;
                     account.TrangThai = i.TrangThai;
-                    //account.TrangThaiXoa = i.TrangThaiXoa;
+                    account.TrangThaiXoa = i.TrangThaiXoa;
 
                     listAccount.Add(account);
                 }
-            }
             return listAccount;
         }
 
         public List<TaiKhoan> GetAccountById(int id)
         {
             List<TaiKhoan> account = new List<TaiKhoan>();
-            using (CakeEntities cakeEntities = new CakeEntities())
-            {
                 account = cakeEntities.TaiKhoans.Where(x => x.Id == id).ToList();
-            }
             return account;
 
         }
 
-        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, string image)
+        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, string image, bool status)
         {
-            using (CakeEntities cakeEntities = new CakeEntities())
-            {
                 var accountCurrent = cakeEntities.TaiKhoans.Where(x => x.Id == id).FirstOrDefault();
                 accountCurrent.HoTen = fullname;
                 accountCurrent.MatKhau = password;
@@ -55,21 +48,34 @@ namespace DAL
                 accountCurrent.SoDienThoai = phone;
                 accountCurrent.TenTK = username;
                 accountCurrent.HinhAnh = image;
+                accountCurrent.TrangThai = status;
 
                 cakeEntities.SaveChanges();
-            }
-
         }
 
         public void DeleteAccountById(int id)
         {
-            using (CakeEntities cakeEntities = new CakeEntities())
-            {
                 var accountCurrent = cakeEntities.TaiKhoans.Where(x => x.Id == id).FirstOrDefault();
                 accountCurrent.TrangThaiXoa = true;
                 cakeEntities.SaveChanges();
-            }
+        }
 
+        public List<TaiKhoan> SearchAccount(string key)
+        {
+            List<TaiKhoan> accountSearch = new List<TaiKhoan>();
+            accountSearch = cakeEntities.TaiKhoans.Where(x => x.TenTK.Contains(key) && x.TrangThaiXoa == false || x.DiaChi.Contains(key) && x.TrangThaiXoa == false || x.SoDienThoai.Contains(key) && x.TrangThaiXoa == false)
+                                                .ToList();
+            return accountSearch;
+        }
+
+        public List<TaiKhoan> SearchAccountMulti(string name,string phone, bool status)
+        {
+            List<TaiKhoan> accountSearch = new List<TaiKhoan>();
+            accountSearch = cakeEntities.TaiKhoans.Where(x => x.HoTen.Contains(name) && x.TrangThaiXoa == false)
+                                                  .Where(x => x.SoDienThoai.Contains(phone) && x.TrangThaiXoa == false)
+                                                  .Where(x => x.TrangThai == status && x.TrangThaiXoa == false)
+                                                .ToList();
+            return accountSearch;
         }
     }
 }

@@ -57,6 +57,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.dgv_Banh = new System.Windows.Forms.DataGridView();
+            this.btnClearLoaiBanh = new System.Windows.Forms.Button();
             this.gbChucNangBanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -229,6 +230,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbBanh.Controls.Add(this.txt_LoaiBanh);
+            this.gbBanh.Controls.Add(this.btnClearLoaiBanh);
             this.gbBanh.Controls.Add(this.txt_DonGia);
             this.gbBanh.Controls.Add(this.txt_SoLuong);
             this.gbBanh.Controls.Add(this.txt_TenBanh);
@@ -505,6 +507,23 @@
             this.dgv_Banh.Size = new System.Drawing.Size(632, 297);
             this.dgv_Banh.TabIndex = 28;
             // 
+            // btnClearLoaiBanh
+            // 
+            this.btnClearLoaiBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearLoaiBanh.Image = ((System.Drawing.Image)(resources.GetObject("btnClearLoaiBanh.Image")));
+            this.btnClearLoaiBanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClearLoaiBanh.Location = new System.Drawing.Point(597, 204);
+            this.btnClearLoaiBanh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearLoaiBanh.Name = "btnClearLoaiBanh";
+            this.btnClearLoaiBanh.Size = new System.Drawing.Size(30, 28);
+            this.btnClearLoaiBanh.TabIndex = 1;
+            this.btnClearLoaiBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearLoaiBanh.UseVisualStyleBackColor = true;
+            this.btnClearLoaiBanh.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // USLoaiBanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,5 +579,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DataGridView dgv_Banh;
+        private System.Windows.Forms.Button btnClearLoaiBanh;
     }
 }

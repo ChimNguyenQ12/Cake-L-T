@@ -20,7 +20,8 @@ namespace DAL
                     HoTen = fullname,
                     SoDienThoai = phone,
                     TrangThai = true,
-                    LoaiTK = false
+                    LoaiTK = false,
+                    TrangThaiXoa = false,
                 });
                 cakeEntities.SaveChanges();
             }

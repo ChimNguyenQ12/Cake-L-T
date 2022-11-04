@@ -38,6 +38,7 @@
             this.gbBanh = new System.Windows.Forms.GroupBox();
             this.txt_LoaiBanh = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_DonGia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnClearBanh = new System.Windows.Forms.Button();
             this.txt_SoLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnQLLBImage = new System.Windows.Forms.Button();
             this.txt_TenBanh = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,11 +56,16 @@
             this.gbLoaiBanh = new System.Windows.Forms.GroupBox();
             this.txtTenLoaiBanh = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaLoaiBanh = new Guna.UI2.WinForms.Guna2TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblTenLoaiBanh = new System.Windows.Forms.Label();
             this.lblMaLoaiBanh = new System.Windows.Forms.Label();
             this.dgv_Banh = new System.Windows.Forms.DataGridView();
             this.gbChucNangBanh = new System.Windows.Forms.GroupBox();
             this.btnQuanLyLoaiBanh = new System.Windows.Forms.Button();
+            this.btn_ReportHD = new System.Windows.Forms.Button();
+            this.btn_TimHD = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_TimBanh = new System.Windows.Forms.TextBox();
             this.gbChucNangLoaiBanh = new System.Windows.Forms.GroupBox();
             this.btnQuanLyBanh = new System.Windows.Forms.Button();
             this.btnSuaLoaiBanh = new System.Windows.Forms.Button();
@@ -69,10 +75,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_TimBanh = new System.Windows.Forms.TextBox();
-            this.btn_ReportHD = new System.Windows.Forms.Button();
-            this.btn_TimHD = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
             this.dgvLoaiBanh = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
@@ -187,6 +189,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbBanh.Controls.Add(this.txt_LoaiBanh);
             this.gbBanh.Controls.Add(this.txt_DonGia);
+            this.gbBanh.Controls.Add(this.btnClearBanh);
             this.gbBanh.Controls.Add(this.txt_SoLuong);
             this.gbBanh.Controls.Add(this.btnQLLBImage);
             this.gbBanh.Controls.Add(this.txt_TenBanh);
@@ -257,6 +260,23 @@
             this.txt_DonGia.Size = new System.Drawing.Size(166, 31);
             this.txt_DonGia.TabIndex = 10;
             // 
+            // btnClearBanh
+            // 
+            this.btnClearBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearBanh.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearBanh.Image = ((System.Drawing.Image)(resources.GetObject("btnClearBanh.Image")));
+            this.btnClearBanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClearBanh.Location = new System.Drawing.Point(597, 204);
+            this.btnClearBanh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearBanh.Name = "btnClearBanh";
+            this.btnClearBanh.Size = new System.Drawing.Size(30, 28);
+            this.btnClearBanh.TabIndex = 1;
+            this.btnClearBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearBanh.UseVisualStyleBackColor = true;
+            this.btnClearBanh.Click += new System.EventHandler(this.btnClearBanh_Click);
+            // 
             // txt_SoLuong
             // 
             this.txt_SoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -291,10 +311,10 @@
             this.btnQLLBImage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLLBImage.Image = ((System.Drawing.Image)(resources.GetObject("btnQLLBImage.Image")));
             this.btnQLLBImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLLBImage.Location = new System.Drawing.Point(594, 27);
+            this.btnQLLBImage.Location = new System.Drawing.Point(589, 27);
             this.btnQLLBImage.Margin = new System.Windows.Forms.Padding(0);
             this.btnQLLBImage.Name = "btnQLLBImage";
-            this.btnQLLBImage.Size = new System.Drawing.Size(35, 29);
+            this.btnQLLBImage.Size = new System.Drawing.Size(33, 29);
             this.btnQLLBImage.TabIndex = 0;
             this.btnQLLBImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLLBImage.UseVisualStyleBackColor = false;
@@ -483,6 +503,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbLoaiBanh.Controls.Add(this.txtTenLoaiBanh);
             this.gbLoaiBanh.Controls.Add(this.txtMaLoaiBanh);
+            this.gbLoaiBanh.Controls.Add(this.button1);
             this.gbLoaiBanh.Controls.Add(this.lblTenLoaiBanh);
             this.gbLoaiBanh.Controls.Add(this.lblMaLoaiBanh);
             this.gbLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -509,12 +530,12 @@
             this.txtTenLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
             this.txtTenLoaiBanh.ForeColor = System.Drawing.Color.Black;
             this.txtTenLoaiBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenLoaiBanh.Location = new System.Drawing.Point(185, 104);
+            this.txtTenLoaiBanh.Location = new System.Drawing.Point(231, 99);
             this.txtTenLoaiBanh.Name = "txtTenLoaiBanh";
             this.txtTenLoaiBanh.PasswordChar = '\0';
             this.txtTenLoaiBanh.PlaceholderText = "";
             this.txtTenLoaiBanh.SelectedText = "";
-            this.txtTenLoaiBanh.Size = new System.Drawing.Size(166, 31);
+            this.txtTenLoaiBanh.Size = new System.Drawing.Size(166, 28);
             this.txtTenLoaiBanh.TabIndex = 8;
             // 
             // txtMaLoaiBanh
@@ -533,13 +554,30 @@
             this.txtMaLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
             this.txtMaLoaiBanh.ForeColor = System.Drawing.Color.Black;
             this.txtMaLoaiBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaLoaiBanh.Location = new System.Drawing.Point(187, 58);
+            this.txtMaLoaiBanh.Location = new System.Drawing.Point(233, 53);
             this.txtMaLoaiBanh.Name = "txtMaLoaiBanh";
             this.txtMaLoaiBanh.PasswordChar = '\0';
             this.txtMaLoaiBanh.PlaceholderText = "";
             this.txtMaLoaiBanh.SelectedText = "";
-            this.txtMaLoaiBanh.Size = new System.Drawing.Size(166, 31);
+            this.txtMaLoaiBanh.Size = new System.Drawing.Size(166, 28);
             this.txtMaLoaiBanh.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(597, 204);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 28);
+            this.button1.TabIndex = 1;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnClearBanh_Click);
             // 
             // lblTenLoaiBanh
             // 
@@ -548,7 +586,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTenLoaiBanh.AutoSize = true;
             this.lblTenLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenLoaiBanh.Location = new System.Drawing.Point(43, 108);
+            this.lblTenLoaiBanh.Location = new System.Drawing.Point(110, 104);
             this.lblTenLoaiBanh.Name = "lblTenLoaiBanh";
             this.lblTenLoaiBanh.Size = new System.Drawing.Size(108, 22);
             this.lblTenLoaiBanh.TabIndex = 0;
@@ -561,7 +599,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMaLoaiBanh.AutoSize = true;
             this.lblMaLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaLoaiBanh.Location = new System.Drawing.Point(41, 62);
+            this.lblMaLoaiBanh.Location = new System.Drawing.Point(108, 58);
             this.lblMaLoaiBanh.Name = "lblMaLoaiBanh";
             this.lblMaLoaiBanh.Size = new System.Drawing.Size(106, 22);
             this.lblMaLoaiBanh.TabIndex = 0;
@@ -593,7 +631,6 @@
             this.gbChucNangBanh.Controls.Add(this.btn_SuaBanh);
             this.gbChucNangBanh.Controls.Add(this.btn_XoaBanh);
             this.gbChucNangBanh.Controls.Add(this.btn_ThemBanh);
-            this.gbChucNangBanh.Controls.Add(this.txt_TimBanh);
             this.gbChucNangBanh.Controls.Add(this.btn_ReportHD);
             this.gbChucNangBanh.Controls.Add(this.btn_TimHD);
             this.gbChucNangBanh.Controls.Add(this.label16);
@@ -622,6 +659,56 @@
             this.btnQuanLyLoaiBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuanLyLoaiBanh.UseVisualStyleBackColor = true;
             this.btnQuanLyLoaiBanh.Click += new System.EventHandler(this.btnQuanLyLoaiBanh_Click);
+            // 
+            // btn_ReportHD
+            // 
+            this.btn_ReportHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ReportHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportHD.Image")));
+            this.btn_ReportHD.Location = new System.Drawing.Point(483, 80);
+            this.btn_ReportHD.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ReportHD.Name = "btn_ReportHD";
+            this.btn_ReportHD.Size = new System.Drawing.Size(109, 34);
+            this.btn_ReportHD.TabIndex = 5;
+            this.btn_ReportHD.Text = "Report";
+            this.btn_ReportHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ReportHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ReportHD.UseVisualStyleBackColor = true;
+            // 
+            // btn_TimHD
+            // 
+            this.btn_TimHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_TimHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TimHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimHD.Image")));
+            this.btn_TimHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_TimHD.Location = new System.Drawing.Point(483, 39);
+            this.btn_TimHD.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_TimHD.Name = "btn_TimHD";
+            this.btn_TimHD.Size = new System.Drawing.Size(109, 29);
+            this.btn_TimHD.TabIndex = 1;
+            this.btn_TimHD.Text = "Tìm Kiếm";
+            this.btn_TimHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_TimHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_TimHD.UseVisualStyleBackColor = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(34, 50);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(150, 18);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Nhập thông tin bánh:";
+            // 
+            // txt_TimBanh
+            // 
+            this.txt_TimBanh.Location = new System.Drawing.Point(123, 509);
+            this.txt_TimBanh.Name = "txt_TimBanh";
+            this.txt_TimBanh.Size = new System.Drawing.Size(257, 20);
+            this.txt_TimBanh.TabIndex = 0;
+            this.txt_TimBanh.Text = "Tìm kiếm bánh...";
+            this.txt_TimBanh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txt_TimBanh_MouseClick);
+            this.txt_TimBanh.TextChanged += new System.EventHandler(this.txt_TimBanh_TextChanged);
             // 
             // gbChucNangLoaiBanh
             // 
@@ -761,53 +848,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Nhập thông tin loại bánh:";
             // 
-            // txt_TimBanh
-            // 
-            this.txt_TimBanh.Location = new System.Drawing.Point(218, 39);
-            this.txt_TimBanh.Name = "txt_TimBanh";
-            this.txt_TimBanh.Size = new System.Drawing.Size(257, 29);
-            this.txt_TimBanh.TabIndex = 0;
-            // 
-            // btn_ReportHD
-            // 
-            this.btn_ReportHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ReportHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportHD.Image")));
-            this.btn_ReportHD.Location = new System.Drawing.Point(483, 80);
-            this.btn_ReportHD.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ReportHD.Name = "btn_ReportHD";
-            this.btn_ReportHD.Size = new System.Drawing.Size(109, 34);
-            this.btn_ReportHD.TabIndex = 5;
-            this.btn_ReportHD.Text = "Report";
-            this.btn_ReportHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ReportHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ReportHD.UseVisualStyleBackColor = true;
-            // 
-            // btn_TimHD
-            // 
-            this.btn_TimHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_TimHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TimHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimHD.Image")));
-            this.btn_TimHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TimHD.Location = new System.Drawing.Point(483, 39);
-            this.btn_TimHD.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_TimHD.Name = "btn_TimHD";
-            this.btn_TimHD.Size = new System.Drawing.Size(109, 29);
-            this.btn_TimHD.TabIndex = 1;
-            this.btn_TimHD.Text = "Tìm Kiếm";
-            this.btn_TimHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_TimHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_TimHD.UseVisualStyleBackColor = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(34, 50);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(150, 18);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Nhập thông tin bánh:";
-            // 
             // dgvLoaiBanh
             // 
             this.dgvLoaiBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -848,6 +888,7 @@
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.txt_TimBanh);
             this.Controls.Add(this.gbChucNangLoaiBanh);
             this.Controls.Add(this.dgv_Banh);
             this.Controls.Add(this.dgvLoaiBanh);
@@ -871,6 +912,7 @@
             this.gbChucNangLoaiBanh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiBanh)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -921,5 +963,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvLoaiBanh;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnClearBanh;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -32,12 +32,12 @@ namespace BLL
             }
         }
 
-        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, string image)
+        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, string image, bool status)
         {
             try
             {
                 AdminDAL adminDAL = new AdminDAL();
-                adminDAL.UpdateAccountById(id, fullname, username, password, address, phone, image);
+                adminDAL.UpdateAccountById(id, fullname, username, password, address, phone, image, status);
             }
             catch (Exception)
             {
@@ -51,6 +51,36 @@ namespace BLL
             {
                 AdminDAL adminDAL = new AdminDAL();
                 adminDAL.DeleteAccountById(id);
+            }
+            catch (Exception)
+            {
+                throw new Exception("error");
+            }
+        }
+
+        public List<TaiKhoan> SearchAccount(string key)
+        {
+            try
+            {
+                List<TaiKhoan> accountSearch = new List<TaiKhoan>();
+                AdminDAL adminDAL = new AdminDAL();
+                accountSearch = adminDAL.SearchAccount(key);
+                return accountSearch;
+            }
+            catch (Exception)
+            {
+                throw new Exception("error");
+            }
+        }
+
+        public List<TaiKhoan> SearchAccountMulti(string name, string phone, bool status)
+        {
+            try
+            {
+                List<TaiKhoan> accountSearch = new List<TaiKhoan>();
+                AdminDAL adminDAL = new AdminDAL();
+                accountSearch = adminDAL.SearchAccountMulti(name,phone, status);
+                return accountSearch;
             }
             catch (Exception)
             {
