@@ -99,5 +99,20 @@ namespace BLL
                 throw new Exception("error");
             }
         }
+
+        public List<Banh> SearchCakeMulti(int price, int codeCategory, DateTime dateManu,DateTime dateExpire)
+        {
+            try
+            {
+                List<Banh> cakeSearch = new List<Banh>();
+                BanhDAL banhDAL = new BanhDAL();
+                cakeSearch = banhDAL.SearchCakeMulti(price,codeCategory,dateManu,dateExpire);
+                return cakeSearch;
+            }
+            catch (Exception)
+            {
+                throw new Exception("error");
+            }
+        }
     }
 }

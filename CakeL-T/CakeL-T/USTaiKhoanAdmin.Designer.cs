@@ -31,9 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USTaiKhoanAdmin));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioActive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.btnEyes = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.radioUnactive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TenTK = new Guna.UI2.WinForms.Guna2TextBox();
@@ -41,6 +44,8 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -67,11 +72,13 @@
             this.txt_TimTK = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioUnactive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.radioActive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.tentk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarTK)).BeginInit();
             this.panel29.SuspendLayout();
@@ -113,6 +120,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin tài khoản";
             // 
+            // radioActive
+            // 
+            this.radioActive.BackColor = System.Drawing.Color.Transparent;
+            this.radioActive.Checked = true;
+            this.radioActive.CheckedState.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioActive.CheckedState.BorderThickness = 0;
+            this.radioActive.CheckedState.FillColor = System.Drawing.Color.Lime;
+            this.radioActive.CheckedState.InnerColor = System.Drawing.Color.Snow;
+            this.radioActive.Location = new System.Drawing.Point(417, 182);
+            this.radioActive.Name = "radioActive";
+            this.radioActive.Size = new System.Drawing.Size(20, 20);
+            this.radioActive.TabIndex = 6;
+            this.radioActive.Text = "guna2CustomRadioButton1";
+            this.radioActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioActive.UncheckedState.BorderThickness = 2;
+            this.radioActive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.radioActive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
             // btnEyes
             // 
             this.btnEyes.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,6 +167,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // txt_SDT
+            // 
+            this.txt_SDT.AcceptsReturn = true;
+            this.txt_SDT.BorderRadius = 15;
+            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SDT.DefaultText = "";
+            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SDT.ForeColor = System.Drawing.Color.Black;
+            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Location = new System.Drawing.Point(417, 130);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.PasswordChar = '\0';
+            this.txt_SDT.PlaceholderText = "";
+            this.txt_SDT.SelectedText = "";
+            this.txt_SDT.Size = new System.Drawing.Size(160, 31);
+            this.txt_SDT.TabIndex = 4;
+            // 
             // txt_DiaChi
             // 
             this.txt_DiaChi.BorderRadius = 15;
@@ -162,6 +209,22 @@
             this.txt_DiaChi.SelectedText = "";
             this.txt_DiaChi.Size = new System.Drawing.Size(160, 31);
             this.txt_DiaChi.TabIndex = 3;
+            // 
+            // radioUnactive
+            // 
+            this.radioUnactive.CheckedState.BorderColor = System.Drawing.Color.Red;
+            this.radioUnactive.CheckedState.BorderThickness = 0;
+            this.radioUnactive.CheckedState.FillColor = System.Drawing.Color.Red;
+            this.radioUnactive.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.radioUnactive.Location = new System.Drawing.Point(517, 182);
+            this.radioUnactive.Name = "radioUnactive";
+            this.radioUnactive.Size = new System.Drawing.Size(20, 20);
+            this.radioUnactive.TabIndex = 6;
+            this.radioUnactive.Text = "guna2CustomRadioButton1";
+            this.radioUnactive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioUnactive.UncheckedState.BorderThickness = 2;
+            this.radioUnactive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.radioUnactive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // txt_MatKhau
             // 
@@ -269,6 +332,26 @@
             this.label21.Size = new System.Drawing.Size(54, 18);
             this.label21.TabIndex = 0;
             this.label21.Text = "Địa Chỉ:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(443, 182);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 18);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Hoạt động";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(543, 182);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 18);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Khóa";
             // 
             // label20
             // 
@@ -448,6 +531,8 @@
             // 
             // dgv_TaiKhoan
             // 
+            this.dgv_TaiKhoan.AllowDrop = true;
+            this.dgv_TaiKhoan.AllowUserToOrderColumns = true;
             this.dgv_TaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -455,6 +540,14 @@
             this.dgv_TaiKhoan.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_TaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_TaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TaiKhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tentk,
+            this.MatKhau,
+            this.hoten,
+            this.SoDienThoai,
+            this.DiaChi,
+            this.LoaiTK,
+            this.Trangthai});
             this.dgv_TaiKhoan.Location = new System.Drawing.Point(3, 2);
             this.dgv_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TaiKhoan.Name = "dgv_TaiKhoan";
@@ -463,7 +556,7 @@
             this.dgv_TaiKhoan.RowHeadersWidth = 51;
             this.dgv_TaiKhoan.RowTemplate.Height = 24;
             this.dgv_TaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_TaiKhoan.Size = new System.Drawing.Size(638, 279);
+            this.dgv_TaiKhoan.Size = new System.Drawing.Size(638, 400);
             this.dgv_TaiKhoan.TabIndex = 0;
             this.dgv_TaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick);
             this.dgv_TaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick);
@@ -637,81 +730,54 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // txt_SDT
+            // tentk
             // 
-            this.txt_SDT.AcceptsReturn = true;
-            this.txt_SDT.BorderRadius = 15;
-            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_SDT.DefaultText = "";
-            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SDT.ForeColor = System.Drawing.Color.Black;
-            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SDT.Location = new System.Drawing.Point(417, 130);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.PasswordChar = '\0';
-            this.txt_SDT.PlaceholderText = "";
-            this.txt_SDT.SelectedText = "";
-            this.txt_SDT.Size = new System.Drawing.Size(160, 31);
-            this.txt_SDT.TabIndex = 4;
+            this.tentk.DataPropertyName = "TenTK";
+            this.tentk.HeaderText = "Tên Tài Khoản";
+            this.tentk.Name = "tentk";
+            this.tentk.ReadOnly = true;
             // 
-            // label4
+            // MatKhau
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(543, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 18);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Khóa";
+            this.MatKhau.DataPropertyName = "MatKhau";
+            this.MatKhau.HeaderText = "Mật Khẩu";
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.ReadOnly = true;
             // 
-            // label5
+            // hoten
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(443, 182);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 18);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Hoạt động";
+            this.hoten.DataPropertyName = "HoTen";
+            this.hoten.HeaderText = "Họ và Tên";
+            this.hoten.Name = "hoten";
+            this.hoten.ReadOnly = true;
             // 
-            // radioUnactive
+            // SoDienThoai
             // 
-            this.radioUnactive.CheckedState.BorderColor = System.Drawing.Color.Red;
-            this.radioUnactive.CheckedState.BorderThickness = 0;
-            this.radioUnactive.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.radioUnactive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.radioUnactive.Location = new System.Drawing.Point(517, 182);
-            this.radioUnactive.Name = "radioUnactive";
-            this.radioUnactive.Size = new System.Drawing.Size(20, 20);
-            this.radioUnactive.TabIndex = 6;
-            this.radioUnactive.Text = "guna2CustomRadioButton1";
-            this.radioUnactive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.radioUnactive.UncheckedState.BorderThickness = 2;
-            this.radioUnactive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.radioUnactive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số Điện Thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.ReadOnly = true;
             // 
-            // radioActive
+            // DiaChi
             // 
-            this.radioActive.BackColor = System.Drawing.Color.Transparent;
-            this.radioActive.Checked = true;
-            this.radioActive.CheckedState.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioActive.CheckedState.BorderThickness = 0;
-            this.radioActive.CheckedState.FillColor = System.Drawing.Color.Lime;
-            this.radioActive.CheckedState.InnerColor = System.Drawing.Color.Snow;
-            this.radioActive.Location = new System.Drawing.Point(417, 182);
-            this.radioActive.Name = "radioActive";
-            this.radioActive.Size = new System.Drawing.Size(20, 20);
-            this.radioActive.TabIndex = 6;
-            this.radioActive.Text = "guna2CustomRadioButton1";
-            this.radioActive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.radioActive.UncheckedState.BorderThickness = 2;
-            this.radioActive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.radioActive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // LoaiTK
+            // 
+            this.LoaiTK.DataPropertyName = "LoaiTK";
+            this.LoaiTK.HeaderText = "Loại Tài Khoản";
+            this.LoaiTK.Name = "LoaiTK";
+            this.LoaiTK.ReadOnly = true;
+            // 
+            // Trangthai
+            // 
+            this.Trangthai.DataPropertyName = "TrangThai";
+            this.Trangthai.HeaderText = "Trạng Thái";
+            this.Trangthai.Name = "Trangthai";
+            this.Trangthai.ReadOnly = true;
             // 
             // USTaiKhoanAdmin
             // 
@@ -787,5 +853,12 @@
         private Guna.UI2.WinForms.Guna2CustomRadioButton radioUnactive;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tentk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Trangthai;
     }
 }

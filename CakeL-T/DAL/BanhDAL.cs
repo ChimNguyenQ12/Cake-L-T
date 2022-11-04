@@ -86,5 +86,37 @@ namespace DAL
                                                 .ToList();
             return accountBanh;
         }
+
+        public List<Banh> SearchCakeMulti(int price, int codeCategory, DateTime dateManu, DateTime dateExpire)
+        {
+            List<Banh> accountBanh = new List<Banh>();
+            if (price == 0 && codeCategory == 0)
+            {
+                accountBanh = cakeEntities.Banhs.Where(x => x.NgaySanXuat == dateManu && x.NgayHetHan == dateExpire && x.TrangThaiXoa == false)
+                                                .ToList();
+            }
+            else if(price == 50000) { 
+            accountBanh = cakeEntities.Banhs.Where(x => x.DonGia < 50000 && x.TrangThaiXoa == false)
+                                            .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
+                                            .Where(x => x.NgaySanXuat == dateManu && x.NgayHetHan == dateExpire && x.TrangThaiXoa == false)
+                                                .ToList();
+            } 
+            else if(price == 75000)
+            {
+            accountBanh = cakeEntities.Banhs.Where(x => x.DonGia > 50000 && x.DonGia < 100000 && x.TrangThaiXoa == false)
+                                                .ToList();
+            }
+            else if (price == 150000)
+            {
+                accountBanh = cakeEntities.Banhs.Where(x => x.DonGia > 100000 && x.DonGia < 200000 && x.TrangThaiXoa == false)
+                                                    .ToList();
+            }
+            else if (price == 200000)
+            {
+                accountBanh = cakeEntities.Banhs.Where(x => x.DonGia > 200000 && x.TrangThaiXoa == false)
+                                                    .ToList();
+            }
+            return accountBanh;
+        }
     }
 }

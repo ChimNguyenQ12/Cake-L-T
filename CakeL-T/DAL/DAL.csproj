@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoaiBanhDAL.cs" />
     <Compile Include="BanhDAL.cs" />
     <Compile Include="AdminDAL.cs" />
     <Compile Include="Banh.cs">

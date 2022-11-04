@@ -131,6 +131,7 @@ namespace CakeL_T
 
         private void dgv_TaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
             DataGridViewRow row = this.dgv_TaiKhoan.Rows[e.RowIndex];
             txt_DiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             txt_MatKhau.Text = row.Cells["MatKhau"].Value.ToString();
