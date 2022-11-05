@@ -46,7 +46,7 @@ namespace CakeL_T
                 USHoaDonAdmin.Instance.BringToFront();
             }
             else
-                USBanhAdmin.Instance.BringToFront();
+                USHoaDonAdmin.Instance.BringToFront();
         }
 
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace CakeL_T
                 USTrangChu.Instance.BringToFront();
             }
             else
-                USBanhAdmin.Instance.BringToFront();
+                USTrangChu.Instance.BringToFront();
         }
 
         private void btn_CaiDat_Click(object sender, EventArgs e)
@@ -138,5 +138,9 @@ namespace CakeL_T
             formCaiDat.ShowDialog();
         }
 
+        private void FormHomeAdmin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

@@ -267,17 +267,17 @@ namespace CakeL_T
 
         private void btnThemLoaiBanh_Click(object sender, EventArgs e)
         {
-            if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text) == "success")
+            if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text,int.Parse(txtMaLoaiBanh.Text)) == "success")
             {
                 MessageBox.Show("Thêm loại sản phẩm thành công!");
                 LoadDataCateCake();
             }
-            else if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text) == "Cake Category already exists")
+            else if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text, int.Parse(txtMaLoaiBanh.Text)) == "Cake Category already exists")
             {
                 MessageBox.Show("Loại Sản phẩm đã tồn tại!");
                 LoadDataCateCake();
             }
-            else if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text) == "error")
+            else if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text, int.Parse(txtMaLoaiBanh.Text)) == "error")
             {
                 MessageBox.Show("Có gì đó không ổn :/");
                 LoadDataCateCake();
@@ -326,6 +326,14 @@ namespace CakeL_T
         {
             if (txtTimLoaiBanh.Text == "Tìm kiếm loại bánh...")
                 txtTimLoaiBanh.Text = "";
+        }
+
+        private void dgvLoaiBanh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1) return;
+            DataGridViewRow row = this.dgvLoaiBanh.Rows[e.RowIndex];
+            txtMaLoaiBanh.Text = row.Cells["MaLoai"].Value.ToString();
+            txtTenLoaiBanh.Text = row.Cells["TenLoai"].Value.ToString();
         }
     }
 }

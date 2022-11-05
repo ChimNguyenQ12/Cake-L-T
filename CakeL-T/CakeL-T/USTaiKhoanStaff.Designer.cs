@@ -37,14 +37,12 @@
             this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_tenTK = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_Luong = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_MaNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -111,14 +109,12 @@
             this.groupBox1.Controls.Add(this.dtp_NgaySinh);
             this.groupBox1.Controls.Add(this.txt_MatKhau);
             this.groupBox1.Controls.Add(this.txt_tenTK);
-            this.groupBox1.Controls.Add(this.txt_Luong);
             this.groupBox1.Controls.Add(this.txt_DiaChi);
             this.groupBox1.Controls.Add(this.txt_SDT);
             this.groupBox1.Controls.Add(this.txt_TenNV);
             this.groupBox1.Controls.Add(this.txt_MaNV);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -152,7 +148,7 @@
             this.txt_MatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MatKhau.Location = new System.Drawing.Point(500, 244);
+            this.txt_MatKhau.Location = new System.Drawing.Point(500, 196);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.PasswordChar = '\0';
             this.txt_MatKhau.PlaceholderText = "";
@@ -173,34 +169,13 @@
             this.txt_tenTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_tenTK.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_tenTK.Location = new System.Drawing.Point(500, 175);
+            this.txt_tenTK.Location = new System.Drawing.Point(500, 127);
             this.txt_tenTK.Name = "txt_tenTK";
             this.txt_tenTK.PasswordChar = '\0';
             this.txt_tenTK.PlaceholderText = "";
             this.txt_tenTK.SelectedText = "";
             this.txt_tenTK.Size = new System.Drawing.Size(215, 32);
             this.txt_tenTK.TabIndex = 2;
-            // 
-            // txt_Luong
-            // 
-            this.txt_Luong.BorderRadius = 15;
-            this.txt_Luong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Luong.DefaultText = "";
-            this.txt_Luong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Luong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Luong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Luong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Luong.Enabled = false;
-            this.txt_Luong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Luong.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Luong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Luong.Location = new System.Drawing.Point(500, 127);
-            this.txt_Luong.Name = "txt_Luong";
-            this.txt_Luong.PasswordChar = '\0';
-            this.txt_Luong.PlaceholderText = "";
-            this.txt_Luong.SelectedText = "";
-            this.txt_Luong.Size = new System.Drawing.Size(215, 32);
-            this.txt_Luong.TabIndex = 2;
             // 
             // txt_DiaChi
             // 
@@ -290,7 +265,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(403, 252);
+            this.label9.Location = new System.Drawing.Point(403, 204);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 1;
@@ -299,20 +274,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(401, 194);
+            this.label8.Location = new System.Drawing.Point(401, 146);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Tên Tài Khoản:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(403, 138);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Lương:";
             // 
             // label5
             // 
@@ -412,14 +378,12 @@
         private System.Windows.Forms.DateTimePicker dtp_NgaySinh;
         private Guna.UI2.WinForms.Guna2TextBox txt_MatKhau;
         private Guna.UI2.WinForms.Guna2TextBox txt_tenTK;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Luong;
         private Guna.UI2.WinForms.Guna2TextBox txt_DiaChi;
         private Guna.UI2.WinForms.Guna2TextBox txt_SDT;
         private Guna.UI2.WinForms.Guna2TextBox txt_TenNV;
         private Guna.UI2.WinForms.Guna2TextBox txt_MaNV;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

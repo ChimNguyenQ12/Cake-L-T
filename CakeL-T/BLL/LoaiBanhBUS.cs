@@ -58,11 +58,11 @@ namespace BLL
             }
         }
 
-        public string AddCateCake(string name)
+        public string AddCateCake(string name, int code)
         {
             try
             {
-                int code = int.Parse(DateTime.Now.ToString("MMddHHmmss"));
+                
                 LoaiBanhDAL LoaiBanhDAL = new LoaiBanhDAL();
                 var tbCateCake = LoaiBanhDAL.GetCateCakes();
                 foreach (var cake in tbCateCake)

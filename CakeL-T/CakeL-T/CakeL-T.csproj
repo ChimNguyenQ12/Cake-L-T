@@ -331,12 +331,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="USLoaiBanh.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="USLoaiBanh.Designer.cs">
-      <DependentUpon>USLoaiBanh.cs</DependentUpon>
-    </Compile>
     <Compile Include="USTaiKhoanAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -354,6 +348,12 @@
     </Compile>
     <Compile Include="USTrangChu.Designer.cs">
       <DependentUpon>USTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USTrangChuStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USTrangChuStaff.Designer.cs">
+      <DependentUpon>USTrangChuStaff.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormHomeAdmin.en.resx">
       <DependentUpon>FormHomeAdmin.cs</DependentUpon>
@@ -407,9 +407,6 @@
     <EmbeddedResource Include="USHoaDonStaff.resx">
       <DependentUpon>USHoaDonStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="USLoaiBanh.resx">
-      <DependentUpon>USLoaiBanh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="USTaiKhoanAdmin.resx">
       <DependentUpon>USTaiKhoanAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -418,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="USTrangChu.resx">
       <DependentUpon>USTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USTrangChuStaff.resx">
+      <DependentUpon>USTrangChuStaff.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -10,26 +10,21 @@ using System.Windows.Forms;
 
 namespace CakeL_T
 {
-    public partial class USLoaiBanh : UserControl
+    public partial class USTrangChuStaff : UserControl
     {
-        private static USLoaiBanh instance;
-        public static USLoaiBanh Instance
+        private static USTrangChu instance;
+        public static USTrangChu Instance
         {
             get
             {
                 if (instance == null)
-                    instance = new USLoaiBanh();
+                    instance = new USTrangChu();
                 return instance;
             }
         }
-        public USLoaiBanh()
+        public USTrangChuStaff()
         {
             InitializeComponent();
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
