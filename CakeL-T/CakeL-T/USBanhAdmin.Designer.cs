@@ -36,7 +36,9 @@
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.gbBanh = new System.Windows.Forms.GroupBox();
-            this.txt_LoaiBanh = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbb_loaiBanh = new System.Windows.Forms.ComboBox();
+            this.dtp_NgayHH = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtp_NgaySX = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txt_DonGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnClearBanh = new System.Windows.Forms.Button();
             this.txt_SoLuong = new Guna.UI2.WinForms.Guna2TextBox();
@@ -78,19 +80,18 @@
             this.btnThemLoaiBanh = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dgvLoaiBanh = new System.Windows.Forms.DataGridView();
+            this.MaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.txtTimLoaiBanh = new System.Windows.Forms.TextBox();
             this.MaBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTimLoaiBanh = new System.Windows.Forms.TextBox();
-            this.dtp_NgaySX = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtp_NgayHH = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -201,7 +202,7 @@
             this.gbBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbBanh.Controls.Add(this.txt_LoaiBanh);
+            this.gbBanh.Controls.Add(this.cbb_loaiBanh);
             this.gbBanh.Controls.Add(this.dtp_NgayHH);
             this.gbBanh.Controls.Add(this.dtp_NgaySX);
             this.gbBanh.Controls.Add(this.txt_DonGia);
@@ -226,29 +227,39 @@
             this.gbBanh.TabStop = false;
             this.gbBanh.Text = "Thông tin bánh";
             // 
-            // txt_LoaiBanh
+            // cbb_loaiBanh
             // 
-            this.txt_LoaiBanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_LoaiBanh.BorderRadius = 15;
-            this.txt_LoaiBanh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_LoaiBanh.DefaultText = "";
-            this.txt_LoaiBanh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_LoaiBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_LoaiBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_LoaiBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_LoaiBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_LoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
-            this.txt_LoaiBanh.ForeColor = System.Drawing.Color.Black;
-            this.txt_LoaiBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_LoaiBanh.Location = new System.Drawing.Point(426, 25);
-            this.txt_LoaiBanh.Name = "txt_LoaiBanh";
-            this.txt_LoaiBanh.PasswordChar = '\0';
-            this.txt_LoaiBanh.PlaceholderText = "";
-            this.txt_LoaiBanh.SelectedText = "";
-            this.txt_LoaiBanh.Size = new System.Drawing.Size(138, 31);
-            this.txt_LoaiBanh.TabIndex = 11;
+            this.cbb_loaiBanh.FormattingEnabled = true;
+            this.cbb_loaiBanh.Location = new System.Drawing.Point(426, 24);
+            this.cbb_loaiBanh.Name = "cbb_loaiBanh";
+            this.cbb_loaiBanh.Size = new System.Drawing.Size(153, 30);
+            this.cbb_loaiBanh.TabIndex = 29;
+            // 
+            // dtp_NgayHH
+            // 
+            this.dtp_NgayHH.Checked = true;
+            this.dtp_NgayHH.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_NgayHH.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_NgayHH.Location = new System.Drawing.Point(426, 98);
+            this.dtp_NgayHH.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_NgayHH.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtp_NgayHH.Name = "dtp_NgayHH";
+            this.dtp_NgayHH.Size = new System.Drawing.Size(200, 30);
+            this.dtp_NgayHH.TabIndex = 28;
+            this.dtp_NgayHH.Value = new System.DateTime(2022, 11, 4, 14, 34, 40, 916);
+            // 
+            // dtp_NgaySX
+            // 
+            this.dtp_NgaySX.Checked = true;
+            this.dtp_NgaySX.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_NgaySX.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_NgaySX.Location = new System.Drawing.Point(426, 62);
+            this.dtp_NgaySX.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_NgaySX.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtp_NgaySX.Name = "dtp_NgaySX";
+            this.dtp_NgaySX.Size = new System.Drawing.Size(200, 30);
+            this.dtp_NgaySX.TabIndex = 28;
+            this.dtp_NgaySX.Value = new System.DateTime(2022, 11, 4, 14, 34, 40, 916);
             // 
             // txt_DonGia
             // 
@@ -325,7 +336,7 @@
             this.btnQLLBImage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnQLLBImage.Image = ((System.Drawing.Image)(resources.GetObject("btnQLLBImage.Image")));
             this.btnQLLBImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLLBImage.Location = new System.Drawing.Point(567, 26);
+            this.btnQLLBImage.Location = new System.Drawing.Point(582, 26);
             this.btnQLLBImage.Margin = new System.Windows.Forms.Padding(0);
             this.btnQLLBImage.Name = "btnQLLBImage";
             this.btnQLLBImage.Size = new System.Drawing.Size(33, 29);
@@ -527,7 +538,7 @@
             this.txtTenLoaiBanh.PasswordChar = '\0';
             this.txtTenLoaiBanh.PlaceholderText = "";
             this.txtTenLoaiBanh.SelectedText = "";
-            this.txtTenLoaiBanh.Size = new System.Drawing.Size(166, 37);
+            this.txtTenLoaiBanh.Size = new System.Drawing.Size(166, 33);
             this.txtTenLoaiBanh.TabIndex = 8;
             // 
             // txtMaLoaiBanh
@@ -553,7 +564,7 @@
             this.txtMaLoaiBanh.PlaceholderText = "";
             this.txtMaLoaiBanh.ReadOnly = true;
             this.txtMaLoaiBanh.SelectedText = "";
-            this.txtMaLoaiBanh.Size = new System.Drawing.Size(166, 36);
+            this.txtMaLoaiBanh.Size = new System.Drawing.Size(166, 33);
             this.txtMaLoaiBanh.TabIndex = 7;
             // 
             // button1
@@ -777,6 +788,7 @@
             this.SoLuong,
             this.DonGia,
             this.LoaiBanh,
+            this.Loai,
             this.NgaySanXuat,
             this.NgayHetHan});
             this.dgv_Banh.Location = new System.Drawing.Point(31, 554);
@@ -809,7 +821,7 @@
             this.gbChucNangLoaiBanh.Controls.Add(this.btnThemLoaiBanh);
             this.gbChucNangLoaiBanh.Controls.Add(this.button6);
             this.gbChucNangLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbChucNangLoaiBanh.Location = new System.Drawing.Point(31, 377);
+            this.gbChucNangLoaiBanh.Location = new System.Drawing.Point(31, 367);
             this.gbChucNangLoaiBanh.Name = "gbChucNangLoaiBanh";
             this.gbChucNangLoaiBanh.Size = new System.Drawing.Size(640, 142);
             this.gbChucNangLoaiBanh.TabIndex = 27;
@@ -922,6 +934,18 @@
             this.dgvLoaiBanh.Size = new System.Drawing.Size(632, 251);
             this.dgvLoaiBanh.TabIndex = 0;
             // 
+            // MaLoai
+            // 
+            this.MaLoai.DataPropertyName = "MaLoai";
+            this.MaLoai.HeaderText = "Mã Loại Bánh";
+            this.MaLoai.Name = "MaLoai";
+            // 
+            // TenLoai
+            // 
+            this.TenLoai.DataPropertyName = "TenLoai";
+            this.TenLoai.HeaderText = "Tên Loại Bánh";
+            this.TenLoai.Name = "TenLoai";
+            // 
             // btnRefresh
             // 
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -938,6 +962,16 @@
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // txtTimLoaiBanh
+            // 
+            this.txtTimLoaiBanh.Location = new System.Drawing.Point(123, 528);
+            this.txtTimLoaiBanh.Name = "txtTimLoaiBanh";
+            this.txtTimLoaiBanh.Size = new System.Drawing.Size(257, 20);
+            this.txtTimLoaiBanh.TabIndex = 0;
+            this.txtTimLoaiBanh.Text = "Tìm kiếm loại bánh...";
+            this.txtTimLoaiBanh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTimLoaiBanh_MouseClick);
+            this.txtTimLoaiBanh.TextChanged += new System.EventHandler(this.txtTimLoaiBanh_TextChanged);
             // 
             // MaBanh
             // 
@@ -969,6 +1003,12 @@
             this.LoaiBanh.HeaderText = "Loại Bánh";
             this.LoaiBanh.Name = "LoaiBanh";
             // 
+            // Loai
+            // 
+            this.Loai.DataPropertyName = "Loai";
+            this.Loai.HeaderText = "Loại";
+            this.Loai.Name = "Loai";
+            // 
             // NgaySanXuat
             // 
             this.NgaySanXuat.DataPropertyName = "NgaySanXuat";
@@ -980,54 +1020,6 @@
             this.NgayHetHan.DataPropertyName = "NgayHetHan";
             this.NgayHetHan.HeaderText = "Ngày Hết Hạn";
             this.NgayHetHan.Name = "NgayHetHan";
-            // 
-            // MaLoai
-            // 
-            this.MaLoai.DataPropertyName = "MaLoai";
-            this.MaLoai.HeaderText = "Mã Loại Bánh";
-            this.MaLoai.Name = "MaLoai";
-            // 
-            // TenLoai
-            // 
-            this.TenLoai.DataPropertyName = "TenLoai";
-            this.TenLoai.HeaderText = "Tên Loại Bánh";
-            this.TenLoai.Name = "TenLoai";
-            // 
-            // txtTimLoaiBanh
-            // 
-            this.txtTimLoaiBanh.Location = new System.Drawing.Point(123, 528);
-            this.txtTimLoaiBanh.Name = "txtTimLoaiBanh";
-            this.txtTimLoaiBanh.Size = new System.Drawing.Size(257, 20);
-            this.txtTimLoaiBanh.TabIndex = 0;
-            this.txtTimLoaiBanh.Text = "Tìm kiếm loại bánh...";
-            this.txtTimLoaiBanh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTimLoaiBanh_MouseClick);
-            this.txtTimLoaiBanh.TextChanged += new System.EventHandler(this.txtTimLoaiBanh_TextChanged);
-            // 
-            // dtp_NgaySX
-            // 
-            this.dtp_NgaySX.Checked = true;
-            this.dtp_NgaySX.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtp_NgaySX.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_NgaySX.Location = new System.Drawing.Point(426, 62);
-            this.dtp_NgaySX.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtp_NgaySX.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtp_NgaySX.Name = "dtp_NgaySX";
-            this.dtp_NgaySX.Size = new System.Drawing.Size(200, 30);
-            this.dtp_NgaySX.TabIndex = 28;
-            this.dtp_NgaySX.Value = new System.DateTime(2022, 11, 4, 14, 34, 40, 916);
-            // 
-            // dtp_NgayHH
-            // 
-            this.dtp_NgayHH.Checked = true;
-            this.dtp_NgayHH.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtp_NgayHH.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_NgayHH.Location = new System.Drawing.Point(426, 98);
-            this.dtp_NgayHH.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtp_NgayHH.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtp_NgayHH.Name = "dtp_NgayHH";
-            this.dtp_NgayHH.Size = new System.Drawing.Size(200, 30);
-            this.dtp_NgayHH.TabIndex = 28;
-            this.dtp_NgayHH.Value = new System.DateTime(2022, 11, 4, 14, 34, 40, 916);
             // 
             // USBanhAdmin
             // 
@@ -1073,7 +1065,6 @@
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.GroupBox gbBanh;
-        private Guna.UI2.WinForms.Guna2TextBox txt_LoaiBanh;
         private Guna.UI2.WinForms.Guna2TextBox txt_DonGia;
         private Guna.UI2.WinForms.Guna2TextBox txt_SoLuong;
         private Guna.UI2.WinForms.Guna2TextBox txt_TenBanh;
@@ -1116,17 +1107,19 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbb_price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaBanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenBanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiBanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySanXuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayHetHan;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLoai;
         private System.Windows.Forms.TextBox txtTimLoaiBanh;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_NgayHH;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_NgaySX;
+        private System.Windows.Forms.ComboBox cbb_loaiBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Loai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySanXuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayHetHan;
     }
 }

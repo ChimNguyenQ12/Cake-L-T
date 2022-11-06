@@ -67,17 +67,17 @@ namespace CakeL_T
 
         private void btn_ThemBanh_Click(object sender, EventArgs e)
         {
-            if (banhBUS.AddCake(int.Parse(txt_LoaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_SoLuong.Text), int.Parse(txt_DonGia.Text), DateTime.Parse(dtp_NgaySX.Text), DateTime.Parse(dtp_NgayHH.Text), pb_Banh.ToString()) == "success")
+            if (banhBUS.AddCake(int.Parse(cbb_loaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_SoLuong.Text), int.Parse(txt_DonGia.Text), DateTime.Parse(dtp_NgaySX.Text), DateTime.Parse(dtp_NgayHH.Text), pb_Banh.ToString()) == "success")
             {
                 MessageBox.Show("Thêm sản phẩm thành công!");
                 LoadData();
             }
-            else if (banhBUS.AddCake(int.Parse(txt_LoaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_SoLuong.Text), int.Parse(txt_DonGia.Text), DateTime.Parse(dtp_NgaySX.Text), DateTime.Parse(dtp_NgayHH.Text), pb_Banh.ToString()) == "Cake already exists")
+            else if (banhBUS.AddCake(int.Parse(cbb_loaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_SoLuong.Text), int.Parse(txt_DonGia.Text), DateTime.Parse(dtp_NgaySX.Text), DateTime.Parse(dtp_NgayHH.Text), pb_Banh.ToString()) == "Cake already exists")
             {
                 MessageBox.Show("Sản phẩm đã tồn tại!");
                 LoadData();
             }
-            else if (banhBUS.AddCake(int.Parse(txt_LoaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_SoLuong.Text), int.Parse(txt_DonGia.Text), DateTime.Parse(dtp_NgaySX.Text), DateTime.Parse(dtp_NgayHH.Text), pb_Banh.ToString()) == "error")
+            else if (banhBUS.AddCake(int.Parse(cbb_loaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_SoLuong.Text), int.Parse(txt_DonGia.Text), DateTime.Parse(dtp_NgaySX.Text), DateTime.Parse(dtp_NgayHH.Text), pb_Banh.ToString()) == "error")
             {
                 MessageBox.Show("Có gì đó không ổn :/");
                 LoadData();
@@ -85,6 +85,11 @@ namespace CakeL_T
         }
         private void LoadData()
         {
+            var cate = loaiBanhBUS.GetCateCakes();
+            cbb_loaiBanh.DataSource = cate;
+            cbb_loaiBanh.DisplayMember = "TenLoai";
+            cbb_loaiBanh.ValueMember = "MaLoai";
+
             cbb_price.Text = "Chọn khoảng giá";
             cbbCategory.Text = "Chọn loại bánh";
             dtpNSX.Text = String.Empty;
@@ -92,15 +97,28 @@ namespace CakeL_T
             dtp_NgayHH.MinDate = DateTime.Today;
             dtpNgayHH.MinDate = DateTime.Today;
             txt_TimBanh.Text = "Tìm kiếm bánh...";
+
             dgv_Banh.DataSource = banhBUS.GetCakes();
+            for (int i = 0; i < dgv_Banh.Rows.Count; i++)
+            {
+                //Use when column names known
+                if(dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == "1")
+                {
+                    dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = "Kem";
+                }
+            }
             dgv_Banh.Columns["HinhAnh"].Visible = false;
+            dgv_Banh.Columns["LoaiBanh"].Visible = false;
             dgv_Banh.Columns["HinhAnhs"].Visible = false;
             dgv_Banh.Columns["LoaiBanh1"].Visible = false;
             dgv_Banh.Columns["TrangThaiXoa"].Visible = false;
+
+
             DataGridViewRow row = this.dgv_Banh.Rows[0];
+           
             txt_MaBanh.Text = row.Cells["MaBanh"].Value.ToString();
             txt_DonGia.Text = row.Cells["DonGia"].Value.ToString();
-            txt_LoaiBanh.Text = row.Cells["LoaiBanh"].Value.ToString();
+            cbb_loaiBanh.Text = row.Cells["LoaiBanh"].Value.ToString();
             txt_SoLuong.Text = row.Cells["SoLuong"].Value.ToString();
             txt_TenBanh.Text = row.Cells["TenBanh"].Value.ToString();
         }
@@ -121,7 +139,7 @@ namespace CakeL_T
             txt_DonGia.Text = "";
             txt_SoLuong.Text = "";
             txt_TenBanh.Text = "";
-            txt_LoaiBanh.Text = "";
+            cbb_loaiBanh.Text = "";
             txtMaLoaiBanh.Text = "";
             txtTenLoaiBanh.Text = "";
         }
@@ -192,7 +210,7 @@ namespace CakeL_T
                 var cell = row.Cells["MaBanh"];
                 int idSelected = Convert.ToInt32(cell.Value);
                 string image = pb_Banh.ToString();
-                UpdateCake(idSelected, int.Parse(txt_LoaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_SoLuong.Text), int.Parse(txt_DonGia.Text), DateTime.Parse(dtp_NgaySX.Text), DateTime.Parse(dtp_NgayHH.Text), image);
+                UpdateCake(idSelected, int.Parse(cbb_loaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_SoLuong.Text), int.Parse(txt_DonGia.Text), DateTime.Parse(dtp_NgaySX.Text), DateTime.Parse(dtp_NgayHH.Text), image);
                 LoadData();
                 MessageBox.Show($"Sửa sản phẩm {txt_MaBanh.Text} thành công", "Sửa sản phẩm");
             }
@@ -204,7 +222,7 @@ namespace CakeL_T
             DataGridViewRow row = this.dgv_Banh.Rows[e.RowIndex];
             txt_MaBanh.Text = row.Cells["MaBanh"].Value.ToString();
             txt_DonGia.Text = row.Cells["DonGia"].Value.ToString();
-            txt_LoaiBanh.Text = row.Cells["LoaiBanh"].Value.ToString();
+            cbb_loaiBanh.Text = row.Cells["LoaiBanh"].Value.ToString();
             txt_SoLuong.Text = row.Cells["SoLuong"].Value.ToString();
             txt_TenBanh.Text = row.Cells["TenBanh"].Value.ToString();
         }

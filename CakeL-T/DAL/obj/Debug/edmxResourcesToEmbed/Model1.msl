@@ -31,6 +31,7 @@
     <EntitySetMapping Name="Banhs">
       <EntityTypeMapping TypeName="Model.Banh">
         <MappingFragment StoreEntitySet="Banh">
+          <ScalarProperty Name="TenLoaiBanh" ColumnName="TenLoaiBanh" />
           <ScalarProperty Name="TrangThaiXoa" ColumnName="TrangThaiXoa" />
           <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
           <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
