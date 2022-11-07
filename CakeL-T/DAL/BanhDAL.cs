@@ -99,6 +99,13 @@ namespace DAL
                 accountBanh = cakeEntities.Banhs.Where(x => x.TrangThaiXoa == false && x.TrangThaiBanh == status)
                                                 .ToList();
             }
+            else if (price == 1)
+            {
+                accountBanh = cakeEntities.Banhs.Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
+                                                .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
+                                                .ToList();
+
+            }
             else if(price == 50000) { 
             accountBanh = cakeEntities.Banhs.Where(x => x.DonGia < 50000 && x.TrangThaiXoa == false)
                                             .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)

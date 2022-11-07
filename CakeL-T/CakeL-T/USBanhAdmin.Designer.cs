@@ -691,6 +691,7 @@
             this.cbb_price.Font = new System.Drawing.Font("Monotype Corsiva", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_price.FormattingEnabled = true;
             this.cbb_price.Items.AddRange(new object[] {
+            "Tất cả",
             "< 50.000đ",
             "50.000đ ->100.000đ",
             "100.000đ -> 200.000đ",

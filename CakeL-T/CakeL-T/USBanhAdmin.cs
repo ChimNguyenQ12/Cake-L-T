@@ -297,6 +297,10 @@ namespace CakeL_T
                 price = 0;
                 codeCategory = 0;
             }
+            else if (cbb_price.SelectedItem.ToString() == "Tất cả")
+            {
+                price = 1;
+            }
             else if(cbb_price.SelectedItem.ToString() == "< 50.000đ")
             {
                 price = 50000;
