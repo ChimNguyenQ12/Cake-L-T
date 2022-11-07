@@ -312,6 +312,7 @@
             // 
             // cbb_loaiBanh
             // 
+            this.cbb_loaiBanh.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_loaiBanh.FormattingEnabled = true;
             this.cbb_loaiBanh.Location = new System.Drawing.Point(392, 38);
             this.cbb_loaiBanh.Name = "cbb_loaiBanh";
@@ -679,16 +680,16 @@
             // 
             // cbbCategory
             // 
-            this.cbbCategory.Font = new System.Drawing.Font("Monotype Corsiva", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCategory.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCategory.FormattingEnabled = true;
             this.cbbCategory.Location = new System.Drawing.Point(102, 68);
             this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(135, 22);
+            this.cbbCategory.Size = new System.Drawing.Size(135, 23);
             this.cbbCategory.TabIndex = 29;
             // 
             // cbb_price
             // 
-            this.cbb_price.Font = new System.Drawing.Font("Monotype Corsiva", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_price.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_price.FormattingEnabled = true;
             this.cbb_price.Items.AddRange(new object[] {
             "Tất cả",
@@ -698,7 +699,7 @@
             "> 200.000đ"});
             this.cbb_price.Location = new System.Drawing.Point(102, 35);
             this.cbb_price.Name = "cbb_price";
-            this.cbb_price.Size = new System.Drawing.Size(135, 22);
+            this.cbb_price.Size = new System.Drawing.Size(135, 23);
             this.cbb_price.TabIndex = 29;
             // 
             // btnQuanLyLoaiBanh
