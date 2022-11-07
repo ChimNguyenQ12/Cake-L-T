@@ -20,10 +20,8 @@ namespace DAL
                     cake.LoaiBanh = i.LoaiBanh;
                     cake.MaBanh = i.MaBanh;
                     cake.TenBanh = i.TenBanh;
-                    cake.SoLuong = i.SoLuong;
+                    cake.TrangThaiBanh = i.TrangThaiBanh;
                     cake.DonGia = i.DonGia;
-                    cake.NgaySanXuat = i.NgaySanXuat;
-                    cake.NgayHetHan = i.NgayHetHan;
                     cake.HinhAnh = i.HinhAnh;
                     cake.TrangThaiXoa = i.TrangThaiXoa;
 
@@ -45,15 +43,13 @@ namespace DAL
 
         }
 
-        public void UpdateCakeById(int code, int category, string name, int quanity, int price, DateTime dateManu, DateTime dateExpire, string image)
+        public void UpdateCakeById(int code, int category, string name, bool status, int price, string image)
         {
                 var cakeCurrent = cakeEntities.Banhs.Where(x => x.MaBanh == code).FirstOrDefault();
                 cakeCurrent.LoaiBanh = category;
                 cakeCurrent.TenBanh = name;
-                cakeCurrent.SoLuong = quanity;
+                cakeCurrent.TrangThaiBanh = status;
                 cakeCurrent.DonGia = price;
-                cakeCurrent.NgaySanXuat = dateManu;
-                cakeCurrent.NgayHetHan = dateExpire;
                 cakeCurrent.HinhAnh = image;
 
                 cakeEntities.SaveChanges();
@@ -66,17 +62,15 @@ namespace DAL
                 cakeEntities.SaveChanges();
         }
 
-        public string AddCake(int code, int category, string name, int quanity, int price, DateTime dateManu, DateTime dateExpire, string image)
+        public string AddCake(int code, int category, string name, int price, string image)
         {
                 cakeEntities.Banhs.Add(new Banh()
                 {
                     MaBanh = code,
                     TenBanh = name,
                     LoaiBanh = category,
-                    SoLuong = quanity,
+                    TrangThaiBanh = true,
                     DonGia = price,
-                    NgayHetHan = dateExpire,
-                    NgaySanXuat = dateManu,
                     TrangThaiXoa = false,
                     HinhAnh = image
                 });
@@ -87,38 +81,46 @@ namespace DAL
         public List<Banh> SearchCake(string key)
         {
             List<Banh> accountBanh = new List<Banh>();
-            accountBanh = cakeEntities.Banhs.Where(x => x.TenBanh.Contains(key) && x.TrangThaiXoa == false)
+            if(key == "0")
+            {
+                accountBanh = cakeEntities.Banhs.Where(x => x.TrangThaiXoa == false)
+                                                .ToList();
+            }
+            accountBanh = cakeEntities.Banhs.Where(x => x.MaBanh.ToString().Contains(key) && x.TrangThaiXoa == false)
                                                 .ToList();
             return accountBanh;
         }
 
-        public List<Banh> SearchCakeMulti(int price, int codeCategory, DateTime dateManu, DateTime dateExpire)
+        public List<Banh> SearchCakeMulti(int price, int codeCategory, bool status)
         {
             List<Banh> accountBanh = new List<Banh>();
             if (price == 0 && codeCategory == 0)
             {
-                accountBanh = cakeEntities.Banhs.Where(x => x.NgaySanXuat == dateManu && x.NgayHetHan == dateExpire && x.TrangThaiXoa == false)
+                accountBanh = cakeEntities.Banhs.Where(x => x.TrangThaiXoa == false && x.TrangThaiBanh == status)
                                                 .ToList();
             }
             else if(price == 50000) { 
             accountBanh = cakeEntities.Banhs.Where(x => x.DonGia < 50000 && x.TrangThaiXoa == false)
+                                            .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
                                             .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
-                                            .Where(x => x.NgaySanXuat == dateManu && x.NgayHetHan == dateExpire && x.TrangThaiXoa == false)
-                                                .ToList();
+                                            .ToList();
             } 
             else if(price == 75000)
             {
             accountBanh = cakeEntities.Banhs.Where(x => x.DonGia > 50000 && x.DonGia < 100000 && x.TrangThaiXoa == false)
+                                                .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
                                                 .ToList();
             }
             else if (price == 150000)
             {
                 accountBanh = cakeEntities.Banhs.Where(x => x.DonGia > 100000 && x.DonGia < 200000 && x.TrangThaiXoa == false)
+                                                    .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
                                                     .ToList();
             }
             else if (price == 200000)
             {
                 accountBanh = cakeEntities.Banhs.Where(x => x.DonGia > 200000 && x.TrangThaiXoa == false)
+                                                    .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
                                                     .ToList();
             }
             return accountBanh;

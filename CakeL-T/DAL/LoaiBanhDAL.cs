@@ -62,7 +62,12 @@ namespace DAL
         public List<LoaiBanh> SearchCateCake(string key)
         {
             List<LoaiBanh> accountLoaiBanh = new List<LoaiBanh>();
-            accountLoaiBanh = cakeEntities.LoaiBanhs.Where(x => x.TenLoai.Contains(key) && x.TrangThaiXoa == false)
+            if (key == "0")
+            {
+                accountLoaiBanh = cakeEntities.LoaiBanhs.Where(x => x.TrangThaiXoa == false)
+                                                .ToList();
+            }
+            accountLoaiBanh = cakeEntities.LoaiBanhs.Where(x => x.MaLoai.ToString().Contains(key) && x.TrangThaiXoa == false)
                                                 .ToList();
             return accountLoaiBanh;
         }

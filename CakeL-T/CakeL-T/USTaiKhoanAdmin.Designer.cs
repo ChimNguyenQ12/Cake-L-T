@@ -31,27 +31,28 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USTaiKhoanAdmin));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.radioUnactive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.radioActive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.btnEyes = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.radioUnactive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TenTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.pb_AvatarTK = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.radioTimActive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.radioTimUnactive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.txtTimTen = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTimTenTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_ThemTK = new System.Windows.Forms.Button();
@@ -78,8 +79,9 @@
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarTK)).BeginInit();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TaiKhoan)).BeginInit();
@@ -94,21 +96,17 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.radioActive);
+            this.groupBox3.Controls.Add(this.panel1);
             this.groupBox3.Controls.Add(this.btnEyes);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.txt_SDT);
             this.groupBox3.Controls.Add(this.txt_DiaChi);
-            this.groupBox3.Controls.Add(this.radioUnactive);
             this.groupBox3.Controls.Add(this.txt_MatKhau);
             this.groupBox3.Controls.Add(this.txt_TenNV);
             this.groupBox3.Controls.Add(this.txt_TenTK);
             this.groupBox3.Controls.Add(this.pb_AvatarTK);
-            this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label18);
@@ -120,6 +118,64 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin tài khoản";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.radioUnactive);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.radioActive);
+            this.panel1.Location = new System.Drawing.Point(305, 167);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(296, 48);
+            this.panel1.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(226, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 18);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Khóa";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(7, 10);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(74, 18);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Trạng Thái:";
+            // 
+            // radioUnactive
+            // 
+            this.radioUnactive.CheckedState.BorderColor = System.Drawing.Color.Red;
+            this.radioUnactive.CheckedState.BorderThickness = 0;
+            this.radioUnactive.CheckedState.FillColor = System.Drawing.Color.Red;
+            this.radioUnactive.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.radioUnactive.Location = new System.Drawing.Point(199, 10);
+            this.radioUnactive.Name = "radioUnactive";
+            this.radioUnactive.Size = new System.Drawing.Size(20, 20);
+            this.radioUnactive.TabIndex = 6;
+            this.radioUnactive.Text = "guna2CustomRadioButton1";
+            this.radioUnactive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioUnactive.UncheckedState.BorderThickness = 2;
+            this.radioUnactive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.radioUnactive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(125, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 18);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Hoạt động";
+            // 
             // radioActive
             // 
             this.radioActive.BackColor = System.Drawing.Color.Transparent;
@@ -128,7 +184,7 @@
             this.radioActive.CheckedState.BorderThickness = 0;
             this.radioActive.CheckedState.FillColor = System.Drawing.Color.Lime;
             this.radioActive.CheckedState.InnerColor = System.Drawing.Color.Snow;
-            this.radioActive.Location = new System.Drawing.Point(417, 182);
+            this.radioActive.Location = new System.Drawing.Point(99, 10);
             this.radioActive.Name = "radioActive";
             this.radioActive.Size = new System.Drawing.Size(20, 20);
             this.radioActive.TabIndex = 6;
@@ -210,22 +266,6 @@
             this.txt_DiaChi.Size = new System.Drawing.Size(160, 31);
             this.txt_DiaChi.TabIndex = 3;
             // 
-            // radioUnactive
-            // 
-            this.radioUnactive.CheckedState.BorderColor = System.Drawing.Color.Red;
-            this.radioUnactive.CheckedState.BorderThickness = 0;
-            this.radioUnactive.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.radioUnactive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.radioUnactive.Location = new System.Drawing.Point(517, 182);
-            this.radioUnactive.Name = "radioUnactive";
-            this.radioUnactive.Size = new System.Drawing.Size(20, 20);
-            this.radioUnactive.TabIndex = 6;
-            this.radioUnactive.Text = "guna2CustomRadioButton1";
-            this.radioUnactive.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.radioUnactive.UncheckedState.BorderThickness = 2;
-            this.radioUnactive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.radioUnactive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
             // txt_MatKhau
             // 
             this.txt_MatKhau.BorderRadius = 15;
@@ -303,16 +343,6 @@
             this.pb_AvatarTK.TabStop = false;
             this.pb_AvatarTK.Click += new System.EventHandler(this.pb_AvatarTK_Click);
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(312, 182);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(74, 18);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Trạng Thái:";
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -332,26 +362,6 @@
             this.label21.Size = new System.Drawing.Size(54, 18);
             this.label21.TabIndex = 0;
             this.label21.Text = "Địa Chỉ:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(443, 182);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 18);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Hoạt động";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(543, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 18);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Khóa";
             // 
             // label20
             // 
@@ -391,7 +401,7 @@
             this.radioTimActive.CheckedState.BorderThickness = 0;
             this.radioTimActive.CheckedState.FillColor = System.Drawing.Color.Lime;
             this.radioTimActive.CheckedState.InnerColor = System.Drawing.Color.Snow;
-            this.radioTimActive.Location = new System.Drawing.Point(314, 42);
+            this.radioTimActive.Location = new System.Drawing.Point(327, 42);
             this.radioTimActive.Name = "radioTimActive";
             this.radioTimActive.Size = new System.Drawing.Size(20, 20);
             this.radioTimActive.TabIndex = 6;
@@ -407,7 +417,7 @@
             this.radioTimUnactive.CheckedState.BorderThickness = 0;
             this.radioTimUnactive.CheckedState.FillColor = System.Drawing.Color.Red;
             this.radioTimUnactive.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.radioTimUnactive.Location = new System.Drawing.Point(414, 42);
+            this.radioTimUnactive.Location = new System.Drawing.Point(427, 42);
             this.radioTimUnactive.Name = "radioTimUnactive";
             this.radioTimUnactive.Size = new System.Drawing.Size(20, 20);
             this.radioTimUnactive.TabIndex = 6;
@@ -417,32 +427,32 @@
             this.radioTimUnactive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.radioTimUnactive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
-            // txtTimTen
+            // txtTimTenTK
             // 
-            this.txtTimTen.BorderRadius = 15;
-            this.txtTimTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimTen.DefaultText = "";
-            this.txtTimTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTimTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTimTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimTen.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimTen.ForeColor = System.Drawing.Color.Black;
-            this.txtTimTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimTen.Location = new System.Drawing.Point(50, 38);
-            this.txtTimTen.Name = "txtTimTen";
-            this.txtTimTen.PasswordChar = '\0';
-            this.txtTimTen.PlaceholderText = "";
-            this.txtTimTen.SelectedText = "";
-            this.txtTimTen.Size = new System.Drawing.Size(106, 24);
-            this.txtTimTen.TabIndex = 4;
+            this.txtTimTenTK.BorderRadius = 15;
+            this.txtTimTenTK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimTenTK.DefaultText = "";
+            this.txtTimTenTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimTenTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimTenTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimTenTK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimTenTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimTenTK.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimTenTK.ForeColor = System.Drawing.Color.Black;
+            this.txtTimTenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimTenTK.Location = new System.Drawing.Point(65, 38);
+            this.txtTimTenTK.Name = "txtTimTenTK";
+            this.txtTimTenTK.PasswordChar = '\0';
+            this.txtTimTenTK.PlaceholderText = "";
+            this.txtTimTenTK.SelectedText = "";
+            this.txtTimTenTK.Size = new System.Drawing.Size(106, 24);
+            this.txtTimTenTK.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(440, 42);
+            this.label2.Location = new System.Drawing.Point(453, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 18);
             this.label2.TabIndex = 0;
@@ -452,7 +462,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(340, 42);
+            this.label1.Location = new System.Drawing.Point(353, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 18);
             this.label1.TabIndex = 0;
@@ -547,7 +557,7 @@
             this.SoDienThoai,
             this.DiaChi,
             this.LoaiTK,
-            this.Trangthai});
+            this.TrangThai});
             this.dgv_TaiKhoan.Location = new System.Drawing.Point(3, 2);
             this.dgv_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TaiKhoan.Name = "dgv_TaiKhoan";
@@ -609,7 +619,7 @@
             this.groupBox2.Controls.Add(this.radioTimActive);
             this.groupBox2.Controls.Add(this.btn_SuaTK);
             this.groupBox2.Controls.Add(this.txtTimSDT);
-            this.groupBox2.Controls.Add(this.txtTimTen);
+            this.groupBox2.Controls.Add(this.txtTimTenTK);
             this.groupBox2.Controls.Add(this.radioTimUnactive);
             this.groupBox2.Controls.Add(this.btn_XoaTK);
             this.groupBox2.Controls.Add(this.btn_ThemTK);
@@ -641,7 +651,7 @@
             this.txtTimSDT.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimSDT.ForeColor = System.Drawing.Color.Black;
             this.txtTimSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimSDT.Location = new System.Drawing.Point(210, 38);
+            this.txtTimSDT.Location = new System.Drawing.Point(220, 38);
             this.txtTimSDT.Name = "txtTimSDT";
             this.txtTimSDT.PasswordChar = '\0';
             this.txtTimSDT.PlaceholderText = "";
@@ -684,7 +694,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(162, 44);
+            this.label3.Location = new System.Drawing.Point(177, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 18);
             this.label3.TabIndex = 0;
@@ -694,11 +704,11 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(7, 44);
+            this.label16.Location = new System.Drawing.Point(6, 42);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(37, 18);
+            this.label16.Size = new System.Drawing.Size(63, 18);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Tên:";
+            this.label16.Text = "Tên TK:";
             // 
             // txt_TimTK
             // 
@@ -772,19 +782,19 @@
             this.LoaiTK.Name = "LoaiTK";
             this.LoaiTK.ReadOnly = true;
             // 
-            // Trangthai
+            // TrangThai
             // 
-            this.Trangthai.DataPropertyName = "TrangThai";
-            this.Trangthai.HeaderText = "Trạng Thái";
-            this.Trangthai.Name = "Trangthai";
-            this.Trangthai.ReadOnly = true;
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
             // 
             // USTaiKhoanAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.txt_TimTK);
             this.Controls.Add(this.label17);
@@ -796,6 +806,8 @@
             this.Size = new System.Drawing.Size(695, 832);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarTK)).EndInit();
             this.panel29.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TaiKhoan)).EndInit();
@@ -812,7 +824,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private Guna.UI2.WinForms.Guna2TextBox txtTimTen;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimTenTK;
         private Guna.UI2.WinForms.Guna2TextBox txt_DiaChi;
         private Guna.UI2.WinForms.Guna2TextBox txt_MatKhau;
         private Guna.UI2.WinForms.Guna2TextBox txt_TenNV;
@@ -853,12 +865,13 @@
         private Guna.UI2.WinForms.Guna2CustomRadioButton radioUnactive;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tentk;
         private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Trangthai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }

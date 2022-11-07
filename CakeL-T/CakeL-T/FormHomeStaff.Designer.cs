@@ -40,6 +40,7 @@
             this.panel_LapHoaDon = new System.Windows.Forms.Panel();
             this.panel_TrangChu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_chinh = new System.Windows.Forms.Panel();
             this.btn_CaiLaiMK = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -97,7 +98,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel_chinh = new System.Windows.Forms.Panel();
             this.panel_Trai.SuspendLayout();
             this.grb_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarNV1)).BeginInit();
@@ -235,7 +235,7 @@
             this.btn_HoaDon.Name = "btn_HoaDon";
             this.btn_HoaDon.Size = new System.Drawing.Size(150, 51);
             this.btn_HoaDon.TabIndex = 14;
-            this.btn_HoaDon.Text = "Hóa đơn";
+            this.btn_HoaDon.Text = "Bán hàng";
             this.btn_HoaDon.UseTransparentBackground = true;
             this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
             // 
@@ -337,6 +337,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(771, 843);
             this.panel1.TabIndex = 12;
+            // 
+            // panel_chinh
+            // 
+            this.panel_chinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_chinh.Location = new System.Drawing.Point(0, 0);
+            this.panel_chinh.Name = "panel_chinh";
+            this.panel_chinh.Size = new System.Drawing.Size(771, 843);
+            this.panel_chinh.TabIndex = 13;
             // 
             // btn_CaiLaiMK
             // 
@@ -1036,14 +1044,6 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 10;
             this.pictureBox7.TabStop = false;
-            // 
-            // panel_chinh
-            // 
-            this.panel_chinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_chinh.Location = new System.Drawing.Point(0, 0);
-            this.panel_chinh.Name = "panel_chinh";
-            this.panel_chinh.Size = new System.Drawing.Size(771, 843);
-            this.panel_chinh.TabIndex = 13;
             // 
             // FormHomeStaff
             // 

@@ -22,11 +22,9 @@ namespace DAL
     
         public int MaBanh { get; set; }
         public string TenBanh { get; set; }
-        public Nullable<int> SoLuong { get; set; }
+        public Nullable<bool> TrangThaiBanh { get; set; }
         public Nullable<int> DonGia { get; set; }
         public Nullable<int> LoaiBanh { get; set; }
-        public Nullable<System.DateTime> NgaySanXuat { get; set; }
-        public Nullable<System.DateTime> NgayHetHan { get; set; }
         public string HinhAnh { get; set; }
         public bool TrangThaiXoa { get; set; }
         public string TenLoaiBanh { get; set; }

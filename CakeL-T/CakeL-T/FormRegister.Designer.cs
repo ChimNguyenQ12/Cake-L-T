@@ -221,6 +221,7 @@
             this.txt_TenDangNhap.SelectedText = "";
             this.txt_TenDangNhap.Size = new System.Drawing.Size(315, 41);
             this.txt_TenDangNhap.TabIndex = 0;
+            this.txt_TenDangNhap.TextChanged += new System.EventHandler(this.txt_TenDangNhap_TextChanged);
             this.txt_TenDangNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TenDangNhap_KeyPress);
             // 
             // txt_MatKhau
@@ -247,6 +248,7 @@
             this.txt_MatKhau.SelectedText = "";
             this.txt_MatKhau.Size = new System.Drawing.Size(315, 41);
             this.txt_MatKhau.TabIndex = 1;
+            this.txt_MatKhau.TextChanged += new System.EventHandler(this.txt_TenDangNhap_TextChanged);
             this.txt_MatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MatKhau_KeyPress);
             // 
             // txt_NhapLaiMatKhau
@@ -273,6 +275,7 @@
             this.txt_NhapLaiMatKhau.SelectedText = "";
             this.txt_NhapLaiMatKhau.Size = new System.Drawing.Size(315, 41);
             this.txt_NhapLaiMatKhau.TabIndex = 2;
+            this.txt_NhapLaiMatKhau.TextChanged += new System.EventHandler(this.txt_TenDangNhap_TextChanged);
             this.txt_NhapLaiMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_NhapLaiMatKhau_KeyPress);
             // 
             // txt_HoTen

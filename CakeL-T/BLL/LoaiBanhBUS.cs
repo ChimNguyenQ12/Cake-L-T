@@ -58,11 +58,11 @@ namespace BLL
             }
         }
 
-        public string AddCateCake(string name)
+        public string AddCateCake(string name, int code)
         {
             try
             {
-                int code = int.Parse(DateTime.Now.ToString("MMddHHmmss"));
+                
                 LoaiBanhDAL LoaiBanhDAL = new LoaiBanhDAL();
                 var tbCateCake = LoaiBanhDAL.GetCateCakes();
                 foreach (var cake in tbCateCake)
@@ -85,13 +85,19 @@ namespace BLL
             return "success";
         }
 
-        public List<LoaiBanh> SearchCateCake(string key)
+        public List<LoaiBanh> SearchCateCake(int key)
         {
             try
-            {
+            {   
+                string k = key.ToString();
                 List<LoaiBanh> cakeCateSearch = new List<LoaiBanh>();
                 LoaiBanhDAL LoaiBanhDAL = new LoaiBanhDAL();
-                cakeCateSearch = LoaiBanhDAL.SearchCateCake(key);
+                if (k == "0")
+                {
+                    cakeCateSearch = LoaiBanhDAL.SearchCateCake("0");
+
+                }
+                cakeCateSearch = LoaiBanhDAL.SearchCateCake(k);
                 return cakeCateSearch;
             }
             catch (Exception)

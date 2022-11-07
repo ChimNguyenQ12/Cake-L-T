@@ -32,12 +32,12 @@ namespace BLL
             }
         }
 
-        public void UpdateCakeById(int code, int category, string name, int quanity, int price, DateTime dateManu, DateTime dateExpire, string image)
+        public void UpdateCakeById(int code, int category, string name, bool status, int price, string image)
         {
             try
             {
                 BanhDAL banhDAL = new BanhDAL();
-                banhDAL.UpdateCakeById(code, category, name, quanity, price, dateManu, dateExpire,image);
+                banhDAL.UpdateCakeById(code, category, name, status, price,image);
             }
             catch (Exception)
             {
@@ -58,11 +58,10 @@ namespace BLL
             }
         }
 
-        public string AddCake(int category, string name, int quanity, int price, DateTime dateManu, DateTime dateExpire, string image)
+        public string AddCake(int code, int category, string name, int price, string image)
         {
             try
             {
-                int code = int.Parse(DateTime.Now.ToString("MMddHHmmss"));
                 BanhDAL banhDAL = new BanhDAL();
                 var tbCake = banhDAL.GetCakes();
                 foreach (var cake in tbCake)
@@ -73,7 +72,7 @@ namespace BLL
                     }
                 }
 
-                if (banhDAL.AddCake(code, category, name, quanity, price, dateManu, dateExpire,image) == "success")
+                if (banhDAL.AddCake(code, category, name, price,image) == "success")
                 {
                     return "success";
                 }
@@ -85,13 +84,19 @@ namespace BLL
             return "success";
         }
 
-        public List<Banh> SearchCake(string key)
+        public List<Banh> SearchCake(int key)
         {
             try
             {
+                string k = key.ToString();
                 List<Banh> cakeSearch = new List<Banh>();
                 BanhDAL banhDAL = new BanhDAL();
-                cakeSearch = banhDAL.SearchCake(key);
+                if (key == 0)
+                {
+                    cakeSearch = banhDAL.SearchCake("0");
+
+                }
+                cakeSearch = banhDAL.SearchCake(k);
                 return cakeSearch;
             }
             catch (Exception)
@@ -100,13 +105,13 @@ namespace BLL
             }
         }
 
-        public List<Banh> SearchCakeMulti(int price, int codeCategory, DateTime dateManu,DateTime dateExpire)
+        public List<Banh> SearchCakeMulti(int price, int codeCategory, bool status)
         {
             try
             {
                 List<Banh> cakeSearch = new List<Banh>();
                 BanhDAL banhDAL = new BanhDAL();
-                cakeSearch = banhDAL.SearchCakeMulti(price,codeCategory,dateManu,dateExpire);
+                cakeSearch = banhDAL.SearchCakeMulti(price,codeCategory, status);
                 return cakeSearch;
             }
             catch (Exception)

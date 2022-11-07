@@ -6,11 +6,9 @@
     </Key>
     <Property Name="MaBanh" Type="int" Nullable="false" />
     <Property Name="TenBanh" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="SoLuong" Type="int" />
+    <Property Name="TrangThaiBanh" Type="bit" />
     <Property Name="DonGia" Type="int" />
     <Property Name="LoaiBanh" Type="int" />
-    <Property Name="NgaySanXuat" Type="datetime" />
-    <Property Name="NgayHetHan" Type="datetime" />
     <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
     <Property Name="TrangThaiXoa" Type="bit" Nullable="false" />
     <Property Name="TenLoaiBanh" Type="nvarchar" MaxLength="50" />
@@ -43,15 +41,6 @@
     <Property Name="MaKhach" Type="nchar" MaxLength="10" />
     <Property Name="TongTien" Type="int" />
   </EntityType>
-  <EntityType Name="KhachHang">
-    <Key>
-      <PropertyRef Name="MaKhach" />
-    </Key>
-    <Property Name="MaKhach" Type="int" Nullable="false" />
-    <Property Name="TenKhach" Type="nvarchar" MaxLength="50" />
-    <Property Name="SoDienThoai" Type="int" />
-    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
-  </EntityType>
   <EntityType Name="LoaiBanh">
     <Key>
       <PropertyRef Name="MaLoai" />
@@ -59,18 +48,6 @@
     <Property Name="MaLoai" Type="int" Nullable="false" />
     <Property Name="TenLoai" Type="nvarchar" MaxLength="50" />
     <Property Name="TrangThaiXoa" Type="bit" Nullable="false" />
-  </EntityType>
-  <EntityType Name="NhanVien">
-    <Key>
-      <PropertyRef Name="MaNV" />
-    </Key>
-    <Property Name="MaNV" Type="int" Nullable="false" />
-    <Property Name="TenNV" Type="nvarchar" MaxLength="50" />
-    <Property Name="NgaySinh" Type="datetime" />
-    <Property Name="SDT" Type="int" />
-    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
-    <Property Name="Luong" Type="int" />
-    <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -126,9 +103,7 @@
     <EntitySet Name="CTHoaDon" EntityType="Self.CTHoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HinhAnh" EntityType="Self.HinhAnh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoaiBanh" EntityType="Self.LoaiBanh" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Banh_LoaiBanh" Association="Self.FK_Banh_LoaiBanh">

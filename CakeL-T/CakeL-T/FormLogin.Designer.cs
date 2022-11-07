@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_DangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -167,32 +167,33 @@
             this.txt_TenDangNhap.Size = new System.Drawing.Size(290, 41);
             this.txt_TenDangNhap.TabIndex = 0;
             // 
-            // guna2Button1
+            // btn_DangNhap
             // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_DangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.LightCoral;
-            this.guna2Button1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(473, 351);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "Đăng Nhập";
-            this.guna2Button1.Click += new System.EventHandler(this.btn_DangNhap_Click);
+            this.btn_DangNhap.BorderRadius = 20;
+            this.btn_DangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_DangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_DangNhap.FillColor = System.Drawing.Color.LightCoral;
+            this.btn_DangNhap.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DangNhap.ForeColor = System.Drawing.Color.White;
+            this.btn_DangNhap.Location = new System.Drawing.Point(473, 351);
+            this.btn_DangNhap.Name = "btn_DangNhap";
+            this.btn_DangNhap.Size = new System.Drawing.Size(180, 45);
+            this.btn_DangNhap.TabIndex = 2;
+            this.btn_DangNhap.Text = "Đăng Nhập";
+            this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.btn_DangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 671);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btn_DangNhap);
             this.Controls.Add(this.txt_TenDangNhap);
             this.Controls.Add(this.txt_MatKhau);
             this.Controls.Add(this.label4);
@@ -221,6 +222,6 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txt_MatKhau;
         private Guna.UI2.WinForms.Guna2TextBox txt_TenDangNhap;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_DangNhap;
     }
 }

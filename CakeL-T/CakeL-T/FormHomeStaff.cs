@@ -32,14 +32,14 @@ namespace CakeL_T
 
         private void FormHomeStaff_Load(object sender, EventArgs e)
         {
-            if (!panel_chinh.Controls.Contains(USTrangChu.Instance))
+            if (!panel_chinh.Controls.Contains(USTrangChuStaff.Instance))
             {
-                panel_chinh.Controls.Add(USTrangChu.Instance);
-                USTrangChu.Instance.Dock = DockStyle.Fill;
-                USTrangChu.Instance.BringToFront();
+                panel_chinh.Controls.Add(USTrangChuStaff.Instance);
+                USTrangChuStaff.Instance.Dock = DockStyle.Fill;
+                USTrangChuStaff.Instance.BringToFront();
             }
             else
-                USBanhAdmin.Instance.BringToFront();
+                USTrangChu.Instance.BringToFront();
         }
 
         private void btn_HoaDon_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace CakeL_T
                 USHoaDonStaff.Instance.BringToFront();
             }
             else
-                USBanhAdmin.Instance.BringToFront();
+                USHoaDonStaff.Instance.BringToFront();
         }
 
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
@@ -63,19 +63,19 @@ namespace CakeL_T
                 USTaiKhoanStaff.Instance.BringToFront();
             }
             else
-                USBanhAdmin.Instance.BringToFront();
+                USTaiKhoanStaff.Instance.BringToFront();
         }
 
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
             if (!panel_chinh.Controls.Contains(USTrangChu.Instance))
             {
-                panel_chinh.Controls.Add(USTrangChu.Instance);
-                USTrangChu.Instance.Dock = DockStyle.Fill;
-                USTrangChu.Instance.BringToFront();
+                panel_chinh.Controls.Add(USTrangChuStaff.Instance);
+                USTrangChuStaff.Instance.Dock = DockStyle.Fill;
+                USTrangChuStaff.Instance.BringToFront();
             }
             else
-                USTrangChu.Instance.BringToFront();
+                USTrangChuStaff.Instance.BringToFront();
         }
     }
 }

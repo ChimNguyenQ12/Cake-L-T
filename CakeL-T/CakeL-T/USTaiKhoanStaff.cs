@@ -29,8 +29,8 @@ namespace CakeL_T
 
         private void btn_CaiLaiMK_Click(object sender, EventArgs e)
         {
-            FormCaiDat formCaiDat = new FormCaiDat();
-            formCaiDat.ShowDialog();
+            FormCaiLaiMK formCaiLaiMK = new FormCaiLaiMK();
+            formCaiLaiMK.ShowDialog();
         }
     }
 }

@@ -105,11 +105,11 @@ namespace CakeL_T
 
         private void txt_MatKhau_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
-            if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
-            {
-                e.Handled = true;
-            }
+            //e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            //if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
+            //{
+            //    e.Handled = true;
+            //}
             //if (Control.IsKeyLocked(Keys.CapsLock))
             //{
             //    MessageBox.Show("The Caps Lock key is ON.");
@@ -118,11 +118,16 @@ namespace CakeL_T
 
         private void txt_NhapLaiMatKhau_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
-            if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
-            {
-                e.Handled = true;
-            }
+            //e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            //if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
+            //{
+            //    e.Handled = true;
+            //}
+        }
+
+        private void txt_TenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+            txt_TenDangNhap.Text = txt_TenDangNhap.Text.Replace(" ", "");
         }
     }
 }

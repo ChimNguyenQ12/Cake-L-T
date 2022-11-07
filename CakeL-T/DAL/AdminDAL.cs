@@ -71,7 +71,7 @@ namespace DAL
         public List<TaiKhoan> SearchAccountMulti(string name,string phone, bool status)
         {
             List<TaiKhoan> accountSearch = new List<TaiKhoan>();
-            accountSearch = cakeEntities.TaiKhoans.Where(x => x.HoTen.Contains(name) && x.TrangThaiXoa == false)
+            accountSearch = cakeEntities.TaiKhoans.Where(x => x.TenTK.Contains(name) && x.TrangThaiXoa == false)
                                                   .Where(x => x.SoDienThoai.Contains(phone) && x.TrangThaiXoa == false)
                                                   .Where(x => x.TrangThai == status && x.TrangThaiXoa == false)
                                                 .ToList();
