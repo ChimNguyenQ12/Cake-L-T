@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USTaiKhoanAdmin));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_clear = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_eyes = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.radioUnactive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.radioActive = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.btnEyes = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,6 +61,13 @@
             this.label17 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
             this.dgv_TaiKhoan = new System.Windows.Forms.DataGridView();
+            this.tentk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -73,13 +80,6 @@
             this.txt_TimTK = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.tentk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarTK)).BeginInit();
@@ -96,9 +96,9 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.btn_clear);
+            this.groupBox3.Controls.Add(this.btn_eyes);
             this.groupBox3.Controls.Add(this.panel1);
-            this.groupBox3.Controls.Add(this.btnEyes);
-            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.txt_SDT);
             this.groupBox3.Controls.Add(this.txt_DiaChi);
             this.groupBox3.Controls.Add(this.txt_MatKhau);
@@ -118,6 +118,37 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin tài khoản";
             // 
+            // btn_clear
+            // 
+            this.btn_clear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_clear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_clear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_clear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_clear.FillColor = System.Drawing.Color.Transparent;
+            this.btn_clear.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_clear.ForeColor = System.Drawing.Color.White;
+            this.btn_clear.Image = ((System.Drawing.Image)(resources.GetObject("btn_clear.Image")));
+            this.btn_clear.Location = new System.Drawing.Point(607, 182);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(30, 30);
+            this.btn_clear.TabIndex = 8;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
+            // btn_eyes
+            // 
+            this.btn_eyes.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_eyes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_eyes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_eyes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_eyes.FillColor = System.Drawing.Color.Transparent;
+            this.btn_eyes.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_eyes.ForeColor = System.Drawing.Color.White;
+            this.btn_eyes.Image = ((System.Drawing.Image)(resources.GetObject("btn_eyes.Image")));
+            this.btn_eyes.Location = new System.Drawing.Point(278, 170);
+            this.btn_eyes.Name = "btn_eyes";
+            this.btn_eyes.Size = new System.Drawing.Size(28, 25);
+            this.btn_eyes.TabIndex = 8;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label4);
@@ -125,9 +156,9 @@
             this.panel1.Controls.Add(this.radioUnactive);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.radioActive);
-            this.panel1.Location = new System.Drawing.Point(305, 167);
+            this.panel1.Location = new System.Drawing.Point(330, 167);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 48);
+            this.panel1.Size = new System.Drawing.Size(271, 48);
             this.panel1.TabIndex = 7;
             // 
             // label4
@@ -193,35 +224,6 @@
             this.radioActive.UncheckedState.BorderThickness = 2;
             this.radioActive.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.radioActive.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // btnEyes
-            // 
-            this.btnEyes.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEyes.Image = ((System.Drawing.Image)(resources.GetObject("btnEyes.Image")));
-            this.btnEyes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEyes.Location = new System.Drawing.Point(278, 171);
-            this.btnEyes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEyes.Name = "btnEyes";
-            this.btnEyes.Size = new System.Drawing.Size(25, 23);
-            this.btnEyes.TabIndex = 0;
-            this.btnEyes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEyes.UseVisualStyleBackColor = true;
-            this.btnEyes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEyes_MouseDown);
-            this.btnEyes.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnEyes_MouseUp);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(606, 188);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 30);
-            this.button1.TabIndex = 1;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txt_SDT
             // 
@@ -572,6 +574,55 @@
             this.dgv_TaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellContentClick);
             this.dgv_TaiKhoan.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_TaiKhoan_CellFormatting);
             // 
+            // tentk
+            // 
+            this.tentk.DataPropertyName = "TenTK";
+            this.tentk.HeaderText = "Tên Tài Khoản";
+            this.tentk.Name = "tentk";
+            this.tentk.ReadOnly = true;
+            // 
+            // MatKhau
+            // 
+            this.MatKhau.DataPropertyName = "MatKhau";
+            this.MatKhau.HeaderText = "Mật Khẩu";
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.ReadOnly = true;
+            // 
+            // hoten
+            // 
+            this.hoten.DataPropertyName = "HoTen";
+            this.hoten.HeaderText = "Họ và Tên";
+            this.hoten.Name = "hoten";
+            this.hoten.ReadOnly = true;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số Điện Thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // LoaiTK
+            // 
+            this.LoaiTK.DataPropertyName = "LoaiTK";
+            this.LoaiTK.HeaderText = "Loại Tài Khoản";
+            this.LoaiTK.Name = "LoaiTK";
+            this.LoaiTK.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -740,55 +791,6 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // tentk
-            // 
-            this.tentk.DataPropertyName = "TenTK";
-            this.tentk.HeaderText = "Tên Tài Khoản";
-            this.tentk.Name = "tentk";
-            this.tentk.ReadOnly = true;
-            // 
-            // MatKhau
-            // 
-            this.MatKhau.DataPropertyName = "MatKhau";
-            this.MatKhau.HeaderText = "Mật Khẩu";
-            this.MatKhau.Name = "MatKhau";
-            this.MatKhau.ReadOnly = true;
-            // 
-            // hoten
-            // 
-            this.hoten.DataPropertyName = "HoTen";
-            this.hoten.HeaderText = "Họ và Tên";
-            this.hoten.Name = "hoten";
-            this.hoten.ReadOnly = true;
-            // 
-            // SoDienThoai
-            // 
-            this.SoDienThoai.DataPropertyName = "SoDienThoai";
-            this.SoDienThoai.HeaderText = "Số Điện Thoại";
-            this.SoDienThoai.Name = "SoDienThoai";
-            this.SoDienThoai.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            // 
-            // LoaiTK
-            // 
-            this.LoaiTK.DataPropertyName = "LoaiTK";
-            this.LoaiTK.HeaderText = "Loại Tài Khoản";
-            this.LoaiTK.Name = "LoaiTK";
-            this.LoaiTK.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            // 
             // USTaiKhoanAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -850,13 +852,11 @@
         private System.Windows.Forms.Button btn_ReportHD;
         private System.Windows.Forms.Button btn_TimTK;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRefresh;
         private Guna.UI2.WinForms.Guna2CustomRadioButton radioTimActive;
         private Guna.UI2.WinForms.Guna2CustomRadioButton radioTimUnactive;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnEyes;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2TextBox txtTimSDT;
         private System.Windows.Forms.Label label3;
@@ -873,5 +873,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTK;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private Guna.UI2.WinForms.Guna2Button btn_clear;
+        private Guna.UI2.WinForms.Guna2Button btn_eyes;
     }
 }

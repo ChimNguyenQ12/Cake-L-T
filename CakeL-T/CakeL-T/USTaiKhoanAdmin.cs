@@ -201,10 +201,6 @@ namespace CakeL_T
             }
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
 
         private void txt_MatKhau_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -262,6 +258,16 @@ namespace CakeL_T
                 status = false;
                 dgv_TaiKhoan.DataSource = adminBUS.SearchAccountMulti(txtTimTenTK.Text, txtTimSDT.Text, status);
             }
+        }
+
+        private void btnEyes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }
