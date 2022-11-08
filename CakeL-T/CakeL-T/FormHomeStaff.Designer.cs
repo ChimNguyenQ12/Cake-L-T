@@ -305,7 +305,7 @@
             this.panel_LapHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_LapHoaDon.Location = new System.Drawing.Point(245, 0);
             this.panel_LapHoaDon.Name = "panel_LapHoaDon";
-            this.panel_LapHoaDon.Size = new System.Drawing.Size(771, 843);
+            this.panel_LapHoaDon.Size = new System.Drawing.Size(833, 843);
             this.panel_LapHoaDon.TabIndex = 2;
             // 
             // panel_TrangChu
@@ -321,7 +321,7 @@
             this.panel_TrangChu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_TrangChu.Location = new System.Drawing.Point(0, 0);
             this.panel_TrangChu.Name = "panel_TrangChu";
-            this.panel_TrangChu.Size = new System.Drawing.Size(771, 843);
+            this.panel_TrangChu.Size = new System.Drawing.Size(833, 843);
             this.panel_TrangChu.TabIndex = 23;
             // 
             // panel1
@@ -335,7 +335,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(771, 843);
+            this.panel1.Size = new System.Drawing.Size(833, 843);
             this.panel1.TabIndex = 12;
             // 
             // panel_chinh
@@ -343,7 +343,7 @@
             this.panel_chinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_chinh.Location = new System.Drawing.Point(0, 0);
             this.panel_chinh.Name = "panel_chinh";
-            this.panel_chinh.Size = new System.Drawing.Size(771, 843);
+            this.panel_chinh.Size = new System.Drawing.Size(833, 843);
             this.panel_chinh.TabIndex = 13;
             // 
             // btn_CaiLaiMK
@@ -726,7 +726,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(108, 256);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(70, 8);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
             // pictureBox4
@@ -736,7 +736,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Location = new System.Drawing.Point(251, 148);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(111, 85);
+            this.pictureBox4.Size = new System.Drawing.Size(173, 85);
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
             // 
@@ -747,7 +747,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Location = new System.Drawing.Point(129, 148);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(111, 85);
+            this.pictureBox3.Size = new System.Drawing.Size(173, 85);
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             // 
@@ -758,7 +758,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Location = new System.Drawing.Point(6, 148);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(111, 85);
+            this.pictureBox2.Size = new System.Drawing.Size(173, 85);
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
@@ -770,7 +770,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 279);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(356, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(418, 396);
             this.dataGridView1.TabIndex = 18;
             // 
             // panel12
@@ -789,7 +789,7 @@
             this.panel12.Location = new System.Drawing.Point(6, 691);
             this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(741, 91);
+            this.panel12.Size = new System.Drawing.Size(803, 91);
             this.panel12.TabIndex = 15;
             // 
             // label16
@@ -876,7 +876,7 @@
             this.panel4.Location = new System.Drawing.Point(367, 182);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(381, 93);
+            this.panel4.Size = new System.Drawing.Size(443, 93);
             this.panel4.TabIndex = 16;
             // 
             // cbMonAn
@@ -940,7 +940,7 @@
             this.panel23.Location = new System.Drawing.Point(368, 125);
             this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(380, 53);
+            this.panel23.Size = new System.Drawing.Size(442, 53);
             this.panel23.TabIndex = 17;
             // 
             // label7
@@ -963,7 +963,7 @@
             this.panel20.Location = new System.Drawing.Point(367, 279);
             this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(381, 396);
+            this.panel20.Size = new System.Drawing.Size(443, 396);
             this.panel20.TabIndex = 14;
             // 
             // lvHoaDon
@@ -981,7 +981,7 @@
             this.lvHoaDon.Location = new System.Drawing.Point(0, 0);
             this.lvHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.lvHoaDon.Name = "lvHoaDon";
-            this.lvHoaDon.Size = new System.Drawing.Size(381, 396);
+            this.lvHoaDon.Size = new System.Drawing.Size(443, 396);
             this.lvHoaDon.TabIndex = 1;
             this.lvHoaDon.UseCompatibleStateImageBehavior = false;
             this.lvHoaDon.View = System.Windows.Forms.View.Details;
@@ -1014,7 +1014,7 @@
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(441, 22);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(152, 68);
+            this.pictureBox5.Size = new System.Drawing.Size(214, 68);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
@@ -1027,7 +1027,7 @@
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(239, 22);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(152, 68);
+            this.pictureBox6.Size = new System.Drawing.Size(214, 68);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
@@ -1040,7 +1040,7 @@
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(33, 22);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(152, 68);
+            this.pictureBox7.Size = new System.Drawing.Size(214, 68);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 10;
             this.pictureBox7.TabStop = false;
@@ -1049,7 +1049,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 843);
+            this.ClientSize = new System.Drawing.Size(1078, 843);
             this.Controls.Add(this.panel_LapHoaDon);
             this.Controls.Add(this.panel_Trai);
             this.Name = "FormHomeStaff";

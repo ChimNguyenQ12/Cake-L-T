@@ -17,7 +17,6 @@ namespace DAL
         public int MaHoaDon { get; set; }
         public string IdTaiKhoan { get; set; }
         public Nullable<System.DateTime> NgayMua { get; set; }
-        public string MaKhach { get; set; }
         public Nullable<int> TongTien { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="CakeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Banh">
     <Key>
       <PropertyRef Name="MaBanh" />
@@ -38,7 +38,6 @@
     <Property Name="MaHoaDon" Type="int" Nullable="false" />
     <Property Name="IdTaiKhoan" Type="nchar" MaxLength="10" />
     <Property Name="NgayMua" Type="datetime" />
-    <Property Name="MaKhach" Type="nchar" MaxLength="10" />
     <Property Name="TongTien" Type="int" />
   </EntityType>
   <EntityType Name="LoaiBanh">
@@ -48,16 +47,6 @@
     <Property Name="MaLoai" Type="int" Nullable="false" />
     <Property Name="TenLoai" Type="nvarchar" MaxLength="50" />
     <Property Name="TrangThaiXoa" Type="bit" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -98,13 +87,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ModelStoreContainer">
+  <EntityContainer Name="CakeModelStoreContainer">
     <EntitySet Name="Banh" EntityType="Self.Banh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTHoaDon" EntityType="Self.CTHoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HinhAnh" EntityType="Self.HinhAnh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoaiBanh" EntityType="Self.LoaiBanh" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Banh_LoaiBanh" Association="Self.FK_Banh_LoaiBanh">
       <End Role="LoaiBanh" EntitySet="LoaiBanh" />

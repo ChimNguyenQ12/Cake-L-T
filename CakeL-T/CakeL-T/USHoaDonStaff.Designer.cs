@@ -30,15 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USHoaDonStaff));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dgv_Banh = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
             this.btInHoaDon = new System.Windows.Forms.Button();
             this.btThanhToan = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_TongTien = new System.Windows.Forms.TextBox();
-            this.numGiamGia = new System.Windows.Forms.NumericUpDown();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_LamMoi = new Guna.UI2.WinForms.Guna2Button();
+            this.rbn_HetHang = new System.Windows.Forms.RadioButton();
+            this.rbn_Conhang = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_TimKiem = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.txt_TenBanh = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btThemMon = new System.Windows.Forms.Button();
@@ -51,10 +55,9 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).BeginInit();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numGiamGia)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_DemBanh)).BeginInit();
             this.panel23.SuspendLayout();
@@ -67,8 +70,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dgv_Banh);
             this.panel1.Controls.Add(this.panel12);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel23);
             this.panel1.Controls.Add(this.panel20);
@@ -76,29 +79,18 @@
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(771, 843);
+            this.panel1.Size = new System.Drawing.Size(833, 843);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Location = new System.Drawing.Point(455, 22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(273, 191);
-            this.pictureBox3.TabIndex = 32;
-            this.pictureBox3.TabStop = false;
             // 
             // dgv_Banh
             // 
             this.dgv_Banh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Banh.Location = new System.Drawing.Point(14, 305);
+            this.dgv_Banh.Location = new System.Drawing.Point(3, 0);
             this.dgv_Banh.Name = "dgv_Banh";
-            this.dgv_Banh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Banh.Size = new System.Drawing.Size(741, 203);
+            this.dgv_Banh.Size = new System.Drawing.Size(397, 412);
             this.dgv_Banh.TabIndex = 30;
             this.dgv_Banh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Banh_CellContentClick);
             // 
@@ -108,30 +100,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BackColor = System.Drawing.Color.LightCoral;
-            this.panel12.Controls.Add(this.label16);
             this.panel12.Controls.Add(this.btInHoaDon);
             this.panel12.Controls.Add(this.btThanhToan);
             this.panel12.Controls.Add(this.label11);
             this.panel12.Controls.Add(this.txt_TongTien);
-            this.panel12.Controls.Add(this.numGiamGia);
             this.panel12.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel12.Location = new System.Drawing.Point(17, 752);
+            this.panel12.Location = new System.Drawing.Point(14, 736);
             this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(738, 91);
+            this.panel12.Size = new System.Drawing.Size(800, 87);
             this.panel12.TabIndex = 27;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(390, 18);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(86, 18);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "Giảm giá (%):";
-            this.label16.Visible = false;
             // 
             // btInHoaDon
             // 
@@ -185,15 +163,113 @@
             this.txt_TongTien.Text = "0";
             this.txt_TongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numGiamGia
+            // panel2
             // 
-            this.numGiamGia.Location = new System.Drawing.Point(491, 18);
-            this.numGiamGia.Margin = new System.Windows.Forms.Padding(2);
-            this.numGiamGia.Name = "numGiamGia";
-            this.numGiamGia.Size = new System.Drawing.Size(80, 29);
-            this.numGiamGia.TabIndex = 1;
-            this.numGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numGiamGia.Visible = false;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.LightCoral;
+            this.panel2.Controls.Add(this.btn_LamMoi);
+            this.panel2.Controls.Add(this.rbn_HetHang);
+            this.panel2.Controls.Add(this.rbn_Conhang);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btn_TimKiem);
+            this.panel2.Controls.Add(this.txt_TenBanh);
+            this.panel2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(17, 133);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(388, 161);
+            this.panel2.TabIndex = 28;
+            // 
+            // btn_LamMoi
+            // 
+            this.btn_LamMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LamMoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LamMoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_LamMoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_LamMoi.FillColor = System.Drawing.Color.White;
+            this.btn_LamMoi.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic);
+            this.btn_LamMoi.ForeColor = System.Drawing.Color.Black;
+            this.btn_LamMoi.Location = new System.Drawing.Point(285, 112);
+            this.btn_LamMoi.Name = "btn_LamMoi";
+            this.btn_LamMoi.Size = new System.Drawing.Size(81, 32);
+            this.btn_LamMoi.TabIndex = 16;
+            this.btn_LamMoi.Text = "Làm mới";
+            this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
+            // 
+            // rbn_HetHang
+            // 
+            this.rbn_HetHang.AutoSize = true;
+            this.rbn_HetHang.Location = new System.Drawing.Point(150, 59);
+            this.rbn_HetHang.Name = "rbn_HetHang";
+            this.rbn_HetHang.Size = new System.Drawing.Size(92, 26);
+            this.rbn_HetHang.TabIndex = 15;
+            this.rbn_HetHang.Text = "Hết hàng";
+            this.rbn_HetHang.UseVisualStyleBackColor = true;
+            // 
+            // rbn_Conhang
+            // 
+            this.rbn_Conhang.AutoSize = true;
+            this.rbn_Conhang.Checked = true;
+            this.rbn_Conhang.Location = new System.Drawing.Point(24, 59);
+            this.rbn_Conhang.Name = "rbn_Conhang";
+            this.rbn_Conhang.Size = new System.Drawing.Size(97, 26);
+            this.rbn_Conhang.TabIndex = 14;
+            this.rbn_Conhang.TabStop = true;
+            this.rbn_Conhang.Text = "Còn Hàng";
+            this.rbn_Conhang.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(174, 33);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Tìm kiếm bánh";
+            // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.BackColor = System.Drawing.Color.White;
+            this.btn_TimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_TimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_TimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_TimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_TimKiem.FillColor = System.Drawing.Color.Transparent;
+            this.btn_TimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_TimKiem.ForeColor = System.Drawing.Color.White;
+            this.btn_TimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btn_TimKiem.Image")));
+            this.btn_TimKiem.Location = new System.Drawing.Point(287, 59);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_TimKiem.Size = new System.Drawing.Size(35, 26);
+            this.btn_TimKiem.TabIndex = 3;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            // 
+            // txt_TenBanh
+            // 
+            this.txt_TenBanh.BorderRadius = 20;
+            this.txt_TenBanh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TenBanh.DefaultText = "";
+            this.txt_TenBanh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_TenBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_TenBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_TenBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_TenBanh.ForeColor = System.Drawing.Color.Black;
+            this.txt_TenBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_TenBanh.Location = new System.Drawing.Point(24, 103);
+            this.txt_TenBanh.Name = "txt_TenBanh";
+            this.txt_TenBanh.PasswordChar = '\0';
+            this.txt_TenBanh.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_TenBanh.PlaceholderText = "Nhập tên bánh";
+            this.txt_TenBanh.SelectedText = "";
+            this.txt_TenBanh.Size = new System.Drawing.Size(236, 41);
+            this.txt_TenBanh.TabIndex = 2;
+            this.txt_TenBanh.TextChanged += new System.EventHandler(this.txt_TenBanh_TextChanged);
             // 
             // panel4
             // 
@@ -205,10 +281,10 @@
             this.panel4.Controls.Add(this.btThemMon);
             this.panel4.Controls.Add(this.num_DemBanh);
             this.panel4.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(339, 201);
+            this.panel4.Location = new System.Drawing.Point(420, 193);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(418, 93);
+            this.panel4.Size = new System.Drawing.Size(399, 101);
             this.panel4.TabIndex = 28;
             // 
             // btn_Xoa
@@ -264,17 +340,17 @@
             this.panel23.BackColor = System.Drawing.Color.LightCoral;
             this.panel23.Controls.Add(this.label7);
             this.panel23.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel23.Location = new System.Drawing.Point(339, 144);
+            this.panel23.Location = new System.Drawing.Point(420, 133);
             this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(417, 53);
+            this.panel23.Size = new System.Drawing.Size(398, 53);
             this.panel23.TabIndex = 29;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(37, 11);
+            this.label7.Location = new System.Drawing.Point(24, 10);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(312, 33);
             this.label7.TabIndex = 13;
@@ -282,21 +358,21 @@
             // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.pictureBox3);
+            this.panel20.Controls.Add(this.dgv_Banh);
             this.panel20.Controls.Add(this.dgv_HoaDon);
-            this.panel20.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel20.Location = new System.Drawing.Point(14, 513);
+            this.panel20.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel20.Location = new System.Drawing.Point(14, 314);
             this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(741, 233);
+            this.panel20.Size = new System.Drawing.Size(805, 418);
             this.panel20.TabIndex = 26;
             // 
             // dgv_HoaDon
             // 
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HoaDon.Location = new System.Drawing.Point(3, 1);
+            this.dgv_HoaDon.Location = new System.Drawing.Point(406, 0);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
-            this.dgv_HoaDon.Size = new System.Drawing.Size(429, 229);
+            this.dgv_HoaDon.Size = new System.Drawing.Size(394, 412);
             this.dgv_HoaDon.TabIndex = 0;
             // 
             // pictureBox5
@@ -305,9 +381,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(449, 41);
+            this.pictureBox5.Location = new System.Drawing.Point(505, 28);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(152, 68);
+            this.pictureBox5.Size = new System.Drawing.Size(189, 68);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 25;
             this.pictureBox5.TabStop = false;
@@ -318,9 +394,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(247, 41);
+            this.pictureBox6.Location = new System.Drawing.Point(303, 28);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(152, 68);
+            this.pictureBox6.Size = new System.Drawing.Size(189, 68);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 24;
             this.pictureBox6.TabStop = false;
@@ -331,9 +407,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(41, 41);
+            this.pictureBox7.Location = new System.Drawing.Point(97, 28);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(152, 68);
+            this.pictureBox7.Size = new System.Drawing.Size(189, 68);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 23;
             this.pictureBox7.TabStop = false;
@@ -344,14 +420,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "USHoaDonStaff";
-            this.Size = new System.Drawing.Size(771, 843);
+            this.Size = new System.Drawing.Size(833, 843);
             this.Load += new System.EventHandler(this.USHoaDonStaff_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numGiamGia)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.num_DemBanh)).EndInit();
             this.panel23.ResumeLayout(false);
@@ -368,15 +444,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dgv_Banh;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btInHoaDon;
         private System.Windows.Forms.Button btThanhToan;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_TongTien;
-        private System.Windows.Forms.NumericUpDown numGiamGia;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btThemMon;
         private System.Windows.Forms.NumericUpDown num_DemBanh;
@@ -388,5 +461,12 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.DataGridView dgv_HoaDon;
         private System.Windows.Forms.Button btn_Xoa;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_TimKiem;
+        private Guna.UI2.WinForms.Guna2TextBox txt_TenBanh;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton rbn_HetHang;
+        private System.Windows.Forms.RadioButton rbn_Conhang;
+        private Guna.UI2.WinForms.Guna2Button btn_LamMoi;
     }
 }

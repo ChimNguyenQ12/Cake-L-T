@@ -90,6 +90,18 @@ namespace DAL
                                                 .ToList();
             return accountBanh;
         }
+        public List<Banh> SearchCakeName(string name)
+        {
+            List<Banh> accountBanh = new List<Banh>();
+            if (name == null)
+            {
+                accountBanh = cakeEntities.Banhs.Where(x => x.TrangThaiXoa == false)
+                                                .ToList();
+            }
+            accountBanh = cakeEntities.Banhs.Where(x => x.TenBanh.ToString().Contains(name) && x.TrangThaiXoa == false)
+                                                .ToList();
+            return accountBanh;
+        }
 
         public List<Banh> SearchCakeMulti(int price, int codeCategory, bool status)
         {

@@ -14,7 +14,7 @@ namespace CakeL_T
     public partial class USHoaDonStaff : UserControl
     {
         DataTable dt = new DataTable();
-        public static string tenbanh, soluong, dongia;
+        public static string tenbanh, tinhtrang, dongia;
         public static int tong = 0;
         BanhBUS banhBUS = new BanhBUS();
         private static USHoaDonStaff instance;
@@ -36,7 +36,7 @@ namespace CakeL_T
         {
             LoadData();
             dt.Columns.Add("Tên Bánh");
-            dt.Columns.Add("Số Lượng");
+            dt.Columns.Add("Tình Trạng");
             dt.Columns.Add("Đơn Giá");
             dt.Columns.Add("Thành Tiền");
             dgv_HoaDon.DataSource = dt;
@@ -46,13 +46,16 @@ namespace CakeL_T
         {
             int thanhtien = 0;
             thanhtien = int.Parse(num_DemBanh.Value.ToString()) * int.Parse(dongia);
-            tong = tong + thanhtien;
-            if(int.Parse(soluong)<num_DemBanh.Value)
+            if (tinhtrang == "False")
             {
-                MessageBox.Show("không đủ số lượng");
+                MessageBox.Show("Bánh này đã hết hàng");
             }
-            dt.Rows.Add(tenbanh, num_DemBanh.Value.ToString(), dongia, thanhtien);
-            txt_TongTien.Text = tong.ToString();
+            else
+            {
+                tong = tong + thanhtien;
+                dt.Rows.Add(tenbanh, num_DemBanh.Value.ToString(), dongia, thanhtien);
+                txt_TongTien.Text = tong.ToString();
+            }
         }
 
         private void btThanhToan_Click(object sender, EventArgs e)
@@ -62,19 +65,65 @@ namespace CakeL_T
             tong = 0;
         }
 
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            var price = 1;
+            var codeCategory = 1;
+            bool status;
+            if (rbn_Conhang.Checked)
+            {
+                status = true;
+                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(price, codeCategory, status);
+            }
+            else if (rbn_HetHang.Checked)
+            {
+                status = false;
+                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(price, codeCategory, status);
+            }
+        }
+
+        private void txt_TenBanh_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_TenBanh.Text == "")
+            {
+                dgv_Banh.DataSource = banhBUS.SearchCakeName(null);
+            }
+            else
+            {
+                dgv_Banh.DataSource = banhBUS.SearchCakeName(txt_TenBanh.Text);
+            }
+        }
+
+        private void btn_LamMoi_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
 
         private void LoadData()
         {
             dgv_Banh.DataSource = banhBUS.GetCakes();
+            for (int i = 0; i < dgv_Banh.Rows.Count; i++)
+            {
+                //Use when column names known
+                if (dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == "1")
+                {
+                    dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = "Kem";
+                }
+            }
+            dgv_Banh.Columns["LoaiBanh"].Visible = false;
+            dgv_Banh.Columns["MaBanh"].Visible = false;
+            dgv_Banh.Columns["HinhAnh"].Visible = false;
+            dgv_Banh.Columns["LoaiBanh"].Visible = false;
             dgv_Banh.Columns["HinhAnhs"].Visible = false;
             dgv_Banh.Columns["LoaiBanh1"].Visible = false;
-            DataGridViewRow row = this.dgv_Banh.Rows[0];
+            dgv_Banh.Columns["TrangThaiXoa"].Visible = false;
         }
         private void dgv_Banh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = this.dgv_Banh.Rows[e.RowIndex];
             dongia = row.Cells["DonGia"].Value.ToString();
-            soluong = row.Cells["SoLuong"].Value.ToString();
+            tinhtrang = row.Cells["TrangThaiBanh"].Value.ToString();
             tenbanh = row.Cells["TenBanh"].Value.ToString();
         }
     }

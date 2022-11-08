@@ -104,6 +104,26 @@ namespace BLL
                 throw new Exception("error");
             }
         }
+        public List<Banh> SearchCakeName(string name)
+        {
+            try
+            {
+                string nameCake = name.ToString();
+                List<Banh> cakeSearch = new List<Banh>();
+                BanhDAL banhDAL = new BanhDAL();
+                if (nameCake == null)
+                {
+                    cakeSearch = banhDAL.SearchCakeName("0");
+
+                }
+                cakeSearch = banhDAL.SearchCakeName(nameCake);
+                return cakeSearch;
+            }
+            catch (Exception)
+            {
+                throw new Exception("error");
+            }
+        }
 
         public List<Banh> SearchCakeMulti(int price, int codeCategory, bool status)
         {

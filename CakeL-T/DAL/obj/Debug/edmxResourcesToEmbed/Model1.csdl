@@ -1,18 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="CakeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="CakeEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Banhs" EntityType="Model.Banh" />
-    <EntitySet Name="CTHoaDons" EntityType="Model.CTHoaDon" />
-    <EntitySet Name="HinhAnhs" EntityType="Model.HinhAnh" />
-    <EntitySet Name="HoaDons" EntityType="Model.HoaDon" />
-    <EntitySet Name="LoaiBanhs" EntityType="Model.LoaiBanh" />
-    <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagram" />
-    <EntitySet Name="TaiKhoans" EntityType="Model.TaiKhoan" />
-    <AssociationSet Name="FK_Banh_LoaiBanh" Association="Model.FK_Banh_LoaiBanh">
+    <EntitySet Name="Banhs" EntityType="CakeModel.Banh" />
+    <EntitySet Name="CTHoaDons" EntityType="CakeModel.CTHoaDon" />
+    <EntitySet Name="HinhAnhs" EntityType="CakeModel.HinhAnh" />
+    <EntitySet Name="HoaDons" EntityType="CakeModel.HoaDon" />
+    <EntitySet Name="LoaiBanhs" EntityType="CakeModel.LoaiBanh" />
+    <EntitySet Name="TaiKhoans" EntityType="CakeModel.TaiKhoan" />
+    <AssociationSet Name="FK_Banh_LoaiBanh" Association="CakeModel.FK_Banh_LoaiBanh">
       <End Role="LoaiBanh" EntitySet="LoaiBanhs" />
       <End Role="Banh" EntitySet="Banhs" />
     </AssociationSet>
-    <AssociationSet Name="FK_HinhAnh_Banh" Association="Model.FK_HinhAnh_Banh">
+    <AssociationSet Name="FK_HinhAnh_Banh" Association="CakeModel.FK_HinhAnh_Banh">
       <End Role="Banh" EntitySet="Banhs" />
       <End Role="HinhAnh" EntitySet="HinhAnhs" />
     </AssociationSet>
@@ -29,8 +28,8 @@
     <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TrangThaiXoa" Type="Boolean" Nullable="false" />
     <Property Name="TenLoaiBanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="LoaiBanh1" Relationship="Model.FK_Banh_LoaiBanh" FromRole="Banh" ToRole="LoaiBanh" />
-    <NavigationProperty Name="HinhAnhs" Relationship="Model.FK_HinhAnh_Banh" FromRole="Banh" ToRole="HinhAnh" />
+    <NavigationProperty Name="LoaiBanh1" Relationship="CakeModel.FK_Banh_LoaiBanh" FromRole="Banh" ToRole="LoaiBanh" />
+    <NavigationProperty Name="HinhAnhs" Relationship="CakeModel.FK_HinhAnh_Banh" FromRole="Banh" ToRole="HinhAnh" />
   </EntityType>
   <EntityType Name="CTHoaDon">
     <Key>
@@ -49,7 +48,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MaBanh" Type="Int32" Nullable="false" />
     <Property Name="TenHinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Banh" Relationship="Model.FK_HinhAnh_Banh" FromRole="HinhAnh" ToRole="Banh" />
+    <NavigationProperty Name="Banh" Relationship="CakeModel.FK_HinhAnh_Banh" FromRole="HinhAnh" ToRole="Banh" />
   </EntityType>
   <EntityType Name="HoaDon">
     <Key>
@@ -58,7 +57,6 @@
     <Property Name="MaHoaDon" Type="Int32" Nullable="false" />
     <Property Name="IdTaiKhoan" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="NgayMua" Type="DateTime" Precision="3" />
-    <Property Name="MaKhach" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="TongTien" Type="Int32" />
   </EntityType>
   <EntityType Name="LoaiBanh">
@@ -68,17 +66,7 @@
     <Property Name="MaLoai" Type="Int32" Nullable="false" />
     <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TrangThaiXoa" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Banhs" Relationship="Model.FK_Banh_LoaiBanh" FromRole="LoaiBanh" ToRole="Banh" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Banhs" Relationship="CakeModel.FK_Banh_LoaiBanh" FromRole="LoaiBanh" ToRole="Banh" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -96,8 +84,8 @@
     <Property Name="TrangThaiXoa" Type="Boolean" Nullable="false" />
   </EntityType>
   <Association Name="FK_Banh_LoaiBanh">
-    <End Type="Model.LoaiBanh" Role="LoaiBanh" Multiplicity="0..1" />
-    <End Type="Model.Banh" Role="Banh" Multiplicity="*" />
+    <End Type="CakeModel.LoaiBanh" Role="LoaiBanh" Multiplicity="0..1" />
+    <End Type="CakeModel.Banh" Role="Banh" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoaiBanh">
         <PropertyRef Name="MaLoai" />
@@ -108,8 +96,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_HinhAnh_Banh">
-    <End Type="Model.Banh" Role="Banh" Multiplicity="1" />
-    <End Type="Model.HinhAnh" Role="HinhAnh" Multiplicity="*" />
+    <End Type="CakeModel.Banh" Role="Banh" Multiplicity="1" />
+    <End Type="CakeModel.HinhAnh" Role="HinhAnh" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Banh">
         <PropertyRef Name="MaBanh" />

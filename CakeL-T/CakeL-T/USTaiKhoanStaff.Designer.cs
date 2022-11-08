@@ -356,7 +356,7 @@
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.groupBox1);
             this.Name = "USTaiKhoanStaff";
-            this.Size = new System.Drawing.Size(771, 843);
+            this.Size = new System.Drawing.Size(833, 843);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();

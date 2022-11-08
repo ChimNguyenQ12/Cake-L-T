@@ -4,16 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c844e813496144faa22ac464fd87b6f4" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.Banh" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="Model.CTHoaDon" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Model.HinhAnh" Width="1.5" PointX="5.25" PointY="1.5" />
-        <EntityTypeShape EntityType="Model.HoaDon" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Model.LoaiBanh" Width="1.5" PointX="0.75" PointY="1.5" />
-        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="4.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Model.TaiKhoan" Width="1.5" PointX="6.75" PointY="4.75" />
-        <AssociationConnector Association="Model.FK_Banh_LoaiBanh" />
-        <AssociationConnector Association="Model.FK_HinhAnh_Banh" />
+      <Diagram DiagramId="cbc5ae3142e843ee86c1eebfeefbc8f4" Name="Diagram1">
+        <EntityTypeShape EntityType="CakeModel.Banh" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="CakeModel.CTHoaDon" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CakeModel.HinhAnh" Width="1.5" PointX="5.25" PointY="1.5" />
+        <EntityTypeShape EntityType="CakeModel.HoaDon" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CakeModel.LoaiBanh" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="CakeModel.TaiKhoan" Width="1.5" PointX="4.75" PointY="4.75" />
+        <AssociationConnector Association="CakeModel.FK_Banh_LoaiBanh" />
+        <AssociationConnector Association="CakeModel.FK_HinhAnh_Banh" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
