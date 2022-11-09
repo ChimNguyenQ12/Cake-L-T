@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USHoaDonStaff));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgv_Banh = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btInHoaDon = new System.Windows.Forms.Button();
             this.btThanhToan = new System.Windows.Forms.Button();
@@ -50,18 +49,19 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.dgv_Banh = new System.Windows.Forms.DataGridView();
             this.dgv_HoaDon = new System.Windows.Forms.DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_DemBanh)).BeginInit();
             this.panel23.SuspendLayout();
             this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -84,15 +84,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(833, 843);
             this.panel1.TabIndex = 0;
-            // 
-            // dgv_Banh
-            // 
-            this.dgv_Banh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Banh.Location = new System.Drawing.Point(3, 0);
-            this.dgv_Banh.Name = "dgv_Banh";
-            this.dgv_Banh.Size = new System.Drawing.Size(397, 412);
-            this.dgv_Banh.TabIndex = 30;
-            this.dgv_Banh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Banh_CellContentClick);
             // 
             // panel12
             // 
@@ -144,7 +135,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(390, 57);
+            this.label11.Location = new System.Drawing.Point(392, 37);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 18);
@@ -153,7 +144,7 @@
             // 
             // txt_TongTien
             // 
-            this.txt_TongTien.Location = new System.Drawing.Point(491, 51);
+            this.txt_TongTien.Location = new System.Drawing.Point(493, 31);
             this.txt_TongTien.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TongTien.Name = "txt_TongTien";
             this.txt_TongTien.ReadOnly = true;
@@ -179,7 +170,7 @@
             this.panel2.Location = new System.Drawing.Point(17, 133);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(388, 161);
+            this.panel2.Size = new System.Drawing.Size(397, 161);
             this.panel2.TabIndex = 28;
             // 
             // btn_LamMoi
@@ -367,11 +358,24 @@
             this.panel20.Size = new System.Drawing.Size(805, 418);
             this.panel20.TabIndex = 26;
             // 
+            // dgv_Banh
+            // 
+            this.dgv_Banh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Banh.Location = new System.Drawing.Point(3, 0);
+            this.dgv_Banh.Name = "dgv_Banh";
+            this.dgv_Banh.RowHeadersVisible = false;
+            this.dgv_Banh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Banh.Size = new System.Drawing.Size(397, 412);
+            this.dgv_Banh.TabIndex = 30;
+            this.dgv_Banh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Banh_CellContentClick);
+            // 
             // dgv_HoaDon
             // 
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HoaDon.Location = new System.Drawing.Point(406, 0);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
+            this.dgv_HoaDon.RowHeadersVisible = false;
+            this.dgv_HoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_HoaDon.Size = new System.Drawing.Size(394, 412);
             this.dgv_HoaDon.TabIndex = 0;
             // 
@@ -423,7 +427,6 @@
             this.Size = new System.Drawing.Size(833, 843);
             this.Load += new System.EventHandler(this.USHoaDonStaff_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -433,6 +436,7 @@
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             this.panel20.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Banh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

@@ -13,6 +13,7 @@ namespace CakeL_T
 {
     public partial class USHoaDonStaff : UserControl
     {
+       
         DataTable dt = new DataTable();
         public static string tenbanh, tinhtrang, dongia;
         public static int tong = 0;
@@ -27,11 +28,12 @@ namespace CakeL_T
                 return instance;
             }
         }
+
         public USHoaDonStaff()
         {
             InitializeComponent();
         }
-
+    
         private void USHoaDonStaff_Load(object sender, EventArgs e)
         {
             LoadData();

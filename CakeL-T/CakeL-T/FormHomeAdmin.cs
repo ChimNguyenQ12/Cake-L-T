@@ -14,12 +14,17 @@ namespace CakeL_T
     public partial class FormHomeAdmin : Form
     {
         string fileName;
+
+        private string _tentk;
         public FormHomeAdmin()
         {
             InitializeComponent();
             LoadData();
         }
-
+        public FormHomeAdmin(string tentk) : this()
+        {
+            _tentk = tentk;
+        }
         private void LoadData()
         {
             AdminBUS adminBUS = new AdminBUS();

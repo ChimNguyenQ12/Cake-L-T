@@ -12,12 +12,17 @@ namespace CakeL_T
 {
     public partial class FormHomeStaff : Form
     {
-
+        private string _tentk;
+        private int _idTK;
         public FormHomeStaff()
         {
             InitializeComponent();
         }
-
+        public FormHomeStaff(string tentk, int idTK) : this()
+        {
+            _tentk = tentk;
+            _idTK = idTK;
+        }
         private void btn_CaiLaiMK_Click(object sender, EventArgs e)
         {
             FormCaiLaiMK formCaiLaiMK = new FormCaiLaiMK();
@@ -32,6 +37,7 @@ namespace CakeL_T
 
         private void FormHomeStaff_Load(object sender, EventArgs e)
         {
+            lb_TenNV.Text = _tentk;
             if (!panel_chinh.Controls.Contains(USTrangChuStaff.Instance))
             {
                 panel_chinh.Controls.Add(USTrangChuStaff.Instance);

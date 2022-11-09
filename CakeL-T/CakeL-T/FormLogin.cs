@@ -22,6 +22,7 @@ namespace CakeL_T
         {
             string userName = txt_TenDangNhap.Text;
             string passWord = txt_MatKhau.Text;
+            int idtk = 0;
 
             if(passWord == "" || userName == "")
             {
@@ -41,7 +42,7 @@ namespace CakeL_T
                 }
                 else if (loginBUS.checkLogin(userName, passWord) == "staff")
                 {
-                    FormHomeStaff formHomeStaff = new FormHomeStaff();
+                    FormHomeStaff formHomeStaff = new FormHomeStaff(userName,idtk);
                     formHomeStaff.Show();
                 }
                 else

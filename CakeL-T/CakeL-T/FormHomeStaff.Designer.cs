@@ -269,6 +269,7 @@
             // lb_TenNV
             // 
             this.lb_TenNV.AutoSize = true;
+            this.lb_TenNV.BackColor = System.Drawing.Color.Transparent;
             this.lb_TenNV.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_TenNV.ForeColor = System.Drawing.Color.Black;
             this.lb_TenNV.Location = new System.Drawing.Point(67, 125);

@@ -39,20 +39,12 @@
             this.btn_SuaHD = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_MaKH = new System.Windows.Forms.TextBox();
-            this.txt_TenKH = new System.Windows.Forms.TextBox();
-            this.txt_DiaChiKH = new System.Windows.Forms.TextBox();
-            this.txt_SoDienThoaiKH = new System.Windows.Forms.TextBox();
             this.txt_TenNVLHD = new System.Windows.Forms.TextBox();
             this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.txt_NgayBan = new System.Windows.Forms.TextBox();
             this.txt_MaHD = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,9 +65,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HoaDon.Location = new System.Drawing.Point(33, 465);
+            this.dgv_HoaDon.Location = new System.Drawing.Point(33, 431);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
-            this.dgv_HoaDon.Size = new System.Drawing.Size(629, 350);
+            this.dgv_HoaDon.Size = new System.Drawing.Size(629, 384);
             this.dgv_HoaDon.TabIndex = 16;
             // 
             // groupBox2
@@ -91,7 +83,7 @@
             this.groupBox2.Controls.Add(this.btn_SuaHD);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(33, 324);
+            this.groupBox2.Location = new System.Drawing.Point(33, 282);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(629, 131);
             this.groupBox2.TabIndex = 15;
@@ -219,76 +211,28 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.txt_MaKH);
-            this.groupBox1.Controls.Add(this.txt_TenKH);
-            this.groupBox1.Controls.Add(this.txt_DiaChiKH);
-            this.groupBox1.Controls.Add(this.txt_SoDienThoaiKH);
             this.groupBox1.Controls.Add(this.txt_TenNVLHD);
             this.groupBox1.Controls.Add(this.txt_MaNV);
             this.groupBox1.Controls.Add(this.txt_NgayBan);
             this.groupBox1.Controls.Add(this.txt_MaHD);
-            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(33, 151);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(629, 167);
+            this.groupBox1.Size = new System.Drawing.Size(629, 125);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin:";
-            // 
-            // txt_MaKH
-            // 
-            this.txt_MaKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_MaKH.Location = new System.Drawing.Point(440, 26);
-            this.txt_MaKH.Name = "txt_MaKH";
-            this.txt_MaKH.Size = new System.Drawing.Size(172, 29);
-            this.txt_MaKH.TabIndex = 4;
-            // 
-            // txt_TenKH
-            // 
-            this.txt_TenKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_TenKH.Location = new System.Drawing.Point(440, 61);
-            this.txt_TenKH.Name = "txt_TenKH";
-            this.txt_TenKH.Size = new System.Drawing.Size(172, 29);
-            this.txt_TenKH.TabIndex = 5;
-            // 
-            // txt_DiaChiKH
-            // 
-            this.txt_DiaChiKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DiaChiKH.Location = new System.Drawing.Point(440, 96);
-            this.txt_DiaChiKH.Name = "txt_DiaChiKH";
-            this.txt_DiaChiKH.Size = new System.Drawing.Size(172, 29);
-            this.txt_DiaChiKH.TabIndex = 6;
-            // 
-            // txt_SoDienThoaiKH
-            // 
-            this.txt_SoDienThoaiKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_SoDienThoaiKH.Location = new System.Drawing.Point(440, 131);
-            this.txt_SoDienThoaiKH.Name = "txt_SoDienThoaiKH";
-            this.txt_SoDienThoaiKH.Size = new System.Drawing.Size(172, 29);
-            this.txt_SoDienThoaiKH.TabIndex = 7;
             // 
             // txt_TenNVLHD
             // 
             this.txt_TenNVLHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_TenNVLHD.Location = new System.Drawing.Point(148, 131);
+            this.txt_TenNVLHD.Location = new System.Drawing.Point(432, 62);
             this.txt_TenNVLHD.Name = "txt_TenNVLHD";
             this.txt_TenNVLHD.Size = new System.Drawing.Size(159, 29);
             this.txt_TenNVLHD.TabIndex = 3;
@@ -298,7 +242,7 @@
             this.txt_MaNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_MaNV.Location = new System.Drawing.Point(148, 98);
+            this.txt_MaNV.Location = new System.Drawing.Point(432, 29);
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.Size = new System.Drawing.Size(159, 29);
             this.txt_MaNV.TabIndex = 2;
@@ -323,19 +267,6 @@
             this.txt_MaHD.Size = new System.Drawing.Size(159, 29);
             this.txt_MaHD.TabIndex = 0;
             // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(328, 107);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 18);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Địa chỉ:";
-            // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -343,7 +274,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(29, 142);
+            this.label15.Location = new System.Drawing.Point(313, 73);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(107, 18);
             this.label15.TabIndex = 0;
@@ -356,50 +287,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(29, 109);
+            this.label10.Location = new System.Drawing.Point(313, 40);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(104, 18);
             this.label10.TabIndex = 0;
             this.label10.Text = "Mã nhân viên:";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(325, 142);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(102, 18);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Số điện thoại:";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(325, 37);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 18);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Mã khách:";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(325, 70);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 18);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Tên khách:";
             // 
             // label9
             // 
@@ -517,20 +409,12 @@
         private System.Windows.Forms.Button btn_SuaHD;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_MaKH;
-        private System.Windows.Forms.TextBox txt_TenKH;
-        private System.Windows.Forms.TextBox txt_DiaChiKH;
-        private System.Windows.Forms.TextBox txt_SoDienThoaiKH;
         private System.Windows.Forms.TextBox txt_TenNVLHD;
         private System.Windows.Forms.TextBox txt_MaNV;
         private System.Windows.Forms.TextBox txt_NgayBan;
         private System.Windows.Forms.TextBox txt_MaHD;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

@@ -588,7 +588,6 @@ D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\System.Threading.AccessControl.xml
 D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL-T.csproj.AssemblyReference.cache
 D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL-T.csproj.SuggestedBindingRedirects.cache
-D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL-T.exe.config
 D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL_T.USBanhAdmin.resources
 D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL_T.FormCaiDat.resources
 D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL_T.FormCaiLaiMK.resources
@@ -618,3 +617,12 @@ D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\vi-VN\CakeL-T.resources.dll
 D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL-T.csproj.CopyComplete
 D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL-T.exe
 D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL-T.pdb
+D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\Syncfusion.Grid.Base.xml
+D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\Syncfusion.SpellChecker.Base.xml
+D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\Syncfusion.Tools.Base.xml
+D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\Syncfusion.Tools.Windows.xml
+D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL_T.FormReport.resources

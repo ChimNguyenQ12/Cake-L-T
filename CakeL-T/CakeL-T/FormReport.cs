@@ -16,5 +16,11 @@ namespace CakeL_T
         {
             InitializeComponent();
         }
+
+        private void FormReport_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
