@@ -626,3 +626,8 @@ D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.
 D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 D:\DA_Win\Cake\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 D:\DA_Win\Cake\CakeL-T\CakeL-T\obj\Debug\CakeL_T.FormReport.resources
+D:\Winform\CakeL-T\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Winform\CakeL-T\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Winform\CakeL-T\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Winform\CakeL-T\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Winform\CakeL-T\Cake-L-T\CakeL-T\CakeL-T\obj\Debug\CakeL_T.FormReport.resources

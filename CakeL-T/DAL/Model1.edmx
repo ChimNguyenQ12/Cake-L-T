@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="CakeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Banh">
           <Key>
             <PropertyRef Name="MaBanh" />
@@ -17,6 +17,7 @@
           <Property Name="HinhAnh" Type="nvarchar" MaxLength="50" />
           <Property Name="TrangThaiXoa" Type="bit" Nullable="false" />
           <Property Name="TenLoaiBanh" Type="nvarchar" MaxLength="50" />
+          <Property Name="TenTrangThaiBanh" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="CTHoaDon">
           <Key>
@@ -52,6 +53,16 @@
           <Property Name="MaLoai" Type="int" Nullable="false" />
           <Property Name="TenLoai" Type="nvarchar" MaxLength="50" />
           <Property Name="TrangThaiXoa" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -92,12 +103,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="CakeModelStoreContainer">
+        <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Banh" EntityType="Self.Banh" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CTHoaDon" EntityType="Self.CTHoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HinhAnh" EntityType="Self.HinhAnh" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiBanh" EntityType="Self.LoaiBanh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Banh_LoaiBanh" Association="Self.FK_Banh_LoaiBanh">
             <End Role="LoaiBanh" EntitySet="LoaiBanh" />
@@ -111,19 +123,20 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="CakeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="CakeEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Banhs" EntityType="CakeModel.Banh" />
-          <EntitySet Name="CTHoaDons" EntityType="CakeModel.CTHoaDon" />
-          <EntitySet Name="HinhAnhs" EntityType="CakeModel.HinhAnh" />
-          <EntitySet Name="HoaDons" EntityType="CakeModel.HoaDon" />
-          <EntitySet Name="LoaiBanhs" EntityType="CakeModel.LoaiBanh" />
-          <EntitySet Name="TaiKhoans" EntityType="CakeModel.TaiKhoan" />
-          <AssociationSet Name="FK_Banh_LoaiBanh" Association="CakeModel.FK_Banh_LoaiBanh">
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Banhs" EntityType="Model.Banh" />
+          <EntitySet Name="CTHoaDons" EntityType="Model.CTHoaDon" />
+          <EntitySet Name="HinhAnhs" EntityType="Model.HinhAnh" />
+          <EntitySet Name="HoaDons" EntityType="Model.HoaDon" />
+          <EntitySet Name="LoaiBanhs" EntityType="Model.LoaiBanh" />
+          <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagram" />
+          <EntitySet Name="TaiKhoans" EntityType="Model.TaiKhoan" />
+          <AssociationSet Name="FK_Banh_LoaiBanh" Association="Model.FK_Banh_LoaiBanh">
             <End Role="LoaiBanh" EntitySet="LoaiBanhs" />
             <End Role="Banh" EntitySet="Banhs" />
           </AssociationSet>
-          <AssociationSet Name="FK_HinhAnh_Banh" Association="CakeModel.FK_HinhAnh_Banh">
+          <AssociationSet Name="FK_HinhAnh_Banh" Association="Model.FK_HinhAnh_Banh">
             <End Role="Banh" EntitySet="Banhs" />
             <End Role="HinhAnh" EntitySet="HinhAnhs" />
           </AssociationSet>
@@ -140,8 +153,9 @@
           <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TrangThaiXoa" Type="Boolean" Nullable="false" />
           <Property Name="TenLoaiBanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="LoaiBanh1" Relationship="CakeModel.FK_Banh_LoaiBanh" FromRole="Banh" ToRole="LoaiBanh" />
-          <NavigationProperty Name="HinhAnhs" Relationship="CakeModel.FK_HinhAnh_Banh" FromRole="Banh" ToRole="HinhAnh" />
+          <Property Name="TenTrangThaiBanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LoaiBanh1" Relationship="Model.FK_Banh_LoaiBanh" FromRole="Banh" ToRole="LoaiBanh" />
+          <NavigationProperty Name="HinhAnhs" Relationship="Model.FK_HinhAnh_Banh" FromRole="Banh" ToRole="HinhAnh" />
         </EntityType>
         <EntityType Name="CTHoaDon">
           <Key>
@@ -160,7 +174,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaBanh" Type="Int32" Nullable="false" />
           <Property Name="TenHinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Banh" Relationship="CakeModel.FK_HinhAnh_Banh" FromRole="HinhAnh" ToRole="Banh" />
+          <NavigationProperty Name="Banh" Relationship="Model.FK_HinhAnh_Banh" FromRole="HinhAnh" ToRole="Banh" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
@@ -178,7 +192,17 @@
           <Property Name="MaLoai" Type="Int32" Nullable="false" />
           <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TrangThaiXoa" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Banhs" Relationship="CakeModel.FK_Banh_LoaiBanh" FromRole="LoaiBanh" ToRole="Banh" />
+          <NavigationProperty Name="Banhs" Relationship="Model.FK_Banh_LoaiBanh" FromRole="LoaiBanh" ToRole="Banh" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -196,8 +220,8 @@
           <Property Name="TrangThaiXoa" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK_Banh_LoaiBanh">
-          <End Type="CakeModel.LoaiBanh" Role="LoaiBanh" Multiplicity="0..1" />
-          <End Type="CakeModel.Banh" Role="Banh" Multiplicity="*" />
+          <End Type="Model.LoaiBanh" Role="LoaiBanh" Multiplicity="0..1" />
+          <End Type="Model.Banh" Role="Banh" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LoaiBanh">
               <PropertyRef Name="MaLoai" />
@@ -208,8 +232,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HinhAnh_Banh">
-          <End Type="CakeModel.Banh" Role="Banh" Multiplicity="1" />
-          <End Type="CakeModel.HinhAnh" Role="HinhAnh" Multiplicity="*" />
+          <End Type="Model.Banh" Role="Banh" Multiplicity="1" />
+          <End Type="Model.HinhAnh" Role="HinhAnh" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Banh">
               <PropertyRef Name="MaBanh" />
@@ -224,10 +248,11 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CakeModelStoreContainer" CdmEntityContainer="CakeEntities">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="Banhs">
-            <EntityTypeMapping TypeName="CakeModel.Banh">
+            <EntityTypeMapping TypeName="Model.Banh">
               <MappingFragment StoreEntitySet="Banh">
+                <ScalarProperty Name="TenTrangThaiBanh" ColumnName="TenTrangThaiBanh" />
                 <ScalarProperty Name="TenLoaiBanh" ColumnName="TenLoaiBanh" />
                 <ScalarProperty Name="TrangThaiXoa" ColumnName="TrangThaiXoa" />
                 <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
@@ -240,7 +265,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CTHoaDons">
-            <EntityTypeMapping TypeName="CakeModel.CTHoaDon">
+            <EntityTypeMapping TypeName="Model.CTHoaDon">
               <MappingFragment StoreEntitySet="CTHoaDon">
                 <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
@@ -251,7 +276,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HinhAnhs">
-            <EntityTypeMapping TypeName="CakeModel.HinhAnh">
+            <EntityTypeMapping TypeName="Model.HinhAnh">
               <MappingFragment StoreEntitySet="HinhAnh">
                 <ScalarProperty Name="TenHinh" ColumnName="TenHinh" />
                 <ScalarProperty Name="MaBanh" ColumnName="MaBanh" />
@@ -260,7 +285,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HoaDons">
-            <EntityTypeMapping TypeName="CakeModel.HoaDon">
+            <EntityTypeMapping TypeName="Model.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />
                 <ScalarProperty Name="NgayMua" ColumnName="NgayMua" />
@@ -270,7 +295,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LoaiBanhs">
-            <EntityTypeMapping TypeName="CakeModel.LoaiBanh">
+            <EntityTypeMapping TypeName="Model.LoaiBanh">
               <MappingFragment StoreEntitySet="LoaiBanh">
                 <ScalarProperty Name="TrangThaiXoa" ColumnName="TrangThaiXoa" />
                 <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
@@ -278,8 +303,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TaiKhoans">
-            <EntityTypeMapping TypeName="CakeModel.TaiKhoan">
+            <EntityTypeMapping TypeName="Model.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
                 <ScalarProperty Name="TrangThaiXoa" ColumnName="TrangThaiXoa" />
                 <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />

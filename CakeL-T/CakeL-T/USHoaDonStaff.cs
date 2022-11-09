@@ -18,6 +18,7 @@ namespace CakeL_T
         public static string tenbanh, tinhtrang, dongia;
         public static int tong = 0;
         BanhBUS banhBUS = new BanhBUS();
+        LoaiBanhBUS loaiBanhBUS = new LoaiBanhBUS();
         private static USHoaDonStaff instance;
         public static USHoaDonStaff Instance
         {
@@ -86,13 +87,24 @@ namespace CakeL_T
 
         private void txt_TenBanh_TextChanged(object sender, EventArgs e)
         {
-            if (txt_TenBanh.Text == "")
+            dgv_Banh.DataSource = banhBUS.SearchCakeStaff(txt_TenBanh.Text);
+            for (int i = 0; i < dgv_Banh.Rows.Count; i++)
             {
-                dgv_Banh.DataSource = banhBUS.SearchCakeName(null);
-            }
-            else
-            {
-                dgv_Banh.DataSource = banhBUS.SearchCakeName(txt_TenBanh.Text);
+                foreach (var item in loaiBanhBUS.GetCateCakes())
+                {
+                    if (dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == item.MaLoai.ToString())
+                    {
+                        dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = item.TenLoai.ToString();
+                    }
+                }
+                if (dgv_Banh.Rows[i].Cells["TrangThaiBanh"].Value.ToString() == "True")
+                {
+                    dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Còn hàng";
+                }
+                else
+                {
+                    dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Hết hàng";
+                }
             }
         }
 
@@ -107,10 +119,20 @@ namespace CakeL_T
             dgv_Banh.DataSource = banhBUS.GetCakes();
             for (int i = 0; i < dgv_Banh.Rows.Count; i++)
             {
-                //Use when column names known
-                if (dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == "1")
+                foreach (var item in loaiBanhBUS.GetCateCakes())
                 {
-                    dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = "Kem";
+                    if (dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == item.MaLoai.ToString())
+                    {
+                        dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = item.TenLoai.ToString();
+                    }
+                }
+                if (dgv_Banh.Rows[i].Cells["TrangThaiBanh"].Value.ToString() == "True")
+                {
+                    dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Còn hàng";
+                }
+                else
+                {
+                    dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Hết hàng";
                 }
             }
             dgv_Banh.Columns["LoaiBanh"].Visible = false;
@@ -120,6 +142,7 @@ namespace CakeL_T
             dgv_Banh.Columns["HinhAnhs"].Visible = false;
             dgv_Banh.Columns["LoaiBanh1"].Visible = false;
             dgv_Banh.Columns["TrangThaiXoa"].Visible = false;
+            dgv_Banh.Columns["TrangThaiBanh"].Visible = false;
         }
         private void dgv_Banh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -32,6 +32,8 @@ namespace CakeL_T
 
         private void BanhAdmin_Load(object sender, EventArgs e)
         {
+            loadCateCakeSearch();
+
             panel_banh.Visible = true;
             panel_loaiBanh.Visible = true;
             gbLoaiBanh.Hide();
@@ -71,48 +73,67 @@ namespace CakeL_T
 
         private void btn_ThemBanh_Click(object sender, EventArgs e)
         {
-            if (txt_MaBanh.Text == "" || txt_DonGia.Text == "" || txt_TenBanh.Text == "")
+            if(txt_MaBanh.Enabled == false)
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin!");
+                txt_MaBanh.Enabled = true;
+                btn_SuaBanh.Enabled = false;
+                btn_XoaBanh.Enabled = false;
             }
             else
             {
-                if (banhBUS.AddCake(int.Parse(txt_MaBanh.Text), int.Parse(cbb_loaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_DonGia.Text), pb_Banh.ToString()) == "success")
+                if (txt_MaBanh.Text == "" || txt_DonGia.Text == "" || txt_TenBanh.Text == "")
                 {
-                    MessageBox.Show("Thêm sản phẩm thành công!");
-                    LoadData();
+                    MessageBox.Show("Vui lòng nhập đủ thông tin!");
                 }
-                else if (banhBUS.AddCake(int.Parse(txt_MaBanh.Text), int.Parse(cbb_loaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_DonGia.Text), pb_Banh.ToString()) == "Cake already exists")
+                else
                 {
-                    MessageBox.Show("Sản phẩm đã tồn tại!");
-                    LoadData();
-                }
-                else if (banhBUS.AddCake(int.Parse(txt_MaBanh.Text), int.Parse(cbb_loaiBanh.Text), txt_TenBanh.Text, int.Parse(txt_DonGia.Text), pb_Banh.ToString()) == "error")
-                {
-                    MessageBox.Show("Có gì đó không ổn :/");
-                    LoadData();
+                    var cateCake = Convert.ToInt32(cbb_loaiBanh.SelectedValue);
+                    if (banhBUS.AddCake(int.Parse(txt_MaBanh.Text), cateCake, txt_TenBanh.Text, int.Parse(txt_DonGia.Text), pb_Banh.ToString()) == "success")
+                    {
+                        MessageBox.Show("Thêm sản phẩm thành công!");
+                        LoadData();
+                    }
+                    else if (banhBUS.AddCake(int.Parse(txt_MaBanh.Text), cateCake, txt_TenBanh.Text, int.Parse(txt_DonGia.Text), pb_Banh.ToString()) == "Cake already exists")
+                    {
+                        MessageBox.Show("Sản phẩm đã tồn tại!");
+                        LoadData();
+                    }
+                    else if (banhBUS.AddCake(int.Parse(txt_MaBanh.Text), cateCake, txt_TenBanh.Text, int.Parse(txt_DonGia.Text), pb_Banh.ToString()) == "error")
+                    {
+                        MessageBox.Show("Có gì đó không ổn :/");
+                        LoadData();
+                    }
                 }
             }
         }
         private void LoadData()
         {
+            txt_MaBanh.Enabled = false;
+            btn_SuaBanh.Enabled = true;
+            btn_XoaBanh.Enabled = true;
             panel_banh.Visible = true;
             panel_loaiBanh.Visible = true;
-            var cate = loaiBanhBUS.GetCateCakes();
-            cbb_loaiBanh.DataSource = cate;
-            cbb_loaiBanh.DisplayMember = "TenLoai";
-            cbb_loaiBanh.ValueMember = "MaLoai";
-
+            LoadDataCategoryCake();
             cbb_price.Text = "Chọn khoảng giá";
-            cbbCategory.Text = "Chọn loại bánh";
+            cbbCategoryTim.Text = "Chọn loại bánh";
 
             dgv_Banh.DataSource = banhBUS.GetCakes();
             for (int i = 0; i < dgv_Banh.Rows.Count; i++)
             {
-                //Use when column names known
-                if(dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == "1")
+                foreach (var item in loaiBanhBUS.GetCateCakes())
                 {
-                    dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = "Kem";
+                    if(dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == item.MaLoai.ToString())
+                    {
+                        dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = item.TenLoai.ToString();
+                    }
+                }
+                if (dgv_Banh.Rows[i].Cells["TrangThai"].Value.ToString() == "True")
+                {
+                    dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Còn hàng";
+                }
+                else
+                {
+                    dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Hết hàng";
                 }
             }
             dgv_Banh.Columns["HinhAnh"].Visible = false;
@@ -120,13 +141,14 @@ namespace CakeL_T
             dgv_Banh.Columns["HinhAnhs"].Visible = false;
             dgv_Banh.Columns["LoaiBanh1"].Visible = false;
             dgv_Banh.Columns["TrangThaiXoa"].Visible = false;
+            dgv_Banh.Columns["TrangThai"].Visible = false;
 
 
             DataGridViewRow row = this.dgv_Banh.Rows[0];
            
             txt_MaBanh.Text = row.Cells["MaBanh"].Value.ToString();
             txt_DonGia.Text = row.Cells["DonGia"].Value.ToString();
-            cbb_loaiBanh.Text = row.Cells["LoaiBanh"].Value.ToString();
+            cbb_loaiBanh.Text = row.Cells["TenLoaiBanh"].Value.ToString();
             txt_TenBanh.Text = row.Cells["TenBanh"].Value.ToString();
             if (Convert.ToBoolean(row.Cells["TrangThai"].Value) == true)
             {
@@ -138,6 +160,24 @@ namespace CakeL_T
                 radioUnactiveCake.Checked = true;
         }
 
+        private void LoadDataCategoryCake()
+        {
+            txtMaLoaiBanh.Enabled = false;
+            btnXoaLoaiBanh.Enabled = true;
+            btnSuaLoaiBanh.Enabled = true;
+
+            var cate = loaiBanhBUS.GetCateCakes();
+            cbb_loaiBanh.DataSource = cate;
+            cbb_loaiBanh.DisplayMember = "TenLoai";
+            cbb_loaiBanh.ValueMember = "MaLoai";
+        }
+        private void loadCateCakeSearch()
+        {
+            var cate = loaiBanhBUS.GetCateCakes();
+            cbbCategoryTim.DataSource = cate;
+            cbbCategoryTim.DisplayMember = "TenLoai";
+            cbbCategoryTim.ValueMember = "MaLoai";
+        }
         private void LoadDataCateCake()
         {
             panel_loaiBanh.Visible = true;
@@ -171,25 +211,21 @@ namespace CakeL_T
         private void UpdateCake(int code, int category, string name, bool status, int price, string image)
         {
             banhBUS.UpdateCakeById(code, category, name, status, price, image);
-            LoadData();
         }
 
         private void UpdateCateCake(int code,string name)
         {
             loaiBanhBUS.UpdateCateCakeById(code, name);
-            LoadData();
         }
 
-        private void DeleteCake(int code)
+        private void DeleteCake(int code, int category, string name, int price, string image)
         {
-            banhBUS.DeleteCakeById(code);
-            LoadData();
+            banhBUS.DeleteCakeById(code, category, name, price, image);
         }
 
-        private void DeleteCateCake(int code)
+        private void DeleteCateCake(int code, string name)
         {
-            loaiBanhBUS.DeleteCateCakeById(code);
-            LoadData();
+            loaiBanhBUS.DeleteCateCakeById(code, name);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -199,6 +235,7 @@ namespace CakeL_T
 
         private void btn_XoaBanh_Click(object sender, EventArgs e)
         {
+            var cateCake = Convert.ToInt32(cbb_loaiBanh.SelectedValue);
             var row = dgv_Banh.SelectedRows[0];
             var cell = row.Cells["MaBanh"];
             int idSelected = Convert.ToInt32(cell.Value);
@@ -207,14 +244,15 @@ namespace CakeL_T
                                      MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (confirmResult == DialogResult.Yes)
             {
-                DeleteCake(idSelected);
-                LoadData();
+                DeleteCake(idSelected, cateCake, txt_TenBanh.Text, int.Parse(txt_DonGia.Text), pb_Banh.ToString());
                 MessageBox.Show($"Sản phẩm {txt_MaBanh.Text} đã được xóa!", "Xóa sản phẩm");
+                LoadData();
             }      
         }
 
         private void btn_SuaBanh_Click(object sender, EventArgs e)
         {
+            var cateCake = Convert.ToInt32(cbb_loaiBanh.SelectedValue);
             var confirmResult = MessageBox.Show($"Bạn có chắc chắn muốn sửa sản phẩm {txt_MaBanh.Text}?",
                                      "Xác nhận sửa",
                                      MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -228,14 +266,14 @@ namespace CakeL_T
                 if (radioActiveCake.Checked)
                 {
                     status = true;
-                    UpdateCake(idSelected, int.Parse(cbb_loaiBanh.Text), txt_TenBanh.Text, status, int.Parse(txt_DonGia.Text), image);
+                    UpdateCake(idSelected, cateCake, txt_TenBanh.Text, status, int.Parse(txt_DonGia.Text), image);
                     MessageBox.Show($"Sửa sản phẩm {txt_MaBanh.Text} thành công", "Sửa sản phẩm");
                     LoadData();
                 }
                 if (radioUnactiveCake.Checked)
                 {
                     status = false;
-                    UpdateCake(idSelected, int.Parse(cbb_loaiBanh.Text), txt_TenBanh.Text, status, int.Parse(txt_DonGia.Text), image);
+                    UpdateCake(idSelected, cateCake, txt_TenBanh.Text, status, int.Parse(txt_DonGia.Text), image);
                     MessageBox.Show($"Sửa sản phẩm {txt_MaBanh.Text} thành công", "Sửa sản phẩm");
                     LoadData();
                 }
@@ -244,11 +282,15 @@ namespace CakeL_T
 
         private void dgv_Banh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            txt_MaBanh.Enabled = false;
+            btn_SuaBanh.Enabled = true;
+            btn_XoaBanh.Enabled = true;
+
             if (e.RowIndex == -1) return;
             DataGridViewRow row = this.dgv_Banh.Rows[e.RowIndex];
             txt_MaBanh.Text = row.Cells["MaBanh"].Value.ToString();
             txt_DonGia.Text = row.Cells["DonGia"].Value.ToString();
-            cbb_loaiBanh.Text = row.Cells["LoaiBanh"].Value.ToString();
+            cbb_loaiBanh.Text = row.Cells["TenLoaiBanh"].Value.ToString();
             txt_TenBanh.Text = row.Cells["TenBanh"].Value.ToString();
             if (Convert.ToBoolean(row.Cells["TrangThai"].Value) == true)
             {
@@ -261,16 +303,55 @@ namespace CakeL_T
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadData();
+            txt_MaBanh.Enabled = false;
+            btn_ThemBanh.Enabled = true;
+            btn_XoaBanh.Enabled = true;
         }
 
         private void txt_TimBanh_TextChanged(object sender, EventArgs e)
         {
             if(txt_TimBanh.Text == "") { 
                dgv_Banh.DataSource = banhBUS.SearchCake(0);
+                for (int i = 0; i < dgv_Banh.Rows.Count; i++)
+                {
+                    foreach (var item in loaiBanhBUS.GetCateCakes())
+                    {
+                        if (dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == item.MaLoai.ToString())
+                        {
+                            dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = item.TenLoai.ToString();
+                        }
+                    }
+                    if (dgv_Banh.Rows[i].Cells["TrangThai"].Value.ToString() == "True")
+                    {
+                        dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Còn hàng";
+                    }
+                    else
+                    {
+                        dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Hết hàng";
+                    }
+                }
             }
             else
             {
                 dgv_Banh.DataSource = banhBUS.SearchCake(int.Parse(txt_TimBanh.Text));
+                for (int i = 0; i < dgv_Banh.Rows.Count; i++)
+                {
+                    foreach (var item in loaiBanhBUS.GetCateCakes())
+                    {
+                        if (dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == item.MaLoai.ToString())
+                        {
+                            dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = item.TenLoai.ToString();
+                        }
+                    }
+                    if (dgv_Banh.Rows[i].Cells["TrangThai"].Value.ToString() == "True")
+                    {
+                        dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Còn hàng";
+                    }
+                    else
+                    {
+                        dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Hết hàng";
+                    }
+                }
             }
         }
 
@@ -290,12 +371,12 @@ namespace CakeL_T
         private void btn_TimHD_Click(object sender, EventArgs e)
         {
             var price = 1 ;
-            var codeCategory = 1;
+            var cate = Convert.ToInt32(cbbCategoryTim.SelectedValue);
             bool status;
-            if(cbb_price.SelectedItem == null || cbbCategory == null)
+            if(cbb_price.SelectedItem == null || cbbCategoryTim == null)
             {
                 price = 0;
-                codeCategory = 0;
+                cate = 0;
             }
             else if (cbb_price.SelectedItem.ToString() == "Tất cả")
             {
@@ -320,31 +401,41 @@ namespace CakeL_T
             if (radioTimActiveCake.Checked)
             {
                 status = true;
-                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(price, codeCategory, status);
+                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(price, cate, status);
             }
             else if (radioTimUnactiveCake.Checked)
             {
                 status = false;
-                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(price, codeCategory, status);
+                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(price, cate, status);
             }
         }
 
         private void btnThemLoaiBanh_Click(object sender, EventArgs e)
         {
-            if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text,int.Parse(txtMaLoaiBanh.Text)) == "success")
+            if(txtMaLoaiBanh.Enabled == false )
             {
-                MessageBox.Show("Thêm loại sản phẩm thành công!");
-                LoadDataCateCake();
+                txtMaLoaiBanh.Enabled = true;
+                btnSuaLoaiBanh.Enabled = false;
+                btnXoaLoaiBanh.Enabled = false;
             }
-            else if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text, int.Parse(txtMaLoaiBanh.Text)) == "Cake Category already exists")
+            else
             {
-                MessageBox.Show("Loại Sản phẩm đã tồn tại!");
-                LoadDataCateCake();
-            }
-            else if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text, int.Parse(txtMaLoaiBanh.Text)) == "error")
-            {
-                MessageBox.Show("Có gì đó không ổn :/");
-                LoadDataCateCake();
+                if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text, int.Parse(txtMaLoaiBanh.Text)) == "success")
+                {
+                    MessageBox.Show("Thêm loại sản phẩm thành công!");
+                    LoadDataCateCake();
+                    LoadDataCategoryCake();
+                }
+                else if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text, int.Parse(txtMaLoaiBanh.Text)) == "Cake Category already exists")
+                {
+                    MessageBox.Show("Loại Sản phẩm đã tồn tại!");
+                    LoadDataCateCake();
+                }
+                else if (loaiBanhBUS.AddCateCake(txtTenLoaiBanh.Text, int.Parse(txtMaLoaiBanh.Text)) == "error")
+                {
+                    MessageBox.Show("Có gì đó không ổn :/");
+                    LoadDataCateCake();
+                }
             }
         }
 
@@ -352,15 +443,15 @@ namespace CakeL_T
         {
             var row = dgvLoaiBanh.SelectedRows[0];
             var cell = row.Cells["MaLoai"];
-            int idSelected = Convert.ToInt32(cell.Value);
+            int idSelected = Convert.ToInt32(cell.Value); 
             var confirmResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa loại sản phẩm {txtMaLoaiBanh.Text}?",
                                      "Xác nhận xóa",
                                      MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (confirmResult == DialogResult.Yes)
             {
-                DeleteCateCake(idSelected);
-                LoadDataCateCake();
+                DeleteCateCake(idSelected, txtTenLoaiBanh.Text);
                 MessageBox.Show($"Loại Sản phẩm {txtMaLoaiBanh.Text} đã được xóa!", "Xóa sản phẩm");
+                LoadDataCateCake();
             }
         }
 
@@ -376,13 +467,16 @@ namespace CakeL_T
                 int idSelected = Convert.ToInt32(cell.Value);
                 string image = pb_Banh.ToString();
                 UpdateCateCake(idSelected, txtTenLoaiBanh.Text);
-                LoadDataCateCake();
                 MessageBox.Show($"Sửa loại sản phẩm {txtMaLoaiBanh.Text} thành công", "Sửa loại sản phẩm");
+                LoadDataCateCake();
             }
         }
 
         private void dgvLoaiBanh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtMaLoaiBanh.Enabled = false;
+            btnXoaLoaiBanh.Enabled = true;
+            btnSuaLoaiBanh.Enabled = true;
             if (e.RowIndex == -1) return;
             DataGridViewRow row = this.dgvLoaiBanh.Rows[e.RowIndex];
             txtMaLoaiBanh.Text = row.Cells["MaLoai"].Value.ToString();
@@ -421,5 +515,6 @@ namespace CakeL_T
         {
             LoadDataCateCake();
         }
+
     }
 }

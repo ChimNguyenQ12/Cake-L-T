@@ -64,7 +64,7 @@
             this.radioTimUnactiveCake = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbbCategory = new System.Windows.Forms.ComboBox();
+            this.cbbCategoryTim = new System.Windows.Forms.ComboBox();
             this.cbb_price = new System.Windows.Forms.ComboBox();
             this.btnQuanLyLoaiBanh = new System.Windows.Forms.Button();
             this.btn_ReportHD = new System.Windows.Forms.Button();
@@ -72,12 +72,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Banh = new System.Windows.Forms.DataGridView();
-            this.MaBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_TimBanh = new System.Windows.Forms.TextBox();
             this.gbChucNangLoaiBanh = new System.Windows.Forms.GroupBox();
             this.btnQuanLyBanh = new System.Windows.Forms.Button();
@@ -95,6 +89,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txt_tim_loaiBanh = new System.Windows.Forms.TextBox();
             this.btnClearLoaiBanh = new System.Windows.Forms.Button();
+            this.MaBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTrangThaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -312,11 +313,11 @@
             // 
             // cbb_loaiBanh
             // 
-            this.cbb_loaiBanh.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_loaiBanh.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_loaiBanh.FormattingEnabled = true;
             this.cbb_loaiBanh.Location = new System.Drawing.Point(392, 38);
             this.cbb_loaiBanh.Name = "cbb_loaiBanh";
-            this.cbb_loaiBanh.Size = new System.Drawing.Size(163, 30);
+            this.cbb_loaiBanh.Size = new System.Drawing.Size(163, 29);
             this.cbb_loaiBanh.TabIndex = 29;
             // 
             // txt_DonGia
@@ -332,16 +333,18 @@
             this.txt_DonGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_DonGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_DonGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_DonGia.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_DonGia.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DonGia.ForeColor = System.Drawing.Color.Black;
             this.txt_DonGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_DonGia.Location = new System.Drawing.Point(126, 138);
+            this.txt_DonGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_DonGia.Name = "txt_DonGia";
             this.txt_DonGia.PasswordChar = '\0';
             this.txt_DonGia.PlaceholderText = "";
             this.txt_DonGia.SelectedText = "";
             this.txt_DonGia.Size = new System.Drawing.Size(166, 31);
             this.txt_DonGia.TabIndex = 10;
+            this.txt_DonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MaBanh_KeyPress);
             // 
             // btnClearBanh
             // 
@@ -392,10 +395,11 @@
             this.txt_MaBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_MaBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_MaBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MaBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_MaBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MaBanh.ForeColor = System.Drawing.Color.Black;
             this.txt_MaBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MaBanh.Location = new System.Drawing.Point(126, 38);
+            this.txt_MaBanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_MaBanh.Name = "txt_MaBanh";
             this.txt_MaBanh.PasswordChar = '\0';
             this.txt_MaBanh.PlaceholderText = "";
@@ -417,10 +421,11 @@
             this.txt_TenBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_TenBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_TenBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txt_TenBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TenBanh.ForeColor = System.Drawing.Color.Black;
             this.txt_TenBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TenBanh.Location = new System.Drawing.Point(126, 87);
+            this.txt_TenBanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_TenBanh.Name = "txt_TenBanh";
             this.txt_TenBanh.PasswordChar = '\0';
             this.txt_TenBanh.PlaceholderText = "";
@@ -521,10 +526,11 @@
             this.txtTenLoaiBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenLoaiBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenLoaiBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txtTenLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenLoaiBanh.ForeColor = System.Drawing.Color.Black;
             this.txtTenLoaiBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenLoaiBanh.Location = new System.Drawing.Point(233, 95);
+            this.txtTenLoaiBanh.Location = new System.Drawing.Point(225, 94);
+            this.txtTenLoaiBanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenLoaiBanh.Name = "txtTenLoaiBanh";
             this.txtTenLoaiBanh.PasswordChar = '\0';
             this.txtTenLoaiBanh.PlaceholderText = "";
@@ -545,16 +551,18 @@
             this.txtMaLoaiBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaLoaiBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaLoaiBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic);
+            this.txtMaLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLoaiBanh.ForeColor = System.Drawing.Color.Black;
             this.txtMaLoaiBanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaLoaiBanh.Location = new System.Drawing.Point(233, 53);
+            this.txtMaLoaiBanh.Location = new System.Drawing.Point(225, 48);
+            this.txtMaLoaiBanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaLoaiBanh.Name = "txtMaLoaiBanh";
             this.txtMaLoaiBanh.PasswordChar = '\0';
             this.txtMaLoaiBanh.PlaceholderText = "";
             this.txtMaLoaiBanh.SelectedText = "";
-            this.txtMaLoaiBanh.Size = new System.Drawing.Size(166, 36);
+            this.txtMaLoaiBanh.Size = new System.Drawing.Size(166, 32);
             this.txtMaLoaiBanh.TabIndex = 7;
+            this.txtMaLoaiBanh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MaBanh_KeyPress);
             // 
             // button1
             // 
@@ -606,7 +614,7 @@
             this.gbChucNangBanh.Controls.Add(this.radioTimUnactiveCake);
             this.gbChucNangBanh.Controls.Add(this.label3);
             this.gbChucNangBanh.Controls.Add(this.label4);
-            this.gbChucNangBanh.Controls.Add(this.cbbCategory);
+            this.gbChucNangBanh.Controls.Add(this.cbbCategoryTim);
             this.gbChucNangBanh.Controls.Add(this.cbb_price);
             this.gbChucNangBanh.Controls.Add(this.btnQuanLyLoaiBanh);
             this.gbChucNangBanh.Controls.Add(this.btn_SuaBanh);
@@ -678,14 +686,14 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Hết hàng";
             // 
-            // cbbCategory
+            // cbbCategoryTim
             // 
-            this.cbbCategory.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCategory.FormattingEnabled = true;
-            this.cbbCategory.Location = new System.Drawing.Point(102, 68);
-            this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(135, 23);
-            this.cbbCategory.TabIndex = 29;
+            this.cbbCategoryTim.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCategoryTim.FormattingEnabled = true;
+            this.cbbCategoryTim.Location = new System.Drawing.Point(102, 68);
+            this.cbbCategoryTim.Name = "cbbCategoryTim";
+            this.cbbCategoryTim.Size = new System.Drawing.Size(135, 23);
+            this.cbbCategoryTim.TabIndex = 29;
             // 
             // cbb_price
             // 
@@ -787,57 +795,16 @@
             this.DonGia,
             this.LoaiBanh,
             this.TenLoaiBanh,
-            this.TrangThai});
-            this.dgv_Banh.Location = new System.Drawing.Point(31, 553);
+            this.TrangThai,
+            this.TenTrangThaiBanh});
+            this.dgv_Banh.Location = new System.Drawing.Point(31, 554);
             this.dgv_Banh.Name = "dgv_Banh";
             this.dgv_Banh.ReadOnly = true;
             this.dgv_Banh.RowHeadersVisible = false;
             this.dgv_Banh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Banh.Size = new System.Drawing.Size(632, 279);
+            this.dgv_Banh.Size = new System.Drawing.Size(632, 278);
             this.dgv_Banh.TabIndex = 0;
             this.dgv_Banh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Banh_CellContentClick);
-            // 
-            // MaBanh
-            // 
-            this.MaBanh.DataPropertyName = "MaBanh";
-            this.MaBanh.HeaderText = "Mã Bánh";
-            this.MaBanh.Name = "MaBanh";
-            this.MaBanh.ReadOnly = true;
-            // 
-            // TenBanh
-            // 
-            this.TenBanh.DataPropertyName = "TenBanh";
-            this.TenBanh.HeaderText = "Tên Bánh";
-            this.TenBanh.Name = "TenBanh";
-            this.TenBanh.ReadOnly = true;
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
-            // LoaiBanh
-            // 
-            this.LoaiBanh.DataPropertyName = "LoaiBanh";
-            this.LoaiBanh.HeaderText = "Loại Bánh";
-            this.LoaiBanh.Name = "LoaiBanh";
-            this.LoaiBanh.ReadOnly = true;
-            // 
-            // TenLoaiBanh
-            // 
-            this.TenLoaiBanh.DataPropertyName = "TenLoaiBanh";
-            this.TenLoaiBanh.HeaderText = "Tên Loại Bánh";
-            this.TenLoaiBanh.Name = "TenLoaiBanh";
-            this.TenLoaiBanh.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThaiBanh";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
             // 
             // txt_TimBanh
             // 
@@ -973,7 +940,7 @@
             this.dgvLoaiBanh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLoaiBanh.Size = new System.Drawing.Size(632, 279);
             this.dgvLoaiBanh.TabIndex = 0;
-            this.dgvLoaiBanh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiBanh_CellContentClick);
+            this.dgvLoaiBanh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiBanh_CellContentClick);
             // 
             // MaLoai
             // 
@@ -1075,6 +1042,55 @@
             this.btnClearLoaiBanh.UseVisualStyleBackColor = true;
             this.btnClearLoaiBanh.Click += new System.EventHandler(this.btnClearLoaiBanh_Click);
             // 
+            // MaBanh
+            // 
+            this.MaBanh.DataPropertyName = "MaBanh";
+            this.MaBanh.HeaderText = "Mã Bánh";
+            this.MaBanh.Name = "MaBanh";
+            this.MaBanh.ReadOnly = true;
+            // 
+            // TenBanh
+            // 
+            this.TenBanh.DataPropertyName = "TenBanh";
+            this.TenBanh.HeaderText = "Tên Bánh";
+            this.TenBanh.Name = "TenBanh";
+            this.TenBanh.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // LoaiBanh
+            // 
+            this.LoaiBanh.DataPropertyName = "LoaiBanh";
+            this.LoaiBanh.HeaderText = "Loại Bánh";
+            this.LoaiBanh.Name = "LoaiBanh";
+            this.LoaiBanh.ReadOnly = true;
+            // 
+            // TenLoaiBanh
+            // 
+            this.TenLoaiBanh.DataPropertyName = "TenLoaiBanh";
+            this.TenLoaiBanh.HeaderText = "Tên Loại Bánh";
+            this.TenLoaiBanh.Name = "TenLoaiBanh";
+            this.TenLoaiBanh.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThaiBanh";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
+            // TenTrangThaiBanh
+            // 
+            this.TenTrangThaiBanh.DataPropertyName = "TenTrangThaiBanh";
+            this.TenTrangThaiBanh.HeaderText = "Trạng Thái Bánh";
+            this.TenTrangThaiBanh.Name = "TenTrangThaiBanh";
+            this.TenTrangThaiBanh.ReadOnly = true;
+            // 
             // USBanhAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1150,7 +1166,7 @@
         private System.Windows.Forms.Button btnClearBanh;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbbCategory;
+        private System.Windows.Forms.ComboBox cbbCategoryTim;
         private System.Windows.Forms.ComboBox cbb_price;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLoai;
@@ -1166,12 +1182,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txt_MaBanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaBanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenBanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiBanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiBanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel_banh;
         private System.Windows.Forms.Panel panel_loaiBanh;
@@ -1181,5 +1191,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMaLoaiBanh;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClearLoaiBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTrangThaiBanh;
     }
 }

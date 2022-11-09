@@ -45,12 +45,12 @@ namespace BLL
             }
         }
 
-        public void DeleteCakeById(int code)
+        public void DeleteCakeById(int code, int category, string name, int price, string image)
         {
             try
             {
                 BanhDAL banhDAL = new BanhDAL();
-                banhDAL.DeleteCakeById(code);
+                banhDAL.DeleteCakeById(code, category, name, price, image);
             }
             catch (Exception)
             {
@@ -132,6 +132,21 @@ namespace BLL
                 List<Banh> cakeSearch = new List<Banh>();
                 BanhDAL banhDAL = new BanhDAL();
                 cakeSearch = banhDAL.SearchCakeMulti(price,codeCategory, status);
+                return cakeSearch;
+            }
+            catch (Exception)
+            {
+                throw new Exception("error");
+            }
+        }
+
+        public List<Banh> SearchCakeStaff(string key)
+        {
+            try
+            {
+                List<Banh> cakeSearch = new List<Banh>();
+                BanhDAL banhDAL = new BanhDAL();
+                cakeSearch = banhDAL.SearchCakeStaff(key);
                 return cakeSearch;
             }
             catch (Exception)

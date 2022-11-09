@@ -35,6 +35,10 @@ namespace CakeL_T
                 {
                     MessageBox.Show("Có gì đó không ổn :/");
                 }
+                else if (loginBUS.checkLogin(userName, passWord) == "lock")
+                {
+                    MessageBox.Show("Tài khoản bị khóa, vui lòng liên hệ quản trị viên!");
+                }
                 else if (loginBUS.checkLogin(userName, passWord) == "admin")
                 {
                     FormHomeAdmin formHomeAdmin = new FormHomeAdmin();
@@ -50,6 +54,11 @@ namespace CakeL_T
                     MessageBox.Show("Tài khoản không tồn tại!");
                 }
             }
+        }
+
+        private void txt_TenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+            txt_TenDangNhap.Text = txt_TenDangNhap.Text.Replace(" ", "");
         }
     }
 }

@@ -260,11 +260,6 @@ namespace CakeL_T
             }
         }
 
-        private void btnEyes_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_clear_Click(object sender, EventArgs e)
         {
             Clear();

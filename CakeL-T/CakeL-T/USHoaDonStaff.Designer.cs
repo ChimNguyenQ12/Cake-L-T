@@ -360,9 +360,12 @@
             // 
             // dgv_Banh
             // 
+            this.dgv_Banh.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_Banh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Banh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Banh.Location = new System.Drawing.Point(3, 0);
             this.dgv_Banh.Name = "dgv_Banh";
+            this.dgv_Banh.ReadOnly = true;
             this.dgv_Banh.RowHeadersVisible = false;
             this.dgv_Banh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Banh.Size = new System.Drawing.Size(397, 412);
@@ -371,6 +374,8 @@
             // 
             // dgv_HoaDon
             // 
+            this.dgv_HoaDon.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_HoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HoaDon.Location = new System.Drawing.Point(406, 0);
             this.dgv_HoaDon.Name = "dgv_HoaDon";

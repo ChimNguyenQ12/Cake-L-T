@@ -55,10 +55,20 @@ namespace DAL
                 cakeEntities.SaveChanges();
         }
 
-        public void DeleteCakeById(int code)
+        public void DeleteCakeById(int code, int category, string name, int price, string image)
         {
                 var cakeCurrent = cakeEntities.Banhs.Where(x => x.MaBanh == code).FirstOrDefault();
-                cakeCurrent.TrangThaiXoa = true;
+                cakeEntities.Banhs.Remove(cakeCurrent);
+                cakeEntities.Banhs.Add(new Banh()
+                {
+                    MaBanh = int.Parse(DateTime.Now.ToString("MMddHHmmss")),
+                    TenBanh = name,
+                    LoaiBanh = category,
+                    TrangThaiBanh = true,
+                    DonGia = price,
+                    TrangThaiXoa = true,
+                    HinhAnh = image
+                });
                 cakeEntities.SaveChanges();
         }
 
@@ -81,15 +91,27 @@ namespace DAL
         public List<Banh> SearchCake(string key)
         {
             List<Banh> accountBanh = new List<Banh>();
-            if(key == "0")
+            if (key == "0")
             {
                 accountBanh = cakeEntities.Banhs.Where(x => x.TrangThaiXoa == false)
                                                 .ToList();
             }
-            accountBanh = cakeEntities.Banhs.Where(x => x.MaBanh.ToString().Contains(key) && x.TrangThaiXoa == false)
+            else
+            {
+                accountBanh = cakeEntities.Banhs.Where(x => x.MaBanh.ToString().Contains(key) && x.TrangThaiXoa == false)
+                                                .ToList();
+            }
+            return accountBanh;
+        }
+
+        public List<Banh> SearchCakeStaff(string key)
+        {
+            List<Banh> accountBanh = new List<Banh>();
+            accountBanh = cakeEntities.Banhs.Where(x => x.TenBanh.Contains(key) && x.TrangThaiXoa == false)
                                                 .ToList();
             return accountBanh;
         }
+
         public List<Banh> SearchCakeName(string name)
         {
             List<Banh> accountBanh = new List<Banh>();
@@ -128,18 +150,21 @@ namespace DAL
             {
             accountBanh = cakeEntities.Banhs.Where(x => x.DonGia > 50000 && x.DonGia < 100000 && x.TrangThaiXoa == false)
                                                 .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
+                                                .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
                                                 .ToList();
             }
             else if (price == 150000)
             {
                 accountBanh = cakeEntities.Banhs.Where(x => x.DonGia > 100000 && x.DonGia < 200000 && x.TrangThaiXoa == false)
                                                     .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
+                                                    .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
                                                     .ToList();
             }
             else if (price == 200000)
             {
                 accountBanh = cakeEntities.Banhs.Where(x => x.DonGia > 200000 && x.TrangThaiXoa == false)
                                                     .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
+                                                    .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
                                                     .ToList();
             }
             return accountBanh;

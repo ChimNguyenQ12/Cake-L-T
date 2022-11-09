@@ -28,6 +28,7 @@ namespace DAL
         public string HinhAnh { get; set; }
         public bool TrangThaiXoa { get; set; }
         public string TenLoaiBanh { get; set; }
+        public string TenTrangThaiBanh { get; set; }
     
         public virtual LoaiBanh LoaiBanh1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

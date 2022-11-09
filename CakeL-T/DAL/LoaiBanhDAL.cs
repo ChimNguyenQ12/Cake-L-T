@@ -41,10 +41,16 @@ namespace DAL
                 cakeEntities.SaveChanges();
         }
 
-        public void DeleteCateCakeById(int code)
+        public void DeleteCateCakeById(int code, string name)
         {
                 var cakeCateCurrent = cakeEntities.LoaiBanhs.Where(x => x.MaLoai == code).FirstOrDefault();
-                    cakeCateCurrent.TrangThaiXoa = true;
+                    cakeEntities.LoaiBanhs.Remove(cakeCateCurrent);
+                    cakeEntities.LoaiBanhs.Add(new LoaiBanh()
+                    {
+                        MaLoai = 999999,
+                        TenLoai = name,
+                        TrangThaiXoa = true
+                    });
                 cakeEntities.SaveChanges();
         }
 
@@ -67,8 +73,11 @@ namespace DAL
                 accountLoaiBanh = cakeEntities.LoaiBanhs.Where(x => x.TrangThaiXoa == false)
                                                 .ToList();
             }
-            accountLoaiBanh = cakeEntities.LoaiBanhs.Where(x => x.MaLoai.ToString().Contains(key) && x.TrangThaiXoa == false)
-                                                .ToList();
+            else
+            {
+                accountLoaiBanh = cakeEntities.LoaiBanhs.Where(x => x.MaLoai.ToString().Contains(key) && x.TrangThaiXoa == false)
+                                                    .ToList();
+            }
             return accountLoaiBanh;
         }
     }

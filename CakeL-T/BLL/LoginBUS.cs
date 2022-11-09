@@ -17,9 +17,11 @@ namespace BLL
                 list = login.GetAccounts();
                 foreach (var account in list)
                 {
-                    if (account.TenTK == username && account.MatKhau == password && account.TrangThai == true && account.LoaiTK == true)
+                    if (account.TenTK == username && account.MatKhau == password && account.TrangThaiXoa == false && account.LoaiTK == false && account.TrangThai == false)
+                        return "lock";
+                    if (account.TenTK == username && account.MatKhau == password && account.TrangThaiXoa == false && account.LoaiTK == true)
                         return "admin";
-                    else if (account.TenTK == username && account.MatKhau == password && account.TrangThai == true && account.LoaiTK == false)
+                    else if (account.TenTK == username && account.MatKhau == password && account.TrangThaiXoa == false && account.LoaiTK == false)
                         return "staff";
                 }
             }
