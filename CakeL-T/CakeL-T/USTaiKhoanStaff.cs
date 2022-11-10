@@ -12,6 +12,8 @@ namespace CakeL_T
 {
     public partial class USTaiKhoanStaff : UserControl
     {
+        public static string idTk;
+
         private static USTaiKhoanStaff instance;
         public static USTaiKhoanStaff Instance
         {
@@ -22,6 +24,11 @@ namespace CakeL_T
                 return instance;
             }
         }
+
+        public static string ID
+        {
+            set { idTk = value; }
+        }
         public USTaiKhoanStaff()
         {
             InitializeComponent();
@@ -29,7 +36,8 @@ namespace CakeL_T
 
         private void btn_CaiLaiMK_Click(object sender, EventArgs e)
         {
-            FormCaiLaiMK formCaiLaiMK = new FormCaiLaiMK();
+            int id = int.Parse(idTk);
+            FormCaiLaiMK formCaiLaiMK = new FormCaiLaiMK(id);
             formCaiLaiMK.ShowDialog();
         }
     }

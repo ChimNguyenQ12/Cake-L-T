@@ -15,8 +15,12 @@ namespace CakeL_T
     {
        
         DataTable dt = new DataTable();
-        public static string tenbanh, tinhtrang, dongia;
+        public static string tenbanh, tinhtrang, dongia, idTk;
         public static int tong = 0;
+        public static string ID
+        {
+            set { idTk = value; }
+        }
         BanhBUS banhBUS = new BanhBUS();
         LoaiBanhBUS loaiBanhBUS = new LoaiBanhBUS();
         private static USHoaDonStaff instance;
@@ -37,6 +41,7 @@ namespace CakeL_T
     
         private void USHoaDonStaff_Load(object sender, EventArgs e)
         {
+            label2.Text = idTk;
             LoadData();
             dt.Columns.Add("Tên Bánh");
             dt.Columns.Add("Tình Trạng");

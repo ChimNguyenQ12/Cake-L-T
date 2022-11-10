@@ -38,6 +38,7 @@
             this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_DangNhap = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_eyes = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -134,6 +135,7 @@
             this.txt_MatKhau.ForeColor = System.Drawing.Color.Black;
             this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MatKhau.Location = new System.Drawing.Point(425, 252);
+            this.txt_MatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.PasswordChar = '*';
             this.txt_MatKhau.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -159,6 +161,7 @@
             this.txt_TenDangNhap.ForeColor = System.Drawing.Color.Black;
             this.txt_TenDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TenDangNhap.Location = new System.Drawing.Point(425, 162);
+            this.txt_TenDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_TenDangNhap.Name = "txt_TenDangNhap";
             this.txt_TenDangNhap.PasswordChar = '\0';
             this.txt_TenDangNhap.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -167,6 +170,7 @@
             this.txt_TenDangNhap.Size = new System.Drawing.Size(290, 41);
             this.txt_TenDangNhap.TabIndex = 0;
             this.txt_TenDangNhap.TextChanged += new System.EventHandler(this.txt_TenDangNhap_TextChanged);
+            this.txt_TenDangNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TenDangNhap_KeyPress);
             // 
             // btn_DangNhap
             // 
@@ -188,12 +192,30 @@
             this.btn_DangNhap.Text = "Đăng Nhập";
             this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
+            // btn_eyes
+            // 
+            this.btn_eyes.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_eyes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_eyes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_eyes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_eyes.FillColor = System.Drawing.Color.Transparent;
+            this.btn_eyes.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_eyes.ForeColor = System.Drawing.Color.White;
+            this.btn_eyes.Image = ((System.Drawing.Image)(resources.GetObject("btn_eyes.Image")));
+            this.btn_eyes.Location = new System.Drawing.Point(722, 252);
+            this.btn_eyes.Name = "btn_eyes";
+            this.btn_eyes.Size = new System.Drawing.Size(31, 41);
+            this.btn_eyes.TabIndex = 9;
+            this.btn_eyes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_eyes_MouseDown);
+            this.btn_eyes.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_eyes_MouseUp);
+            // 
             // FormLogin
             // 
             this.AcceptButton = this.btn_DangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 671);
+            this.Controls.Add(this.btn_eyes);
             this.Controls.Add(this.btn_DangNhap);
             this.Controls.Add(this.txt_TenDangNhap);
             this.Controls.Add(this.txt_MatKhau);
@@ -224,5 +246,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_MatKhau;
         private Guna.UI2.WinForms.Guna2TextBox txt_TenDangNhap;
         private Guna.UI2.WinForms.Guna2Button btn_DangNhap;
+        private Guna.UI2.WinForms.Guna2Button btn_eyes;
     }
 }

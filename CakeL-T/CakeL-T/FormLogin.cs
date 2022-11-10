@@ -8,21 +8,39 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
-
+using System.Security.Cryptography;
 namespace CakeL_T
 {
     public partial class FormLogin : Form
     {
+        int idtk = 0;
         public FormLogin()
         {
             InitializeComponent();
         }
 
+        private string Encrypt(string value)
+        {
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                UTF8Encoding uTF8 = new UTF8Encoding();
+                byte[] data = md5.ComputeHash(Encoding.UTF8.GetBytes(value));
+                return Convert.ToBase64String(data);
+            }
+        }
+
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
+            LoginBUS loginBUS = new LoginBUS();
             string userName = txt_TenDangNhap.Text;
-            string passWord = txt_MatKhau.Text;
-            int idtk = 0;
+            string passWord = Encrypt(txt_MatKhau.Text);
+
+            var account = loginBUS.GetAccountByUsername(userName);
+
+            foreach (var item in account)
+            {
+                idtk = item.Id;
+            }
 
             if(passWord == "" || userName == "")
             {
@@ -30,7 +48,6 @@ namespace CakeL_T
             }
             else
             {
-                LoginBUS loginBUS = new LoginBUS();
                 if (loginBUS.checkLogin(userName, passWord) == "error")
                 {
                     MessageBox.Show("Có gì đó không ổn :/");
@@ -59,6 +76,25 @@ namespace CakeL_T
         private void txt_TenDangNhap_TextChanged(object sender, EventArgs e)
         {
             txt_TenDangNhap.Text = txt_TenDangNhap.Text.Replace(" ", "");
+        }
+
+        private void txt_TenDangNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (System.Text.Encoding.UTF8.GetByteCount(new char[] { e.KeyChar }) > 1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btn_eyes_MouseDown(object sender, MouseEventArgs e)
+        {
+            txt_MatKhau.PasswordChar = (char)0;
+        }
+
+        private void btn_eyes_MouseUp(object sender, MouseEventArgs e)
+        {
+            txt_MatKhau.PasswordChar = '*';
         }
     }
 }

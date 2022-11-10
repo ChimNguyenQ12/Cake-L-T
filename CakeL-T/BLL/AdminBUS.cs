@@ -87,5 +87,18 @@ namespace BLL
                 throw new Exception("error");
             }
         }
+
+        public void ResetPass(int id)
+        {
+            try
+            {
+                AdminDAL adminDAL = new AdminDAL();
+                adminDAL.ResetPass(id);
+            }
+            catch (Exception)
+            {
+                throw new Exception("error");
+            }
+        }
     }
 }

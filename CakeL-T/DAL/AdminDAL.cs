@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -76,6 +77,23 @@ namespace DAL
                                                   .Where(x => x.TrangThai == status && x.TrangThaiXoa == false)
                                                 .ToList();
             return accountSearch;
+        }
+
+        private string Encrypt(string value)
+        {
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                UTF8Encoding uTF8 = new UTF8Encoding();
+                byte[] data = md5.ComputeHash(Encoding.UTF8.GetBytes(value));
+                return Convert.ToBase64String(data);
+            }
+        }
+
+        public void ResetPass(int id)
+        {
+            var accountCurrent = cakeEntities.TaiKhoans.Where(x => x.Id == id).FirstOrDefault();
+            accountCurrent.MatKhau = Encrypt("1");
+            cakeEntities.SaveChanges();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -18,11 +19,21 @@ namespace CakeL_T
             InitializeComponent();
         }
 
+        private string Encrypt(string value)
+        {
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                UTF8Encoding uTF8 = new UTF8Encoding();
+                byte[] data = md5.ComputeHash(Encoding.UTF8.GetBytes(value));
+                return Convert.ToBase64String(data);
+            }
+        }
+
         private void btn_DangKy_Click(object sender, EventArgs e)
         {
             string username = txt_TenDangNhap.Text;
-            string password = txt_MatKhau.Text;
-            string repeatPW = txt_NhapLaiMatKhau.Text;
+            string password = Encrypt(txt_MatKhau.Text);
+            string repeatPW = Encrypt(txt_NhapLaiMatKhau.Text);
             string address = txt_DiaChi.Text;
             string fullname = txt_HoTen.Text;
             string phone = txt_SDT.Text;
@@ -128,6 +139,26 @@ namespace CakeL_T
         private void txt_TenDangNhap_TextChanged(object sender, EventArgs e)
         {
             txt_TenDangNhap.Text = txt_TenDangNhap.Text.Replace(" ", "");
+        }
+
+        private void btn_eyes_MouseDown(object sender, MouseEventArgs e)
+        {
+            txt_MatKhau.PasswordChar = (char)0;
+        }
+
+        private void btn_eyes_MouseUp(object sender, MouseEventArgs e)
+        {
+            txt_MatKhau.PasswordChar = '*';
+        }
+
+        private void guna2Button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            txt_NhapLaiMatKhau.PasswordChar = (char)0;
+        }
+
+        private void guna2Button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            txt_NhapLaiMatKhau.PasswordChar = '*';
         }
     }
 }

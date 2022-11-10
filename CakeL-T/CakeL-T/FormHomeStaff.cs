@@ -22,7 +22,13 @@ namespace CakeL_T
         {
             _tentk = tentk;
             _idTK = idTK;
+
         }
+        public string ID
+        {
+            get { return _idTK.ToString(); }
+        }
+
         private void btn_CaiLaiMK_Click(object sender, EventArgs e)
         {
             FormCaiLaiMK formCaiLaiMK = new FormCaiLaiMK();
@@ -37,6 +43,8 @@ namespace CakeL_T
 
         private void FormHomeStaff_Load(object sender, EventArgs e)
         {
+            USHoaDonStaff.ID = ID;
+            USTaiKhoanStaff.ID = ID;
             lb_TenNV.Text = _tentk;
             if (!panel_chinh.Controls.Contains(USTrangChuStaff.Instance))
             {

@@ -264,5 +264,20 @@ namespace CakeL_T
         {
             Clear();
         }
+
+        private void btnResetPass_Click(object sender, EventArgs e)
+        {
+            var row = dgv_TaiKhoan.SelectedRows[0];
+            var cell = row.Cells["Id"];
+            int idSelected = Convert.ToInt32(cell.Value);
+            var confirmResult = MessageBox.Show($"Bạn có chắc chắn muốn reset mật khẩu của tài khoản {txt_TenTK.Text}?",
+                                   "Xác nhận Reset",
+                                   MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirmResult == DialogResult.Yes)
+            {
+                adminBUS.ResetPass(idSelected);
+                MessageBox.Show($"Mật khẩu của tài khoản {txt_TenTK.Text} đã được reset thành 1", "Reset mật khẩu");
+            }
+        }
     }
 }

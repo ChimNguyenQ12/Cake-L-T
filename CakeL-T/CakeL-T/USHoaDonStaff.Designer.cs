@@ -54,6 +54,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,6 +71,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
@@ -423,6 +425,15 @@
             this.pictureBox7.TabIndex = 23;
             this.pictureBox7.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(329, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 18);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "label2";
+            // 
             // USHoaDonStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -432,6 +443,7 @@
             this.Size = new System.Drawing.Size(833, 843);
             this.Load += new System.EventHandler(this.USHoaDonStaff_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -477,5 +489,6 @@
         private System.Windows.Forms.RadioButton rbn_HetHang;
         private System.Windows.Forms.RadioButton rbn_Conhang;
         private Guna.UI2.WinForms.Guna2Button btn_LamMoi;
+        private System.Windows.Forms.Label label2;
     }
 }

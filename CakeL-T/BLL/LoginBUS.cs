@@ -31,5 +31,49 @@ namespace BLL
             }
             return "success";
         }
+
+        public List<TaiKhoan> GetAccountByUsername(string username)
+        {
+            try
+            {
+                List<TaiKhoan> accountByUsername= new List<TaiKhoan>();
+                LoginDAL loginDAL = new LoginDAL();
+                accountByUsername = loginDAL.GetAccountByUsername(username);
+                return accountByUsername;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public List<TaiKhoan> GetAccountById(int id)
+        {
+            try
+            {
+                List<TaiKhoan> accountById = new List<TaiKhoan>();
+                LoginDAL loginDAL = new LoginDAL();
+                accountById = loginDAL.GetAccountById(id);
+                return accountById;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public void ChangePassword(int idTk, string currentPass, string newPass, string repeatPass)
+        {
+            try
+            {
+               
+                LoginDAL loginDAL = new LoginDAL();
+                loginDAL.ChangePassword(idTk,currentPass, newPass,repeatPass);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

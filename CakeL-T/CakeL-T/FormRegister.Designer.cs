@@ -46,6 +46,8 @@
             this.txt_HoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_eyes = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -214,6 +216,7 @@
             this.txt_TenDangNhap.ForeColor = System.Drawing.Color.Black;
             this.txt_TenDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TenDangNhap.Location = new System.Drawing.Point(397, 126);
+            this.txt_TenDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_TenDangNhap.Name = "txt_TenDangNhap";
             this.txt_TenDangNhap.PasswordChar = '\0';
             this.txt_TenDangNhap.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -241,6 +244,7 @@
             this.txt_MatKhau.ForeColor = System.Drawing.Color.Black;
             this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MatKhau.Location = new System.Drawing.Point(397, 206);
+            this.txt_MatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.PasswordChar = '*';
             this.txt_MatKhau.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -268,6 +272,7 @@
             this.txt_NhapLaiMatKhau.ForeColor = System.Drawing.Color.Black;
             this.txt_NhapLaiMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_NhapLaiMatKhau.Location = new System.Drawing.Point(397, 283);
+            this.txt_NhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_NhapLaiMatKhau.Name = "txt_NhapLaiMatKhau";
             this.txt_NhapLaiMatKhau.PasswordChar = '*';
             this.txt_NhapLaiMatKhau.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -295,6 +300,7 @@
             this.txt_HoTen.ForeColor = System.Drawing.Color.Black;
             this.txt_HoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_HoTen.Location = new System.Drawing.Point(397, 369);
+            this.txt_HoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_HoTen.Name = "txt_HoTen";
             this.txt_HoTen.PasswordChar = '\0';
             this.txt_HoTen.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -320,6 +326,7 @@
             this.txt_SDT.ForeColor = System.Drawing.Color.Black;
             this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_SDT.Location = new System.Drawing.Point(397, 449);
+            this.txt_SDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.PasswordChar = '\0';
             this.txt_SDT.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -346,6 +353,7 @@
             this.txt_DiaChi.ForeColor = System.Drawing.Color.Black;
             this.txt_DiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_DiaChi.Location = new System.Drawing.Point(397, 537);
+            this.txt_DiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.PasswordChar = '\0';
             this.txt_DiaChi.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -354,11 +362,47 @@
             this.txt_DiaChi.Size = new System.Drawing.Size(315, 41);
             this.txt_DiaChi.TabIndex = 5;
             // 
+            // btn_eyes
+            // 
+            this.btn_eyes.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_eyes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_eyes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_eyes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_eyes.FillColor = System.Drawing.Color.Transparent;
+            this.btn_eyes.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_eyes.ForeColor = System.Drawing.Color.White;
+            this.btn_eyes.Image = ((System.Drawing.Image)(resources.GetObject("btn_eyes.Image")));
+            this.btn_eyes.Location = new System.Drawing.Point(719, 206);
+            this.btn_eyes.Name = "btn_eyes";
+            this.btn_eyes.Size = new System.Drawing.Size(31, 41);
+            this.btn_eyes.TabIndex = 10;
+            this.btn_eyes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_eyes_MouseDown);
+            this.btn_eyes.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_eyes_MouseUp);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.Location = new System.Drawing.Point(719, 283);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(31, 41);
+            this.guna2Button1.TabIndex = 11;
+            this.guna2Button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2Button1_MouseDown);
+            this.guna2Button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.guna2Button1_MouseUp);
+            // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 743);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btn_eyes);
             this.Controls.Add(this.txt_DiaChi);
             this.Controls.Add(this.txt_SDT);
             this.Controls.Add(this.txt_HoTen);
@@ -406,5 +450,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_HoTen;
         private Guna.UI2.WinForms.Guna2TextBox txt_SDT;
         private Guna.UI2.WinForms.Guna2TextBox txt_DiaChi;
+        private Guna.UI2.WinForms.Guna2Button btn_eyes;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

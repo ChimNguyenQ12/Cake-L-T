@@ -31,5 +31,34 @@ namespace DAL
             }
             return listAccount;
         }
+
+        public List<TaiKhoan> GetAccountByUsername(string username)
+        {
+            using (CakeEntities cakeEntities = new CakeEntities())
+            {
+                var accountByUsername = cakeEntities.TaiKhoans.Where(x => x.TenTK == username).ToList();
+                return accountByUsername;
+            }
+        }
+
+        public List<TaiKhoan> GetAccountById(int id)
+        {
+            using (CakeEntities cakeEntities = new CakeEntities())
+            {
+                var accountById = cakeEntities.TaiKhoans.Where(x => x.Id == id).ToList();
+                return accountById;
+            }
+        }
+
+        public void ChangePassword(int idTk,string currentPass, string newPass, string repeatPass)
+        {
+            using (CakeEntities cakeEntities = new CakeEntities())
+            {
+                var accountCurrent = cakeEntities.TaiKhoans.Where(x => x.Id == idTk).FirstOrDefault();
+                accountCurrent.MatKhau = newPass;
+                cakeEntities.SaveChanges();
+            }
+        }
+
     }
 }
