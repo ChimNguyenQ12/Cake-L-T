@@ -1053,9 +1053,11 @@
             this.ClientSize = new System.Drawing.Size(1078, 843);
             this.Controls.Add(this.panel_LapHoaDon);
             this.Controls.Add(this.panel_Trai);
+            this.KeyPreview = true;
             this.Name = "FormHomeStaff";
             this.Text = "FormHome";
             this.Load += new System.EventHandler(this.FormHomeStaff_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormHomeStaff_KeyDown);
             this.panel_Trai.ResumeLayout(false);
             this.panel_Trai.PerformLayout();
             this.grb_Menu.ResumeLayout(false);

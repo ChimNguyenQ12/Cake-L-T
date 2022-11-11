@@ -42,7 +42,13 @@ namespace DAL
                 return cake;
 
         }
+        public List<Banh> GetCakeByName(string nameCake)
+        {
+            List<Banh> cake = new List<Banh>();
+            cake = cakeEntities.Banhs.Where(x => x.TenBanh == nameCake).ToList();
+            return cake;
 
+        }
         public void UpdateCakeById(int code, int category, string name, bool status, int price, string image)
         {
                 var cakeCurrent = cakeEntities.Banhs.Where(x => x.MaBanh == code).FirstOrDefault();

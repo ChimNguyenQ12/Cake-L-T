@@ -91,5 +91,26 @@ namespace CakeL_T
             else
                 USTrangChuStaff.Instance.BringToFront();
         }
+
+        private void FormHomeStaff_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.F1))
+            {
+                btn_TrangChu.PerformClick();
+            }
+            if (e.KeyCode.Equals(Keys.F2))
+            {
+                btn_HoaDon.PerformClick();
+            }
+            if (e.KeyCode.Equals(Keys.F3))
+            {
+                btn_TaiKhoan.PerformClick();
+            }
+            if (e.KeyCode.Equals(Keys.F4))
+            {
+                btn_CaiLaiMK.PerformClick();
+            }
+           
+        }
     }
 }

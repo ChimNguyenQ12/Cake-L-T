@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USHoaDonStaff));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_TienNhan = new System.Windows.Forms.TextBox();
+            this.txt_TienThua = new System.Windows.Forms.TextBox();
             this.btInHoaDon = new System.Windows.Forms.Button();
             this.btThanhToan = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -54,7 +58,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,7 +74,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
@@ -93,6 +95,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BackColor = System.Drawing.Color.LightCoral;
+            this.panel12.Controls.Add(this.label4);
+            this.panel12.Controls.Add(this.label3);
+            this.panel12.Controls.Add(this.txt_TienNhan);
+            this.panel12.Controls.Add(this.txt_TienThua);
             this.panel12.Controls.Add(this.btInHoaDon);
             this.panel12.Controls.Add(this.btThanhToan);
             this.panel12.Controls.Add(this.label11);
@@ -103,6 +109,43 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(800, 87);
             this.panel12.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(156, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 22);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Tiền Nhận:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(160, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 22);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Tiền Thừa:";
+            // 
+            // txt_TienNhan
+            // 
+            this.txt_TienNhan.Location = new System.Drawing.Point(251, 3);
+            this.txt_TienNhan.Name = "txt_TienNhan";
+            this.txt_TienNhan.Size = new System.Drawing.Size(136, 29);
+            this.txt_TienNhan.TabIndex = 9;
+            this.txt_TienNhan.Text = "0";
+            this.txt_TienNhan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_TienNhan.TextChanged += new System.EventHandler(this.txt_TienNhan_TextChanged);
+            // 
+            // txt_TienThua
+            // 
+            this.txt_TienThua.Location = new System.Drawing.Point(251, 43);
+            this.txt_TienThua.Name = "txt_TienThua";
+            this.txt_TienThua.Size = new System.Drawing.Size(136, 29);
+            this.txt_TienThua.TabIndex = 9;
+            this.txt_TienThua.Text = "0";
+            this.txt_TienThua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btInHoaDon
             // 
@@ -136,17 +179,17 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(392, 37);
+            this.label11.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(392, 49);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 18);
+            this.label11.Size = new System.Drawing.Size(87, 22);
             this.label11.TabIndex = 8;
             this.label11.Text = "Tổng tiền: ";
             // 
             // txt_TongTien
             // 
-            this.txt_TongTien.Location = new System.Drawing.Point(493, 31);
+            this.txt_TongTien.Location = new System.Drawing.Point(491, 42);
             this.txt_TongTien.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TongTien.Name = "txt_TongTien";
             this.txt_TongTien.ReadOnly = true;
@@ -425,15 +468,6 @@
             this.pictureBox7.TabIndex = 23;
             this.pictureBox7.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(329, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 18);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "label2";
-            // 
             // USHoaDonStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,7 +477,6 @@
             this.Size = new System.Drawing.Size(833, 843);
             this.Load += new System.EventHandler(this.USHoaDonStaff_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -489,6 +522,9 @@
         private System.Windows.Forms.RadioButton rbn_HetHang;
         private System.Windows.Forms.RadioButton rbn_Conhang;
         private Guna.UI2.WinForms.Guna2Button btn_LamMoi;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_TienNhan;
+        private System.Windows.Forms.TextBox txt_TienThua;
     }
 }

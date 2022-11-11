@@ -1121,12 +1121,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel_DoanhThu);
             this.Controls.Add(this.panel_Trai);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormHomeAdmin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHomeAdmin_FormClosing);
             this.Load += new System.EventHandler(this.FormHomeAdmin_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormHomeAdmin_KeyPress);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormHomeAdmin_KeyDown);
             this.panel_Trai.ResumeLayout(false);
             this.grb_Menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();

@@ -142,10 +142,34 @@ namespace CakeL_T
             FormCaiDat formCaiDat = new FormCaiDat();
             formCaiDat.ShowDialog();
         }
-
-        private void FormHomeAdmin_KeyPress(object sender, KeyPressEventArgs e)
+        private void FormHomeAdmin_KeyDown(object sender, KeyEventArgs e)
         {
-
+            
+                if (e.KeyCode.Equals(Keys.F1))
+                {
+                btn_TrangChu.PerformClick();
+                }
+                if (e.KeyCode.Equals(Keys.F2))
+                {
+                    btn_DoanhThu.PerformClick();
+                }
+                if (e.KeyCode.Equals(Keys.F3))
+                {
+                    btn_HoaDon.PerformClick();
+                }
+                if (e.KeyCode.Equals(Keys.F4))
+                {
+                    btn_Banh.PerformClick();
+                }
+                if (e.KeyCode.Equals(Keys.F5))
+                {
+                    btn_TaiKhoan.PerformClick();
+                }
+                if (e.KeyCode.Equals(Keys.F6))
+                {
+                    btn_CaiDat.PerformClick();
+                }
+            
         }
     }
 }

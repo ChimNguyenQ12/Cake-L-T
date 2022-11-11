@@ -31,18 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USHoaDonAdmin));
             this.dgv_HoaDon = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_TimHD = new System.Windows.Forms.TextBox();
             this.btn_ReportHD = new System.Windows.Forms.Button();
             this.btn_TimHD = new System.Windows.Forms.Button();
-            this.btn_LuuHD = new System.Windows.Forms.Button();
-            this.btn_XoaHD = new System.Windows.Forms.Button();
             this.btn_SuaHD = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_TenNVLHD = new System.Windows.Forms.TextBox();
-            this.txt_MaNV = new System.Windows.Forms.TextBox();
-            this.txt_NgayBan = new System.Windows.Forms.TextBox();
-            this.txt_MaHD = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,6 +44,12 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.txt_MaHD = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_NgayBan = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_MaNV = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_Tongtien = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_timKiem = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_CThoaDon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HoaDon)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -64,41 +63,35 @@
             this.dgv_HoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_HoaDon.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_HoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HoaDon.Location = new System.Drawing.Point(33, 431);
+            this.dgv_HoaDon.Location = new System.Drawing.Point(155, 469);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
-            this.dgv_HoaDon.Size = new System.Drawing.Size(629, 384);
+            this.dgv_HoaDon.RowHeadersVisible = false;
+            this.dgv_HoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_HoaDon.Size = new System.Drawing.Size(385, 346);
             this.dgv_HoaDon.TabIndex = 16;
+            this.dgv_HoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.txt_TimHD);
+            this.groupBox2.Controls.Add(this.btn_CThoaDon);
+            this.groupBox2.Controls.Add(this.btn_timKiem);
             this.groupBox2.Controls.Add(this.btn_ReportHD);
             this.groupBox2.Controls.Add(this.btn_TimHD);
-            this.groupBox2.Controls.Add(this.btn_LuuHD);
-            this.groupBox2.Controls.Add(this.btn_XoaHD);
             this.groupBox2.Controls.Add(this.btn_SuaHD);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(33, 282);
+            this.groupBox2.Location = new System.Drawing.Point(33, 320);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(629, 131);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
-            // 
-            // txt_TimHD
-            // 
-            this.txt_TimHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_TimHD.Location = new System.Drawing.Point(218, 39);
-            this.txt_TimHD.Name = "txt_TimHD";
-            this.txt_TimHD.Size = new System.Drawing.Size(246, 29);
-            this.txt_TimHD.TabIndex = 0;
             // 
             // btn_ReportHD
             // 
@@ -136,44 +129,6 @@
             this.btn_TimHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_TimHD.UseVisualStyleBackColor = false;
             // 
-            // btn_LuuHD
-            // 
-            this.btn_LuuHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_LuuHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_LuuHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LuuHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_LuuHD.Image")));
-            this.btn_LuuHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LuuHD.Location = new System.Drawing.Point(218, 86);
-            this.btn_LuuHD.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_LuuHD.Name = "btn_LuuHD";
-            this.btn_LuuHD.Size = new System.Drawing.Size(68, 34);
-            this.btn_LuuHD.TabIndex = 2;
-            this.btn_LuuHD.Text = "Lưu";
-            this.btn_LuuHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_LuuHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_LuuHD.UseVisualStyleBackColor = false;
-            // 
-            // btn_XoaHD
-            // 
-            this.btn_XoaHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_XoaHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_XoaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XoaHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaHD.Image")));
-            this.btn_XoaHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_XoaHD.Location = new System.Drawing.Point(305, 86);
-            this.btn_XoaHD.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_XoaHD.Name = "btn_XoaHD";
-            this.btn_XoaHD.Size = new System.Drawing.Size(68, 34);
-            this.btn_XoaHD.TabIndex = 3;
-            this.btn_XoaHD.Text = "Xóa";
-            this.btn_XoaHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_XoaHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_XoaHD.UseVisualStyleBackColor = false;
-            // 
             // btn_SuaHD
             // 
             this.btn_SuaHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -199,10 +154,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(34, 50);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(170, 18);
+            this.label16.Size = new System.Drawing.Size(200, 22);
             this.label16.TabIndex = 0;
             this.label16.Text = "Nhập thông tin hóa đơn:";
             // 
@@ -211,7 +166,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.txt_TenNVLHD);
+            this.groupBox1.Controls.Add(this.txt_Tongtien);
             this.groupBox1.Controls.Add(this.txt_MaNV);
             this.groupBox1.Controls.Add(this.txt_NgayBan);
             this.groupBox1.Controls.Add(this.txt_MaHD);
@@ -222,50 +177,10 @@
             this.groupBox1.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(33, 151);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(629, 125);
+            this.groupBox1.Size = new System.Drawing.Size(650, 163);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin:";
-            // 
-            // txt_TenNVLHD
-            // 
-            this.txt_TenNVLHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_TenNVLHD.Location = new System.Drawing.Point(432, 62);
-            this.txt_TenNVLHD.Name = "txt_TenNVLHD";
-            this.txt_TenNVLHD.Size = new System.Drawing.Size(159, 29);
-            this.txt_TenNVLHD.TabIndex = 3;
-            // 
-            // txt_MaNV
-            // 
-            this.txt_MaNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_MaNV.Location = new System.Drawing.Point(432, 29);
-            this.txt_MaNV.Name = "txt_MaNV";
-            this.txt_MaNV.Size = new System.Drawing.Size(159, 29);
-            this.txt_MaNV.TabIndex = 2;
-            // 
-            // txt_NgayBan
-            // 
-            this.txt_NgayBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_NgayBan.Location = new System.Drawing.Point(148, 64);
-            this.txt_NgayBan.Name = "txt_NgayBan";
-            this.txt_NgayBan.Size = new System.Drawing.Size(159, 29);
-            this.txt_NgayBan.TabIndex = 1;
-            // 
-            // txt_MaHD
-            // 
-            this.txt_MaHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_MaHD.Location = new System.Drawing.Point(148, 29);
-            this.txt_MaHD.Name = "txt_MaHD";
-            this.txt_MaHD.Size = new System.Drawing.Size(159, 29);
-            this.txt_MaHD.TabIndex = 0;
             // 
             // label15
             // 
@@ -273,12 +188,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(313, 73);
+            this.label15.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(338, 100);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 18);
+            this.label15.Size = new System.Drawing.Size(93, 22);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Tên nhân viên:";
+            this.label15.Text = "Tổng tiền:";
             // 
             // label10
             // 
@@ -286,10 +201,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(313, 40);
+            this.label10.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(341, 40);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 18);
+            this.label10.Size = new System.Drawing.Size(123, 22);
             this.label10.TabIndex = 0;
             this.label10.Text = "Mã nhân viên:";
             // 
@@ -299,10 +214,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(34, 75);
+            this.label9.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(34, 100);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 18);
+            this.label9.Size = new System.Drawing.Size(95, 22);
             this.label9.TabIndex = 0;
             this.label9.Text = "Ngày bán: ";
             // 
@@ -312,10 +227,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(34, 40);
+            this.label8.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(27, 40);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 18);
+            this.label8.Size = new System.Drawing.Size(102, 22);
             this.label8.TabIndex = 0;
             this.label8.Text = "Mã hóa đơn";
             // 
@@ -371,6 +286,95 @@
             this.pictureBox7.TabIndex = 10;
             this.pictureBox7.TabStop = false;
             // 
+            // txt_MaHD
+            // 
+            this.txt_MaHD.BorderRadius = 20;
+            this.txt_MaHD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.txt_MaHD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.txt_MaHD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txt_MaHD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.txt_MaHD.Enabled = false;
+            this.txt_MaHD.FillColor = System.Drawing.Color.White;
+            this.txt_MaHD.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
+            this.txt_MaHD.ForeColor = System.Drawing.Color.Black;
+            this.txt_MaHD.Location = new System.Drawing.Point(142, 21);
+            this.txt_MaHD.Name = "txt_MaHD";
+            this.txt_MaHD.Size = new System.Drawing.Size(168, 41);
+            this.txt_MaHD.TabIndex = 1;
+            // 
+            // txt_NgayBan
+            // 
+            this.txt_NgayBan.BorderRadius = 20;
+            this.txt_NgayBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.txt_NgayBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.txt_NgayBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txt_NgayBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.txt_NgayBan.Enabled = false;
+            this.txt_NgayBan.FillColor = System.Drawing.Color.White;
+            this.txt_NgayBan.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
+            this.txt_NgayBan.ForeColor = System.Drawing.Color.Black;
+            this.txt_NgayBan.Location = new System.Drawing.Point(142, 81);
+            this.txt_NgayBan.Name = "txt_NgayBan";
+            this.txt_NgayBan.Size = new System.Drawing.Size(168, 41);
+            this.txt_NgayBan.TabIndex = 1;
+            // 
+            // txt_MaNV
+            // 
+            this.txt_MaNV.BorderRadius = 20;
+            this.txt_MaNV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.txt_MaNV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.txt_MaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txt_MaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.txt_MaNV.Enabled = false;
+            this.txt_MaNV.FillColor = System.Drawing.Color.White;
+            this.txt_MaNV.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
+            this.txt_MaNV.ForeColor = System.Drawing.Color.Black;
+            this.txt_MaNV.Location = new System.Drawing.Point(473, 21);
+            this.txt_MaNV.Name = "txt_MaNV";
+            this.txt_MaNV.Size = new System.Drawing.Size(168, 41);
+            this.txt_MaNV.TabIndex = 1;
+            // 
+            // txt_Tongtien
+            // 
+            this.txt_Tongtien.BorderRadius = 20;
+            this.txt_Tongtien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.txt_Tongtien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.txt_Tongtien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txt_Tongtien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.txt_Tongtien.Enabled = false;
+            this.txt_Tongtien.FillColor = System.Drawing.Color.White;
+            this.txt_Tongtien.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
+            this.txt_Tongtien.ForeColor = System.Drawing.Color.Black;
+            this.txt_Tongtien.Location = new System.Drawing.Point(473, 81);
+            this.txt_Tongtien.Name = "txt_Tongtien";
+            this.txt_Tongtien.Size = new System.Drawing.Size(168, 41);
+            this.txt_Tongtien.TabIndex = 1;
+            // 
+            // btn_timKiem
+            // 
+            this.btn_timKiem.BorderColor = System.Drawing.Color.Gray;
+            this.btn_timKiem.BorderRadius = 15;
+            this.btn_timKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_timKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_timKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_timKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_timKiem.FillColor = System.Drawing.Color.White;
+            this.btn_timKiem.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic);
+            this.btn_timKiem.ForeColor = System.Drawing.Color.Black;
+            this.btn_timKiem.Location = new System.Drawing.Point(240, 38);
+            this.btn_timKiem.Name = "btn_timKiem";
+            this.btn_timKiem.Size = new System.Drawing.Size(221, 30);
+            this.btn_timKiem.TabIndex = 6;
+            // 
+            // btn_CThoaDon
+            // 
+            this.btn_CThoaDon.Location = new System.Drawing.Point(32, 84);
+            this.btn_CThoaDon.Name = "btn_CThoaDon";
+            this.btn_CThoaDon.Size = new System.Drawing.Size(205, 35);
+            this.btn_CThoaDon.TabIndex = 7;
+            this.btn_CThoaDon.Text = "Xem Chi Tiết Hóa Đơn";
+            this.btn_CThoaDon.UseVisualStyleBackColor = true;
+            // 
             // USHoaDonAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,6 +388,7 @@
             this.Controls.Add(this.pictureBox7);
             this.Name = "USHoaDonAdmin";
             this.Size = new System.Drawing.Size(695, 832);
+            this.Load += new System.EventHandler(this.USHoaDonAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HoaDon)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -401,18 +406,11 @@
 
         private System.Windows.Forms.DataGridView dgv_HoaDon;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_TimHD;
         private System.Windows.Forms.Button btn_ReportHD;
         private System.Windows.Forms.Button btn_TimHD;
-        private System.Windows.Forms.Button btn_LuuHD;
-        private System.Windows.Forms.Button btn_XoaHD;
         private System.Windows.Forms.Button btn_SuaHD;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_TenNVLHD;
-        private System.Windows.Forms.TextBox txt_MaNV;
-        private System.Windows.Forms.TextBox txt_NgayBan;
-        private System.Windows.Forms.TextBox txt_MaHD;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -421,5 +419,11 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private Guna.UI2.WinForms.Guna2Button txt_Tongtien;
+        private Guna.UI2.WinForms.Guna2Button txt_MaNV;
+        private Guna.UI2.WinForms.Guna2Button txt_NgayBan;
+        private Guna.UI2.WinForms.Guna2Button txt_MaHD;
+        private System.Windows.Forms.Button btn_CThoaDon;
+        private Guna.UI2.WinForms.Guna2Button btn_timKiem;
     }
 }

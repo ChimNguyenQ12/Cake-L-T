@@ -31,6 +31,20 @@ namespace BLL
                 return null;
             }
         }
+        public List<Banh> GetCakeByName(string nameCake)
+        {
+            try
+            {
+                List<Banh> lstcake = new List<Banh>();
+                BanhDAL banhDAL = new BanhDAL();
+                lstcake = banhDAL.GetCakeByName(nameCake);
+                return lstcake;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
 
         public void UpdateCakeById(int code, int category, string name, bool status, int price, string image)
         {

@@ -91,3 +91,15 @@ D:\DA_Win\Cake\CakeL-T\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\DA_Win\Cake\CakeL-T\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\DA_Win\Cake\CakeL-T\DAL\obj\Debug\DAL.dll
 D:\DA_Win\Cake\CakeL-T\DAL\obj\Debug\DAL.pdb
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\bin\Debug\DAL.dll.config
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\bin\Debug\DAL.dll
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\bin\Debug\DAL.pdb
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\bin\Debug\EntityFramework.dll
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\bin\Debug\EntityFramework.xml
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\obj\Debug\DAL.dll
+D:\DA_Win\Cake\CakeLT\CakeL-T\DAL\obj\Debug\DAL.pdb

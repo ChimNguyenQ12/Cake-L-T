@@ -40,5 +40,10 @@ namespace CakeL_T
             FormCaiLaiMK formCaiLaiMK = new FormCaiLaiMK(id);
             formCaiLaiMK.ShowDialog();
         }
+
+        private void USTaiKhoanStaff_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

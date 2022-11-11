@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,18 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using System.Security.Principal;
+using System.Diagnostics;
 
 namespace CakeL_T
 {
     public partial class USHoaDonStaff : UserControl
     {
        
-        DataTable dt = new DataTable();
-        public static string tenbanh, tinhtrang, dongia, idTk;
-        public static int tong = 0;
+        DataTable dt ;
+        public static string tenbanh, tinhtrang, dongia, _idTk;
+        public static int tong = 0, maHD = 0, maCTHD;
         public static string ID
         {
-            set { idTk = value; }
+            set { _idTk = value; }
         }
         BanhBUS banhBUS = new BanhBUS();
         LoaiBanhBUS loaiBanhBUS = new LoaiBanhBUS();
@@ -41,10 +45,11 @@ namespace CakeL_T
     
         private void USHoaDonStaff_Load(object sender, EventArgs e)
         {
-            label2.Text = idTk;
+            
             LoadData();
+            dt=new DataTable();
             dt.Columns.Add("Tên Bánh");
-            dt.Columns.Add("Tình Trạng");
+            dt.Columns.Add("Số Lượng");
             dt.Columns.Add("Đơn Giá");
             dt.Columns.Add("Thành Tiền");
             dgv_HoaDon.DataSource = dt;
@@ -52,25 +57,93 @@ namespace CakeL_T
 
         private void btThemMon_Click(object sender, EventArgs e)
         {
-            int thanhtien = 0;
-            thanhtien = int.Parse(num_DemBanh.Value.ToString()) * int.Parse(dongia);
-            if (tinhtrang == "False")
+            try
             {
-                MessageBox.Show("Bánh này đã hết hàng");
+                int thanhtien = 0;
+                thanhtien = int.Parse(num_DemBanh.Value.ToString()) * int.Parse(dongia);
+                if (tinhtrang == "False")
+                {
+                    MessageBox.Show("Bánh này đã hết hàng");
+                }
+                else
+                {
+                    tong = tong + thanhtien;
+                    dt.Rows.Add(tenbanh, num_DemBanh.Value.ToString(), dongia, thanhtien);
+                    txt_TongTien.Text = tong.ToString();
+                }
             }
-            else
-            {
-                tong = tong + thanhtien;
-                dt.Rows.Add(tenbanh, num_DemBanh.Value.ToString(), dongia, thanhtien);
-                txt_TongTien.Text = tong.ToString();
-            }
+            catch { };
         }
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            string tam;
-            MessageBox.Show("tổng tiền cần thanh toán là: " + tong + "VND");
-            tong = 0;
+            string idTk;
+            int soLuong = 0, tongTien = 0, maBanh = 0, giatien = 0;
+
+            idTk = _idTk;
+            
+            soLuong=int.Parse(num_DemBanh.Value.ToString());
+            tongTien = tong;
+
+            HoaDonBUS hoadonBUS = new HoaDonBUS();
+            CTHoaDonBUS ctBUS = new CTHoaDonBUS();
+            try
+            {   
+                do
+                {
+                    maHD += 1;
+                } while (hoadonBUS.HoaDon(maHD, idTk, tongTien) == "Ma hoa don da ton tai");
+
+                if (hoadonBUS.HoaDon(maHD, idTk, tongTien) == "Ma hoa don da ton tai")
+                {
+                    for(int i = 0; i< dgv_HoaDon.Rows.Count-1; i++)
+                    {
+                        string namecake=null;
+                        namecake = dgv_HoaDon.Rows[i].Cells["Tên Bánh"].Value.ToString();
+
+                        var cake = banhBUS.GetCakeByName(namecake);
+                        foreach (var item in cake)
+                        {
+                             maBanh = item.MaBanh;
+                        }
+                        soLuong = int.Parse( dgv_HoaDon.Rows[i].Cells["Số Lượng"].Value.ToString());
+                        giatien = int.Parse(dgv_HoaDon.Rows[i].Cells["Số Lượng"].Value.ToString()) * int.Parse(dgv_HoaDon.Rows[i].Cells["Thành Tiền"].Value.ToString());
+                        do
+                        {
+                            maCTHD += 1;
+                        } while (ctBUS.CTHoaDon(maCTHD, maBanh, maHD, soLuong, giatien) == "Mã đã tồn tại");
+                        if (ctBUS.CTHoaDon(maCTHD, maBanh, maHD,soLuong,giatien) == "success")
+                        {
+                            Debug.WriteLine("success");
+                        }
+                    }
+
+                    MessageBox.Show("Thanh toán thành công");
+                    maHD= 0;
+                    dt = new DataTable();
+                    dt.Columns.Add("Tên Bánh");
+                    dt.Columns.Add("Số Lượng");
+                    dt.Columns.Add("Đơn Giá");
+                    dt.Columns.Add("Thành Tiền");
+                    dgv_HoaDon.DataSource = dt;
+                    tong = 0;
+                    txt_TongTien.Text = "0";
+                    txt_TienThua.Text = "0";
+                    txt_TienNhan.Text = "0";
+                }
+            }
+            catch (Exception ex) {  }
+        }
+
+        private void txt_TienNhan_TextChanged(object sender, EventArgs e)
+        {
+            int tienthua = 0;
+            tienthua = int.Parse(txt_TienNhan.Text) - tong;
+            if (tienthua > 0)
+            {
+                txt_TienThua.Text = tienthua.ToString();
+            }
+            else txt_TienThua.Text+= "0";
         }
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
@@ -122,6 +195,7 @@ namespace CakeL_T
         private void LoadData()
         {
             dgv_Banh.DataSource = banhBUS.GetCakes();
+            DataGridViewRow row = this.dgv_Banh.Rows[0];
             for (int i = 0; i < dgv_Banh.Rows.Count; i++)
             {
                 foreach (var item in loaiBanhBUS.GetCateCakes())
@@ -140,6 +214,7 @@ namespace CakeL_T
                     dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Hết hàng";
                 }
             }
+            dgv_Banh.Columns["TenBanh"].Name = "Tên Bánh";
             dgv_Banh.Columns["LoaiBanh"].Visible = false;
             dgv_Banh.Columns["MaBanh"].Visible = false;
             dgv_Banh.Columns["HinhAnh"].Visible = false;
@@ -148,6 +223,7 @@ namespace CakeL_T
             dgv_Banh.Columns["LoaiBanh1"].Visible = false;
             dgv_Banh.Columns["TrangThaiXoa"].Visible = false;
             dgv_Banh.Columns["TrangThaiBanh"].Visible = false;
+           
         }
         private void dgv_Banh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
