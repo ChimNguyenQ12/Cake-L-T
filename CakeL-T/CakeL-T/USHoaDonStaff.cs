@@ -1,19 +1,8 @@
 ﻿using BLL;
-using DAL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
-using System.Security.Principal;
 using System.Diagnostics;
-using static System.Net.Mime.MediaTypeNames;
-using Syncfusion.Windows.Forms.Tools;
 
 namespace CakeL_T
 {
@@ -168,10 +157,10 @@ namespace CakeL_T
 
         private void num_DemBanh_ValueChanged(object sender, EventArgs e)
         {
-            if(int .Parse(num_DemBanh.Value.ToString())<0)
+            if(int .Parse(num_DemBanh.Value.ToString())<1)
             {
-                MessageBox.Show("Số lượng phải lớn hơn 0");
-                num_DemBanh.Value= 0;
+                MessageBox.Show("Số lượng phải lớn hơn 1");
+                num_DemBanh.Value= 1;
             }
         }
 

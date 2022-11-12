@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="CakeShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="CakeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Banh">
     <Key>
       <PropertyRef Name="MaBanh" />
@@ -43,30 +43,21 @@
     <Property Name="TenLoai" Type="nchar" MaxLength="10" />
     <Property Name="TrangThaiXoa" Type="bit" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenTK" Type="nvarchar" MaxLength="50" />
     <Property Name="MatKhau" Type="nvarchar" MaxLength="50" />
     <Property Name="LoaiTK" Type="bit" />
-    <Property Name="TrangThai" Type="bit" />
+    <Property Name="TrangThai" Type="bit" Nullable="false" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
     <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
     <Property Name="SoDienThoai" Type="nvarchar" MaxLength="50" />
     <Property Name="HinhAnh" Type="nvarchar(max)" />
-    <Property Name="TrangThaiXoa" Type="bit" />
+    <Property Name="TrangThaiXoa" Type="bit" Nullable="false" />
+    <Property Name="TenLoaiTrangThai" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Banh_LoaiBanh">
     <End Role="LoaiBanh" Type="Self.LoaiBanh" Multiplicity="0..1" />
@@ -116,12 +107,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="CakeShopModelStoreContainer">
+  <EntityContainer Name="CakeModelStoreContainer">
     <EntitySet Name="Banh" EntityType="Self.Banh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietHD" EntityType="Self.ChiTietHD" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoaiBanh" EntityType="Self.LoaiBanh" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Banh_LoaiBanh" Association="Self.FK_Banh_LoaiBanh">
       <End Role="LoaiBanh" EntitySet="LoaiBanh" />

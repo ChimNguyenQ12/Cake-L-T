@@ -59,6 +59,10 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Banh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTrangThaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -425,6 +429,11 @@
             this.dgv_Banh.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_Banh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Banh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Banh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Banh,
+            this.TenTrangThaiBanh,
+            this.a,
+            this.TenLoaiBanh});
             this.dgv_Banh.Location = new System.Drawing.Point(3, 3);
             this.dgv_Banh.Name = "dgv_Banh";
             this.dgv_Banh.ReadOnly = true;
@@ -441,6 +450,7 @@
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HoaDon.Location = new System.Drawing.Point(406, 3);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
+            this.dgv_HoaDon.ReadOnly = true;
             this.dgv_HoaDon.RowHeadersVisible = false;
             this.dgv_HoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_HoaDon.Size = new System.Drawing.Size(394, 409);
@@ -479,6 +489,34 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 23;
             this.pictureBox7.TabStop = false;
+            // 
+            // Banh
+            // 
+            this.Banh.DataPropertyName = "TenBanh";
+            this.Banh.HeaderText = "Tên Bánh";
+            this.Banh.Name = "Banh";
+            this.Banh.ReadOnly = true;
+            // 
+            // TenTrangThaiBanh
+            // 
+            this.TenTrangThaiBanh.DataPropertyName = "TenTrangThaiBanh";
+            this.TenTrangThaiBanh.HeaderText = "Trạng Thái";
+            this.TenTrangThaiBanh.Name = "TenTrangThaiBanh";
+            this.TenTrangThaiBanh.ReadOnly = true;
+            // 
+            // a
+            // 
+            this.a.DataPropertyName = "DonGia";
+            this.a.HeaderText = "Đơn Giá";
+            this.a.Name = "a";
+            this.a.ReadOnly = true;
+            // 
+            // TenLoaiBanh
+            // 
+            this.TenLoaiBanh.DataPropertyName = "TenLoaiBanh";
+            this.TenLoaiBanh.HeaderText = "Loại Bánh";
+            this.TenLoaiBanh.Name = "TenLoaiBanh";
+            this.TenLoaiBanh.ReadOnly = true;
             // 
             // USHoaDonStaff
             // 
@@ -539,5 +577,9 @@
         private System.Windows.Forms.TextBox txt_TienNhan;
         private System.Windows.Forms.TextBox txt_TienThua;
         private System.Windows.Forms.Button btn_Clear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Banh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTrangThaiBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn a;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiBanh;
     }
 }
