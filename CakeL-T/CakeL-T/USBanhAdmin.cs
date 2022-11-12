@@ -107,7 +107,7 @@ namespace CakeL_T
             }
         }
         private void LoadData()
-        {
+        {   
             txt_MaBanh.Enabled = false;
             btn_SuaBanh.Enabled = true;
             btn_XoaBanh.Enabled = true;
