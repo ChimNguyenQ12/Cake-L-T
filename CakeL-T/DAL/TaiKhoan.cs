@@ -14,15 +14,24 @@ namespace DAL
     
     public partial class TaiKhoan
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TaiKhoan()
+        {
+            this.HoaDons = new HashSet<HoaDon>();
+        }
+    
         public int Id { get; set; }
         public string TenTK { get; set; }
         public string MatKhau { get; set; }
-        public bool LoaiTK { get; set; }
-        public bool TrangThai { get; set; }
+        public Nullable<bool> LoaiTK { get; set; }
+        public Nullable<bool> TrangThai { get; set; }
         public string DiaChi { get; set; }
         public string HoTen { get; set; }
         public string SoDienThoai { get; set; }
         public string HinhAnh { get; set; }
-        public bool TrangThaiXoa { get; set; }
+        public Nullable<bool> TrangThaiXoa { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

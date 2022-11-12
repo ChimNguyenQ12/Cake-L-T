@@ -4,15 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5c03d72000ee4dcfaa1d6e5c90f6b1d3" Name="Diagram1">
-        <EntityTypeShape EntityType="cakeModel.Banh" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="cakeModel.ChiTietHD" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="cakeModel.HinhAnh" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="cakeModel.HoaDon" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="cakeModel.LoaiBanh" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="cakeModel.TaiKhoan" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="cakeModel.FK_Banh_LoaiBanh" ManuallyRouted="false" />
-        <AssociationConnector Association="cakeModel.FK_HinhAnh_Banh" ManuallyRouted="false" />
+      <Diagram DiagramId="3d488fd493d44a5da7f3b6b9942c3844" Name="Diagram1">
+        <EntityTypeShape EntityType="CakeShopModel.Banh" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CakeShopModel.ChiTietHD" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CakeShopModel.HoaDon" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CakeShopModel.LoaiBanh" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CakeShopModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CakeShopModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="CakeShopModel.FK_Banh_LoaiBanh" ManuallyRouted="false" />
+        <AssociationConnector Association="CakeShopModel.FK_ChiTietHD_Banh" ManuallyRouted="false" />
+        <AssociationConnector Association="CakeShopModel.FK_ChiTietHD_HoaDon" ManuallyRouted="false" />
+        <AssociationConnector Association="CakeShopModel.FK_HoaDon_TaiKhoan" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

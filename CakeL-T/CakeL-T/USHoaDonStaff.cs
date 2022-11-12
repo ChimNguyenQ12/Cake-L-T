@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using BLL;
 using System.Security.Principal;
 using System.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
+using Syncfusion.Windows.Forms.Tools;
 
 namespace CakeL_T
 {
@@ -19,9 +21,9 @@ namespace CakeL_T
     {
        
         DataTable dt ;
-        public static string tenbanh, tinhtrang, dongia, _idTk;
-        public static int tong = 0, maHD = 0, maCTHD;
-        public static string ID
+        public static string tenbanh, tinhtrang, dongia, tam;
+        public static int tong = 0, maHD = 0, maCTHD, _idTk;
+        public static int ID
         {
             set { _idTk = value; }
         }
@@ -77,7 +79,7 @@ namespace CakeL_T
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
-            string idTk;
+            int idTk;
             int soLuong = 0, tongTien = 0, maBanh = 0, giatien = 0;
 
             idTk = _idTk;
@@ -173,20 +175,48 @@ namespace CakeL_T
             }
         }
 
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            int tongtien = 0;
+            foreach (DataGridViewRow item in this.dgv_HoaDon.SelectedRows)
+            {
+                dgv_HoaDon.Rows.RemoveAt(item.Index);
+            }
+            tongtien = int.Parse(txt_TongTien.Text.Trim()) - int.Parse(tam);
+            tong = tongtien;
+            txt_TongTien.Text = tongtien.ToString();
+        }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            dt.Columns.Add("Tên Bánh");
+            dt.Columns.Add("Số Lượng");
+            dt.Columns.Add("Đơn Giá");
+            dt.Columns.Add("Thành Tiền");
+            dgv_HoaDon.DataSource = dt;
+            txt_TongTien.Text = "0";
+        }
+
+        private void dgv_HoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int index = dgv_HoaDon.CurrentCell.RowIndex; //lấy ra chỉ số của row đang đc chọn
+            tam = dgv_HoaDon.Rows[index].Cells[3].Value.ToString();
+        }
+
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            var price = 1;
-            var codeCategory = 1;
             bool status;
             if (rbn_Conhang.Checked)
             {
                 status = true;
-                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(price, codeCategory, status);
+                dgv_Banh.DataSource = banhBUS.SearchCakeStatus(status);
             }
             else if (rbn_HetHang.Checked)
             {
                 status = false;
-                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(price, codeCategory, status);
+                dgv_Banh.DataSource = banhBUS.SearchCakeStatus(status);
             }
         }
 
@@ -246,8 +276,8 @@ namespace CakeL_T
             dgv_Banh.Columns["MaBanh"].Visible = false;
             dgv_Banh.Columns["HinhAnh"].Visible = false;
             dgv_Banh.Columns["LoaiBanh"].Visible = false;
-            dgv_Banh.Columns["HinhAnhs"].Visible = false;
-            dgv_Banh.Columns["LoaiBanh1"].Visible = false;
+            //dgv_Banh.Columns["HinhAnhs"].Visible = false;
+            //dgv_Banh.Columns["LoaiBanh1"].Visible = false;
             dgv_Banh.Columns["TrangThaiXoa"].Visible = false;
             dgv_Banh.Columns["TrangThaiBanh"].Visible = false;
            

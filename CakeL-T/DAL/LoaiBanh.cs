@@ -22,7 +22,7 @@ namespace DAL
     
         public int MaLoai { get; set; }
         public string TenLoai { get; set; }
-        public bool TrangThaiXoa { get; set; }
+        public Nullable<bool> TrangThaiXoa { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Banh> Banhs { get; set; }

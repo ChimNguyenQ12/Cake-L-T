@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+using System.Diagnostics;
+
 namespace CakeL_T
 {
 
@@ -49,6 +51,37 @@ namespace CakeL_T
             txt_MaNV.Text = row.Cells["IdTaiKhoan"].Value.ToString();
             txt_NgayBan.Text = row.Cells["NgayMua"].Value.ToString();
             txt_Tongtien.Text = row.Cells["TongTien"].Value.ToString();
+        }
+
+        private void btn_TimHD_Click(object sender, EventArgs e)
+        {
+            var tongtien = 1;
+            var tien = Convert.ToInt32(cbb_TongTien.SelectedValue);
+            if (cbb_TongTien.SelectedItem == null || cbb_TongTien == null)
+            {
+                tongtien = 0;
+                tien = 0;
+            }
+            else if (cbb_TongTien.SelectedItem.ToString() == "Tất cả")
+            {
+                tongtien = 1;
+            }
+            else if (cbb_TongTien.SelectedItem.ToString() == "< 50.000đ")
+            {
+                tongtien = 50000;
+            }
+            else if (cbb_TongTien.SelectedItem.ToString() == "50.000đ -> 100.000đ")
+            {
+                tongtien = 75000;
+            }
+            else if (cbb_TongTien.SelectedItem.ToString() == "100.000đ -> 200.000đ")
+            {
+                tongtien = 150000;
+            }
+            else if (cbb_TongTien.SelectedItem.ToString() == "> 200.000đ")
+            {
+                tongtien = 200000;
+            }
         }
     }
 }

@@ -41,10 +41,10 @@ namespace CakeL_T
             dgv_TaiKhoan.Columns["MatKhau"].Visible = false;
             dgv_TaiKhoan.Columns["LoaiTK"].Visible = false;
             DataGridViewRow row = this.dgv_TaiKhoan.Rows[0];
-            txt_DiaChi.Text = row.Cells["DiaChi"].Value.ToString();
+            //txt_DiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             txt_MatKhau.Text = row.Cells["MatKhau"].Value.ToString();
             txt_TenNV.Text = row.Cells["HoTen"].Value.ToString();
-            txtTimTenTK.Text = row.Cells["SoDienThoai"].Value.ToString();
+            //txtTimTenTK.Text = row.Cells["SoDienThoai"].Value.ToString();
             txt_TenTK.Text = row.Cells["TenTK"].Value.ToString();
             if (Convert.ToBoolean(row.Cells["LoaiTK"].Value) == true)
             {

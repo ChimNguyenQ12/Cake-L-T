@@ -24,9 +24,9 @@ namespace CakeL_T
             _idTK = idTK;
 
         }
-        public string ID
+        public int ID
         {
-            get { return _idTK.ToString(); }
+            get { return _idTK; }
         }
 
         private void btn_CaiLaiMK_Click(object sender, EventArgs e)

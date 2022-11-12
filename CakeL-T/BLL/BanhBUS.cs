@@ -51,7 +51,7 @@ namespace BLL
             try
             {
                 BanhDAL banhDAL = new BanhDAL();
-                banhDAL.UpdateCakeById(code, category, name, status, price,image);
+                banhDAL.UpdateCakeById(code, category, name, status, price, image);
             }
             catch (Exception)
             {
@@ -86,7 +86,7 @@ namespace BLL
                     }
                 }
 
-                if (banhDAL.AddCake(code, category, name, price,image) == "success")
+                if (banhDAL.AddCake(code, category, name, price, image) == "success")
                 {
                     return "success";
                 }
@@ -139,13 +139,13 @@ namespace BLL
             }
         }
 
-        public List<Banh> SearchCakeMulti(int price, int codeCategory, bool status)
+        public List<Banh> SearchCakeMulti(int minPrice, int maxPrice, int price, int codeCategory, bool status)
         {
             try
             {
                 List<Banh> cakeSearch = new List<Banh>();
                 BanhDAL banhDAL = new BanhDAL();
-                cakeSearch = banhDAL.SearchCakeMulti(price,codeCategory, status);
+                cakeSearch = banhDAL.SearchCakeMulti(minPrice, maxPrice, price, codeCategory, status);
                 return cakeSearch;
             }
             catch (Exception)
@@ -161,6 +161,21 @@ namespace BLL
                 List<Banh> cakeSearch = new List<Banh>();
                 BanhDAL banhDAL = new BanhDAL();
                 cakeSearch = banhDAL.SearchCakeStaff(key);
+                return cakeSearch;
+            }
+            catch (Exception)
+            {
+                throw new Exception("error");
+            }
+        }
+
+        public List<Banh> SearchCakeStatus(bool status)
+        {
+            try
+            {
+                List<Banh> cakeSearch = new List<Banh>();
+                BanhDAL banhDAL = new BanhDAL();
+                cakeSearch = banhDAL.SearchCakeStatus(status);
                 return cakeSearch;
             }
             catch (Exception)

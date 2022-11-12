@@ -15,7 +15,7 @@ namespace BLL
             listHD = hoadonDAL.GetHoaDon().ToList();
             return listHD;
         }
-        public string HoaDon(int MaHD, string IDTK, int TongTien)
+        public string HoaDon(int MaHD, int IDTK, int TongTien)
         {
             try
             {
@@ -36,5 +36,6 @@ namespace BLL
             }catch(Exception ex) { return "error"; }
             return "success";
         }
+        
     }
 }

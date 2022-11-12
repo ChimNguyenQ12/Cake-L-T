@@ -53,6 +53,10 @@ namespace CakeL_T
             {
                 MessageBox.Show("Mật khẩu chứa ít nhất 6 ký tự và nhiều nhất 20 ký tự");
             }
+            else if (string.IsNullOrWhiteSpace(txt_MatKhau.Text))
+            {
+                MessageBox.Show("Mật khẩu không được chứa toàn bộ khoảng trắng");
+            }
             else if (!match.Success)
             {
                 MessageBox.Show("Số điện thoại không phù hợp");

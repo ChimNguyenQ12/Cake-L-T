@@ -14,9 +14,20 @@ namespace DAL
     
     public partial class HoaDon
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HoaDon()
+        {
+            this.ChiTietHDs = new HashSet<ChiTietHD>();
+        }
+    
         public int MaHoaDon { get; set; }
-        public string IdTaiKhoan { get; set; }
+        public Nullable<int> IdTaiKhoan { get; set; }
         public Nullable<System.DateTime> NgayMua { get; set; }
         public Nullable<int> TongTien { get; set; }
+        public Nullable<bool> TrangThai { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietHD> ChiTietHDs { get; set; }
+        public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }

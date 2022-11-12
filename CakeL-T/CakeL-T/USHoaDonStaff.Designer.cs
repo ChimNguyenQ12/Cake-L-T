@@ -47,6 +47,7 @@
             this.btn_TimKiem = new Guna.UI2.WinForms.Guna2CircleButton();
             this.txt_TenBanh = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_Clear = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btThemMon = new System.Windows.Forms.Button();
             this.num_DemBanh = new System.Windows.Forms.NumericUpDown();
@@ -74,6 +75,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.MistyRose;
             this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
@@ -91,10 +93,8 @@
             // 
             // panel12
             // 
-            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel12.BackColor = System.Drawing.Color.LightCoral;
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel12.BackColor = System.Drawing.Color.Salmon;
             this.panel12.Controls.Add(this.label4);
             this.panel12.Controls.Add(this.label3);
             this.panel12.Controls.Add(this.txt_TienNhan);
@@ -204,10 +204,8 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.LightCoral;
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackColor = System.Drawing.Color.Salmon;
             this.panel2.Controls.Add(this.btn_LamMoi);
             this.panel2.Controls.Add(this.rbn_HetHang);
             this.panel2.Controls.Add(this.rbn_Conhang);
@@ -223,6 +221,7 @@
             // 
             // btn_LamMoi
             // 
+            this.btn_LamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_LamMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_LamMoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_LamMoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -239,6 +238,7 @@
             // 
             // rbn_HetHang
             // 
+            this.rbn_HetHang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbn_HetHang.AutoSize = true;
             this.rbn_HetHang.Location = new System.Drawing.Point(150, 59);
             this.rbn_HetHang.Name = "rbn_HetHang";
@@ -249,6 +249,7 @@
             // 
             // rbn_Conhang
             // 
+            this.rbn_Conhang.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbn_Conhang.AutoSize = true;
             this.rbn_Conhang.Checked = true;
             this.rbn_Conhang.Location = new System.Drawing.Point(24, 59);
@@ -261,6 +262,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 12);
@@ -271,6 +273,7 @@
             // 
             // btn_TimKiem
             // 
+            this.btn_TimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_TimKiem.BackColor = System.Drawing.Color.White;
             this.btn_TimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_TimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -289,6 +292,7 @@
             // 
             // txt_TenBanh
             // 
+            this.txt_TenBanh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_TenBanh.BorderRadius = 20;
             this.txt_TenBanh.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_TenBanh.DefaultText = "";
@@ -312,10 +316,9 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.LightCoral;
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.BackColor = System.Drawing.Color.Salmon;
+            this.panel4.Controls.Add(this.btn_Clear);
             this.panel4.Controls.Add(this.btn_Xoa);
             this.panel4.Controls.Add(this.btThemMon);
             this.panel4.Controls.Add(this.num_DemBanh);
@@ -326,25 +329,37 @@
             this.panel4.Size = new System.Drawing.Size(399, 101);
             this.panel4.TabIndex = 28;
             // 
+            // btn_Clear
+            // 
+            this.btn_Clear.BackColor = System.Drawing.Color.White;
+            this.btn_Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Clear.Location = new System.Drawing.Point(146, 55);
+            this.btn_Clear.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(111, 31);
+            this.btn_Clear.TabIndex = 1;
+            this.btn_Clear.Text = "Xóa hóa đơn";
+            this.btn_Clear.UseVisualStyleBackColor = false;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
+            // 
             // btn_Xoa
             // 
             this.btn_Xoa.BackColor = System.Drawing.Color.White;
             this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Xoa.Location = new System.Drawing.Point(130, 20);
+            this.btn_Xoa.Location = new System.Drawing.Point(31, 55);
             this.btn_Xoa.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(95, 31);
             this.btn_Xoa.TabIndex = 1;
             this.btn_Xoa.Text = "Xóa bánh";
             this.btn_Xoa.UseVisualStyleBackColor = false;
-            this.btn_Xoa.Visible = false;
-            this.btn_Xoa.Click += new System.EventHandler(this.btThemMon_Click);
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btThemMon
             // 
             this.btThemMon.BackColor = System.Drawing.Color.White;
             this.btThemMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThemMon.Location = new System.Drawing.Point(30, 20);
+            this.btThemMon.Location = new System.Drawing.Point(31, 11);
             this.btThemMon.Margin = new System.Windows.Forms.Padding(2);
             this.btThemMon.Name = "btThemMon";
             this.btThemMon.Size = new System.Drawing.Size(96, 31);
@@ -355,7 +370,7 @@
             // 
             // num_DemBanh
             // 
-            this.num_DemBanh.Location = new System.Drawing.Point(243, 22);
+            this.num_DemBanh.Location = new System.Drawing.Point(146, 13);
             this.num_DemBanh.Margin = new System.Windows.Forms.Padding(2);
             this.num_DemBanh.Minimum = new decimal(new int[] {
             100,
@@ -374,10 +389,8 @@
             // 
             // panel23
             // 
-            this.panel23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel23.BackColor = System.Drawing.Color.LightCoral;
+            this.panel23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel23.BackColor = System.Drawing.Color.Salmon;
             this.panel23.Controls.Add(this.label7);
             this.panel23.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel23.Location = new System.Drawing.Point(420, 133);
@@ -412,12 +425,12 @@
             this.dgv_Banh.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_Banh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Banh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Banh.Location = new System.Drawing.Point(3, 0);
+            this.dgv_Banh.Location = new System.Drawing.Point(3, 3);
             this.dgv_Banh.Name = "dgv_Banh";
             this.dgv_Banh.ReadOnly = true;
             this.dgv_Banh.RowHeadersVisible = false;
             this.dgv_Banh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Banh.Size = new System.Drawing.Size(397, 412);
+            this.dgv_Banh.Size = new System.Drawing.Size(397, 409);
             this.dgv_Banh.TabIndex = 30;
             this.dgv_Banh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Banh_CellContentClick);
             // 
@@ -426,18 +439,17 @@
             this.dgv_HoaDon.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_HoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HoaDon.Location = new System.Drawing.Point(406, 0);
+            this.dgv_HoaDon.Location = new System.Drawing.Point(406, 3);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
             this.dgv_HoaDon.RowHeadersVisible = false;
             this.dgv_HoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_HoaDon.Size = new System.Drawing.Size(394, 412);
+            this.dgv_HoaDon.Size = new System.Drawing.Size(394, 409);
             this.dgv_HoaDon.TabIndex = 0;
+            this.dgv_HoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(505, 28);
             this.pictureBox5.Name = "pictureBox5";
@@ -448,9 +460,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(303, 28);
             this.pictureBox6.Name = "pictureBox6";
@@ -461,9 +471,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(97, 28);
             this.pictureBox7.Name = "pictureBox7";
@@ -530,5 +538,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_TienNhan;
         private System.Windows.Forms.TextBox txt_TienThua;
+        private System.Windows.Forms.Button btn_Clear;
     }
 }

@@ -10,6 +10,7 @@ namespace DAL
 {
     public class HoaDonDAL
     {
+        CakeEntities cakeEntities = new CakeEntities();
         public List<HoaDon> GetHoaDon()
         {
             List<HoaDon> listHoadon = new List<HoaDon>();
@@ -28,7 +29,7 @@ namespace DAL
             }
             return listHoadon;
         }
-        public string HoaDon(int MaHD, string IDTK, int TongTien)
+        public string HoaDon(int MaHD, int IDTK, int TongTien)
         {
             try
             {
@@ -46,6 +47,51 @@ namespace DAL
             }
             catch (Exception ex) { return "error"; }
             return "success";
+        }
+        public List<HoaDon> SearchHDMulti(int tien, int tongtien)
+        {
+            List<HoaDon> accountHD = new List<HoaDon>();
+            //if (tien == 0 && tongtien == 0)
+            //{
+            //    accountHD = cakeEntities.HoaDons.Where(x => x.TrangThaiXoa == false && x.TrangThaiBanh == status)
+            //                                    .ToList();
+            //}
+            //else if (tien == 1)
+            //{
+            //    accountHD = cakeEntities.HoaDons.Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
+            //                                    .Where(x => x.LoaiBanh == tongtien && x.TrangThaiXoa == false)
+            //                                    .ToList();
+
+            //}
+            //else if (tien == 50000)
+            //{
+            //    accountHD = cakeEntities.HoaDons.Where(x => x.DonGia < 50000 && x.TrangThaiXoa == false)
+            //                                    .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
+            //                                    .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
+            //                                    .ToList();
+            //}
+            //else if (tien == 75000)
+            //{
+            //    accountHD = cakeEntities.HoaDons.Where(x => x.DonGia > 50000 && x.DonGia < 100000 && x.TrangThaiXoa == false)
+            //                                        .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
+            //                                        .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
+            //                                        .ToList();
+            //}
+            //else if (tien == 150000)
+            //{
+            //    accountHD = cakeEntities.HoaDons.Where(x => x.DonGia > 100000 && x.DonGia < 200000 && x.TrangThaiXoa == false)
+            //                                        .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
+            //                                        .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
+            //                                        .ToList();
+            //}
+            //else if (tien == 200000)
+            //{
+            //    accountHD = cakeEntities.HoaDons.Where(x => x.DonGia > 200000 && x.TrangThaiXoa == false)
+            //                                        .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
+            //                                        .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
+            //                                        .ToList();
+            //}
+            return accountHD;
         }
     }
 }

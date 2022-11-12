@@ -136,10 +136,11 @@
             this.pictureBox12.TabIndex = 5;
             this.pictureBox12.TabStop = false;
             // 
-            // TrangChu
+            // USTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox16);
@@ -147,7 +148,7 @@
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.pictureBox12);
-            this.Name = "TrangChu";
+            this.Name = "USTrangChu";
             this.Size = new System.Drawing.Size(695, 832);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();

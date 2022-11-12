@@ -15,9 +15,13 @@ namespace DAL
     public partial class ChiTietHD
     {
         public int MaCTHoaDon { get; set; }
-        public int MaBanh { get; set; }
+        public Nullable<int> MaBanh { get; set; }
         public Nullable<int> MaHoaDon { get; set; }
         public Nullable<int> SoLuong { get; set; }
         public Nullable<int> GiaTien { get; set; }
+        public Nullable<bool> TrangThai { get; set; }
+    
+        public virtual Banh Banh { get; set; }
+        public virtual HoaDon HoaDon { get; set; }
     }
 }

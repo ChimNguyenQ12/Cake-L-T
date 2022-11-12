@@ -27,9 +27,9 @@ namespace DAL
     
         public virtual DbSet<Banh> Banhs { get; set; }
         public virtual DbSet<ChiTietHD> ChiTietHDs { get; set; }
-        public virtual DbSet<HinhAnh> HinhAnhs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<LoaiBanh> LoaiBanhs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
     }
 }

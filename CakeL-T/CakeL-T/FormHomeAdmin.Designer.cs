@@ -174,7 +174,7 @@
             // panel_Trai
             // 
             resources.ApplyResources(this.panel_Trai, "panel_Trai");
-            this.panel_Trai.BackColor = System.Drawing.Color.LightCoral;
+            this.panel_Trai.BackColor = System.Drawing.Color.Salmon;
             this.panel_Trai.Controls.Add(this.dateTimePicker1);
             this.panel_Trai.Controls.Add(this.grb_Menu);
             this.panel_Trai.Controls.Add(this.pb_Avatar);
@@ -409,6 +409,7 @@
             // panel_chinh
             // 
             resources.ApplyResources(this.panel_chinh, "panel_chinh");
+            this.panel_chinh.BackColor = System.Drawing.Color.MistyRose;
             this.panel_chinh.Controls.Add(this.lb_TenNV);
             this.panel_chinh.Name = "panel_chinh";
             // 
