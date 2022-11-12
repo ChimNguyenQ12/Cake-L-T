@@ -72,6 +72,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Banh = new System.Windows.Forms.DataGridView();
+            this.MaBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTrangThaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_TimBanh = new System.Windows.Forms.TextBox();
             this.gbChucNangLoaiBanh = new System.Windows.Forms.GroupBox();
             this.btnQuanLyBanh = new System.Windows.Forms.Button();
@@ -89,13 +96,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txt_tim_loaiBanh = new System.Windows.Forms.TextBox();
             this.btnClearLoaiBanh = new System.Windows.Forms.Button();
-            this.MaBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTrangThaiBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -806,6 +806,55 @@
             this.dgv_Banh.TabIndex = 0;
             this.dgv_Banh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Banh_CellContentClick);
             // 
+            // MaBanh
+            // 
+            this.MaBanh.DataPropertyName = "MaBanh";
+            this.MaBanh.HeaderText = "Mã Bánh";
+            this.MaBanh.Name = "MaBanh";
+            this.MaBanh.ReadOnly = true;
+            // 
+            // TenBanh
+            // 
+            this.TenBanh.DataPropertyName = "TenBanh";
+            this.TenBanh.HeaderText = "Tên Bánh";
+            this.TenBanh.Name = "TenBanh";
+            this.TenBanh.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // LoaiBanh
+            // 
+            this.LoaiBanh.DataPropertyName = "LoaiBanh";
+            this.LoaiBanh.HeaderText = "Loại Bánh";
+            this.LoaiBanh.Name = "LoaiBanh";
+            this.LoaiBanh.ReadOnly = true;
+            // 
+            // TenLoaiBanh
+            // 
+            this.TenLoaiBanh.DataPropertyName = "TenLoaiBanh";
+            this.TenLoaiBanh.HeaderText = "Tên Loại Bánh";
+            this.TenLoaiBanh.Name = "TenLoaiBanh";
+            this.TenLoaiBanh.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThaiBanh";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
+            // TenTrangThaiBanh
+            // 
+            this.TenTrangThaiBanh.DataPropertyName = "TenTrangThaiBanh";
+            this.TenTrangThaiBanh.HeaderText = "Trạng Thái Bánh";
+            this.TenTrangThaiBanh.Name = "TenTrangThaiBanh";
+            this.TenTrangThaiBanh.ReadOnly = true;
+            // 
             // txt_TimBanh
             // 
             this.txt_TimBanh.Location = new System.Drawing.Point(207, 7);
@@ -1041,55 +1090,6 @@
             this.btnClearLoaiBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClearLoaiBanh.UseVisualStyleBackColor = true;
             this.btnClearLoaiBanh.Click += new System.EventHandler(this.btnClearLoaiBanh_Click);
-            // 
-            // MaBanh
-            // 
-            this.MaBanh.DataPropertyName = "MaBanh";
-            this.MaBanh.HeaderText = "Mã Bánh";
-            this.MaBanh.Name = "MaBanh";
-            this.MaBanh.ReadOnly = true;
-            // 
-            // TenBanh
-            // 
-            this.TenBanh.DataPropertyName = "TenBanh";
-            this.TenBanh.HeaderText = "Tên Bánh";
-            this.TenBanh.Name = "TenBanh";
-            this.TenBanh.ReadOnly = true;
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
-            // LoaiBanh
-            // 
-            this.LoaiBanh.DataPropertyName = "LoaiBanh";
-            this.LoaiBanh.HeaderText = "Loại Bánh";
-            this.LoaiBanh.Name = "LoaiBanh";
-            this.LoaiBanh.ReadOnly = true;
-            // 
-            // TenLoaiBanh
-            // 
-            this.TenLoaiBanh.DataPropertyName = "TenLoaiBanh";
-            this.TenLoaiBanh.HeaderText = "Tên Loại Bánh";
-            this.TenLoaiBanh.Name = "TenLoaiBanh";
-            this.TenLoaiBanh.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThaiBanh";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            // 
-            // TenTrangThaiBanh
-            // 
-            this.TenTrangThaiBanh.DataPropertyName = "TenTrangThaiBanh";
-            this.TenTrangThaiBanh.HeaderText = "Trạng Thái Bánh";
-            this.TenTrangThaiBanh.Name = "TenTrangThaiBanh";
-            this.TenTrangThaiBanh.ReadOnly = true;
             // 
             // USBanhAdmin
             // 

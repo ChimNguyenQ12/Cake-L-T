@@ -725,6 +725,7 @@
             // btnResetPass
             // 
             this.btnResetPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnResetPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnResetPass.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetPass.ForeColor = System.Drawing.Color.Black;
             this.btnResetPass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -734,7 +735,6 @@
             this.btnResetPass.Size = new System.Drawing.Size(160, 41);
             this.btnResetPass.TabIndex = 0;
             this.btnResetPass.Text = "Reset Password";
-            this.btnResetPass.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnResetPass.UseVisualStyleBackColor = false;
             this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
             // 

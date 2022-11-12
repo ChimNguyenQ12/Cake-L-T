@@ -36,7 +36,6 @@
             this.btn_TrangChu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_HoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.btn_DoanhThu = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_NhapHang = new Guna.UI2.WinForms.Guna2Button();
             this.btn_CaiDat = new Guna.UI2.WinForms.Guna2Button();
             this.btn_TaiKhoan = new Guna.UI2.WinForms.Guna2Button();
             this.pb_Avatar = new System.Windows.Forms.PictureBox();
@@ -193,7 +192,6 @@
             this.grb_Menu.Controls.Add(this.btn_TrangChu);
             this.grb_Menu.Controls.Add(this.btn_HoaDon);
             this.grb_Menu.Controls.Add(this.btn_DoanhThu);
-            this.grb_Menu.Controls.Add(this.btn_NhapHang);
             this.grb_Menu.Controls.Add(this.btn_CaiDat);
             this.grb_Menu.Controls.Add(this.btn_TaiKhoan);
             this.grb_Menu.ForeColor = System.Drawing.Color.Black;
@@ -288,27 +286,6 @@
             this.btn_DoanhThu.Name = "btn_DoanhThu";
             this.btn_DoanhThu.UseTransparentBackground = true;
             this.btn_DoanhThu.Click += new System.EventHandler(this.btn_DoanhThu_Click);
-            // 
-            // btn_NhapHang
-            // 
-            resources.ApplyResources(this.btn_NhapHang, "btn_NhapHang");
-            this.btn_NhapHang.BackColor = System.Drawing.Color.Transparent;
-            this.btn_NhapHang.BorderColor = System.Drawing.Color.PaleTurquoise;
-            this.btn_NhapHang.BorderRadius = 24;
-            this.btn_NhapHang.BorderThickness = 1;
-            this.btn_NhapHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_NhapHang.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btn_NhapHang.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btn_NhapHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_NhapHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_NhapHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_NhapHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_NhapHang.FillColor = System.Drawing.Color.LightCoral;
-            this.btn_NhapHang.ForeColor = System.Drawing.Color.Black;
-            this.btn_NhapHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_NhapHang.Image")));
-            this.btn_NhapHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_NhapHang.Name = "btn_NhapHang";
-            this.btn_NhapHang.UseTransparentBackground = true;
             // 
             // btn_CaiDat
             // 
@@ -1187,7 +1164,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_TaiKhoan;
         private Guna.UI2.WinForms.Guna2Button btn_TrangChu;
         private Guna.UI2.WinForms.Guna2Button btn_Banh;
-        private Guna.UI2.WinForms.Guna2Button btn_NhapHang;
         private Guna.UI2.WinForms.Guna2Button btn_CaiDat;
         private System.Windows.Forms.Panel panel_DoanhThu;
         private System.Windows.Forms.Panel panel_HoaDon;

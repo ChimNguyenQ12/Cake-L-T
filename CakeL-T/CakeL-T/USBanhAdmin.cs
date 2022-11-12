@@ -119,7 +119,7 @@ namespace CakeL_T
 
             dgv_Banh.DataSource = banhBUS.GetCakes();
             for (int i = 0; i < dgv_Banh.Rows.Count; i++)
-            {
+            {   
                 foreach (var item in loaiBanhBUS.GetCateCakes())
                 {
                     if(dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == item.MaLoai.ToString())

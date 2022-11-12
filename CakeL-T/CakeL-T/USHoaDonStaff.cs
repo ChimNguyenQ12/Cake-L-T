@@ -146,6 +146,33 @@ namespace CakeL_T
             else txt_TienThua.Text+= "0";
         }
 
+        private void txt_TienNhan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != (char)(Keys.Back)))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    if (txt_TienNhan.Text.Length > 9)
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+        }
+
+        private void num_DemBanh_ValueChanged(object sender, EventArgs e)
+        {
+            if(int .Parse(num_DemBanh.Value.ToString())<0)
+            {
+                MessageBox.Show("Số lượng phải lớn hơn 0");
+                num_DemBanh.Value= 0;
+            }
+        }
+
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
             var price = 1;
@@ -214,7 +241,7 @@ namespace CakeL_T
                     dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Hết hàng";
                 }
             }
-            dgv_Banh.Columns["TenBanh"].Name = "Tên Bánh";
+            
             dgv_Banh.Columns["LoaiBanh"].Visible = false;
             dgv_Banh.Columns["MaBanh"].Visible = false;
             dgv_Banh.Columns["HinhAnh"].Visible = false;

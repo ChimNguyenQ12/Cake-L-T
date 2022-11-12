@@ -178,9 +178,9 @@
             this.btn_TaiKhoan.Location = new System.Drawing.Point(19, 464);
             this.btn_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btn_TaiKhoan.Name = "btn_TaiKhoan";
-            this.btn_TaiKhoan.Size = new System.Drawing.Size(150, 51);
+            this.btn_TaiKhoan.Size = new System.Drawing.Size(173, 51);
             this.btn_TaiKhoan.TabIndex = 17;
-            this.btn_TaiKhoan.Text = "Tài khoản";
+            this.btn_TaiKhoan.Text = "Tài khoản (F3)";
             this.btn_TaiKhoan.UseTransparentBackground = true;
             this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
             // 
@@ -206,9 +206,9 @@
             this.btn_TrangChu.Location = new System.Drawing.Point(19, 35);
             this.btn_TrangChu.Margin = new System.Windows.Forms.Padding(2);
             this.btn_TrangChu.Name = "btn_TrangChu";
-            this.btn_TrangChu.Size = new System.Drawing.Size(150, 51);
+            this.btn_TrangChu.Size = new System.Drawing.Size(173, 51);
             this.btn_TrangChu.TabIndex = 15;
-            this.btn_TrangChu.Text = "Trang chủ";
+            this.btn_TrangChu.Text = "Trang chủ (F1)";
             this.btn_TrangChu.UseTransparentBackground = true;
             this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
             // 
@@ -233,9 +233,9 @@
             this.btn_HoaDon.Location = new System.Drawing.Point(19, 103);
             this.btn_HoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btn_HoaDon.Name = "btn_HoaDon";
-            this.btn_HoaDon.Size = new System.Drawing.Size(150, 51);
+            this.btn_HoaDon.Size = new System.Drawing.Size(173, 51);
             this.btn_HoaDon.TabIndex = 14;
-            this.btn_HoaDon.Text = "Bán hàng";
+            this.btn_HoaDon.Text = "Bán hàng (F2)";
             this.btn_HoaDon.UseTransparentBackground = true;
             this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
             // 
@@ -260,9 +260,9 @@
             this.guna2Button1.Location = new System.Drawing.Point(19, 539);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(150, 51);
+            this.guna2Button1.Size = new System.Drawing.Size(173, 51);
             this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "Cài đặt";
+            this.guna2Button1.Text = "Cài đặt (F4)";
             this.guna2Button1.UseTransparentBackground = true;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 

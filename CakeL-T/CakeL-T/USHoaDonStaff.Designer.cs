@@ -137,9 +137,11 @@
             this.txt_TienNhan.Text = "0";
             this.txt_TienNhan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_TienNhan.TextChanged += new System.EventHandler(this.txt_TienNhan_TextChanged);
+            this.txt_TienNhan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TienNhan_KeyPress);
             // 
             // txt_TienThua
             // 
+            this.txt_TienThua.Enabled = false;
             this.txt_TienThua.Location = new System.Drawing.Point(251, 43);
             this.txt_TienThua.Name = "txt_TienThua";
             this.txt_TienThua.Size = new System.Drawing.Size(136, 29);
@@ -189,6 +191,7 @@
             // 
             // txt_TongTien
             // 
+            this.txt_TongTien.Enabled = false;
             this.txt_TongTien.Location = new System.Drawing.Point(491, 42);
             this.txt_TongTien.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TongTien.Name = "txt_TongTien";
@@ -367,6 +370,7 @@
             0,
             0,
             0});
+            this.num_DemBanh.ValueChanged += new System.EventHandler(this.num_DemBanh_ValueChanged);
             // 
             // panel23
             // 
