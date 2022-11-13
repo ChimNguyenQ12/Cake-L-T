@@ -1,19 +1,9 @@
 ﻿using BLL;
-using DAL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
-using System.Security.Principal;
 using System.Diagnostics;
-using static System.Net.Mime.MediaTypeNames;
-using Syncfusion.Windows.Forms.Tools;
+using Microsoft.ReportingServices.RdlExpressions.ExpressionHostObjectModel;
 
 namespace CakeL_T
 {
@@ -21,7 +11,7 @@ namespace CakeL_T
     {
        
         DataTable dt ;
-        public static string tenbanh, tinhtrang, dongia, tam;
+        public static string tenbanh, tinhtrang, dongia, tam, tensosanh;
         public static int tong = 0, maHD = 0, maCTHD, _idTk;
         public static int ID
         {
@@ -59,19 +49,54 @@ namespace CakeL_T
 
         private void btThemMon_Click(object sender, EventArgs e)
         {
+            int tontai = 0, vitri =0;
+            
             try
             {
-                int thanhtien = 0;
-                thanhtien = int.Parse(num_DemBanh.Value.ToString()) * int.Parse(dongia);
-                if (tinhtrang == "False")
+                for (int i = 0; i < dgv_HoaDon.Rows.Count; i++)
                 {
-                    MessageBox.Show("Bánh này đã hết hàng");
+                    if (dgv_HoaDon.Rows[i].Cells["Tên Bánh"].Value != null)
+                    {
+                        if (tensosanh == dgv_HoaDon.Rows[i].Cells["Tên Bánh"].Value.ToString())
+                        {
+                            tontai = 1;
+                            vitri = i;
+                            break;
+                        }
+                        else
+                        {
+                            tontai = 0;
+                        }
+                    }
+                    else
+                    {
+                        tontai = 0;
+                        break;
+                    }
+                }
+                if (tontai == 0)
+                {
+                    int thanhtien = 0;
+                    thanhtien = int.Parse(num_DemBanh.Value.ToString()) * int.Parse(dongia);
+                    if (tinhtrang == "False")
+                    {
+                        MessageBox.Show("Bánh này đã hết hàng");
+                    }
+                    else
+                    {
+                        tong = tong + thanhtien;
+                        dt.Rows.Add(tenbanh, num_DemBanh.Value.ToString(), dongia, thanhtien);
+                        txt_TongTien.Text = tong.ToString();
+                    }
                 }
                 else
                 {
-                    tong = tong + thanhtien;
-                    dt.Rows.Add(tenbanh, num_DemBanh.Value.ToString(), dongia, thanhtien);
+                    int soluongmoi = 0;
+                    soluongmoi = int.Parse(dgv_HoaDon.Rows[vitri].Cells[1].Value.ToString()) + int.Parse(num_DemBanh.Value.ToString());
+                    dgv_HoaDon.Rows[vitri].Cells[1].Value = soluongmoi;
+                    tong = tong + (soluongmoi * int.Parse(dgv_HoaDon.Rows[vitri].Cells[3].Value.ToString()) - int.Parse(dgv_HoaDon.Rows[vitri].Cells[3].Value.ToString()));
                     txt_TongTien.Text = tong.ToString();
+                    dgv_HoaDon.Rows[vitri].Cells[3].Value = soluongmoi * int.Parse(dgv_HoaDon.Rows[vitri].Cells[3].Value.ToString());
                 }
             }
             catch { };
@@ -79,6 +104,7 @@ namespace CakeL_T
 
         private void btThanhToan_Click(object sender, EventArgs e)
         {
+            bool trangthai = true;
             int idTk;
             int soLuong = 0, tongTien = 0, maBanh = 0, giatien = 0;
 
@@ -94,9 +120,9 @@ namespace CakeL_T
                 do
                 {
                     maHD += 1;
-                } while (hoadonBUS.HoaDon(maHD, idTk, tongTien) == "Ma hoa don da ton tai");
+                } while (hoadonBUS.HoaDon(maHD, idTk, tongTien, trangthai) == "Ma hoa don da ton tai");
 
-                if (hoadonBUS.HoaDon(maHD, idTk, tongTien) == "Ma hoa don da ton tai")
+                if (hoadonBUS.HoaDon(maHD, idTk, tongTien, trangthai) == "Ma hoa don da ton tai")
                 {
                     for(int i = 0; i< dgv_HoaDon.Rows.Count-1; i++)
                     {
@@ -113,8 +139,8 @@ namespace CakeL_T
                         do
                         {
                             maCTHD += 1;
-                        } while (ctBUS.CTHoaDon(maCTHD, maBanh, maHD, soLuong, giatien) == "Mã đã tồn tại");
-                        if (ctBUS.CTHoaDon(maCTHD, maBanh, maHD,soLuong,giatien) == "success")
+                        } while (ctBUS.CTHoaDon(maCTHD, maBanh, maHD, soLuong, giatien,trangthai) == "Mã đã tồn tại");
+                        if (ctBUS.CTHoaDon(maCTHD, maBanh, maHD,soLuong,giatien,trangthai) == "success")
                         {
                             Debug.WriteLine("success");
                         }
@@ -139,13 +165,25 @@ namespace CakeL_T
 
         private void txt_TienNhan_TextChanged(object sender, EventArgs e)
         {
-            int tienthua = 0;
-            tienthua = int.Parse(txt_TienNhan.Text) - tong;
-            if (tienthua > 0)
+            try
             {
-                txt_TienThua.Text = tienthua.ToString();
+                int tienthua = 0;
+                tienthua = int.Parse(txt_TienNhan.Text) - tong;
+                if (tienthua > 0)
+                {
+                    txt_TienThua.Text = tienthua.ToString();
+                }
+                else
+                {
+                    txt_TienThua.Clear();
+                    txt_TienThua.Text += "0";
+                }
             }
-            else txt_TienThua.Text+= "0";
+            catch (Exception ex) 
+            { 
+                txt_TienThua.Clear() ;
+                txt_TienThua.Text = "0"; 
+            }
         }
 
         private void txt_TienNhan_KeyPress(object sender, KeyPressEventArgs e)
@@ -168,25 +206,38 @@ namespace CakeL_T
 
         private void num_DemBanh_ValueChanged(object sender, EventArgs e)
         {
-            if(int .Parse(num_DemBanh.Value.ToString())<0)
+            if(int .Parse(num_DemBanh.Value.ToString())<1)
             {
-                MessageBox.Show("Số lượng phải lớn hơn 0");
-                num_DemBanh.Value= 0;
+                MessageBox.Show("Số lượng phải lớn hơn 1");
+                num_DemBanh.Value= 1;
             }
+            
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            int tongtien = 0;
-            foreach (DataGridViewRow item in this.dgv_HoaDon.SelectedRows)
+            try
             {
-                dgv_HoaDon.Rows.RemoveAt(item.Index);
+                int tongtien = 0;
+                foreach (DataGridViewRow item in this.dgv_HoaDon.SelectedRows)
+                {
+                    dgv_HoaDon.Rows.RemoveAt(item.Index);
+                }
+                tongtien = int.Parse(txt_TongTien.Text.Trim()) - int.Parse(tam);
+                tong = tongtien;
+                txt_TongTien.Text = tongtien.ToString();
             }
-            tongtien = int.Parse(txt_TongTien.Text.Trim()) - int.Parse(tam);
-            tong = tongtien;
-            txt_TongTien.Text = tongtien.ToString();
+            catch { }
         }
 
+        private void num_DemBanh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar < 48 || e.KeyChar > 57)
+            {
+                MessageBox.Show("Chỉ được nhập số nguyên");
+                e.Handled = true;   
+            }
+        }
         private void btn_Clear_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
@@ -201,7 +252,7 @@ namespace CakeL_T
         private void dgv_HoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            int index = dgv_HoaDon.CurrentCell.RowIndex; //lấy ra chỉ số của row đang đc chọn
+            int index = dgv_HoaDon.CurrentCell.RowIndex; 
             tam = dgv_HoaDon.Rows[index].Cells[3].Value.ToString();
         }
 
@@ -284,10 +335,15 @@ namespace CakeL_T
         }
         private void dgv_Banh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.dgv_Banh.Rows[e.RowIndex];
-            dongia = row.Cells["DonGia"].Value.ToString();
-            tinhtrang = row.Cells["TrangThaiBanh"].Value.ToString();
-            tenbanh = row.Cells["TenBanh"].Value.ToString();
+            //DataGridViewRow row = this.dgv_Banh.Rows[e.RowIndex];
+            //dongia = row.Cells["Đơn Giá"].Value.ToString();
+            //tinhtrang = row.Cells["Trạng Thái"].Value.ToString();
+            //tenbanh = row.Cells["Tên Bánh"].Value.ToString();
+            int index = dgv_Banh.CurrentCell.RowIndex;
+            dongia = dgv_Banh.Rows[index].Cells[3].Value.ToString();
+            tenbanh = dgv_Banh.Rows[index].Cells[1].Value.ToString();
+            tinhtrang = dgv_Banh.Rows[index].Cells[2].Value.ToString();
+            tensosanh = dgv_Banh.Rows[index].Cells[1].Value.ToString();
         }
     }
 }

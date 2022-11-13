@@ -68,6 +68,7 @@
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -251,6 +252,7 @@
             this.txt_SDT.SelectedText = "";
             this.txt_SDT.Size = new System.Drawing.Size(160, 31);
             this.txt_SDT.TabIndex = 4;
+            this.txt_SDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SDT_KeyPress);
             // 
             // txt_DiaChi
             // 
@@ -570,7 +572,8 @@
             this.SoDienThoai,
             this.DiaChi,
             this.LoaiTK,
-            this.TrangThai});
+            this.TrangThai,
+            this.TenTrangThai});
             this.dgv_TaiKhoan.Location = new System.Drawing.Point(3, 2);
             this.dgv_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TaiKhoan.Name = "dgv_TaiKhoan";
@@ -633,6 +636,13 @@
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
+            // 
+            // TenTrangThai
+            // 
+            this.TenTrangThai.DataPropertyName = "TenLoaiTrangThai";
+            this.TenTrangThai.HeaderText = "Trạng Thái";
+            this.TenTrangThai.Name = "TenTrangThai";
+            this.TenTrangThai.ReadOnly = true;
             // 
             // pictureBox8
             // 
@@ -893,6 +903,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button btn_clear;
+        private System.Windows.Forms.Button btnResetPass;
+        private Guna.UI2.WinForms.Guna2Button btn_eyes;
+        private Guna.UI2.WinForms.Guna2TextBox txt_MatKhau;
+        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.DataGridViewTextBoxColumn tentk;
         private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
@@ -900,10 +915,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTK;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private Guna.UI2.WinForms.Guna2Button btn_clear;
-        private System.Windows.Forms.Button btnResetPass;
-        private Guna.UI2.WinForms.Guna2Button btn_eyes;
-        private Guna.UI2.WinForms.Guna2TextBox txt_MatKhau;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTrangThai;
     }
 }

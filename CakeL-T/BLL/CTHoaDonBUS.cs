@@ -12,7 +12,7 @@ namespace BLL
 {
     public class CTHoaDonBUS
     {
-        public string CTHoaDon(int MaCTHD, int maBanh, int MaHD, int soLuong, int giaTien)
+        public string CTHoaDon(int MaCTHD, int maBanh, int MaHD, int soLuong, int giaTien, bool trangthai)
         {
             try
             {
@@ -25,7 +25,7 @@ namespace BLL
                         return "Mã đã tồn tại";
                     }
                 }
-                if (ctHoaDon.CTHoaDon(MaCTHD,maBanh,MaHD,soLuong,giaTien) == "success")
+                if (ctHoaDon.CTHoaDon(MaCTHD,maBanh,MaHD,soLuong,giaTien,trangthai) == "success")
                 {
                     return "success";
                 }
@@ -36,6 +36,33 @@ namespace BLL
 
             }
             return "success";
+        }
+        public List<ChiTietHD> GetHDByMaHD(int maHD)
+        {
+            try
+            {
+                List<ChiTietHD> accountById = new List<ChiTietHD>();
+                CTHoaDonDAL ctHoaDonDAL = new CTHoaDonDAL();
+                accountById = ctHoaDonDAL.GetCTHD(maHD);
+                return accountById;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public void DeleteCatectHDById(int maHD)
+        {
+            try
+            {
+                CTHoaDonDAL cthoaDonDAL = new CTHoaDonDAL();
+                var tbCateCake = cthoaDonDAL.GetCTHoaDon();
+                cthoaDonDAL.DeleteCatectHDById(maHD);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

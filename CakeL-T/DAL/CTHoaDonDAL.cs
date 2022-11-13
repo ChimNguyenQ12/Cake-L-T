@@ -22,11 +22,12 @@ namespace DAL
                 ct.MaHoaDon = i.MaHoaDon;
                 ct.SoLuong=i.SoLuong;
                 ct.GiaTien=i.GiaTien;
+                ct.TrangThai = i.TrangThai;
                 listCTHoaDon.Add(ct);
             }
             return listCTHoaDon;
         }
-        public string CTHoaDon(int MaCTHD, int maBanh,int MaHD,int soLuong, int giaTien)
+        public string CTHoaDon(int MaCTHD, int maBanh,int MaHD,int soLuong, int giaTien, bool trangthai)
         {
             try
             {
@@ -38,7 +39,8 @@ namespace DAL
                         MaBanh = maBanh,
                         MaHoaDon= MaHD, 
                         SoLuong= soLuong,
-                        GiaTien= giaTien
+                        GiaTien= giaTien,
+                        TrangThai=trangthai
 
                     });
                     cakeEntities.SaveChanges();
@@ -46,6 +48,32 @@ namespace DAL
             }
             catch (Exception ex) { return "error"; }
             return "success";
+        }
+        public List<ChiTietHD> GetCTHD(int maHD)
+        {
+            List<ChiTietHD> ctHoaDon = new List<ChiTietHD>();
+            if (maHD == 0)
+            {
+                ctHoaDon = cakeEntities.ChiTietHDs.Where(x => x.TrangThai == true)
+                                                .ToList();
+            }
+            else
+            {
+                ctHoaDon = cakeEntities.ChiTietHDs.Where(x => x.MaHoaDon == maHD && x.TrangThai == true)
+                                                .ToList();
+            }
+            return ctHoaDon;
+
+        }
+        public void DeleteCatectHDById(int maHD)
+        {
+            var cakeCateCurrent = cakeEntities.ChiTietHDs.Where(x => x.MaHoaDon == maHD).FirstOrDefault();
+            cakeEntities.ChiTietHDs.Remove(cakeCateCurrent);
+            cakeEntities.ChiTietHDs.Add(new ChiTietHD()
+            {
+                TrangThai = false
+            });
+            cakeEntities.SaveChanges();
         }
     }
 }

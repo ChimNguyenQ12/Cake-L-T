@@ -139,13 +139,13 @@ namespace BLL
             }
         }
 
-        public List<Banh> SearchCakeMulti(int minPrice, int maxPrice, int price, int codeCategory, bool status)
+        public List<Banh> SearchCakeMulti(int minPrice, int maxPrice, int codeCategory, bool status)
         {
             try
             {
                 List<Banh> cakeSearch = new List<Banh>();
                 BanhDAL banhDAL = new BanhDAL();
-                cakeSearch = banhDAL.SearchCakeMulti(minPrice, maxPrice, price, codeCategory, status);
+                cakeSearch = banhDAL.SearchCakeMulti(minPrice, maxPrice, codeCategory, status);
                 return cakeSearch;
             }
             catch (Exception)

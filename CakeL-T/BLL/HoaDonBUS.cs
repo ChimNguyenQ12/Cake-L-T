@@ -15,7 +15,7 @@ namespace BLL
             listHD = hoadonDAL.GetHoaDon().ToList();
             return listHD;
         }
-        public string HoaDon(int MaHD, int IDTK, int TongTien)
+        public string HoaDon(int MaHD, int IDTK, int TongTien, bool trangthai)
         {
             try
             {
@@ -29,13 +29,26 @@ namespace BLL
                         return "Ma hoa don da ton tai";
                     }
                 }
-                if(hoadon.HoaDon(MaHD,IDTK,TongTien) == "success")
+                if(hoadon.HoaDon(MaHD,IDTK,TongTien,trangthai) == "success")
                 {
                     return "success";
                 }
             }catch(Exception ex) { return "error"; }
             return "success";
         }
-        
+        public void DeleteCateHDById(int maHD)
+        {
+            try
+            {
+                HoaDonDAL hoaDonDAL = new HoaDonDAL();
+                var tbCateCake = hoaDonDAL.GetHoaDon();
+                hoaDonDAL.DeleteCateHDById(maHD);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }

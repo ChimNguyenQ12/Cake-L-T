@@ -24,12 +24,13 @@ namespace DAL
                     hoadon.IdTaiKhoan = i.IdTaiKhoan;
                     hoadon.NgayMua=i.NgayMua;
                     hoadon.TongTien=i.TongTien;
+                    hoadon.TrangThai=i.TrangThai;
                     listHoadon.Add(hoadon);
                 }
             }
             return listHoadon;
         }
-        public string HoaDon(int MaHD, int IDTK, int TongTien)
+        public string HoaDon(int MaHD, int IDTK, int TongTien, bool trangthai)
         {
             try
             {
@@ -40,7 +41,8 @@ namespace DAL
                         MaHoaDon =MaHD,
                         IdTaiKhoan =IDTK,
                         NgayMua =DateTime.Now,
-                        TongTien =TongTien                       
+                        TongTien =TongTien,   
+                        TrangThai=trangthai                               
                     });
                     cakeEntities.SaveChanges();
                 }
@@ -48,50 +50,16 @@ namespace DAL
             catch (Exception ex) { return "error"; }
             return "success";
         }
-        public List<HoaDon> SearchHDMulti(int tien, int tongtien)
+        public void DeleteCateHDById(int maHD)
         {
-            List<HoaDon> accountHD = new List<HoaDon>();
-            //if (tien == 0 && tongtien == 0)
-            //{
-            //    accountHD = cakeEntities.HoaDons.Where(x => x.TrangThaiXoa == false && x.TrangThaiBanh == status)
-            //                                    .ToList();
-            //}
-            //else if (tien == 1)
-            //{
-            //    accountHD = cakeEntities.HoaDons.Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
-            //                                    .Where(x => x.LoaiBanh == tongtien && x.TrangThaiXoa == false)
-            //                                    .ToList();
-
-            //}
-            //else if (tien == 50000)
-            //{
-            //    accountHD = cakeEntities.HoaDons.Where(x => x.DonGia < 50000 && x.TrangThaiXoa == false)
-            //                                    .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
-            //                                    .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
-            //                                    .ToList();
-            //}
-            //else if (tien == 75000)
-            //{
-            //    accountHD = cakeEntities.HoaDons.Where(x => x.DonGia > 50000 && x.DonGia < 100000 && x.TrangThaiXoa == false)
-            //                                        .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
-            //                                        .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
-            //                                        .ToList();
-            //}
-            //else if (tien == 150000)
-            //{
-            //    accountHD = cakeEntities.HoaDons.Where(x => x.DonGia > 100000 && x.DonGia < 200000 && x.TrangThaiXoa == false)
-            //                                        .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
-            //                                        .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
-            //                                        .ToList();
-            //}
-            //else if (tien == 200000)
-            //{
-            //    accountHD = cakeEntities.HoaDons.Where(x => x.DonGia > 200000 && x.TrangThaiXoa == false)
-            //                                        .Where(x => x.TrangThaiBanh == status && x.TrangThaiXoa == false)
-            //                                        .Where(x => x.LoaiBanh == codeCategory && x.TrangThaiXoa == false)
-            //                                        .ToList();
-            //}
-            return accountHD;
+            var cakeCateCurrent = cakeEntities.HoaDons.Where(x => x.MaHoaDon == maHD).FirstOrDefault();
+            cakeEntities.HoaDons.Remove(cakeCateCurrent);
+            cakeEntities.HoaDons.Add(new HoaDon()
+            {
+                TrangThai = false
+            });
+            cakeEntities.SaveChanges();
         }
+
     }
 }

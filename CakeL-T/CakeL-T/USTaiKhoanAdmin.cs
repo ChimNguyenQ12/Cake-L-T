@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,17 +36,30 @@ namespace CakeL_T
             txtTimSDT.Text = "";
             txt_TimTK.Text = "Tìm kiếm tài khoản...";
             dgv_TaiKhoan.DataSource = adminBUS.GetAccounts();
+            for (int i = 0; i < dgv_TaiKhoan.Rows.Count; i++)
+            {
+                if (dgv_TaiKhoan.Rows[i].Cells["TrangThai"].Value.ToString() == "True")
+                {
+                    dgv_TaiKhoan.Rows[i].Cells["TenTrangThai"].Value = "Hoạt động";
+                }
+                else
+                {
+                    dgv_TaiKhoan.Rows[i].Cells["TenTrangThai"].Value = "Khóa";
+                }
+            }
             dgv_TaiKhoan.Columns["Id"].Visible = false;
             dgv_TaiKhoan.Columns["HinhAnh"].Visible = false;
             dgv_TaiKhoan.Columns["TrangThaiXoa"].Visible = false;
+            dgv_TaiKhoan.Columns["TrangThai"].Visible = false;
             dgv_TaiKhoan.Columns["MatKhau"].Visible = false;
             dgv_TaiKhoan.Columns["LoaiTK"].Visible = false;
+            dgv_TaiKhoan.Columns["HoaDons"].Visible = false;
             DataGridViewRow row = this.dgv_TaiKhoan.Rows[0];
-            //txt_DiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             txt_MatKhau.Text = row.Cells["MatKhau"].Value.ToString();
             txt_TenNV.Text = row.Cells["HoTen"].Value.ToString();
-            //txtTimTenTK.Text = row.Cells["SoDienThoai"].Value.ToString();
             txt_TenTK.Text = row.Cells["TenTK"].Value.ToString();
+            txt_SDT.Text = row.Cells["SoDienThoai"].Value.ToString();
+            txt_DiaChi.Text = row.Cells["DiaChi"].Value.ToString();
             if (Convert.ToBoolean(row.Cells["LoaiTK"].Value) == true)
             {
                 btn_XoaTK.Enabled = false;
@@ -116,35 +130,38 @@ namespace CakeL_T
 
         private void btn_SuaTK_Click(object sender, EventArgs e)
         {           
-            if(txt_MatKhau.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập mật khẩu");
-            }
-            else if (txt_MatKhau.Text.Length < 6 || txt_MatKhau.Text.Length > 20)
-            {
-                MessageBox.Show("Mật khẩu chứa ít nhất 6 ký tự và nhiều nhất 20 ký tự");
-            }
-            else 
-            { 
                 var row = dgv_TaiKhoan.SelectedRows[0];
                 var cell = row.Cells["Id"];
                 int idSelected = Convert.ToInt32(cell.Value);
                 string image = pb_AvatarTK.ToString();
                 bool status;
-                if (radioTimActive.Checked)
+                string pattern = @"^([\+]?33[-]?|[0])?[1-9][0-9]{8}$";
+                Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+                Match match = regex.Match(txt_SDT.Text);
+                var accounts = adminBUS.GetAccounts();
+                if(txt_SDT.Text == "" || txt_DiaChi.Text == "" || txt_TenNV.Text == "")
+                 {
+                MessageBox.Show("Vui lòng điền đủ thông tin");
+                  }
+                else if (!match.Success)
+                {
+                    MessageBox.Show("Số điện thoại không phù hợp");
+                    return;
+                }
+                else if (radioActive.Checked)
                 {
                     var confirmResult = MessageBox.Show($"Bạn có chắc chắn muốn sửa tài khoản {txt_TenTK.Text}?",
                                    "Xác nhận sửa",
                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (confirmResult == DialogResult.Yes)
                     {
-                        status = true;
-                        UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txtTimTenTK.Text, image, status);
+                    status = true;
                         MessageBox.Show($"Tài khoản {txt_TenTK.Text} đã được sửa", "Sửa tài khoản");
+                        UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txt_SDT.Text, image, status);
                     }
                     
                 }
-                else if( radioTimUnactive.Checked)
+                else if( radioUnactive.Checked)
                 {
                     var confirmResult = MessageBox.Show($"Bạn có chắc chắn muốn sửa tài khoản {txt_TenTK.Text}?",
                                    "Xác nhận sửa",
@@ -152,12 +169,10 @@ namespace CakeL_T
                     if (confirmResult == DialogResult.Yes)
                     {
                         status = false;
-                        UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txtTimTenTK.Text, image, status);
                         MessageBox.Show($"Tài khoản {txt_TenTK.Text} đã được sửa", "Sửa tài khoản");
+                        UpdateAccount(idSelected, txt_TenNV.Text, txt_TenTK.Text, txt_MatKhau.Text, txt_DiaChi.Text, txt_SDT.Text, image, status);
                     }
                 }
-                MessageBox.Show($"Sửa tài khoản {txt_TenTK.Text} thành công!", "Sửa tài khoản");
-            }
         }
 
         private void dgv_TaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -278,6 +293,24 @@ namespace CakeL_T
             {
                 adminBUS.ResetPass(idSelected);
                 MessageBox.Show($"Mật khẩu của tài khoản {txt_TenTK.Text} đã được reset thành 1", "Reset mật khẩu");
+            }
+        }
+
+        private void txt_SDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != (char)(Keys.Back)))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    if (txt_SDT.Text.Length > 9)
+                    {
+                        e.Handled = true;
+                    }
+                }
             }
         }
     }

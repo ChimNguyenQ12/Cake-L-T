@@ -10,14 +10,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using System.Diagnostics;
+using DAL;
 
 namespace CakeL_T
 {
 
     public partial class USHoaDonAdmin : UserControl
     {
+        int maHD = 0;
         private static USHoaDonAdmin instance;
         public static HoaDonBUS hoadonBUS = new HoaDonBUS();
+        public static CTHoaDonBUS ctHoaDonBUS = new CTHoaDonBUS();
         public static USHoaDonAdmin
             Instance
         {
@@ -45,12 +48,8 @@ namespace CakeL_T
 
         private void dgv_HoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == -1) return;
-            DataGridViewRow row = this.dgv_HoaDon.Rows[e.RowIndex];
-            txt_MaHD.Text = row.Cells["MaHoaDon"].Value.ToString();
-            txt_MaNV.Text = row.Cells["IdTaiKhoan"].Value.ToString();
-            txt_NgayBan.Text = row.Cells["NgayMua"].Value.ToString();
-            txt_Tongtien.Text = row.Cells["TongTien"].Value.ToString();
+            int index = dgv_HoaDon.CurrentCell.RowIndex;
+            maHD = int.Parse(dgv_HoaDon.Rows[index].Cells[0].Value.ToString());
         }
 
         private void btn_TimHD_Click(object sender, EventArgs e)
@@ -82,6 +81,17 @@ namespace CakeL_T
             {
                 tongtien = 200000;
             }
+        }
+
+        private void btn_CThoaDon_Click(object sender, EventArgs e)
+        {
+            dgv_ctHoaDon.DataSource = ctHoaDonBUS.GetHDByMaHD(maHD);
+        }
+
+        private void btn_XoaHD_Click(object sender, EventArgs e)
+        {
+            hoadonBUS.DeleteCateHDById(maHD);
+            ctHoaDonBUS.DeleteCatectHDById(maHD);
         }
     }
 }

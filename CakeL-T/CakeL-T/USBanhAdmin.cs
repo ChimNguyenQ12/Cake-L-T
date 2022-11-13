@@ -117,6 +117,7 @@ namespace CakeL_T
             panel_banh.Visible = true;
             panel_loaiBanh.Visible = true;
             cbb_price.Text = "Chọn khoảng giá";
+            cbbCategoryTim.Text = "Chọn loại bánh";
             LoadDataCategoryCake();
 
             dgv_Banh.DataSource = banhBUS.GetCakes();
@@ -140,10 +141,10 @@ namespace CakeL_T
             }
             dgv_Banh.Columns["HinhAnh"].Visible = false;
             dgv_Banh.Columns["LoaiBanh"].Visible = false;
-            dgv_Banh.Columns["HinhAnhs"].Visible = false;
             dgv_Banh.Columns["LoaiBanh1"].Visible = false;
             dgv_Banh.Columns["TrangThaiXoa"].Visible = false;
             dgv_Banh.Columns["TrangThai"].Visible = false;
+            dgv_Banh.Columns["ChiTietHDs"].Visible = false;
 
 
             DataGridViewRow row = this.dgv_Banh.Rows[0];
@@ -305,6 +306,7 @@ namespace CakeL_T
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadData();
+            cbbCategoryTim.SelectedValue = 0;
             txt_MaBanh.Enabled = false;
             btn_ThemBanh.Enabled = true;
             btn_XoaBanh.Enabled = true;
@@ -375,7 +377,6 @@ namespace CakeL_T
         {
             var minPrice = 1;
             var maxPrice = 1;
-            var price = 1;
             var cate = Convert.ToInt32(cbbCategoryTim.SelectedValue);
             bool status;
             if (cbb_price.SelectedItem == null && cate == 0)
@@ -383,13 +384,17 @@ namespace CakeL_T
                 minPrice = 0;
                 maxPrice = 0;
                 cate = 0;
-                price = 0;
+            }
+            else if (cbbCategoryTim.Text.ToString() == "Chọn loại bánh" && cbb_price.SelectedItem == null && cate == 1)
+            {
+                minPrice = 0;
+                maxPrice = 0;
+                cate = 0;
             }
             else if (cbb_price.SelectedItem == null && cate != 0)
             {
                 minPrice = 0;
                 maxPrice = 0;
-                price = 0;
             }
             else if (cbb_price.SelectedItem.ToString() == "Tất cả")
             {
@@ -415,19 +420,34 @@ namespace CakeL_T
             {
                 minPrice = 200000;
             }
-            else
-            {
-                price = Convert.ToInt32(cbb_price.SelectedItem.ToString());
-            }
             if (radioTimActiveCake.Checked)
             {
                 status = true;
-                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(minPrice, maxPrice, price, cate, status);
+                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(minPrice, maxPrice, cate, status);
             }
             else if (radioTimUnactiveCake.Checked)
             {
                 status = false;
-                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(minPrice, maxPrice, price, cate, status);
+                dgv_Banh.DataSource = banhBUS.SearchCakeMulti(minPrice, maxPrice, cate, status);
+            }
+
+            for (int i = 0; i < dgv_Banh.Rows.Count; i++)
+            {
+                foreach (var item in loaiBanhBUS.GetCateCakes())
+                {
+                    if (dgv_Banh.Rows[i].Cells["LoaiBanh"].Value.ToString() == item.MaLoai.ToString())
+                    {
+                        dgv_Banh.Rows[i].Cells["TenLoaiBanh"].Value = item.TenLoai.ToString();
+                    }
+                }
+                if (dgv_Banh.Rows[i].Cells["TrangThai"].Value.ToString() == "True")
+                {
+                    dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Còn hàng";
+                }
+                else
+                {
+                    dgv_Banh.Rows[i].Cells["TenTrangThaiBanh"].Value = "Hết hàng";
+                }
             }
         }
 

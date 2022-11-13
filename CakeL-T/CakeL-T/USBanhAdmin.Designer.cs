@@ -702,7 +702,7 @@
             this.cbb_price.Items.AddRange(new object[] {
             "Tất cả",
             "< 50.000đ",
-            "50.000đ ->100.000đ",
+            "50.000đ -> 100.000đ",
             "100.000đ -> 200.000đ",
             "> 200.000đ"});
             this.cbb_price.Location = new System.Drawing.Point(102, 35);
@@ -837,7 +837,7 @@
             // TenLoaiBanh
             // 
             this.TenLoaiBanh.DataPropertyName = "TenLoaiBanh";
-            this.TenLoaiBanh.HeaderText = "Tên Loại Bánh";
+            this.TenLoaiBanh.HeaderText = "Loại Bánh";
             this.TenLoaiBanh.Name = "TenLoaiBanh";
             this.TenLoaiBanh.ReadOnly = true;
             // 
