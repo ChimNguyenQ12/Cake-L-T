@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,7 +44,13 @@ namespace CakeL_T
 
         private void USTaiKhoanStaff_Load(object sender, EventArgs e)
         {
-
+            AdminBUS tk = new AdminBUS();
+            var item = tk.GetAccountById(idTk);
+            txt_TenNV.Text = item[0].HoTen;
+            txt_DiaChi.Text = item[0].DiaChi;
+            txt_MaNV.Text = idTk.ToString();
+            txt_SDT.Text = item[0].SoDienThoai;
+            txt_tenTK.Text = item[0].TenTK;
         }
     }
 }

@@ -17,17 +17,19 @@ namespace DAL
             foreach (var i in tbCTHoaDon)
             {
                 ChiTietHD ct = new ChiTietHD();
-                ct.MaCTHoaDon = i.MaCTHoaDon;
-                ct.MaBanh=i.MaBanh;
-                ct.MaHoaDon = i.MaHoaDon;
-                ct.SoLuong=i.SoLuong;
-                ct.GiaTien=i.GiaTien;
-                ct.TrangThai = i.TrangThai;
-                listCTHoaDon.Add(ct);
+                
+                    ct.MaCTHoaDon = i.MaCTHoaDon;
+                    ct.MaBanh = i.MaBanh;
+                    ct.MaHoaDon = i.MaHoaDon;
+                    ct.SoLuong = i.SoLuong;
+                    ct.GiaTien = i.GiaTien;
+                    ct.TrangThai = i.TrangThai;
+                    listCTHoaDon.Add(ct);
+                
             }
             return listCTHoaDon;
         }
-        public string CTHoaDon(int MaCTHD, int maBanh,int MaHD,int soLuong, int giaTien, bool trangthai)
+        public string ThemCTHoaDon(int MaCTHD, int maBanh,int MaHD,int soLuong, int giaTien, bool trangthai)
         {
             try
             {
@@ -49,7 +51,7 @@ namespace DAL
             catch (Exception ex) { return "error"; }
             return "success";
         }
-        public List<ChiTietHD> GetCTHD(int maHD)
+        public List<ChiTietHD> GetctHoaDonByMaHD(int maHD)
         {
             List<ChiTietHD> ctHoaDon = new List<ChiTietHD>();
             if (maHD == 0)
@@ -65,14 +67,17 @@ namespace DAL
             return ctHoaDon;
 
         }
-        public void DeleteCatectHDById(int maHD)
+
+        public void DeleteCTHoaDonById(int maHD)
         {
-            var cakeCateCurrent = cakeEntities.ChiTietHDs.Where(x => x.MaHoaDon == maHD).FirstOrDefault();
-            cakeEntities.ChiTietHDs.Remove(cakeCateCurrent);
-            cakeEntities.ChiTietHDs.Add(new ChiTietHD()
+            var ctHoaDon = cakeEntities.ChiTietHDs.Where(x => x.MaHoaDon == maHD).ToList();
+            foreach(var item in ctHoaDon)
             {
-                TrangThai = false
-            });
+                if(item.TrangThai == true)
+                {
+                    item.TrangThai = false;
+                }
+            }
             cakeEntities.SaveChanges();
         }
     }

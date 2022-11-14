@@ -120,9 +120,9 @@ namespace CakeL_T
                 do
                 {
                     maHD += 1;
-                } while (hoadonBUS.HoaDon(maHD, idTk, tongTien, trangthai) == "Ma hoa don da ton tai");
+                } while (hoadonBUS.ThemHoaDon(maHD, idTk, tongTien, trangthai) == "Ma hoa don da ton tai");
 
-                if (hoadonBUS.HoaDon(maHD, idTk, tongTien, trangthai) == "Ma hoa don da ton tai")
+                if (hoadonBUS.ThemHoaDon(maHD, idTk, tongTien, trangthai) == "Ma hoa don da ton tai")
                 {
                     for(int i = 0; i< dgv_HoaDon.Rows.Count-1; i++)
                     {
@@ -139,8 +139,8 @@ namespace CakeL_T
                         do
                         {
                             maCTHD += 1;
-                        } while (ctBUS.CTHoaDon(maCTHD, maBanh, maHD, soLuong, giatien,trangthai) == "Mã đã tồn tại");
-                        if (ctBUS.CTHoaDon(maCTHD, maBanh, maHD,soLuong,giatien,trangthai) == "success")
+                        } while (ctBUS.ThemCTHoaDon(maCTHD, maBanh, maHD, soLuong, giatien,trangthai) == "Mã đã tồn tại");
+                        if (ctBUS.ThemCTHoaDon(maCTHD, maBanh, maHD,soLuong,giatien,trangthai) == "success")
                         {
                             Debug.WriteLine("success");
                         }

@@ -15,7 +15,7 @@ namespace BLL
             listHD = hoadonDAL.GetHoaDon().ToList();
             return listHD;
         }
-        public string HoaDon(int MaHD, int IDTK, int TongTien, bool trangthai)
+        public string ThemHoaDon(int MaHD, int IDTK, int TongTien, bool trangthai)
         {
             try
             {
@@ -29,24 +29,52 @@ namespace BLL
                         return "Ma hoa don da ton tai";
                     }
                 }
-                if(hoadon.HoaDon(MaHD,IDTK,TongTien,trangthai) == "success")
+                if(hoadon.ThemHoaDon(MaHD,IDTK,TongTien,trangthai) == "success")
                 {
                     return "success";
                 }
             }catch(Exception ex) { return "error"; }
             return "success";
         }
-        public void DeleteCateHDById(int maHD)
+        public void DeleteHoaDonById(int maHD)
         {
             try
             {
                 HoaDonDAL hoaDonDAL = new HoaDonDAL();
                 var tbCateCake = hoaDonDAL.GetHoaDon();
-                hoaDonDAL.DeleteCateHDById(maHD);
+                hoaDonDAL.DeleteHoaDonById(maHD);
             }
             catch (Exception)
             {
                 throw;
+            }
+        }
+        public List<HoaDon> GetHDByMaHD(int maHD)
+        {
+            try
+            {
+                List<HoaDon> hoadon = new List<HoaDon>();
+                HoaDonDAL hoaDonDAL = new HoaDonDAL();
+                var seachHD = hoaDonDAL.GetHoaDonByMaHD(maHD);
+                return seachHD;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public List<HoaDon> GetHDByMaNV(int maNV)
+        {
+            try
+            {
+                List<HoaDon> hoadon = new List<HoaDon>();
+                HoaDonDAL hoaDonDAL = new HoaDonDAL();
+                var seachHD = hoaDonDAL.GetHoaDonByMaNV(maNV);
+                return seachHD;
+            }
+            catch (Exception)
+            {
+                return null;
             }
         }
 

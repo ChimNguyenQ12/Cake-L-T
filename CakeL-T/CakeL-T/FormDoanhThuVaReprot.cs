@@ -28,7 +28,7 @@ namespace CakeL_T
         {
             FormReport formReport = new FormReport();
             formReport.MdiParent = this;
-            FormReport report = new FormReport();
+            formReport.Show();
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BLL;
 using System.Diagnostics;
 using DAL;
+using ServiceStack;
 
 namespace CakeL_T
 {
@@ -50,48 +51,38 @@ namespace CakeL_T
         {
             int index = dgv_HoaDon.CurrentCell.RowIndex;
             maHD = int.Parse(dgv_HoaDon.Rows[index].Cells[0].Value.ToString());
+            
+            dgv_ctHoaDon.DataSource = ctHoaDonBUS.GetCTHDByMaHD(maHD);
         }
 
         private void btn_TimHD_Click(object sender, EventArgs e)
         {
-            var tongtien = 1;
-            var tien = Convert.ToInt32(cbb_TongTien.SelectedValue);
-            if (cbb_TongTien.SelectedItem == null || cbb_TongTien == null)
+            try
             {
-                tongtien = 0;
-                tien = 0;
-            }
-            else if (cbb_TongTien.SelectedItem.ToString() == "Tất cả")
-            {
-                tongtien = 1;
-            }
-            else if (cbb_TongTien.SelectedItem.ToString() == "< 50.000đ")
-            {
-                tongtien = 50000;
-            }
-            else if (cbb_TongTien.SelectedItem.ToString() == "50.000đ -> 100.000đ")
-            {
-                tongtien = 75000;
-            }
-            else if (cbb_TongTien.SelectedItem.ToString() == "100.000đ -> 200.000đ")
-            {
-                tongtien = 150000;
-            }
-            else if (cbb_TongTien.SelectedItem.ToString() == "> 200.000đ")
-            {
-                tongtien = 200000;
-            }
-        }
+                if(txt_maHD.Text != null)
+                {
+                   dgv_HoaDon.DataSource = hoadonBUS.GetHDByMaHD(int.Parse(txt_maHD.Text));
 
-        private void btn_CThoaDon_Click(object sender, EventArgs e)
-        {
-            dgv_ctHoaDon.DataSource = ctHoaDonBUS.GetHDByMaHD(maHD);
+                }
+                else if (txt_maNV.Text != null)
+                {
+                    dgv_HoaDon.DataSource = hoadonBUS.GetHDByMaHD(int.Parse(txt_maNV.Text));
+                }
+            }
+            catch { };
         }
-
         private void btn_XoaHD_Click(object sender, EventArgs e)
         {
-            hoadonBUS.DeleteCateHDById(maHD);
-            ctHoaDonBUS.DeleteCatectHDById(maHD);
+            hoadonBUS.DeleteHoaDonById(maHD);            
+            ctHoaDonBUS.DeletectHoaDonById(maHD);
+            LoadData();
+        }
+
+        private void btn_lamMoi_Click(object sender, EventArgs e)
+        {
+            txt_maNV.Text = "";
+            txt_maHD.Text = "";
+            LoadData();
         }
     }
 }

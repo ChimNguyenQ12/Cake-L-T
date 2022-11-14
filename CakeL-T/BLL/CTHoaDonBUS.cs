@@ -12,7 +12,7 @@ namespace BLL
 {
     public class CTHoaDonBUS
     {
-        public string CTHoaDon(int MaCTHD, int maBanh, int MaHD, int soLuong, int giaTien, bool trangthai)
+        public string ThemCTHoaDon(int MaCTHD, int maBanh, int MaHD, int soLuong, int giaTien, bool trangthai)
         {
             try
             {
@@ -25,7 +25,7 @@ namespace BLL
                         return "Mã đã tồn tại";
                     }
                 }
-                if (ctHoaDon.CTHoaDon(MaCTHD,maBanh,MaHD,soLuong,giaTien,trangthai) == "success")
+                if (ctHoaDon.ThemCTHoaDon(MaCTHD,maBanh,MaHD,soLuong,giaTien,trangthai) == "success")
                 {
                     return "success";
                 }
@@ -37,13 +37,13 @@ namespace BLL
             }
             return "success";
         }
-        public List<ChiTietHD> GetHDByMaHD(int maHD)
+        public List<ChiTietHD> GetCTHDByMaHD(int maHD)
         {
             try
             {
                 List<ChiTietHD> accountById = new List<ChiTietHD>();
                 CTHoaDonDAL ctHoaDonDAL = new CTHoaDonDAL();
-                accountById = ctHoaDonDAL.GetCTHD(maHD);
+                accountById = ctHoaDonDAL.GetctHoaDonByMaHD(maHD);
                 return accountById;
             }
             catch (Exception)
@@ -51,13 +51,13 @@ namespace BLL
                 return null;
             }
         }
-        public void DeleteCatectHDById(int maHD)
+        public void DeletectHoaDonById(int maHD)
         {
             try
             {
                 CTHoaDonDAL cthoaDonDAL = new CTHoaDonDAL();
                 var tbCateCake = cthoaDonDAL.GetCTHoaDon();
-                cthoaDonDAL.DeleteCatectHDById(maHD);
+                cthoaDonDAL.DeleteCTHoaDonById(maHD);
             }
             catch (Exception)
             {

@@ -477,6 +477,7 @@
             this.Name = "FormDoanhThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDoanhThu";
+            this.Load += new System.EventHandler(this.FormDoanhThu_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

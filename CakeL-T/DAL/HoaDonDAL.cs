@@ -19,18 +19,21 @@ namespace DAL
                 var tbHoaDon = cakeEntities.HoaDons.ToList();
                 foreach (var i in tbHoaDon)
                 {
+
                     HoaDon hoadon = new HoaDon();
-                    hoadon.MaHoaDon = i.MaHoaDon;
-                    hoadon.IdTaiKhoan = i.IdTaiKhoan;
-                    hoadon.NgayMua=i.NgayMua;
-                    hoadon.TongTien=i.TongTien;
-                    hoadon.TrangThai=i.TrangThai;
-                    listHoadon.Add(hoadon);
+                   
+                        hoadon.MaHoaDon = i.MaHoaDon;
+                        hoadon.IdTaiKhoan = i.IdTaiKhoan;
+                        hoadon.NgayMua = i.NgayMua;
+                        hoadon.TongTien = i.TongTien;
+                        hoadon.TrangThai = i.TrangThai;
+                        listHoadon.Add(hoadon);
+                    
                 }
             }
             return listHoadon;
         }
-        public string HoaDon(int MaHD, int IDTK, int TongTien, bool trangthai)
+        public string ThemHoaDon(int MaHD, int IDTK, int TongTien, bool trangthai)
         {
             try
             {
@@ -50,14 +53,42 @@ namespace DAL
             catch (Exception ex) { return "error"; }
             return "success";
         }
-        public void DeleteCateHDById(int maHD)
+        public List<HoaDon> GetHoaDonByMaHD(int maHD)
         {
-            var cakeCateCurrent = cakeEntities.HoaDons.Where(x => x.MaHoaDon == maHD).FirstOrDefault();
-            cakeEntities.HoaDons.Remove(cakeCateCurrent);
-            cakeEntities.HoaDons.Add(new HoaDon()
+            List<HoaDon> hoaDon = new List<HoaDon>();
+            if (maHD == 0)
             {
-                TrangThai = false
-            });
+                hoaDon = cakeEntities.HoaDons.Where(x => x.TrangThai == true)
+                                                .ToList();
+            }
+            else
+            {
+                hoaDon = cakeEntities.HoaDons.Where(x => x.MaHoaDon == maHD && x.TrangThai == true)
+                                                .ToList();
+            }
+            return hoaDon;
+
+        }
+        public List<HoaDon> GetHoaDonByMaNV(int maNV)
+        {
+            List<HoaDon> hoaDon = new List<HoaDon>();
+            if (maNV == 0)
+            {
+                hoaDon = cakeEntities.HoaDons.Where(x => x.TrangThai == true)
+                                                .ToList();
+            }
+            else
+            {
+                hoaDon = cakeEntities.HoaDons.Where(x => x.IdTaiKhoan == maNV && x.TrangThai == true)
+                                                .ToList();
+            }
+            return hoaDon;
+
+        }
+        public void DeleteHoaDonById(int maHD)
+        {
+            var hoaDon = cakeEntities.HoaDons.Where(x => x.MaHoaDon == maHD).FirstOrDefault();
+            hoaDon.TrangThai = false;
             cakeEntities.SaveChanges();
         }
 

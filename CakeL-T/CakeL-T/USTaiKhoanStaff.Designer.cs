@@ -34,18 +34,18 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_MatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_tenTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_DiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_TenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_MaNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pb_AvatarNV2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_SDT = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -102,12 +102,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txt_MatKhau);
+            this.groupBox1.Controls.Add(this.txt_SDT);
             this.groupBox1.Controls.Add(this.txt_tenTK);
             this.groupBox1.Controls.Add(this.txt_DiaChi);
             this.groupBox1.Controls.Add(this.txt_TenNV);
             this.groupBox1.Controls.Add(this.txt_MaNV);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
@@ -119,28 +119,6 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông TIn Nhân Viên";
-            // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.BorderRadius = 15;
-            this.txt_MatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_MatKhau.DefaultText = "";
-            this.txt_MatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_MatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_MatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_MatKhau.Enabled = false;
-            this.txt_MatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MatKhau.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_MatKhau.Location = new System.Drawing.Point(498, 186);
-            this.txt_MatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.PasswordChar = '\0';
-            this.txt_MatKhau.PlaceholderText = "";
-            this.txt_MatKhau.SelectedText = "";
-            this.txt_MatKhau.Size = new System.Drawing.Size(215, 32);
-            this.txt_MatKhau.TabIndex = 2;
             // 
             // txt_tenTK
             // 
@@ -155,7 +133,7 @@
             this.txt_tenTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_tenTK.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_tenTK.Location = new System.Drawing.Point(500, 127);
+            this.txt_tenTK.Location = new System.Drawing.Point(500, 119);
             this.txt_tenTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_tenTK.Name = "txt_tenTK";
             this.txt_tenTK.PasswordChar = '\0';
@@ -231,19 +209,10 @@
             this.txt_MaNV.Size = new System.Drawing.Size(215, 32);
             this.txt_MaNV.TabIndex = 2;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(401, 194);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Mật Khẩu:";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(401, 146);
+            this.label8.Location = new System.Drawing.Point(401, 138);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 1;
@@ -296,6 +265,37 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Thông Tin Tài Khỏan";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(401, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Số điện thoại: ";
+            // 
+            // txt_SDT
+            // 
+            this.txt_SDT.BorderRadius = 15;
+            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SDT.DefaultText = "";
+            this.txt_SDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_SDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_SDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_SDT.Enabled = false;
+            this.txt_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_SDT.Location = new System.Drawing.Point(500, 175);
+            this.txt_SDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.PasswordChar = '\0';
+            this.txt_SDT.PlaceholderText = "";
+            this.txt_SDT.SelectedText = "";
+            this.txt_SDT.Size = new System.Drawing.Size(215, 32);
+            this.txt_SDT.TabIndex = 2;
+            // 
             // USTaiKhoanStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,17 +328,17 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_MatKhau;
         private Guna.UI2.WinForms.Guna2TextBox txt_tenTK;
         private Guna.UI2.WinForms.Guna2TextBox txt_DiaChi;
         private Guna.UI2.WinForms.Guna2TextBox txt_TenNV;
         private Guna.UI2.WinForms.Guna2TextBox txt_MaNV;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pb_AvatarNV2;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2TextBox txt_SDT;
+        private System.Windows.Forms.Label label3;
     }
 }
