@@ -9593,7 +9593,7 @@
         7oFzE7+lFxmyzPxrifwBZ1oo92nsAUQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_ReportHD.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_ReportBanh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAOtJREFUOE/t
         1CEPgVEUBuAb6ILZFDZRMxMlTaGKgj8hmeQnIPkBBAJBVG2i5rd4X77z7YRzdq8Rvduzud99HdfdCEZq
@@ -9748,7 +9748,7 @@
         fKwpAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnReportLoaiBanh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAOtJREFUOE/t
         1CEPgVEUBuAb6ILZFDZRMxMlTaGKgj8hmeQnIPkBBAJBVG2i5rd4X77z7YRzdq8Rvduzud99HdfdCEZq

@@ -45,13 +45,13 @@ namespace BLL
             }
         }
 
-        public void DeleteCateCakeById(int code, string name)
+        public void DeleteCateCakeById(int code)
         {
             try
             {
                 LoaiBanhDAL LoaiBanhDAL = new LoaiBanhDAL();
                 var tbCateCake = LoaiBanhDAL.GetCateCakes();
-                LoaiBanhDAL.DeleteCateCakeById(code, name);
+                LoaiBanhDAL.DeleteCateCakeById(code);
             }
             catch (Exception)
             {
@@ -59,22 +59,21 @@ namespace BLL
             }
         }
 
-        public string AddCateCake(string name, int code)
+        public string AddCateCake(string name)
         {
             try
             {
-                
                 LoaiBanhDAL LoaiBanhDAL = new LoaiBanhDAL();
                 var tbCateCake = LoaiBanhDAL.GetCateCakes();
                 foreach (var cate in tbCateCake)
                 {
-                    if (cate.MaLoai == code)
+                    if (cate.TenLoai == name)
                     {
                         return "Cake Category already exists";
                     }
                 }
 
-                if (LoaiBanhDAL.AddCateCake(code, name) == "success")
+                if (LoaiBanhDAL.AddCateCake(name) == "success")
                 {
                     return "success";
                 }

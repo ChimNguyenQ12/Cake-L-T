@@ -26,7 +26,7 @@ namespace DAL
                     account.SoDienThoai = i.SoDienThoai;
                     account.TrangThai = i.TrangThai;
                     account.TrangThaiXoa = i.TrangThaiXoa;
-
+                    account.TenLoaiTrangThai = i.TenLoaiTrangThai;
                     listAccount.Add(account);
                 }
             return listAccount;
@@ -50,7 +50,14 @@ namespace DAL
                 accountCurrent.TenTK = username;
                 accountCurrent.HinhAnh = image;
                 accountCurrent.TrangThai = status;
-
+                if(status == true)
+                {
+                accountCurrent.TenLoaiTrangThai = "Hoạt động";
+                }
+                else if(status == false)
+                {
+                accountCurrent.TenLoaiTrangThai = "Khóa";
+                }
                 cakeEntities.SaveChanges();
         }
 

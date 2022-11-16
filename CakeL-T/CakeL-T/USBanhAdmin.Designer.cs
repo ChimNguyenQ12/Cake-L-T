@@ -67,7 +67,7 @@
             this.cbbCategoryTim = new System.Windows.Forms.ComboBox();
             this.cbb_price = new System.Windows.Forms.ComboBox();
             this.btnQuanLyLoaiBanh = new System.Windows.Forms.Button();
-            this.btn_ReportHD = new System.Windows.Forms.Button();
+            this.btn_ReportBanh = new System.Windows.Forms.Button();
             this.btn_TimHD = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             this.btnSuaLoaiBanh = new System.Windows.Forms.Button();
             this.btnXoaLoaiBanh = new System.Windows.Forms.Button();
             this.btnThemLoaiBanh = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnReportLoaiBanh = new System.Windows.Forms.Button();
             this.dgvLoaiBanh = new System.Windows.Forms.DataGridView();
             this.MaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,6 +96,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txt_tim_loaiBanh = new System.Windows.Forms.TextBox();
             this.btnClearLoaiBanh = new System.Windows.Forms.Button();
+            this.reportViewerBanh = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewerLoaiBanh = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
@@ -394,6 +396,7 @@
             this.txt_MaBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_MaBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_MaBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_MaBanh.Enabled = false;
             this.txt_MaBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_MaBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MaBanh.ForeColor = System.Drawing.Color.Black;
@@ -403,6 +406,7 @@
             this.txt_MaBanh.Name = "txt_MaBanh";
             this.txt_MaBanh.PasswordChar = '\0';
             this.txt_MaBanh.PlaceholderText = "";
+            this.txt_MaBanh.ReadOnly = true;
             this.txt_MaBanh.SelectedText = "";
             this.txt_MaBanh.Size = new System.Drawing.Size(166, 31);
             this.txt_MaBanh.TabIndex = 8;
@@ -550,6 +554,7 @@
             this.txtMaLoaiBanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtMaLoaiBanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaLoaiBanh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaLoaiBanh.Enabled = false;
             this.txtMaLoaiBanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLoaiBanh.ForeColor = System.Drawing.Color.Black;
@@ -559,6 +564,7 @@
             this.txtMaLoaiBanh.Name = "txtMaLoaiBanh";
             this.txtMaLoaiBanh.PasswordChar = '\0';
             this.txtMaLoaiBanh.PlaceholderText = "";
+            this.txtMaLoaiBanh.ReadOnly = true;
             this.txtMaLoaiBanh.SelectedText = "";
             this.txtMaLoaiBanh.Size = new System.Drawing.Size(166, 32);
             this.txtMaLoaiBanh.TabIndex = 7;
@@ -620,7 +626,7 @@
             this.gbChucNangBanh.Controls.Add(this.btn_SuaBanh);
             this.gbChucNangBanh.Controls.Add(this.btn_XoaBanh);
             this.gbChucNangBanh.Controls.Add(this.btn_ThemBanh);
-            this.gbChucNangBanh.Controls.Add(this.btn_ReportHD);
+            this.gbChucNangBanh.Controls.Add(this.btn_ReportBanh);
             this.gbChucNangBanh.Controls.Add(this.btn_TimHD);
             this.gbChucNangBanh.Controls.Add(this.label2);
             this.gbChucNangBanh.Controls.Add(this.label1);
@@ -728,19 +734,20 @@
             this.btnQuanLyLoaiBanh.UseVisualStyleBackColor = true;
             this.btnQuanLyLoaiBanh.Click += new System.EventHandler(this.btnQuanLyLoaiBanh_Click);
             // 
-            // btn_ReportHD
+            // btn_ReportBanh
             // 
-            this.btn_ReportHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ReportHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportHD.Image")));
-            this.btn_ReportHD.Location = new System.Drawing.Point(483, 100);
-            this.btn_ReportHD.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ReportHD.Name = "btn_ReportHD";
-            this.btn_ReportHD.Size = new System.Drawing.Size(109, 37);
-            this.btn_ReportHD.TabIndex = 5;
-            this.btn_ReportHD.Text = "Report";
-            this.btn_ReportHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ReportHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ReportHD.UseVisualStyleBackColor = true;
+            this.btn_ReportBanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ReportBanh.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportBanh.Image")));
+            this.btn_ReportBanh.Location = new System.Drawing.Point(483, 100);
+            this.btn_ReportBanh.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ReportBanh.Name = "btn_ReportBanh";
+            this.btn_ReportBanh.Size = new System.Drawing.Size(109, 37);
+            this.btn_ReportBanh.TabIndex = 5;
+            this.btn_ReportBanh.Text = "Report";
+            this.btn_ReportBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ReportBanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ReportBanh.UseVisualStyleBackColor = true;
+            this.btn_ReportBanh.Click += new System.EventHandler(this.btn_ReportBanh_Click);
             // 
             // btn_TimHD
             // 
@@ -857,6 +864,8 @@
             // 
             // txt_TimBanh
             // 
+            this.txt_TimBanh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_TimBanh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_TimBanh.Location = new System.Drawing.Point(207, 7);
             this.txt_TimBanh.Name = "txt_TimBanh";
             this.txt_TimBanh.Size = new System.Drawing.Size(135, 20);
@@ -874,7 +883,7 @@
             this.gbChucNangLoaiBanh.Controls.Add(this.btnSuaLoaiBanh);
             this.gbChucNangLoaiBanh.Controls.Add(this.btnXoaLoaiBanh);
             this.gbChucNangLoaiBanh.Controls.Add(this.btnThemLoaiBanh);
-            this.gbChucNangLoaiBanh.Controls.Add(this.button6);
+            this.gbChucNangLoaiBanh.Controls.Add(this.btnReportLoaiBanh);
             this.gbChucNangLoaiBanh.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbChucNangLoaiBanh.Location = new System.Drawing.Point(31, 367);
             this.gbChucNangLoaiBanh.Name = "gbChucNangLoaiBanh";
@@ -955,19 +964,20 @@
             this.btnThemLoaiBanh.UseVisualStyleBackColor = true;
             this.btnThemLoaiBanh.Click += new System.EventHandler(this.btnThemLoaiBanh_Click);
             // 
-            // button6
+            // btnReportLoaiBanh
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(483, 100);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(109, 37);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Report";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnReportLoaiBanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportLoaiBanh.Image = ((System.Drawing.Image)(resources.GetObject("btnReportLoaiBanh.Image")));
+            this.btnReportLoaiBanh.Location = new System.Drawing.Point(483, 100);
+            this.btnReportLoaiBanh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReportLoaiBanh.Name = "btnReportLoaiBanh";
+            this.btnReportLoaiBanh.Size = new System.Drawing.Size(109, 37);
+            this.btnReportLoaiBanh.TabIndex = 5;
+            this.btnReportLoaiBanh.Text = "Report";
+            this.btnReportLoaiBanh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReportLoaiBanh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportLoaiBanh.UseVisualStyleBackColor = true;
+            this.btnReportLoaiBanh.Click += new System.EventHandler(this.btnReportLoaiBanh_Click);
             // 
             // dgvLoaiBanh
             // 
@@ -1067,6 +1077,8 @@
             // 
             // txt_tim_loaiBanh
             // 
+            this.txt_tim_loaiBanh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_tim_loaiBanh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_tim_loaiBanh.Location = new System.Drawing.Point(237, 9);
             this.txt_tim_loaiBanh.Name = "txt_tim_loaiBanh";
             this.txt_tim_loaiBanh.Size = new System.Drawing.Size(135, 20);
@@ -1091,11 +1103,29 @@
             this.btnClearLoaiBanh.UseVisualStyleBackColor = true;
             this.btnClearLoaiBanh.Click += new System.EventHandler(this.btnClearLoaiBanh_Click);
             // 
+            // reportViewerBanh
+            // 
+            this.reportViewerBanh.Location = new System.Drawing.Point(0, 0);
+            this.reportViewerBanh.Name = "reportViewerBanh";
+            this.reportViewerBanh.ServerReport.BearerToken = null;
+            this.reportViewerBanh.Size = new System.Drawing.Size(695, 462);
+            this.reportViewerBanh.TabIndex = 29;
+            // 
+            // reportViewerLoaiBanh
+            // 
+            this.reportViewerLoaiBanh.Location = new System.Drawing.Point(0, 1);
+            this.reportViewerLoaiBanh.Name = "reportViewerLoaiBanh";
+            this.reportViewerLoaiBanh.ServerReport.BearerToken = null;
+            this.reportViewerLoaiBanh.Size = new System.Drawing.Size(695, 461);
+            this.reportViewerLoaiBanh.TabIndex = 30;
+            // 
             // USBanhAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
+            this.Controls.Add(this.reportViewerLoaiBanh);
+            this.Controls.Add(this.reportViewerBanh);
             this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox20);
@@ -1149,7 +1179,7 @@
         private System.Windows.Forms.DataGridView dgv_Banh;
         private System.Windows.Forms.GroupBox gbChucNangBanh;
         private System.Windows.Forms.TextBox txt_TimBanh;
-        private System.Windows.Forms.Button btn_ReportHD;
+        private System.Windows.Forms.Button btn_ReportBanh;
         private System.Windows.Forms.Button btn_TimHD;
         private System.Windows.Forms.Button btnQuanLyLoaiBanh;
         private System.Windows.Forms.Button btnQLLBImage;
@@ -1161,7 +1191,7 @@
         private System.Windows.Forms.Button btnSuaLoaiBanh;
         private System.Windows.Forms.Button btnXoaLoaiBanh;
         private System.Windows.Forms.Button btnThemLoaiBanh;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnReportLoaiBanh;
         private System.Windows.Forms.DataGridView dgvLoaiBanh;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnClearBanh;
@@ -1199,5 +1229,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiBanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTrangThaiBanh;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerBanh;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerLoaiBanh;
     }
 }

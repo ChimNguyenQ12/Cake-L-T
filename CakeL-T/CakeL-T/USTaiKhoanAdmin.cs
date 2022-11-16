@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,6 +55,7 @@ namespace CakeL_T
             dgv_TaiKhoan.Columns["MatKhau"].Visible = false;
             dgv_TaiKhoan.Columns["LoaiTK"].Visible = false;
             dgv_TaiKhoan.Columns["HoaDons"].Visible = false;
+
             DataGridViewRow row = this.dgv_TaiKhoan.Rows[0];
             txt_MatKhau.Text = row.Cells["MatKhau"].Value.ToString();
             txt_TenNV.Text = row.Cells["HoTen"].Value.ToString();
@@ -72,9 +74,19 @@ namespace CakeL_T
                 radioUnactive.Checked = false;
             }
             else
+            {
                 radioUnactive.Checked = true;
                 radioActive.Checked = false;
+            }
 
+            // Auto complete
+            var a = adminBUS.GetAccounts();
+            AutoCompleteStringCollection ac = new AutoCompleteStringCollection();
+            foreach (var item in a)
+            {
+                ac.Add(item.TenTK);
+            }
+            txt_TimTK.AutoCompleteCustomSource = ac;
         }
 
         private void Clear()
@@ -235,6 +247,17 @@ namespace CakeL_T
         private void txt_TimTK_TextChanged(object sender, EventArgs e)
         {
             dgv_TaiKhoan.DataSource = adminBUS.SearchAccount(txt_TimTK.Text);
+            for (int i = 0; i < dgv_TaiKhoan.Rows.Count; i++)
+            {
+                if (dgv_TaiKhoan.Rows[i].Cells["TrangThai"].Value.ToString() == "True")
+                {
+                    dgv_TaiKhoan.Rows[i].Cells["TenTrangThai"].Value = "Hoạt động";
+                }
+                else
+                {
+                    dgv_TaiKhoan.Rows[i].Cells["TenTrangThai"].Value = "Khóa";
+                }
+            }
         }
 
         private void btnEyes_MouseDown(object sender, MouseEventArgs e)
@@ -312,6 +335,35 @@ namespace CakeL_T
                     }
                 }
             }
+        }
+
+        private void USTaiKhoanAdmin_Load(object sender, EventArgs e)
+        {
+            reportViewer1.Visible = false;
+        }
+
+        private void btn_ReportTK_Click(object sender, EventArgs e)
+        {
+            if( reportViewer1.Visible == true)
+            {
+                reportViewer1.Visible = false;
+            }
+            else
+            {
+                reportViewer1.Visible = true;
+            }
+            var listAccounts = adminBUS.GetAccounts().ToList();
+            reportViewer1.LocalReport.ReportPath = "ReportTaiKhoan.rdlc";
+            var source = new ReportDataSource("DataSetTaiKhoan", listAccounts);
+            reportViewer1.LocalReport.DataSources.Clear();
+            //Add param
+            ReportParameter[] parameter = new ReportParameter[2];
+            parameter[0] = new ReportParameter("rpName", txt_TenNV.Text);
+            parameter[1] = new ReportParameter("rpDate", DateTime.Now.ToString());
+            this.reportViewer1.LocalReport.SetParameters(parameter);
+
+            reportViewer1.LocalReport.DataSources.Add(source);
+            this.reportViewer1.RefreshReport();
         }
     }
 }

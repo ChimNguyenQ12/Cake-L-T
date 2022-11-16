@@ -39,11 +39,6 @@ namespace CakeL_T
 
         private void btn_HoaDon_Click(object sender, EventArgs e)
         {
-            //panel_HoaDon.Visible = true;
-            //panel_DoanhThu.Visible = true;
-            //panel_TaiKhoan.Visible = false;
-            //panel_TrangChu.Visible = false;
-            //panel_Banh.Visible = false;
             if (!panel_chinh.Controls.Contains(USHoaDonAdmin.Instance))
             {
                 panel_chinh.Controls.Add(USHoaDonAdmin.Instance);
@@ -56,11 +51,6 @@ namespace CakeL_T
 
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
         {
-            //panel_TaiKhoan.Visible = true;
-            //panel_DoanhThu.Visible = true;
-            //panel_HoaDon.Visible = true;
-            //panel_TrangChu.Visible = false;
-            //panel_Banh.Visible = false;
             if (!panel_chinh.Controls.Contains(USTaiKhoanAdmin.Instance))
             {
                 panel_chinh.Controls.Add(USTaiKhoanAdmin.Instance);
@@ -88,11 +78,6 @@ namespace CakeL_T
 
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
-            //panel_TaiKhoan.Visible = true;
-            //panel_DoanhThu.Visible = true;
-            //panel_HoaDon.Visible = true;
-            //panel_TrangChu.Visible = true;
-            //panel_Banh.Visible = false;
             if (!panel_chinh.Controls.Contains(USTrangChu.Instance))
             {
                 panel_chinh.Controls.Add(USTrangChu.Instance);
@@ -105,11 +90,6 @@ namespace CakeL_T
 
         private void btn_Banh_Click(object sender, EventArgs e)
         {
-            //panel_TaiKhoan.Visible = true;
-            //panel_DoanhThu.Visible = true;
-            //panel_HoaDon.Visible = true;
-            //panel_TrangChu.Visible = true;
-            //panel_Banh.Visible = true;
             if (!panel_chinh.Controls.Contains(USBanhAdmin.Instance))
             {
                 panel_chinh.Controls.Add(USBanhAdmin.Instance);
@@ -122,11 +102,6 @@ namespace CakeL_T
 
         private void FormHomeAdmin_Load(object sender, EventArgs e)
         {
-            //panel_TaiKhoan.Visible = true;
-            //panel_DoanhThu.Visible = true;
-            //panel_HoaDon.Visible = true;
-            //panel_TrangChu.Visible = true;
-            //panel_Banh.Visible = true;
             if (!panel_chinh.Controls.Contains(USTrangChu.Instance))
             {
                 panel_chinh.Controls.Add(USTrangChu.Instance);

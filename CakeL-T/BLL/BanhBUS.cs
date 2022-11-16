@@ -59,12 +59,12 @@ namespace BLL
             }
         }
 
-        public void DeleteCakeById(int code, int category, string name, int price, string image)
+        public void DeleteCakeById(int code)
         {
             try
             {
                 BanhDAL banhDAL = new BanhDAL();
-                banhDAL.DeleteCakeById(code, category, name, price, image);
+                banhDAL.DeleteCakeById(code);
             }
             catch (Exception)
             {
@@ -72,21 +72,14 @@ namespace BLL
             }
         }
 
-        public string AddCake(int code, int category, string name, int price, string image)
+        public string AddCake(int category, string name, int price, string image)
         {
             try
             {
                 BanhDAL banhDAL = new BanhDAL();
                 var tbCake = banhDAL.GetCakes();
-                foreach (var cake in tbCake)
-                {
-                    if (cake.MaBanh == code)
-                    {
-                        return "Cake already exists";
-                    }
-                }
 
-                if (banhDAL.AddCake(code, category, name, price, image) == "success")
+                if (banhDAL.AddCake(category, name, price, image) == "success")
                 {
                     return "success";
                 }

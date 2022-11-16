@@ -22,6 +22,7 @@ namespace DAL
                     TrangThai = true,
                     LoaiTK = false,
                     TrangThaiXoa = false,
+                    TenLoaiTrangThai = "Hoạt động"
                 });
                 cakeEntities.SaveChanges();
             }

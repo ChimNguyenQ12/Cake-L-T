@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="MaBanh" />
     </Key>
-    <Property Name="MaBanh" Type="int" Nullable="false" />
+    <Property Name="MaBanh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenBanh" Type="nvarchar" MaxLength="50" />
     <Property Name="TrangThaiBanh" Type="bit" />
     <Property Name="DonGia" Type="int" />
@@ -39,9 +39,19 @@
     <Key>
       <PropertyRef Name="MaLoai" />
     </Key>
-    <Property Name="MaLoai" Type="int" Nullable="false" />
+    <Property Name="MaLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenLoai" Type="nchar" MaxLength="10" />
     <Property Name="TrangThaiXoa" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -112,6 +122,7 @@
     <EntitySet Name="ChiTietHD" EntityType="Self.ChiTietHD" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoaiBanh" EntityType="Self.LoaiBanh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Banh_LoaiBanh" Association="Self.FK_Banh_LoaiBanh">
       <End Role="LoaiBanh" EntitySet="LoaiBanh" />

@@ -41,25 +41,19 @@ namespace DAL
                 cakeEntities.SaveChanges();
         }
 
-        public void DeleteCateCakeById(int code, string name)
+        public void DeleteCateCakeById(int code)
         {
                 var cakeCateCurrent = cakeEntities.LoaiBanhs.Where(x => x.MaLoai == code).FirstOrDefault();
-                    cakeEntities.LoaiBanhs.Remove(cakeCateCurrent);
-                    cakeEntities.LoaiBanhs.Add(new LoaiBanh()
-                    {
-                        MaLoai = 999999,
-                        TenLoai = name,
-                        TrangThaiXoa = true
-                    });
+                    cakeCateCurrent.TrangThaiXoa = true;
                 cakeEntities.SaveChanges();
         }
 
-        public string AddCateCake(int code, string name)
+        public string AddCateCake(string name)
         {
                 cakeEntities.LoaiBanhs.Add(new LoaiBanh()
                 {
-                    MaLoai = code,
-                    TenLoai = name
+                    TenLoai = name,
+                    TrangThaiXoa=false
                 });
                 cakeEntities.SaveChanges();
             return "success";

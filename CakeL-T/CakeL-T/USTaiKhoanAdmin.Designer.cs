@@ -75,13 +75,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTimSDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnResetPass = new System.Windows.Forms.Button();
-            this.btn_ReportHD = new System.Windows.Forms.Button();
+            this.btn_ReportTK = new System.Windows.Forms.Button();
             this.btn_TimTK = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txt_TimTK = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarTK)).BeginInit();
@@ -696,7 +697,7 @@
             this.groupBox2.Controls.Add(this.btn_XoaTK);
             this.groupBox2.Controls.Add(this.btnResetPass);
             this.groupBox2.Controls.Add(this.btn_ThemTK);
-            this.groupBox2.Controls.Add(this.btn_ReportHD);
+            this.groupBox2.Controls.Add(this.btn_ReportTK);
             this.groupBox2.Controls.Add(this.btn_TimTK);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label16);
@@ -748,19 +749,20 @@
             this.btnResetPass.UseVisualStyleBackColor = false;
             this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
             // 
-            // btn_ReportHD
+            // btn_ReportTK
             // 
-            this.btn_ReportHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ReportHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportHD.Image")));
-            this.btn_ReportHD.Location = new System.Drawing.Point(501, 85);
-            this.btn_ReportHD.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ReportHD.Name = "btn_ReportHD";
-            this.btn_ReportHD.Size = new System.Drawing.Size(109, 34);
-            this.btn_ReportHD.TabIndex = 5;
-            this.btn_ReportHD.Text = "Report";
-            this.btn_ReportHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ReportHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ReportHD.UseVisualStyleBackColor = true;
+            this.btn_ReportTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ReportTK.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportTK.Image")));
+            this.btn_ReportTK.Location = new System.Drawing.Point(501, 85);
+            this.btn_ReportTK.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ReportTK.Name = "btn_ReportTK";
+            this.btn_ReportTK.Size = new System.Drawing.Size(109, 34);
+            this.btn_ReportTK.TabIndex = 5;
+            this.btn_ReportTK.Text = "Report";
+            this.btn_ReportTK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ReportTK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ReportTK.UseVisualStyleBackColor = true;
+            this.btn_ReportTK.Click += new System.EventHandler(this.btn_ReportTK_Click);
             // 
             // btn_TimTK
             // 
@@ -801,6 +803,8 @@
             // 
             // txt_TimTK
             // 
+            this.txt_TimTK.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_TimTK.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_TimTK.Location = new System.Drawing.Point(123, 502);
             this.txt_TimTK.Name = "txt_TimTK";
             this.txt_TimTK.Size = new System.Drawing.Size(257, 20);
@@ -829,11 +833,20 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(695, 450);
+            this.reportViewer1.TabIndex = 27;
+            // 
             // USTaiKhoanAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnRefresh);
@@ -845,6 +858,7 @@
             this.Controls.Add(this.pictureBox10);
             this.Name = "USTaiKhoanAdmin";
             this.Size = new System.Drawing.Size(695, 832);
+            this.Load += new System.EventHandler(this.USTaiKhoanAdmin_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -886,7 +900,7 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_TimTK;
-        private System.Windows.Forms.Button btn_ReportHD;
+        private System.Windows.Forms.Button btn_ReportTK;
         private System.Windows.Forms.Button btn_TimTK;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnRefresh;
@@ -916,5 +930,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTK;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTrangThai;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
