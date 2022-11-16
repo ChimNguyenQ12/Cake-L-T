@@ -28,9 +28,9 @@ namespace DAL
         public string DiaChi { get; set; }
         public string HoTen { get; set; }
         public string SoDienThoai { get; set; }
-        public string HinhAnh { get; set; }
         public bool TrangThaiXoa { get; set; }
         public string TenLoaiTrangThai { get; set; }
+        public byte[] HinhAnh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

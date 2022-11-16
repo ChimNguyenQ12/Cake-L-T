@@ -29,11 +29,6 @@ namespace DAL
 
                 listCake.Add(cake);
             }
-            var results = (from c in cakeEntities.LoaiBanhs
-                           join p in cakeEntities.Banhs on c.MaLoai equals p.LoaiBanh
-                           select new { category = c, product = p })
-                         .GroupBy(x => x.category.MaLoai)
-                         .ToList();
             return listCake;
         }
 

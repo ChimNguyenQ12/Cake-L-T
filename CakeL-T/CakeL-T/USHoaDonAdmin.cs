@@ -12,6 +12,7 @@ using BLL;
 using System.Diagnostics;
 using DAL;
 using ServiceStack;
+using Microsoft.Reporting.WinForms;
 
 namespace CakeL_T
 {
@@ -43,8 +44,8 @@ namespace CakeL_T
         }
         private void LoadData()
         {
-            dgv_HoaDon.DataSource = hoadonBUS.GetHD();            
-
+            dgv_HoaDon.DataSource = hoadonBUS.GetHD();
+            reportViewerHoaDon.Visible = false;
         }
 
         private void dgv_HoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -83,6 +84,32 @@ namespace CakeL_T
             txt_maNV.Text = "";
             txt_maHD.Text = "";
             LoadData();
+        }
+
+        private void btn_ReportHD_Click(object sender, EventArgs e)
+        {
+            if (reportViewerHoaDon.Visible == true)
+            {
+                reportViewerHoaDon.Visible = false;
+            }
+            else
+            {
+                reportViewerHoaDon.Visible = true;
+            }
+            AdminBUS adminBUS = new AdminBUS();
+            var accountCreateReport = adminBUS.GetAccounts().Where(x => x.LoaiTK == true).FirstOrDefault();
+            var listInvoice = hoadonBUS.GetHD().ToList();
+            reportViewerHoaDon.LocalReport.ReportPath = "ReportHoaDon.rdlc";
+            var source = new ReportDataSource("DataSetHoaDon", listInvoice);
+            reportViewerHoaDon.LocalReport.DataSources.Clear();
+            //Add param
+            ReportParameter[] parameter = new ReportParameter[2];
+            parameter[0] = new ReportParameter("rpName", accountCreateReport.HoTen);
+            parameter[1] = new ReportParameter("rpDate", DateTime.Now.ToString());
+            this.reportViewerHoaDon.LocalReport.SetParameters(parameter);
+
+            reportViewerHoaDon.LocalReport.DataSources.Add(source);
+            this.reportViewerHoaDon.RefreshReport();
         }
     }
 }

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -78,6 +80,15 @@ namespace CakeL_T
                 radioUnactive.Checked = true;
                 radioActive.Checked = false;
             }
+            if (row.Cells["HinhAnh"].Value != null)
+            {
+                MemoryStream m = new MemoryStream((byte[])row.Cells["HinhAnh"].Value);
+                pb_AvatarTK.Image = Image.FromStream(m);
+            }
+            else
+            {
+                pb_AvatarTK.Image = Image.FromFile(@"..\..\Image\no_img.png");
+            }
 
             // Auto complete
             var a = adminBUS.GetAccounts();
@@ -106,7 +117,7 @@ namespace CakeL_T
             }
         }
 
-        private void UpdateAccount(int id, string fullname, string username, string password, string address, string phone, string image, bool status)
+        private void UpdateAccount(int id, string fullname, string username, string password, string address, string phone, byte[] image, bool status)
         {
             adminBUS.UpdateAccountById(id, fullname, username, password, address, phone, image, status);
             LoadData();
@@ -145,7 +156,9 @@ namespace CakeL_T
                 var row = dgv_TaiKhoan.SelectedRows[0];
                 var cell = row.Cells["Id"];
                 int idSelected = Convert.ToInt32(cell.Value);
-                string image = pb_AvatarTK.ToString();
+                MemoryStream m = new MemoryStream();
+                pb_AvatarTK.Image.Save(m, ImageFormat.Jpeg);
+                var image = m.ToArray();
                 bool status;
                 string pattern = @"^([\+]?33[-]?|[0])?[1-9][0-9]{8}$";
                 Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
@@ -212,9 +225,20 @@ namespace CakeL_T
             {
                 radioActive.Checked = true;
             }
-            else 
+            else
+            {
             radioUnactive.Checked =  true;
-           
+            }
+            if (row.Cells["HinhAnh"].Value != null)
+            {
+                MemoryStream m = new MemoryStream((byte[])row.Cells["HinhAnh"].Value);
+                pb_AvatarTK.Image = Image.FromStream(m);
+            }
+            else
+            {
+                pb_AvatarTK.Image = Image.FromFile(@"..\..\Image\no_img.png");
+            }
+
         }
 
         private void pb_AvatarTK_Click(object sender, EventArgs e)
@@ -364,6 +388,13 @@ namespace CakeL_T
 
             reportViewer1.LocalReport.DataSources.Add(source);
             this.reportViewer1.RefreshReport();
+        }
+
+        private void btnAddImage_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            string Filepath = openFileDialog1.FileName;
+            pb_AvatarTK.Image = Image.FromFile(Filepath);
         }
     }
 }

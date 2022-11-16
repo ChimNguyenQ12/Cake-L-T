@@ -27,6 +27,7 @@ namespace DAL
                     account.TrangThai = i.TrangThai;
                     account.TrangThaiXoa = i.TrangThaiXoa;
                     account.TenLoaiTrangThai = i.TenLoaiTrangThai;
+                    account.HinhAnh = i.HinhAnh;
                     listAccount.Add(account);
                 }
             return listAccount;
@@ -40,7 +41,7 @@ namespace DAL
 
         }
 
-        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, string image, bool status)
+        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, byte[] image, bool status)
         {
                 var accountCurrent = cakeEntities.TaiKhoans.Where(x => x.Id == id).FirstOrDefault();
                 accountCurrent.HoTen = fullname;

@@ -32,7 +32,7 @@ namespace BLL
             }
         }
 
-        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, string image, bool status)
+        public void UpdateAccountById(int id, string fullname, string username, string password, string address, string phone, byte[] image, bool status)
         {
             try
             {

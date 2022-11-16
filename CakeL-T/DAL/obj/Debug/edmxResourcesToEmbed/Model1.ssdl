@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="CakeshopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="CakeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Banh">
     <Key>
       <PropertyRef Name="MaBanh" />
@@ -18,7 +18,7 @@
     <Key>
       <PropertyRef Name="MaCTHoaDon" />
     </Key>
-    <Property Name="MaCTHoaDon" Type="int" Nullable="false" />
+    <Property Name="MaCTHoaDon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaBanh" Type="int" />
     <Property Name="MaHoaDon" Type="int" />
     <Property Name="SoLuong" Type="int" />
@@ -29,7 +29,7 @@
     <Key>
       <PropertyRef Name="MaHoaDon" />
     </Key>
-    <Property Name="MaHoaDon" Type="int" Nullable="false" />
+    <Property Name="MaHoaDon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdTaiKhoan" Type="int" />
     <Property Name="NgayMua" Type="datetime" />
     <Property Name="TongTien" Type="int" />
@@ -65,9 +65,9 @@
     <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
     <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
     <Property Name="SoDienThoai" Type="nvarchar" MaxLength="50" />
-    <Property Name="HinhAnh" Type="nvarchar(max)" />
     <Property Name="TrangThaiXoa" Type="bit" Nullable="false" />
     <Property Name="TenLoaiTrangThai" Type="nvarchar" MaxLength="50" />
+    <Property Name="HinhAnh" Type="image" />
   </EntityType>
   <Association Name="FK_Banh_LoaiBanh">
     <End Role="LoaiBanh" Type="Self.LoaiBanh" Multiplicity="0..1" />
@@ -117,7 +117,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="CakeshopModelStoreContainer">
+  <EntityContainer Name="CakeModelStoreContainer">
     <EntitySet Name="Banh" EntityType="Self.Banh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietHD" EntityType="Self.ChiTietHD" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />

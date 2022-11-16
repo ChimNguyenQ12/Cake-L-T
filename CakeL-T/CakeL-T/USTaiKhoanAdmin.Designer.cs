@@ -83,6 +83,8 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.btnAddImage = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_AvatarTK)).BeginInit();
@@ -99,6 +101,7 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.btnAddImage);
             this.groupBox3.Controls.Add(this.btn_clear);
             this.groupBox3.Controls.Add(this.btn_eyes);
             this.groupBox3.Controls.Add(this.panel1);
@@ -337,7 +340,7 @@
             this.txt_TenTK.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TenTK.ForeColor = System.Drawing.Color.Black;
             this.txt_TenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TenTK.Location = new System.Drawing.Point(113, 148);
+            this.txt_TenTK.Location = new System.Drawing.Point(112, 160);
             this.txt_TenTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_TenTK.Name = "txt_TenTK";
             this.txt_TenTK.PasswordChar = '\0';
@@ -350,10 +353,10 @@
             // pb_AvatarTK
             // 
             this.pb_AvatarTK.Image = ((System.Drawing.Image)(resources.GetObject("pb_AvatarTK.Image")));
-            this.pb_AvatarTK.Location = new System.Drawing.Point(113, 19);
+            this.pb_AvatarTK.Location = new System.Drawing.Point(68, 26);
             this.pb_AvatarTK.Name = "pb_AvatarTK";
-            this.pb_AvatarTK.Size = new System.Drawing.Size(138, 103);
-            this.pb_AvatarTK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_AvatarTK.Size = new System.Drawing.Size(180, 105);
+            this.pb_AvatarTK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_AvatarTK.TabIndex = 0;
             this.pb_AvatarTK.TabStop = false;
             this.pb_AvatarTK.Click += new System.EventHandler(this.pb_AvatarTK_Click);
@@ -403,7 +406,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(10, 155);
+            this.label18.Location = new System.Drawing.Point(9, 167);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(97, 18);
             this.label18.TabIndex = 0;
@@ -689,6 +692,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.reportViewer1);
             this.groupBox2.Controls.Add(this.radioTimActive);
             this.groupBox2.Controls.Add(this.btn_SuaTK);
             this.groupBox2.Controls.Add(this.txtTimSDT);
@@ -835,18 +839,31 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(-32, -69);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(695, 450);
             this.reportViewer1.TabIndex = 27;
+            // 
+            // btnAddImage
+            // 
+            this.btnAddImage.Location = new System.Drawing.Point(13, 137);
+            this.btnAddImage.Name = "btnAddImage";
+            this.btnAddImage.Size = new System.Drawing.Size(84, 23);
+            this.btnAddImage.TabIndex = 9;
+            this.btnAddImage.Text = "Chọn ảnh";
+            this.btnAddImage.UseVisualStyleBackColor = true;
+            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // USTaiKhoanAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnRefresh);
@@ -931,5 +948,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTrangThai;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Button btnAddImage;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

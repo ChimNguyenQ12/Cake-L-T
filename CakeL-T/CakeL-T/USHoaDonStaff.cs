@@ -106,7 +106,7 @@ namespace CakeL_T
         {
             bool trangthai = true;
             int idTk;
-            int soLuong = 0, tongTien = 0, maBanh = 0, giatien = 0;
+            int soLuong = 0, tongTien = 0, maBanh = 0, giatien = 0, maHD;
 
             idTk = _idTk;
             
@@ -117,12 +117,7 @@ namespace CakeL_T
             CTHoaDonBUS ctBUS = new CTHoaDonBUS();
             try
             {   
-                do
-                {
-                    maHD += 1;
-                } while (hoadonBUS.ThemHoaDon(maHD, idTk, tongTien, trangthai) == "Ma hoa don da ton tai");
-
-                if (hoadonBUS.ThemHoaDon(maHD, idTk, tongTien, trangthai) == "Ma hoa don da ton tai")
+                if (hoadonBUS.ThemHoaDon(idTk, tongTien, trangthai) == "success")
                 {
                     for(int i = 0; i< dgv_HoaDon.Rows.Count-1; i++)
                     {
@@ -136,11 +131,7 @@ namespace CakeL_T
                         }
                         soLuong = int.Parse( dgv_HoaDon.Rows[i].Cells["Số Lượng"].Value.ToString());
                         giatien = int.Parse(dgv_HoaDon.Rows[i].Cells["Số Lượng"].Value.ToString()) * int.Parse(dgv_HoaDon.Rows[i].Cells["Thành Tiền"].Value.ToString());
-                        do
-                        {
-                            maCTHD += 1;
-                        } while (ctBUS.ThemCTHoaDon(maCTHD, maBanh, maHD, soLuong, giatien,trangthai) == "Mã đã tồn tại");
-                        if (ctBUS.ThemCTHoaDon(maCTHD, maBanh, maHD,soLuong,giatien,trangthai) == "success")
+                        if (ctBUS.ThemCTHoaDon(maBanh,soLuong,giatien,trangthai) == "success")
                         {
                             Debug.WriteLine("success");
                         }

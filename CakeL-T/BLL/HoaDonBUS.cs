@@ -15,21 +15,13 @@ namespace BLL
             listHD = hoadonDAL.GetHoaDon().ToList();
             return listHD;
         }
-        public string ThemHoaDon(int MaHD, int IDTK, int TongTien, bool trangthai)
+        public string ThemHoaDon(int IDTK, int TongTien, bool trangthai)
         {
             try
             {
-                
                 HoaDonDAL hoadon = new HoaDonDAL();
                 var tbHoaDon = hoadon.GetHoaDon();
-                foreach(var hoaDon in tbHoaDon)
-                {
-                    if(hoaDon.MaHoaDon == MaHD)
-                    {
-                        return "Ma hoa don da ton tai";
-                    }
-                }
-                if(hoadon.ThemHoaDon(MaHD,IDTK,TongTien,trangthai) == "success")
+                if(hoadon.ThemHoaDon(IDTK,TongTien,trangthai) == "success")
                 {
                     return "success";
                 }

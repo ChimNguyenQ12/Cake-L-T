@@ -12,20 +12,26 @@ namespace BLL
 {
     public class CTHoaDonBUS
     {
-        public string ThemCTHoaDon(int MaCTHD, int maBanh, int MaHD, int soLuong, int giaTien, bool trangthai)
+        public List<ChiTietHD> GetAllCTHD()
+        {
+            try
+            {
+                List<ChiTietHD> chiTietHDs = new List<ChiTietHD>();
+                CTHoaDonDAL ctHoaDonDAL = new CTHoaDonDAL();
+                chiTietHDs = ctHoaDonDAL.GetAllCTHD();
+                return chiTietHDs;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        public string ThemCTHoaDon(int maBanh, int soLuong, int giaTien, bool trangthai)
         {
             try
             {
                 CTHoaDonDAL ctHoaDon = new CTHoaDonDAL();
-                var tbCTHoaDon = ctHoaDon.GetCTHoaDon();
-                foreach (var ct in tbCTHoaDon)
-                {
-                    if (ct.MaCTHoaDon == MaCTHD)
-                    {
-                        return "Mã đã tồn tại";
-                    }
-                }
-                if (ctHoaDon.ThemCTHoaDon(MaCTHD,maBanh,MaHD,soLuong,giaTien,trangthai) == "success")
+                if (ctHoaDon.ThemCTHoaDon(maBanh,soLuong,giaTien,trangthai) == "success")
                 {
                     return "success";
                 }

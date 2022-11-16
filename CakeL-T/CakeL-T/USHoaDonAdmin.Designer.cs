@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USHoaDonAdmin));
             this.dgv_HoaDon = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_lamMoi = new System.Windows.Forms.Button();
             this.txt_maNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_maHD = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv_ctHoaDon = new System.Windows.Forms.DataGridView();
@@ -43,7 +44,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.btn_lamMoi = new System.Windows.Forms.Button();
+            this.reportViewerHoaDon = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HoaDon)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ctHoaDon)).BeginInit();
@@ -76,7 +77,6 @@
             this.groupBox2.Controls.Add(this.dgv_HoaDon);
             this.groupBox2.Controls.Add(this.dgv_ctHoaDon);
             this.groupBox2.Controls.Add(this.btn_XoaHD);
-            this.groupBox2.Controls.Add(this.btn_ReportHD);
             this.groupBox2.Controls.Add(this.btn_TimHD);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label16);
@@ -87,6 +87,16 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
+            // 
+            // btn_lamMoi
+            // 
+            this.btn_lamMoi.Location = new System.Drawing.Point(411, 27);
+            this.btn_lamMoi.Name = "btn_lamMoi";
+            this.btn_lamMoi.Size = new System.Drawing.Size(113, 32);
+            this.btn_lamMoi.TabIndex = 18;
+            this.btn_lamMoi.Text = "Làm Mới";
+            this.btn_lamMoi.UseVisualStyleBackColor = true;
+            this.btn_lamMoi.Click += new System.EventHandler(this.btn_lamMoi_Click);
             // 
             // txt_maNV
             // 
@@ -163,7 +173,7 @@
             // 
             this.btn_ReportHD.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ReportHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportHD.Image")));
-            this.btn_ReportHD.Location = new System.Drawing.Point(544, 118);
+            this.btn_ReportHD.Location = new System.Drawing.Point(563, 792);
             this.btn_ReportHD.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ReportHD.Name = "btn_ReportHD";
             this.btn_ReportHD.Size = new System.Drawing.Size(120, 34);
@@ -172,6 +182,7 @@
             this.btn_ReportHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_ReportHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ReportHD.UseVisualStyleBackColor = true;
+            this.btn_ReportHD.Click += new System.EventHandler(this.btn_ReportHD_Click);
             // 
             // btn_TimHD
             // 
@@ -259,26 +270,26 @@
             this.pictureBox7.TabIndex = 10;
             this.pictureBox7.TabStop = false;
             // 
-            // btn_lamMoi
+            // reportViewerHoaDon
             // 
-            this.btn_lamMoi.Location = new System.Drawing.Point(411, 27);
-            this.btn_lamMoi.Name = "btn_lamMoi";
-            this.btn_lamMoi.Size = new System.Drawing.Size(113, 32);
-            this.btn_lamMoi.TabIndex = 18;
-            this.btn_lamMoi.Text = "Làm Mới";
-            this.btn_lamMoi.UseVisualStyleBackColor = true;
-            this.btn_lamMoi.Click += new System.EventHandler(this.btn_lamMoi_Click);
+            this.reportViewerHoaDon.Location = new System.Drawing.Point(0, 0);
+            this.reportViewerHoaDon.Name = "reportViewerHoaDon";
+            this.reportViewerHoaDon.ServerReport.BearerToken = null;
+            this.reportViewerHoaDon.Size = new System.Drawing.Size(695, 571);
+            this.reportViewerHoaDon.TabIndex = 16;
             // 
             // USHoaDonAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
+            this.Controls.Add(this.reportViewerHoaDon);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.btn_ReportHD);
             this.Name = "USHoaDonAdmin";
             this.Size = new System.Drawing.Size(695, 832);
             this.Load += new System.EventHandler(this.USHoaDonAdmin_Load);
@@ -311,5 +322,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_maHD;
         private Guna.UI2.WinForms.Guna2TextBox txt_maNV;
         private System.Windows.Forms.Button btn_lamMoi;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerHoaDon;
     }
 }

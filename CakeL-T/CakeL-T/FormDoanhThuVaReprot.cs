@@ -19,6 +19,8 @@ namespace CakeL_T
 
         private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormReport formReport = new FormReport();
+            formReport.Close();
             FormDoanhThu formDoanhThu = new FormDoanhThu();
             formDoanhThu.MdiParent = this;
             formDoanhThu.Show();
@@ -26,6 +28,8 @@ namespace CakeL_T
 
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FormDoanhThu formDoanhThu = new FormDoanhThu();
+            formDoanhThu.Close();
             FormReport formReport = new FormReport();
             formReport.MdiParent = this;
             formReport.Show();

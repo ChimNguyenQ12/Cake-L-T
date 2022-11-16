@@ -1076,3 +1076,8 @@ D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\zh-CHT\Microsoft.Repo
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportTaiKhoan.rdlc
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportLoaiBanh.rdlc
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportBanh.rdlc
+D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportHoaDon.rdlc
+D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportByAccount.rdlc
+D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportByDate.rdlc
+D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportByCake.rdlc
+D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\obj\Debug\CakeL-T.exe.config

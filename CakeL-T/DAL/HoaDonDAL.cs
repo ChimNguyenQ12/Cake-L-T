@@ -33,7 +33,7 @@ namespace DAL
             }
             return listHoadon;
         }
-        public string ThemHoaDon(int MaHD, int IDTK, int TongTien, bool trangthai)
+        public string ThemHoaDon(int IDTK, int TongTien, bool trangthai)
         {
             try
             {
@@ -41,7 +41,6 @@ namespace DAL
                 {
                     cakeEntities.HoaDons.Add(new HoaDon()
                     {
-                        MaHoaDon =MaHD,
                         IdTaiKhoan =IDTK,
                         NgayMua =DateTime.Now,
                         TongTien =TongTien,   
