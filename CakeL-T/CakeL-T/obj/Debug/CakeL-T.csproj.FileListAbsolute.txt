@@ -1081,3 +1081,5 @@ D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportByAccount.rdlc
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportByDate.rdlc
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportByCake.rdlc
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\obj\Debug\CakeL-T.exe.config
+D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportDoanhThu.rdlc
+D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\CakeL-T\bin\Debug\ReportCTHD.rdlc

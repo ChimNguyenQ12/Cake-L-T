@@ -34,6 +34,7 @@
     <Property Name="NgayMua" Type="datetime" />
     <Property Name="TongTien" Type="int" />
     <Property Name="TrangThai" Type="bit" />
+    <Property Name="TenTaiKhoan" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="LoaiBanh">
     <Key>

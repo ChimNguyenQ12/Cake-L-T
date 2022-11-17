@@ -362,10 +362,16 @@
     <EmbeddedResource Include="ReportByCake.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportDoanhThu.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportByDate.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportByAccount.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCTHD.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportHoaDon.rdlc">
@@ -444,6 +450,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DAL.Banh.datasource" />
+    <None Include="Properties\DataSources\DAL.ChiTietHD.datasource" />
     <None Include="Properties\DataSources\DAL.HoaDon.datasource" />
     <None Include="Properties\DataSources\DAL.HoaDonDAL.datasource" />
     <None Include="Properties\DataSources\DAL.LoaiBanh.datasource" />

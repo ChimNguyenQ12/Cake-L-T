@@ -30,21 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USHoaDonAdmin));
             this.dgv_HoaDon = new System.Windows.Forms.DataGridView();
+            this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_lamMoi = new System.Windows.Forms.Button();
             this.txt_maNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_maHD = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv_ctHoaDon = new System.Windows.Forms.DataGridView();
+            this.MaCTHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHoaDonn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaBanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_XoaHD = new System.Windows.Forms.Button();
-            this.btn_ReportHD = new System.Windows.Forms.Button();
             this.btn_TimHD = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.btn_ReportHD = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.reportViewerHoaDon = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.btnReportCTHD = new System.Windows.Forms.Button();
+            this.reportViewerCTHD = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HoaDon)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ctHoaDon)).BeginInit();
@@ -55,9 +66,15 @@
             // 
             // dgv_HoaDon
             // 
-            this.dgv_HoaDon.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_HoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_HoaDon.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dgv_HoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_HoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHoaDon,
+            this.TenTaiKhoan,
+            this.NgayMua,
+            this.TongTien});
             this.dgv_HoaDon.Location = new System.Drawing.Point(0, 180);
             this.dgv_HoaDon.Name = "dgv_HoaDon";
             this.dgv_HoaDon.ReadOnly = true;
@@ -67,6 +84,34 @@
             this.dgv_HoaDon.TabIndex = 16;
             this.dgv_HoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
             this.dgv_HoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
+            // 
+            // MaHoaDon
+            // 
+            this.MaHoaDon.DataPropertyName = "MaHoaDon";
+            this.MaHoaDon.HeaderText = "Mã Hóa Đơn";
+            this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.ReadOnly = true;
+            // 
+            // TenTaiKhoan
+            // 
+            this.TenTaiKhoan.DataPropertyName = "TenTaiKhoan";
+            this.TenTaiKhoan.HeaderText = "Tài Khoản Lập";
+            this.TenTaiKhoan.Name = "TenTaiKhoan";
+            this.TenTaiKhoan.ReadOnly = true;
+            // 
+            // NgayMua
+            // 
+            this.NgayMua.DataPropertyName = "NgayMua";
+            this.NgayMua.HeaderText = "Ngày Lập";
+            this.NgayMua.Name = "NgayMua";
+            this.NgayMua.ReadOnly = true;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng Tiền";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -142,9 +187,16 @@
             // 
             // dgv_ctHoaDon
             // 
-            this.dgv_ctHoaDon.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgv_ctHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ctHoaDon.BackgroundColor = System.Drawing.Color.MistyRose;
             this.dgv_ctHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_ctHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ctHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaCTHoaDon,
+            this.MaHoaDonn,
+            this.MaBanh,
+            this.SoLuong,
+            this.GiaTien});
             this.dgv_ctHoaDon.Location = new System.Drawing.Point(0, 395);
             this.dgv_ctHoaDon.Name = "dgv_ctHoaDon";
             this.dgv_ctHoaDon.ReadOnly = true;
@@ -154,6 +206,41 @@
             this.dgv_ctHoaDon.TabIndex = 16;
             this.dgv_ctHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
             this.dgv_ctHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
+            // 
+            // MaCTHoaDon
+            // 
+            this.MaCTHoaDon.DataPropertyName = "MaCTHoaDon";
+            this.MaCTHoaDon.HeaderText = "Mã Chi Tiết Hóa Đơn ";
+            this.MaCTHoaDon.Name = "MaCTHoaDon";
+            this.MaCTHoaDon.ReadOnly = true;
+            // 
+            // MaHoaDonn
+            // 
+            this.MaHoaDonn.DataPropertyName = "MaHoaDon";
+            this.MaHoaDonn.HeaderText = "Mã Hóa Đơn";
+            this.MaHoaDonn.Name = "MaHoaDonn";
+            this.MaHoaDonn.ReadOnly = true;
+            // 
+            // MaBanh
+            // 
+            this.MaBanh.DataPropertyName = "MaBanh";
+            this.MaBanh.HeaderText = "Mã Bánh";
+            this.MaBanh.Name = "MaBanh";
+            this.MaBanh.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // GiaTien
+            // 
+            this.GiaTien.DataPropertyName = "GiaTien";
+            this.GiaTien.HeaderText = "Giá Tiền";
+            this.GiaTien.Name = "GiaTien";
+            this.GiaTien.ReadOnly = true;
             // 
             // btn_XoaHD
             // 
@@ -168,21 +255,6 @@
             this.btn_XoaHD.Text = "Xóa";
             this.btn_XoaHD.UseVisualStyleBackColor = true;
             this.btn_XoaHD.Click += new System.EventHandler(this.btn_XoaHD_Click);
-            // 
-            // btn_ReportHD
-            // 
-            this.btn_ReportHD.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ReportHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportHD.Image")));
-            this.btn_ReportHD.Location = new System.Drawing.Point(563, 792);
-            this.btn_ReportHD.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_ReportHD.Name = "btn_ReportHD";
-            this.btn_ReportHD.Size = new System.Drawing.Size(120, 34);
-            this.btn_ReportHD.TabIndex = 5;
-            this.btn_ReportHD.Text = "Report";
-            this.btn_ReportHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ReportHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_ReportHD.UseVisualStyleBackColor = true;
-            this.btn_ReportHD.Click += new System.EventHandler(this.btn_ReportHD_Click);
             // 
             // btn_TimHD
             // 
@@ -226,6 +298,21 @@
             this.label16.Size = new System.Drawing.Size(118, 22);
             this.label16.TabIndex = 0;
             this.label16.Text = "Mã Hóa Đơn:";
+            // 
+            // btn_ReportHD
+            // 
+            this.btn_ReportHD.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ReportHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportHD.Image")));
+            this.btn_ReportHD.Location = new System.Drawing.Point(242, 792);
+            this.btn_ReportHD.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ReportHD.Name = "btn_ReportHD";
+            this.btn_ReportHD.Size = new System.Drawing.Size(192, 34);
+            this.btn_ReportHD.TabIndex = 5;
+            this.btn_ReportHD.Text = "Report Hóa Đơn";
+            this.btn_ReportHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ReportHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_ReportHD.UseVisualStyleBackColor = true;
+            this.btn_ReportHD.Click += new System.EventHandler(this.btn_ReportHD_Click);
             // 
             // label7
             // 
@@ -275,20 +362,45 @@
             this.reportViewerHoaDon.Location = new System.Drawing.Point(0, 0);
             this.reportViewerHoaDon.Name = "reportViewerHoaDon";
             this.reportViewerHoaDon.ServerReport.BearerToken = null;
-            this.reportViewerHoaDon.Size = new System.Drawing.Size(695, 571);
+            this.reportViewerHoaDon.Size = new System.Drawing.Size(695, 787);
             this.reportViewerHoaDon.TabIndex = 16;
+            // 
+            // btnReportCTHD
+            // 
+            this.btnReportCTHD.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportCTHD.Image = ((System.Drawing.Image)(resources.GetObject("btnReportCTHD.Image")));
+            this.btnReportCTHD.Location = new System.Drawing.Point(438, 792);
+            this.btnReportCTHD.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReportCTHD.Name = "btnReportCTHD";
+            this.btnReportCTHD.Size = new System.Drawing.Size(245, 34);
+            this.btnReportCTHD.TabIndex = 5;
+            this.btnReportCTHD.Text = "Report Chi Tiết Hóa Đơn";
+            this.btnReportCTHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReportCTHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportCTHD.UseVisualStyleBackColor = true;
+            this.btnReportCTHD.Click += new System.EventHandler(this.btnReportCTHD_Click);
+            // 
+            // reportViewerCTHD
+            // 
+            this.reportViewerCTHD.Location = new System.Drawing.Point(0, 0);
+            this.reportViewerCTHD.Name = "reportViewerCTHD";
+            this.reportViewerCTHD.ServerReport.BearerToken = null;
+            this.reportViewerCTHD.Size = new System.Drawing.Size(695, 787);
+            this.reportViewerCTHD.TabIndex = 17;
             // 
             // USHoaDonAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
+            this.Controls.Add(this.reportViewerCTHD);
             this.Controls.Add(this.reportViewerHoaDon);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.btnReportCTHD);
             this.Controls.Add(this.btn_ReportHD);
             this.Name = "USHoaDonAdmin";
             this.Size = new System.Drawing.Size(695, 832);
@@ -323,5 +435,16 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_maNV;
         private System.Windows.Forms.Button btn_lamMoi;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTaiKhoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCTHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDonn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaBanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaTien;
+        private System.Windows.Forms.Button btnReportCTHD;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerCTHD;
     }
 }

@@ -31,14 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDoanhThu));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_TongDtNgay = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.dtp_NgayKetThuc = new System.Windows.Forms.DateTimePicker();
-            this.dtp_NgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.txt_TongDtNgay = new System.Windows.Forms.TextBox();
             this.dgv_DTNgay = new System.Windows.Forms.DataGridView();
+            this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_ReportNgay = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,6 +59,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel_TheoNgay = new System.Windows.Forms.Panel();
+            this.dtpTu = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpDen = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.reportViewerDoanhThu = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -83,13 +88,14 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.reportViewerDoanhThu);
+            this.tabPage1.Controls.Add(this.dtpDen);
+            this.tabPage1.Controls.Add(this.dtpTu);
+            this.tabPage1.Controls.Add(this.txt_TongDtNgay);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.pictureBox7);
             this.tabPage1.Controls.Add(this.pictureBox8);
             this.tabPage1.Controls.Add(this.pictureBox9);
-            this.tabPage1.Controls.Add(this.dtp_NgayKetThuc);
-            this.tabPage1.Controls.Add(this.dtp_NgayBatDau);
-            this.tabPage1.Controls.Add(this.txt_TongDtNgay);
             this.tabPage1.Controls.Add(this.dgv_DTNgay);
             this.tabPage1.Controls.Add(this.btn_ReportNgay);
             this.tabPage1.Controls.Add(this.label7);
@@ -103,6 +109,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Doanh Thu Theo Ngày";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txt_TongDtNgay
+            // 
+            this.txt_TongDtNgay.AutoSize = true;
+            this.txt_TongDtNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TongDtNgay.ForeColor = System.Drawing.Color.Red;
+            this.txt_TongDtNgay.Location = new System.Drawing.Point(569, 735);
+            this.txt_TongDtNgay.Name = "txt_TongDtNgay";
+            this.txt_TongDtNgay.Size = new System.Drawing.Size(57, 20);
+            this.txt_TongDtNgay.TabIndex = 46;
+            this.txt_TongDtNgay.Text = "label3";
             // 
             // label6
             // 
@@ -156,48 +173,55 @@
             this.pictureBox9.TabIndex = 42;
             this.pictureBox9.TabStop = false;
             // 
-            // dtp_NgayKetThuc
-            // 
-            this.dtp_NgayKetThuc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_NgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_NgayKetThuc.Location = new System.Drawing.Point(402, 204);
-            this.dtp_NgayKetThuc.Name = "dtp_NgayKetThuc";
-            this.dtp_NgayKetThuc.Size = new System.Drawing.Size(101, 20);
-            this.dtp_NgayKetThuc.TabIndex = 40;
-            // 
-            // dtp_NgayBatDau
-            // 
-            this.dtp_NgayBatDau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_NgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_NgayBatDau.Location = new System.Drawing.Point(160, 204);
-            this.dtp_NgayBatDau.Name = "dtp_NgayBatDau";
-            this.dtp_NgayBatDau.Size = new System.Drawing.Size(96, 20);
-            this.dtp_NgayBatDau.TabIndex = 41;
-            // 
-            // txt_TongDtNgay
-            // 
-            this.txt_TongDtNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_TongDtNgay.Location = new System.Drawing.Point(570, 732);
-            this.txt_TongDtNgay.Name = "txt_TongDtNgay";
-            this.txt_TongDtNgay.Size = new System.Drawing.Size(141, 20);
-            this.txt_TongDtNgay.TabIndex = 39;
-            // 
             // dgv_DTNgay
             // 
             this.dgv_DTNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_DTNgay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DTNgay.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_DTNgay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DTNgay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DTNgay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHoaDon,
+            this.TenTaiKhoan,
+            this.NgayMua,
+            this.TongTien});
             this.dgv_DTNgay.Location = new System.Drawing.Point(79, 270);
             this.dgv_DTNgay.Name = "dgv_DTNgay";
+            this.dgv_DTNgay.ReadOnly = true;
+            this.dgv_DTNgay.RowHeadersVisible = false;
+            this.dgv_DTNgay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DTNgay.Size = new System.Drawing.Size(635, 435);
             this.dgv_DTNgay.TabIndex = 38;
+            // 
+            // MaHoaDon
+            // 
+            this.MaHoaDon.DataPropertyName = "MaHoaDon";
+            this.MaHoaDon.HeaderText = "Mã Hóa Đơn";
+            this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.ReadOnly = true;
+            // 
+            // TenTaiKhoan
+            // 
+            this.TenTaiKhoan.DataPropertyName = "TenTaiKhoan";
+            this.TenTaiKhoan.HeaderText = "Tài Khoản Lập";
+            this.TenTaiKhoan.Name = "TenTaiKhoan";
+            this.TenTaiKhoan.ReadOnly = true;
+            // 
+            // NgayMua
+            // 
+            this.NgayMua.DataPropertyName = "NgayMua";
+            this.NgayMua.HeaderText = "Ngày Lập";
+            this.NgayMua.Name = "NgayMua";
+            this.NgayMua.ReadOnly = true;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng Tiền";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
             // 
             // btn_ReportNgay
             // 
@@ -208,7 +232,7 @@
             this.btn_ReportNgay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_ReportNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ReportNgay.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportNgay.Image")));
-            this.btn_ReportNgay.Location = new System.Drawing.Point(637, 186);
+            this.btn_ReportNgay.Location = new System.Drawing.Point(706, 191);
             this.btn_ReportNgay.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ReportNgay.Name = "btn_ReportNgay";
             this.btn_ReportNgay.Size = new System.Drawing.Size(74, 38);
@@ -217,6 +241,7 @@
             this.btn_ReportNgay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_ReportNgay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ReportNgay.UseVisualStyleBackColor = false;
+            this.btn_ReportNgay.Click += new System.EventHandler(this.btn_ReportNgay_Click);
             // 
             // label7
             // 
@@ -225,7 +250,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(336, 202);
+            this.label7.Location = new System.Drawing.Point(322, 202);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 75);
             this.label7.TabIndex = 33;
@@ -253,15 +278,16 @@
             this.btn_ThongKeDTNgay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_ThongKeDTNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThongKeDTNgay.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThongKeDTNgay.Image")));
-            this.btn_ThongKeDTNgay.Location = new System.Drawing.Point(534, 186);
+            this.btn_ThongKeDTNgay.Location = new System.Drawing.Point(604, 191);
             this.btn_ThongKeDTNgay.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ThongKeDTNgay.Name = "btn_ThongKeDTNgay";
-            this.btn_ThongKeDTNgay.Size = new System.Drawing.Size(77, 38);
+            this.btn_ThongKeDTNgay.Size = new System.Drawing.Size(87, 38);
             this.btn_ThongKeDTNgay.TabIndex = 36;
             this.btn_ThongKeDTNgay.Text = "Thống kê";
             this.btn_ThongKeDTNgay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_ThongKeDTNgay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ThongKeDTNgay.UseVisualStyleBackColor = false;
+            this.btn_ThongKeDTNgay.Click += new System.EventHandler(this.btn_ThongKeDTNgay_Click);
             // 
             // label9
             // 
@@ -270,7 +296,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(74, 202);
+            this.label9.Location = new System.Drawing.Point(6, 202);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 50);
             this.label9.TabIndex = 35;
@@ -466,6 +492,40 @@
             this.panel_TheoNgay.Size = new System.Drawing.Size(800, 811);
             this.panel_TheoNgay.TabIndex = 0;
             // 
+            // dtpTu
+            // 
+            this.dtpTu.Checked = true;
+            this.dtpTu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpTu.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpTu.Location = new System.Drawing.Point(92, 191);
+            this.dtpTu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTu.Name = "dtpTu";
+            this.dtpTu.Size = new System.Drawing.Size(225, 36);
+            this.dtpTu.TabIndex = 47;
+            this.dtpTu.Value = new System.DateTime(2022, 11, 17, 11, 41, 3, 727);
+            // 
+            // dtpDen
+            // 
+            this.dtpDen.Checked = true;
+            this.dtpDen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpDen.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDen.Location = new System.Drawing.Point(377, 191);
+            this.dtpDen.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDen.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDen.Name = "dtpDen";
+            this.dtpDen.Size = new System.Drawing.Size(222, 36);
+            this.dtpDen.TabIndex = 48;
+            this.dtpDen.Value = new System.DateTime(2022, 11, 17, 11, 41, 14, 844);
+            // 
+            // reportViewerDoanhThu
+            // 
+            this.reportViewerDoanhThu.Location = new System.Drawing.Point(0, 234);
+            this.reportViewerDoanhThu.Name = "reportViewerDoanhThu";
+            this.reportViewerDoanhThu.ServerReport.BearerToken = null;
+            this.reportViewerDoanhThu.Size = new System.Drawing.Size(789, 548);
+            this.reportViewerDoanhThu.TabIndex = 49;
+            // 
             // FormDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,9 +564,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.DateTimePicker dtp_NgayKetThuc;
-        private System.Windows.Forms.DateTimePicker dtp_NgayBatDau;
-        private System.Windows.Forms.TextBox txt_TongDtNgay;
         private System.Windows.Forms.DataGridView dgv_DTNgay;
         private System.Windows.Forms.Button btn_ReportNgay;
         private System.Windows.Forms.Label label7;
@@ -526,5 +583,13 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel_TheoNgay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTaiKhoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
+        private System.Windows.Forms.Label txt_TongDtNgay;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDen;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpTu;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerDoanhThu;
     }
 }

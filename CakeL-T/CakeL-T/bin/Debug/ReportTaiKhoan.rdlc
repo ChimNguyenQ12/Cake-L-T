@@ -641,7 +641,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Người lập báo cáo:</Value>
+                    <Value>Người lập hóa đơn:</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -654,7 +654,7 @@
             <Top>2.02604in</Top>
             <Left>0.23244in</Left>
             <Height>0.25in</Height>
-            <Width>1.32743in</Width>
+            <Width>1.44548in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
