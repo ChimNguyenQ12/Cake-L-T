@@ -50,7 +50,13 @@
             this.btn_ThongKeDTNgay = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.reportViewerThang = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.txtTotalMonth = new System.Windows.Forms.Label();
             this.dgvThang = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Thang = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_ReportDtThang = new System.Windows.Forms.Button();
@@ -61,12 +67,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel_TheoNgay = new System.Windows.Forms.Panel();
-            this.txtTotalMonth = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reportViewerThang = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -363,6 +363,25 @@
             this.tabPage2.Text = "Doanh Thu Theo Tháng";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // reportViewerThang
+            // 
+            this.reportViewerThang.Location = new System.Drawing.Point(0, 281);
+            this.reportViewerThang.Name = "reportViewerThang";
+            this.reportViewerThang.ServerReport.BearerToken = null;
+            this.reportViewerThang.Size = new System.Drawing.Size(789, 502);
+            this.reportViewerThang.TabIndex = 48;
+            // 
+            // txtTotalMonth
+            // 
+            this.txtTotalMonth.AutoSize = true;
+            this.txtTotalMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalMonth.ForeColor = System.Drawing.Color.Red;
+            this.txtTotalMonth.Location = new System.Drawing.Point(568, 706);
+            this.txtTotalMonth.Name = "txtTotalMonth";
+            this.txtTotalMonth.Size = new System.Drawing.Size(57, 20);
+            this.txtTotalMonth.TabIndex = 47;
+            this.txtTotalMonth.Text = "label3";
+            // 
             // dgvThang
             // 
             this.dgvThang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -384,6 +403,34 @@
             this.dgvThang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThang.Size = new System.Drawing.Size(692, 371);
             this.dgvThang.TabIndex = 44;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaHoaDon";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Hóa Đơn";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // TenTK
+            // 
+            this.TenTK.DataPropertyName = "TenTaiKhoan";
+            this.TenTK.HeaderText = "Tài Khoản Lập";
+            this.TenTK.Name = "TenTK";
+            this.TenTK.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NgayMua";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày Lập";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "TongTien";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tổng Tiền";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // txt_Thang
             // 
@@ -408,6 +455,7 @@
             this.txt_Thang.SelectedText = "";
             this.txt_Thang.Size = new System.Drawing.Size(69, 31);
             this.txt_Thang.TabIndex = 43;
+            this.txt_Thang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Thang_KeyPress);
             // 
             // label1
             // 
@@ -534,53 +582,6 @@
             this.panel_TheoNgay.Name = "panel_TheoNgay";
             this.panel_TheoNgay.Size = new System.Drawing.Size(800, 811);
             this.panel_TheoNgay.TabIndex = 0;
-            // 
-            // txtTotalMonth
-            // 
-            this.txtTotalMonth.AutoSize = true;
-            this.txtTotalMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalMonth.ForeColor = System.Drawing.Color.Red;
-            this.txtTotalMonth.Location = new System.Drawing.Point(568, 706);
-            this.txtTotalMonth.Name = "txtTotalMonth";
-            this.txtTotalMonth.Size = new System.Drawing.Size(57, 20);
-            this.txtTotalMonth.TabIndex = 47;
-            this.txtTotalMonth.Text = "label3";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaHoaDon";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Hóa Đơn";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // TenTK
-            // 
-            this.TenTK.DataPropertyName = "TenTaiKhoan";
-            this.TenTK.HeaderText = "Tài Khoản Lập";
-            this.TenTK.Name = "TenTK";
-            this.TenTK.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "NgayMua";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày Lập";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "TongTien";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Tổng Tiền";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // reportViewerThang
-            // 
-            this.reportViewerThang.Location = new System.Drawing.Point(0, 281);
-            this.reportViewerThang.Name = "reportViewerThang";
-            this.reportViewerThang.ServerReport.BearerToken = null;
-            this.reportViewerThang.Size = new System.Drawing.Size(789, 502);
-            this.reportViewerThang.TabIndex = 48;
             // 
             // FormDoanhThu
             // 

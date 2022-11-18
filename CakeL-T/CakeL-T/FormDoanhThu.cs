@@ -203,5 +203,23 @@ namespace CakeL_T
             reportViewerThang.LocalReport.DataSources.Add(source);
             this.reportViewerThang.RefreshReport();
         }
+
+        private void txt_Thang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != (char)(Keys.Back)))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    if (txt_Thang.Text.Length > 1)
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+        }
     }
 }
