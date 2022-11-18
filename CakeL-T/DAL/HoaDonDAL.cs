@@ -16,7 +16,7 @@ namespace DAL
             List<HoaDon> listHoadon = new List<HoaDon>();
             using (CakeEntities cakeEntities = new CakeEntities())
             {
-                var tbHoaDon = cakeEntities.HoaDons.ToList();
+                var tbHoaDon = cakeEntities.HoaDons.ToList().Where(x => x.TrangThai == true);
                 foreach (var i in tbHoaDon)
                 {
 
