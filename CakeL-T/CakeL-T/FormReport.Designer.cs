@@ -41,6 +41,7 @@
             this.dtp_HD = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.reportViewerNgay = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewerSanPham = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewerLoaiSanPham = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // reportViewerNhanVien
@@ -230,11 +231,20 @@
             this.reportViewerSanPham.Size = new System.Drawing.Size(960, 454);
             this.reportViewerSanPham.TabIndex = 7;
             // 
+            // reportViewerLoaiSanPham
+            // 
+            this.reportViewerLoaiSanPham.Location = new System.Drawing.Point(2, 302);
+            this.reportViewerLoaiSanPham.Name = "reportViewerLoaiSanPham";
+            this.reportViewerLoaiSanPham.ServerReport.BearerToken = null;
+            this.reportViewerLoaiSanPham.Size = new System.Drawing.Size(960, 454);
+            this.reportViewerLoaiSanPham.TabIndex = 8;
+            // 
             // FormReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 756);
+            this.Controls.Add(this.reportViewerLoaiSanPham);
             this.Controls.Add(this.reportViewerSanPham);
             this.Controls.Add(this.reportViewerNgay);
             this.Controls.Add(this.dtp_HD);
@@ -273,5 +283,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_HD;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerNgay;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerSanPham;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerLoaiSanPham;
     }
 }

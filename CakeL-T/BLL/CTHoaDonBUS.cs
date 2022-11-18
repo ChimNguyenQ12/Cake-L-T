@@ -16,10 +16,8 @@ namespace BLL
         {
             try
             {
-                List<ChiTietHD> chiTietHDs = new List<ChiTietHD>();
                 CTHoaDonDAL ctHoaDonDAL = new CTHoaDonDAL();
-                chiTietHDs = ctHoaDonDAL.GetAllCTHD();
-                return chiTietHDs;
+                return ctHoaDonDAL.GetAllCTHD(); ;
             }
             catch (Exception)
             {

@@ -12,59 +12,32 @@ namespace DAL
 
         public List<ChiTietHD> GetAllCTHD()
         {
-            List<ChiTietHD> listCTHDs = new List<ChiTietHD>();
-
-            var tbCTHD = cakeEntities.ChiTietHDs.Where(x => x.TrangThai != false).ToList();
-            foreach (var i in tbCTHD)
-            {
-                ChiTietHD chiTietHD = new ChiTietHD();
-                chiTietHD.TrangThai = i.TrangThai;
-                chiTietHD.MaBanh = i.MaBanh;
-                chiTietHD.MaHoaDon = i.MaHoaDon;
-                chiTietHD.SoLuong = i.SoLuong;
-                chiTietHD.GiaTien = i.GiaTien;
-                chiTietHD.MaCTHoaDon = i.MaCTHoaDon;
-
-                listCTHDs.Add(chiTietHD);
-            }
-           
-            return listCTHDs;
+            return cakeEntities.ChiTietHDs
+                .Where(x => x.TrangThai != false)
+                .ToList();
         }
 
         public List<ChiTietHD> GetCTHoaDon()
         {
             List<ChiTietHD> listCTHoaDon = new List<ChiTietHD>();
 
-            var tbCTHoaDon = cakeEntities.ChiTietHDs.ToList();
-            foreach (var i in tbCTHoaDon)
-            {
-                ChiTietHD ct = new ChiTietHD();
-                
-                    ct.MaCTHoaDon = i.MaCTHoaDon;
-                    ct.MaBanh = i.MaBanh;
-                    ct.MaHoaDon = i.MaHoaDon;
-                    ct.SoLuong = i.SoLuong;
-                    ct.GiaTien = i.GiaTien;
-                    ct.TrangThai = i.TrangThai;
-                    listCTHoaDon.Add(ct);
-                
-            }
-            return listCTHoaDon;
+            return cakeEntities.ChiTietHDs.ToList();
         }
-        public string ThemCTHoaDon(int maBanh,int soLuong, int giaTien, bool trangthai)
+
+        public string ThemCTHoaDon(int maBanh, int soLuong, int giaTien, bool trangthai)
         {
             try
             {
                 using (CakeEntities cakeEntities = new CakeEntities())
                 {
-                   int maHd =  cakeEntities.HoaDons.Max(x => x.MaHoaDon);
+                    int maHd = cakeEntities.HoaDons.Max(x => x.MaHoaDon);
                     cakeEntities.ChiTietHDs.Add(new ChiTietHD()
                     {
                         MaBanh = maBanh,
-                        MaHoaDon= maHd, 
-                        SoLuong= soLuong,
-                        GiaTien= giaTien,
-                        TrangThai=trangthai
+                        MaHoaDon = maHd,
+                        SoLuong = soLuong,
+                        GiaTien = giaTien,
+                        TrangThai = trangthai
 
                     });
                     cakeEntities.SaveChanges();
@@ -93,9 +66,9 @@ namespace DAL
         public void DeleteCTHoaDonById(int maHD)
         {
             var ctHoaDon = cakeEntities.ChiTietHDs.Where(x => x.MaHoaDon == maHD).ToList();
-            foreach(var item in ctHoaDon)
+            foreach (var item in ctHoaDon)
             {
-                if(item.TrangThai == true)
+                if (item.TrangThai == true)
                 {
                     item.TrangThai = false;
                 }
