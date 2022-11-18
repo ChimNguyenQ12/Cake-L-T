@@ -49,21 +49,11 @@ namespace CakeL_T
             reportViewerCTHD.Visible = false;
             dgv_HoaDon.DataSource = hoadonBUS.GetHD();
 
-            for (int i = 0; i < dgv_HoaDon.Rows.Count; i++)
-            {
-                foreach (var item in adminBUS.GetAccounts())
-                {
-                    if (dgv_HoaDon.Rows[i].Cells["IdTaiKhoan"].Value.ToString() == item.Id.ToString())
-                    {
-                        dgv_HoaDon.Rows[i].Cells["TenTaiKhoan"].Value = item.TenTK.ToString();
-                    }
-                }
-            }
 
             dgv_HoaDon.Columns["TrangThai"].Visible = false;
             dgv_HoaDon.Columns["ChiTietHDs"].Visible = false;
+            dgv_HoaDon.Columns["TenTaiKhoan"].Visible = false;
             dgv_HoaDon.Columns["TaiKhoan"].Visible = false;
-            dgv_HoaDon.Columns["IdTaiKhoan"].Visible = false;
         }
 
         private void dgv_HoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -78,19 +68,24 @@ namespace CakeL_T
 
         private void btn_TimHD_Click(object sender, EventArgs e)
         {
-            try
+            if(txt_maNV.Text == "" && txt_maHD.Text == "")
             {
-                if(txt_maHD.Text != null)
-                {
-                   dgv_HoaDon.DataSource = hoadonBUS.GetHDByMaHD(int.Parse(txt_maHD.Text));
-
-                }
-                else if (txt_maNV.Text != null)
-                {
-                    dgv_HoaDon.DataSource = hoadonBUS.GetHDByMaHD(int.Parse(txt_maNV.Text));
-                }
+                return;
             }
-            catch { };
+            else if (txt_maHD.Text != "" && txt_maNV.Text != "")
+            {
+            int manv = int.Parse(txt_maNV.Text);
+            int mahd = int.Parse(txt_maHD.Text);
+                dgv_HoaDon.DataSource = hoadonBUS.SearchMulti(manv, mahd);
+            }
+            else if (txt_maNV.Text != "" && txt_maHD.Text == "")
+            {
+                dgv_HoaDon.DataSource = hoadonBUS.GetHDByMaNV(int.Parse(txt_maNV.Text));
+            }
+            else if(txt_maHD.Text != "" && txt_maNV.Text == "")
+            {
+                dgv_HoaDon.DataSource = hoadonBUS.GetHDByMaHD(int.Parse(txt_maHD.Text));
+            }
         }
         private void btn_XoaHD_Click(object sender, EventArgs e)
         {
@@ -119,13 +114,15 @@ namespace CakeL_T
             AdminBUS adminBUS = new AdminBUS();
             var accountCreateReport = adminBUS.GetAccounts().Where(x => x.LoaiTK == true).FirstOrDefault();
             var listInvoice = hoadonBUS.GetHD().ToList();
+            var total = listInvoice.Sum(x => x.TongTien);
             reportViewerHoaDon.LocalReport.ReportPath = "ReportHoaDon.rdlc";
             var source = new ReportDataSource("DataSetHoaDon", listInvoice);
             reportViewerHoaDon.LocalReport.DataSources.Clear();
             //Add param
-            ReportParameter[] parameter = new ReportParameter[2];
+            ReportParameter[] parameter = new ReportParameter[3];
             parameter[0] = new ReportParameter("rpName", accountCreateReport.HoTen);
             parameter[1] = new ReportParameter("rpDate", DateTime.Now.ToString());
+            parameter[2] = new ReportParameter("rpTotal", total.ToString() + "VNĐ");
             this.reportViewerHoaDon.LocalReport.SetParameters(parameter);
 
             reportViewerHoaDon.LocalReport.DataSources.Add(source);

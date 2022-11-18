@@ -84,6 +84,17 @@ namespace DAL
             return hoaDon;
 
         }
+
+        public List<HoaDon> SearchMulti(int maNV, int maHD)
+        {
+            List<HoaDon> hoaDon = new List<HoaDon>();
+                hoaDon = cakeEntities.HoaDons.Where(x => x.TrangThai == true)
+                                               .Where(x => x.MaHoaDon == maHD)
+                                               .Where(x => maNV == maNV)
+                                                .ToList();            
+            return hoaDon;
+
+        }
         public void DeleteHoaDonById(int maHD)
         {
             var hoaDon = cakeEntities.HoaDons.Where(x => x.MaHoaDon == maHD).FirstOrDefault();

@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USHoaDonAdmin));
             this.dgv_HoaDon = new System.Windows.Forms.DataGridView();
-            this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_lamMoi = new System.Windows.Forms.Button();
             this.txt_maNV = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,6 +52,10 @@
             this.reportViewerHoaDon = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnReportCTHD = new System.Windows.Forms.Button();
             this.reportViewerCTHD = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HoaDon)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ctHoaDon)).BeginInit();
@@ -72,7 +72,7 @@
             this.dgv_HoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHoaDon,
-            this.TenTaiKhoan,
+            this.IdTaiKhoan,
             this.NgayMua,
             this.TongTien});
             this.dgv_HoaDon.Location = new System.Drawing.Point(0, 180);
@@ -84,34 +84,6 @@
             this.dgv_HoaDon.TabIndex = 16;
             this.dgv_HoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
             this.dgv_HoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
-            // 
-            // MaHoaDon
-            // 
-            this.MaHoaDon.DataPropertyName = "MaHoaDon";
-            this.MaHoaDon.HeaderText = "Mã Hóa Đơn";
-            this.MaHoaDon.Name = "MaHoaDon";
-            this.MaHoaDon.ReadOnly = true;
-            // 
-            // TenTaiKhoan
-            // 
-            this.TenTaiKhoan.DataPropertyName = "TenTaiKhoan";
-            this.TenTaiKhoan.HeaderText = "Tài Khoản Lập";
-            this.TenTaiKhoan.Name = "TenTaiKhoan";
-            this.TenTaiKhoan.ReadOnly = true;
-            // 
-            // NgayMua
-            // 
-            this.NgayMua.DataPropertyName = "NgayMua";
-            this.NgayMua.HeaderText = "Ngày Lập";
-            this.NgayMua.Name = "NgayMua";
-            this.NgayMua.ReadOnly = true;
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng Tiền";
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -388,6 +360,34 @@
             this.reportViewerCTHD.Size = new System.Drawing.Size(695, 787);
             this.reportViewerCTHD.TabIndex = 17;
             // 
+            // MaHoaDon
+            // 
+            this.MaHoaDon.DataPropertyName = "MaHoaDon";
+            this.MaHoaDon.HeaderText = "Mã Hóa Đơn";
+            this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.ReadOnly = true;
+            // 
+            // IdTaiKhoan
+            // 
+            this.IdTaiKhoan.DataPropertyName = "IdTaiKhoan";
+            this.IdTaiKhoan.HeaderText = "Mã Nhân Viên";
+            this.IdTaiKhoan.Name = "IdTaiKhoan";
+            this.IdTaiKhoan.ReadOnly = true;
+            // 
+            // NgayMua
+            // 
+            this.NgayMua.DataPropertyName = "NgayMua";
+            this.NgayMua.HeaderText = "Ngày Lập";
+            this.NgayMua.Name = "NgayMua";
+            this.NgayMua.ReadOnly = true;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng Tiền";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            // 
             // USHoaDonAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,10 +435,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_maNV;
         private System.Windows.Forms.Button btn_lamMoi;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerHoaDon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTaiKhoan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMua;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaCTHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDonn;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaBanh;
@@ -446,5 +442,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaTien;
         private System.Windows.Forms.Button btnReportCTHD;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerCTHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdTaiKhoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
     }
 }

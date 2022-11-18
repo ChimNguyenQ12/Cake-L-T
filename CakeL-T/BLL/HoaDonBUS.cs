@@ -70,5 +70,20 @@ namespace BLL
             }
         }
 
+        public List<HoaDon> SearchMulti(int maNV, int maHD)
+        {
+            try
+            {
+                List<HoaDon> hoadon = new List<HoaDon>();
+                HoaDonDAL hoaDonDAL = new HoaDonDAL();
+                var seachHD = hoaDonDAL.SearchMulti(maNV, maHD);
+                return seachHD;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
     }
 }
