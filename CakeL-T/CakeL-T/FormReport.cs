@@ -189,7 +189,12 @@ namespace CakeL_T
                     .ToList();
 
                 var listUnit = listInvoiceDetails.Select(x => x.MaHoaDon).Distinct().ToList();
-
+                // Cách 2
+                //var listUnit = listInvoiceDetails
+                //    .GroupBy(x => x.MaHoaDon)
+                //    .Select(x => new { MaHoaDon = x.Key, HoaDonItem = x.First() })
+                //    .Select(x => x.HoaDonItem)
+                //    .ToList();
                 List<HoaDon> listHD = new List<HoaDon>();
                   foreach (var item in listUnit)
                 {

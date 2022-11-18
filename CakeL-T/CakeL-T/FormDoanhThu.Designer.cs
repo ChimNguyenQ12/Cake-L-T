@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDoanhThu));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.reportViewerNgay = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dtpDen = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpTu = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txt_TongDtNgay = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -47,10 +50,9 @@
             this.btn_ThongKeDTNgay = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgvThang = new System.Windows.Forms.DataGridView();
             this.txt_Thang = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_TongDTThang = new System.Windows.Forms.TextBox();
-            this.dgv_DTThang = new System.Windows.Forms.DataGridView();
             this.btn_ReportDtThang = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_ThongKeDTThang = new System.Windows.Forms.Button();
@@ -59,9 +61,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel_TheoNgay = new System.Windows.Forms.Panel();
-            this.dtpTu = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtpDen = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.reportViewerDoanhThu = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.txtTotalMonth = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reportViewerThang = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -69,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DTNgay)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DTThang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -88,7 +93,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.reportViewerDoanhThu);
+            this.tabPage1.Controls.Add(this.reportViewerNgay);
             this.tabPage1.Controls.Add(this.dtpDen);
             this.tabPage1.Controls.Add(this.dtpTu);
             this.tabPage1.Controls.Add(this.txt_TongDtNgay);
@@ -109,6 +114,40 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Doanh Thu Theo Ngày";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // reportViewerNgay
+            // 
+            this.reportViewerNgay.Location = new System.Drawing.Point(0, 234);
+            this.reportViewerNgay.Name = "reportViewerNgay";
+            this.reportViewerNgay.ServerReport.BearerToken = null;
+            this.reportViewerNgay.Size = new System.Drawing.Size(789, 548);
+            this.reportViewerNgay.TabIndex = 49;
+            // 
+            // dtpDen
+            // 
+            this.dtpDen.Checked = true;
+            this.dtpDen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpDen.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDen.Location = new System.Drawing.Point(377, 191);
+            this.dtpDen.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDen.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDen.Name = "dtpDen";
+            this.dtpDen.Size = new System.Drawing.Size(222, 36);
+            this.dtpDen.TabIndex = 48;
+            this.dtpDen.Value = new System.DateTime(2022, 11, 17, 11, 41, 14, 844);
+            // 
+            // dtpTu
+            // 
+            this.dtpTu.Checked = true;
+            this.dtpTu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpTu.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpTu.Location = new System.Drawing.Point(92, 191);
+            this.dtpTu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTu.Name = "dtpTu";
+            this.dtpTu.Size = new System.Drawing.Size(225, 36);
+            this.dtpTu.TabIndex = 47;
+            this.dtpTu.Value = new System.DateTime(2022, 11, 17, 11, 41, 3, 727);
             // 
             // txt_TongDtNgay
             // 
@@ -304,10 +343,11 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.reportViewerThang);
+            this.tabPage2.Controls.Add(this.txtTotalMonth);
+            this.tabPage2.Controls.Add(this.dgvThang);
             this.tabPage2.Controls.Add(this.txt_Thang);
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.txt_TongDTThang);
-            this.tabPage2.Controls.Add(this.dgv_DTThang);
             this.tabPage2.Controls.Add(this.btn_ReportDtThang);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.btn_ThongKeDTThang);
@@ -322,6 +362,28 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Doanh Thu Theo Tháng";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgvThang
+            // 
+            this.dgvThang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvThang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThang.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvThang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvThang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.TenTK,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dgvThang.Location = new System.Drawing.Point(36, 298);
+            this.dgvThang.Name = "dgvThang";
+            this.dgvThang.ReadOnly = true;
+            this.dgvThang.RowHeadersVisible = false;
+            this.dgvThang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvThang.Size = new System.Drawing.Size(692, 371);
+            this.dgvThang.TabIndex = 44;
             // 
             // txt_Thang
             // 
@@ -360,27 +422,6 @@
             this.label1.TabIndex = 42;
             this.label1.Text = "Nhập Tháng Cần Thống Kê:";
             // 
-            // txt_TongDTThang
-            // 
-            this.txt_TongDTThang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_TongDTThang.Location = new System.Drawing.Point(568, 703);
-            this.txt_TongDTThang.Name = "txt_TongDTThang";
-            this.txt_TongDTThang.Size = new System.Drawing.Size(161, 20);
-            this.txt_TongDTThang.TabIndex = 41;
-            // 
-            // dgv_DTThang
-            // 
-            this.dgv_DTThang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_DTThang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DTThang.Location = new System.Drawing.Point(36, 297);
-            this.dgv_DTThang.Name = "dgv_DTThang";
-            this.dgv_DTThang.Size = new System.Drawing.Size(692, 377);
-            this.dgv_DTThang.TabIndex = 40;
-            // 
             // btn_ReportDtThang
             // 
             this.btn_ReportDtThang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -399,6 +440,7 @@
             this.btn_ReportDtThang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_ReportDtThang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ReportDtThang.UseVisualStyleBackColor = false;
+            this.btn_ReportDtThang.Click += new System.EventHandler(this.btn_ReportDtThang_Click);
             // 
             // label2
             // 
@@ -431,6 +473,7 @@
             this.btn_ThongKeDTThang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_ThongKeDTThang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ThongKeDTThang.UseVisualStyleBackColor = false;
+            this.btn_ThongKeDTThang.Click += new System.EventHandler(this.btn_ThongKeDTThang_Click);
             // 
             // label10
             // 
@@ -492,39 +535,52 @@
             this.panel_TheoNgay.Size = new System.Drawing.Size(800, 811);
             this.panel_TheoNgay.TabIndex = 0;
             // 
-            // dtpTu
+            // txtTotalMonth
             // 
-            this.dtpTu.Checked = true;
-            this.dtpTu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpTu.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpTu.Location = new System.Drawing.Point(92, 191);
-            this.dtpTu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpTu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpTu.Name = "dtpTu";
-            this.dtpTu.Size = new System.Drawing.Size(225, 36);
-            this.dtpTu.TabIndex = 47;
-            this.dtpTu.Value = new System.DateTime(2022, 11, 17, 11, 41, 3, 727);
+            this.txtTotalMonth.AutoSize = true;
+            this.txtTotalMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalMonth.ForeColor = System.Drawing.Color.Red;
+            this.txtTotalMonth.Location = new System.Drawing.Point(568, 706);
+            this.txtTotalMonth.Name = "txtTotalMonth";
+            this.txtTotalMonth.Size = new System.Drawing.Size(57, 20);
+            this.txtTotalMonth.TabIndex = 47;
+            this.txtTotalMonth.Text = "label3";
             // 
-            // dtpDen
+            // dataGridViewTextBoxColumn1
             // 
-            this.dtpDen.Checked = true;
-            this.dtpDen.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpDen.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpDen.Location = new System.Drawing.Point(377, 191);
-            this.dtpDen.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpDen.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpDen.Name = "dtpDen";
-            this.dtpDen.Size = new System.Drawing.Size(222, 36);
-            this.dtpDen.TabIndex = 48;
-            this.dtpDen.Value = new System.DateTime(2022, 11, 17, 11, 41, 14, 844);
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaHoaDon";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Hóa Đơn";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // reportViewerDoanhThu
+            // TenTK
             // 
-            this.reportViewerDoanhThu.Location = new System.Drawing.Point(0, 234);
-            this.reportViewerDoanhThu.Name = "reportViewerDoanhThu";
-            this.reportViewerDoanhThu.ServerReport.BearerToken = null;
-            this.reportViewerDoanhThu.Size = new System.Drawing.Size(789, 548);
-            this.reportViewerDoanhThu.TabIndex = 49;
+            this.TenTK.DataPropertyName = "TenTaiKhoan";
+            this.TenTK.HeaderText = "Tài Khoản Lập";
+            this.TenTK.Name = "TenTK";
+            this.TenTK.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NgayMua";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày Lập";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "TongTien";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tổng Tiền";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // reportViewerThang
+            // 
+            this.reportViewerThang.Location = new System.Drawing.Point(0, 281);
+            this.reportViewerThang.Name = "reportViewerThang";
+            this.reportViewerThang.ServerReport.BearerToken = null;
+            this.reportViewerThang.Size = new System.Drawing.Size(789, 502);
+            this.reportViewerThang.TabIndex = 48;
             // 
             // FormDoanhThu
             // 
@@ -547,7 +603,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DTNgay)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DTThang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -573,8 +629,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private Guna.UI2.WinForms.Guna2TextBox txt_Thang;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_TongDTThang;
-        private System.Windows.Forms.DataGridView dgv_DTThang;
         private System.Windows.Forms.Button btn_ReportDtThang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_ThongKeDTThang;
@@ -590,6 +644,13 @@
         private System.Windows.Forms.Label txt_TongDtNgay;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDen;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpTu;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewerDoanhThu;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerNgay;
+        private System.Windows.Forms.DataGridView dgvThang;
+        private System.Windows.Forms.Label txtTotalMonth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerThang;
     }
 }
