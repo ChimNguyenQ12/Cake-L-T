@@ -484,6 +484,7 @@
             this.dgv_HoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_HoaDon.Size = new System.Drawing.Size(394, 409);
             this.dgv_HoaDon.TabIndex = 0;
+            this.dgv_HoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
             this.dgv_HoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoaDon_CellContentClick);
             // 
             // pictureBox5

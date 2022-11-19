@@ -55,8 +55,10 @@ namespace DAL
             using (CakeEntities cakeEntities = new CakeEntities())
             {
                 var accountCurrent = cakeEntities.TaiKhoans.Where(x => x.Id == idTk).FirstOrDefault();
-                accountCurrent.MatKhau = newPass;
-                cakeEntities.SaveChanges();
+          
+                    accountCurrent.MatKhau = newPass;
+                    cakeEntities.SaveChanges();
+                
             }
         }
 

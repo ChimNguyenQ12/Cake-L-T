@@ -78,5 +78,10 @@ namespace CakeL_T
                 this.Hide();
             }
         }
+
+        private void FormCaiLaiMK_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

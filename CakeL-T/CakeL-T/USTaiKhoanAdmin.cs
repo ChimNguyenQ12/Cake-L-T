@@ -392,9 +392,15 @@ namespace CakeL_T
 
         private void btnAddImage_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            string Filepath = openFileDialog1.FileName;
-            pb_AvatarTK.Image = Image.FromFile(Filepath);
+            try
+            {
+                openFileDialog1.ShowDialog();
+                string Filepath = openFileDialog1.FileName;
+                pb_AvatarTK.Image = Image.FromFile(Filepath);
+            }catch(Exception ex)
+            {
+
+            }
         }
     }
 }

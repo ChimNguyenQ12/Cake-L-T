@@ -46,14 +46,17 @@ namespace CakeL_T
             USHoaDonStaff.ID = ID;
             USTaiKhoanStaff.ID = ID;
             lb_TenNV.Text = _tentk;
-            if (!panel_chinh.Controls.Contains(USTrangChuStaff.Instance))
+            try
             {
-                panel_chinh.Controls.Add(USTrangChuStaff.Instance);
-                USTrangChuStaff.Instance.Dock = DockStyle.Fill;
-                USTrangChuStaff.Instance.BringToFront();
-            }
-            else
-                USTrangChu.Instance.BringToFront();
+                if (!panel_chinh.Controls.Contains(USTrangChuStaff.Instance))
+                {
+                    panel_chinh.Controls.Add(USTrangChuStaff.Instance);
+                    USTrangChuStaff.Instance.Dock = DockStyle.Fill;
+                    USTrangChuStaff.Instance.BringToFront();
+                }
+                else
+                    USTrangChu.Instance.BringToFront();
+            }catch(Exception ex) { }
         }
 
         private void btn_HoaDon_Click(object sender, EventArgs e)

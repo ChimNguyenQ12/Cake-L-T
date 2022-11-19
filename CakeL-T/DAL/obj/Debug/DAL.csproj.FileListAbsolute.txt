@@ -139,3 +139,15 @@ D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\DAL\obj\Debug\DAL.csproj.CoreCompileInp
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\DAL\obj\Debug\DAL.dll
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\DAL\obj\Debug\DAL.pdb
+D:\DoAnWinform\CakeL-T\DAL\bin\Debug\DAL.dll.config
+D:\DoAnWinform\CakeL-T\DAL\bin\Debug\DAL.dll
+D:\DoAnWinform\CakeL-T\DAL\bin\Debug\DAL.pdb
+D:\DoAnWinform\CakeL-T\DAL\bin\Debug\EntityFramework.dll
+D:\DoAnWinform\CakeL-T\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\DoAnWinform\CakeL-T\DAL\bin\Debug\EntityFramework.xml
+D:\DoAnWinform\CakeL-T\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\DoAnWinform\CakeL-T\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\DoAnWinform\CakeL-T\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\DoAnWinform\CakeL-T\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\DoAnWinform\CakeL-T\DAL\obj\Debug\DAL.dll
+D:\DoAnWinform\CakeL-T\DAL\obj\Debug\DAL.pdb

@@ -73,7 +73,7 @@ namespace CakeL_T
             if (MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Cake L&T", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
                 e.Cancel = true;
-            }
+            }           
         }
 
         private void btn_TrangChu_Click(object sender, EventArgs e)
@@ -102,14 +102,17 @@ namespace CakeL_T
 
         private void FormHomeAdmin_Load(object sender, EventArgs e)
         {
-            if (!panel_chinh.Controls.Contains(USTrangChu.Instance))
+            try
             {
-                panel_chinh.Controls.Add(USTrangChu.Instance);
-                USTrangChu.Instance.Dock = DockStyle.Fill;
-                USTrangChu.Instance.BringToFront();
-            }
-            else
-                USTrangChu.Instance.BringToFront();
+                if (!panel_chinh.Controls.Contains(USTrangChu.Instance))
+                {
+                    panel_chinh.Controls.Add(USTrangChu.Instance);
+                    USTrangChu.Instance.Dock = DockStyle.Fill;
+                    USTrangChu.Instance.BringToFront();
+                }
+                else
+                    USTrangChu.Instance.BringToFront();
+            }catch(Exception ex) { }
         }
 
         private void btn_CaiDat_Click(object sender, EventArgs e)

@@ -1,29 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="CakeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="CakeEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Banhs" EntityType="CakeModel.Banh" />
-    <EntitySet Name="ChiTietHDs" EntityType="CakeModel.ChiTietHD" />
-    <EntitySet Name="HoaDons" EntityType="CakeModel.HoaDon" />
-    <EntitySet Name="LoaiBanhs" EntityType="CakeModel.LoaiBanh" />
-    <EntitySet Name="sysdiagrams" EntityType="CakeModel.sysdiagram" />
-    <EntitySet Name="TaiKhoans" EntityType="CakeModel.TaiKhoan" />
-    <AssociationSet Name="FK_Banh_LoaiBanh" Association="CakeModel.FK_Banh_LoaiBanh">
-      <End Role="LoaiBanh" EntitySet="LoaiBanhs" />
-      <End Role="Banh" EntitySet="Banhs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ChiTietHD_Banh" Association="CakeModel.FK_ChiTietHD_Banh">
-      <End Role="Banh" EntitySet="Banhs" />
-      <End Role="ChiTietHD" EntitySet="ChiTietHDs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ChiTietHD_HoaDon" Association="CakeModel.FK_ChiTietHD_HoaDon">
-      <End Role="HoaDon" EntitySet="HoaDons" />
-      <End Role="ChiTietHD" EntitySet="ChiTietHDs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HoaDon_TaiKhoan" Association="CakeModel.FK_HoaDon_TaiKhoan">
-      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-      <End Role="HoaDon" EntitySet="HoaDons" />
-    </AssociationSet>
-  </EntityContainer>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Banh">
     <Key>
       <PropertyRef Name="MaBanh" />
@@ -37,8 +13,8 @@
     <Property Name="TrangThaiXoa" Type="Boolean" />
     <Property Name="TenLoaiBanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TenTrangThaiBanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="LoaiBanh1" Relationship="CakeModel.FK_Banh_LoaiBanh" FromRole="Banh" ToRole="LoaiBanh" />
-    <NavigationProperty Name="ChiTietHDs" Relationship="CakeModel.FK_ChiTietHD_Banh" FromRole="Banh" ToRole="ChiTietHD" />
+    <NavigationProperty Name="LoaiBanh1" Relationship="Self.FK_Banh_LoaiBanh" FromRole="Banh" ToRole="LoaiBanh" />
+    <NavigationProperty Name="ChiTietHDs" Relationship="Self.FK_ChiTietHD_Banh" FromRole="Banh" ToRole="ChiTietHD" />
   </EntityType>
   <EntityType Name="ChiTietHD">
     <Key>
@@ -50,8 +26,8 @@
     <Property Name="SoLuong" Type="Int32" />
     <Property Name="GiaTien" Type="Int32" />
     <Property Name="TrangThai" Type="Boolean" />
-    <NavigationProperty Name="Banh" Relationship="CakeModel.FK_ChiTietHD_Banh" FromRole="ChiTietHD" ToRole="Banh" />
-    <NavigationProperty Name="HoaDon" Relationship="CakeModel.FK_ChiTietHD_HoaDon" FromRole="ChiTietHD" ToRole="HoaDon" />
+    <NavigationProperty Name="Banh" Relationship="Self.FK_ChiTietHD_Banh" FromRole="ChiTietHD" ToRole="Banh" />
+    <NavigationProperty Name="HoaDon" Relationship="Self.FK_ChiTietHD_HoaDon" FromRole="ChiTietHD" ToRole="HoaDon" />
   </EntityType>
   <EntityType Name="HoaDon">
     <Key>
@@ -63,8 +39,8 @@
     <Property Name="TongTien" Type="Int32" />
     <Property Name="TrangThai" Type="Boolean" />
     <Property Name="TenTaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="ChiTietHDs" Relationship="CakeModel.FK_ChiTietHD_HoaDon" FromRole="HoaDon" ToRole="ChiTietHD" />
-    <NavigationProperty Name="TaiKhoan" Relationship="CakeModel.FK_HoaDon_TaiKhoan" FromRole="HoaDon" ToRole="TaiKhoan" />
+    <NavigationProperty Name="ChiTietHDs" Relationship="Self.FK_ChiTietHD_HoaDon" FromRole="HoaDon" ToRole="ChiTietHD" />
+    <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_HoaDon_TaiKhoan" FromRole="HoaDon" ToRole="TaiKhoan" />
   </EntityType>
   <EntityType Name="LoaiBanh">
     <Key>
@@ -73,17 +49,7 @@
     <Property Name="MaLoai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TenLoai" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="TrangThaiXoa" Type="Boolean" />
-    <NavigationProperty Name="Banhs" Relationship="CakeModel.FK_Banh_LoaiBanh" FromRole="LoaiBanh" ToRole="Banh" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Banhs" Relationship="Self.FK_Banh_LoaiBanh" FromRole="LoaiBanh" ToRole="Banh" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -100,11 +66,11 @@
     <Property Name="TrangThaiXoa" Type="Boolean" Nullable="false" />
     <Property Name="TenLoaiTrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <NavigationProperty Name="HoaDons" Relationship="CakeModel.FK_HoaDon_TaiKhoan" FromRole="TaiKhoan" ToRole="HoaDon" />
+    <NavigationProperty Name="HoaDons" Relationship="Self.FK_HoaDon_TaiKhoan" FromRole="TaiKhoan" ToRole="HoaDon" />
   </EntityType>
   <Association Name="FK_Banh_LoaiBanh">
-    <End Type="CakeModel.LoaiBanh" Role="LoaiBanh" Multiplicity="0..1" />
-    <End Type="CakeModel.Banh" Role="Banh" Multiplicity="*" />
+    <End Role="LoaiBanh" Type="Self.LoaiBanh" Multiplicity="0..1" />
+    <End Role="Banh" Type="Self.Banh" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoaiBanh">
         <PropertyRef Name="MaLoai" />
@@ -115,8 +81,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ChiTietHD_Banh">
-    <End Type="CakeModel.Banh" Role="Banh" Multiplicity="0..1" />
-    <End Type="CakeModel.ChiTietHD" Role="ChiTietHD" Multiplicity="*" />
+    <End Role="Banh" Type="Self.Banh" Multiplicity="0..1" />
+    <End Role="ChiTietHD" Type="Self.ChiTietHD" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Banh">
         <PropertyRef Name="MaBanh" />
@@ -127,8 +93,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ChiTietHD_HoaDon">
-    <End Type="CakeModel.HoaDon" Role="HoaDon" Multiplicity="0..1" />
-    <End Type="CakeModel.ChiTietHD" Role="ChiTietHD" Multiplicity="*" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="0..1" />
+    <End Role="ChiTietHD" Type="Self.ChiTietHD" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="HoaDon">
         <PropertyRef Name="MaHoaDon" />
@@ -139,8 +105,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_HoaDon_TaiKhoan">
-    <End Type="CakeModel.TaiKhoan" Role="TaiKhoan" Multiplicity="0..1" />
-    <End Type="CakeModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TaiKhoan">
         <PropertyRef Name="Id" />
@@ -150,4 +116,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityContainer Name="CakeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Banhs" EntityType="Self.Banh" />
+    <EntitySet Name="ChiTietHDs" EntityType="Self.ChiTietHD" />
+    <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
+    <EntitySet Name="LoaiBanhs" EntityType="Self.LoaiBanh" />
+    <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+    <AssociationSet Name="FK_Banh_LoaiBanh" Association="Self.FK_Banh_LoaiBanh">
+      <End Role="LoaiBanh" EntitySet="LoaiBanhs" />
+      <End Role="Banh" EntitySet="Banhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietHD_Banh" Association="Self.FK_ChiTietHD_Banh">
+      <End Role="Banh" EntitySet="Banhs" />
+      <End Role="ChiTietHD" EntitySet="ChiTietHDs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietHD_HoaDon" Association="Self.FK_ChiTietHD_HoaDon">
+      <End Role="HoaDon" EntitySet="HoaDons" />
+      <End Role="ChiTietHD" EntitySet="ChiTietHDs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDon_TaiKhoan" Association="Self.FK_HoaDon_TaiKhoan">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

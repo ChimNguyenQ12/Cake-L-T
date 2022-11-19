@@ -128,6 +128,7 @@
             this.label3.Size = new System.Drawing.Size(211, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nhập Mật Khẩu Hiện Tại";
+            this.label3.Visible = false;
             // 
             // txt_mk_ht
             // 
@@ -149,6 +150,7 @@
             this.txt_mk_ht.SelectedText = "";
             this.txt_mk_ht.Size = new System.Drawing.Size(257, 47);
             this.txt_mk_ht.TabIndex = 1;
+            this.txt_mk_ht.Visible = false;
             // 
             // btn_eyes
             // 
@@ -164,6 +166,7 @@
             this.btn_eyes.Name = "btn_eyes";
             this.btn_eyes.Size = new System.Drawing.Size(31, 41);
             this.btn_eyes.TabIndex = 11;
+            this.btn_eyes.Visible = false;
             this.btn_eyes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_eyes_MouseDown);
             this.btn_eyes.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_eyes_MouseUp);
             // 
@@ -221,6 +224,7 @@
             this.Name = "FormCaiLaiMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCaiLaiMK";
+            this.Load += new System.EventHandler(this.FormCaiLaiMK_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

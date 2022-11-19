@@ -78,20 +78,27 @@ namespace CakeL_T
             tong = 0;
             DateTime dateFrom = dtpTu.Value.Date;
             DateTime dateTo = dtpDen.Value.Date;
-            dgv_DTNgay.DataSource = hoadonBUS.GetHD().Where(x => x.NgayMua.Value.Date >= dateFrom && x.NgayMua.Value.Date <= dateTo).ToList();
-            // Tính tổng doanh thu
-            for (int i = 0; i < dgv_DTNgay.Rows.Count; i++)
+            if (dateTo < dateFrom)
             {
-                tong = tong + int.Parse(dgv_DTNgay.Rows[i].Cells[3].Value.ToString());
+                MessageBox.Show("Ngày kết thúc phải lớn hơn ngày bắt đầu");
             }
-            txt_TongDtNgay.Text = tong.ToString() + "VNĐ";
-            for (int i = 0; i < dgv_DTNgay.Rows.Count; i++)
+            else
             {
-                foreach (var item in adminBUS.GetAccounts())
+                dgv_DTNgay.DataSource = hoadonBUS.GetHD().Where(x => x.NgayMua.Value.Date >= dateFrom && x.NgayMua.Value.Date <= dateTo).ToList();
+                // Tính tổng doanh thu
+                for (int i = 0; i < dgv_DTNgay.Rows.Count; i++)
                 {
-                    if (dgv_DTNgay.Rows[i].Cells["IdTaiKhoan"].Value.ToString() == item.Id.ToString())
+                    tong = tong + int.Parse(dgv_DTNgay.Rows[i].Cells[3].Value.ToString());
+                }
+                txt_TongDtNgay.Text = tong.ToString() + "VNĐ";
+                for (int i = 0; i < dgv_DTNgay.Rows.Count; i++)
+                {
+                    foreach (var item in adminBUS.GetAccounts())
                     {
-                        dgv_DTNgay.Rows[i].Cells["TenTaiKhoan"].Value = item.TenTK.ToString();
+                        if (dgv_DTNgay.Rows[i].Cells["IdTaiKhoan"].Value.ToString() == item.Id.ToString())
+                        {
+                            dgv_DTNgay.Rows[i].Cells["TenTaiKhoan"].Value = item.TenTK.ToString();
+                        }
                     }
                 }
             }
@@ -217,6 +224,36 @@ namespace CakeL_T
                     if (txt_Thang.Text.Length > 1)
                     {
                         e.Handled = true;
+                    }
+                }
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            dgv_DTNgay.DataSource = hoadonBUS.GetHD();
+            for (int i = 0; i < dgv_DTNgay.Rows.Count; i++)
+            {
+                foreach (var item in adminBUS.GetAccounts())
+                {
+                    if (dgv_DTNgay.Rows[i].Cells["IdTaiKhoan"].Value.ToString() == item.Id.ToString())
+                    {
+                        dgv_DTNgay.Rows[i].Cells["TenTK"].Value = item.TenTK.ToString();
+                    }
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvThang.DataSource = hoadonBUS.GetHD();
+            for (int i = 0; i < dgvThang.Rows.Count; i++)
+            {
+                foreach (var item in adminBUS.GetAccounts())
+                {
+                    if (dgvThang.Rows[i].Cells["IdTaiKhoan"].Value.ToString() == item.Id.ToString())
+                    {
+                        dgvThang.Rows[i].Cells["TenTK"].Value = item.TenTK.ToString();
                     }
                 }
             }

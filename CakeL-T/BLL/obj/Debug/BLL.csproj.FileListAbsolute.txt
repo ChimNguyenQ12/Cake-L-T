@@ -152,3 +152,16 @@ D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\BLL\obj\Debug\BLL.csproj.CoreCompileInp
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\BLL\obj\Debug\BLL.dll
 D:\Winform\CakeLT-Final\Cake-L-T\CakeL-T\BLL\obj\Debug\BLL.pdb
+D:\DoAnWinform\CakeL-T\BLL\bin\Debug\BLL.dll.config
+D:\DoAnWinform\CakeL-T\BLL\bin\Debug\BLL.dll
+D:\DoAnWinform\CakeL-T\BLL\bin\Debug\BLL.pdb
+D:\DoAnWinform\CakeL-T\BLL\bin\Debug\DAL.dll
+D:\DoAnWinform\CakeL-T\BLL\bin\Debug\EntityFramework.dll
+D:\DoAnWinform\CakeL-T\BLL\bin\Debug\DAL.pdb
+D:\DoAnWinform\CakeL-T\BLL\bin\Debug\DAL.dll.config
+D:\DoAnWinform\CakeL-T\BLL\bin\Debug\EntityFramework.xml
+D:\DoAnWinform\CakeL-T\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\DoAnWinform\CakeL-T\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\DoAnWinform\CakeL-T\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\DoAnWinform\CakeL-T\BLL\obj\Debug\BLL.dll
+D:\DoAnWinform\CakeL-T\BLL\obj\Debug\BLL.pdb
