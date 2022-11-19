@@ -31,6 +31,7 @@ namespace CakeL_T
             reportViewerNgay.Visible = false;
             reportViewerSanPham.Visible = false;
             reportViewerLoaiSanPham.Visible = false;
+            reportViewerTongTien.Visible = false;
             // Category
             var cate = loaiBanhBus.GetCateCakes();
             cbbLoaiSP.DataSource = cate;
@@ -49,6 +50,7 @@ namespace CakeL_T
             cbbNV.DisplayMember = "TenTK";
             cbbNV.ValueMember = "Id";
             this.reportViewerLoaiSanPham.RefreshReport();
+            this.reportViewerTongTien.RefreshReport();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -59,6 +61,7 @@ namespace CakeL_T
                 reportViewerNgay.Visible = false;
                 reportViewerSanPham.Visible = false;
                 reportViewerLoaiSanPham.Visible = false;
+                reportViewerTongTien.Visible = false;
                 if (reportViewerNhanVien.Visible == true)
                 {
                     reportViewerNhanVien.Visible = false;
@@ -92,6 +95,8 @@ namespace CakeL_T
                 reportViewerNhanVien.Visible = false;
                 reportViewerSanPham.Visible = false;
                 reportViewerLoaiSanPham.Visible = false;
+                reportViewerTongTien.Visible = false;
+
                 if (reportViewerNgay.Visible == true)
                 {
                     reportViewerNgay.Visible = false;
@@ -124,6 +129,7 @@ namespace CakeL_T
             {
                 reportViewerNhanVien.Visible = false;
                 reportViewerNgay.Visible = false;
+                reportViewerTongTien.Visible = false;
                 reportViewerLoaiSanPham.Visible = false;
                 if (reportViewerSanPham.Visible == true)
                 {
@@ -168,6 +174,7 @@ namespace CakeL_T
             {
                 reportViewerNhanVien.Visible = false;
                 reportViewerNgay.Visible = false;
+                reportViewerTongTien.Visible = false;
                 reportViewerSanPham.Visible = false;
                 if (reportViewerLoaiSanPham.Visible == true)
                 {
@@ -220,6 +227,78 @@ namespace CakeL_T
                 this.reportViewerLoaiSanPham.LocalReport.SetParameters(parameter);
                 reportViewerLoaiSanPham.LocalReport.DataSources.Add(source);
                 this.reportViewerLoaiSanPham.RefreshReport();
+            }
+
+            // Report theo tổng tiền
+            if (rdbTongTien.Checked == true)
+            {
+                reportViewerNhanVien.Visible = false;
+                reportViewerNgay.Visible = false;
+                reportViewerSanPham.Visible = false;
+                reportViewerLoaiSanPham.Visible = false;
+                if (reportViewerTongTien.Visible == true)
+                {
+                    reportViewerTongTien.Visible = false;
+                }
+                else
+                {
+                    reportViewerTongTien.Visible = true;
+                }
+                
+                List<HoaDon> listInvoices = new List<HoaDon>();
+                string totalFrom = "", totalTo = "";
+                int total = 0;
+                if (cbbTotal.SelectedItem == null)
+                {
+                    totalFrom = "!";
+                    totalTo = "!";
+                    listInvoices = hoaDonBus.GetHD().ToList();
+                }
+                else
+                {
+
+                var price = cbbTotal.SelectedItem.ToString();
+                if (price == "< 500.000đ")
+                {
+                    totalFrom = "0đ";
+                    totalTo = "500.000đ";
+                     listInvoices = hoaDonBus.GetHD().Where(x => x.TongTien <= 500000).ToList();    
+                     total = Convert.ToInt32(listInvoices.Sum(x => x.TongTien));
+                }
+                else if(price == "500.000đ - 1.000.000đ")
+                {
+                    totalFrom = "500.000đ";
+                    totalTo = "1.000.000đ";
+                    listInvoices = hoaDonBus.GetHD().Where(x => x.TongTien >= 500000 && x.TongTien <= 1000000).ToList();
+                    total = Convert.ToInt32(listInvoices.Sum(x => x.TongTien));
+                }
+                else if(price == "1.000.000đ - 5.000.000đ")
+                {
+                    totalFrom = "1.000.000đ";
+                    totalTo = "5.000.000đ";
+                    listInvoices = hoaDonBus.GetHD().Where(x => x.TongTien >= 1000000 && x.TongTien <= 5000000).ToList();
+                    total = Convert.ToInt32(listInvoices.Sum(x => x.TongTien));
+                }
+                else if(price == "> 5.000.000đ")
+                {
+                    totalFrom = ">5.000.000đ";
+                    totalTo = "!";
+                    listInvoices = hoaDonBus.GetHD().Where(x => x.TongTien >= 5000000).ToList();
+                    total = Convert.ToInt32(listInvoices.Sum(x => x.TongTien));
+                }
+                }
+                reportViewerTongTien.LocalReport.ReportPath = "ReportByTotal.rdlc";
+                var source = new ReportDataSource("DataSetHoaDon", listInvoices);
+                reportViewerTongTien.LocalReport.DataSources.Clear();
+                //Add param
+                ReportParameter[] parameter = new ReportParameter[4];
+                parameter[0] = new ReportParameter("rpDate", DateTime.Now.ToString());
+                parameter[1] = new ReportParameter("rpTotalFrom", totalFrom);
+                parameter[2] = new ReportParameter("rpTotalTo", totalTo);
+                parameter[3] = new ReportParameter("Total", total.ToString() + " VND");
+                this.reportViewerTongTien.LocalReport.SetParameters(parameter);
+                reportViewerTongTien.LocalReport.DataSources.Add(source);
+                this.reportViewerTongTien.RefreshReport();
             }
         }
     }

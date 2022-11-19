@@ -42,6 +42,9 @@
             this.reportViewerNgay = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewerSanPham = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewerLoaiSanPham = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rdbTongTien = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.cbbTotal = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.reportViewerTongTien = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // reportViewerNhanVien
@@ -110,7 +113,7 @@
             this.rdbSP.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdbSP.CheckedState.InnerOffset = -4;
             this.rdbSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.rdbSP.Location = new System.Drawing.Point(548, 144);
+            this.rdbSP.Location = new System.Drawing.Point(535, 144);
             this.rdbSP.Name = "rdbSP";
             this.rdbSP.Size = new System.Drawing.Size(108, 24);
             this.rdbSP.TabIndex = 1;
@@ -129,7 +132,7 @@
             this.rdbLoaiSP.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdbLoaiSP.CheckedState.InnerOffset = -4;
             this.rdbLoaiSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.rdbLoaiSP.Location = new System.Drawing.Point(548, 205);
+            this.rdbLoaiSP.Location = new System.Drawing.Point(535, 205);
             this.rdbLoaiSP.Name = "rdbLoaiSP";
             this.rdbLoaiSP.Size = new System.Drawing.Size(144, 24);
             this.rdbLoaiSP.TabIndex = 1;
@@ -169,7 +172,7 @@
             this.cbbNV.ItemHeight = 30;
             this.cbbNV.Location = new System.Drawing.Point(251, 193);
             this.cbbNV.Name = "cbbNV";
-            this.cbbNV.Size = new System.Drawing.Size(173, 36);
+            this.cbbNV.Size = new System.Drawing.Size(218, 36);
             this.cbbNV.TabIndex = 4;
             // 
             // cbbSanPham
@@ -182,9 +185,9 @@
             this.cbbSanPham.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbSanPham.ItemHeight = 30;
-            this.cbbSanPham.Location = new System.Drawing.Point(698, 132);
+            this.cbbSanPham.Location = new System.Drawing.Point(685, 132);
             this.cbbSanPham.Name = "cbbSanPham";
-            this.cbbSanPham.Size = new System.Drawing.Size(169, 36);
+            this.cbbSanPham.Size = new System.Drawing.Size(204, 36);
             this.cbbSanPham.TabIndex = 4;
             // 
             // cbbLoaiSP
@@ -197,9 +200,9 @@
             this.cbbLoaiSP.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbLoaiSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbbLoaiSP.ItemHeight = 30;
-            this.cbbLoaiSP.Location = new System.Drawing.Point(698, 193);
+            this.cbbLoaiSP.Location = new System.Drawing.Point(685, 193);
             this.cbbLoaiSP.Name = "cbbLoaiSP";
-            this.cbbLoaiSP.Size = new System.Drawing.Size(169, 36);
+            this.cbbLoaiSP.Size = new System.Drawing.Size(204, 36);
             this.cbbLoaiSP.TabIndex = 4;
             // 
             // dtp_HD
@@ -239,23 +242,73 @@
             this.reportViewerLoaiSanPham.Size = new System.Drawing.Size(960, 454);
             this.reportViewerLoaiSanPham.TabIndex = 8;
             // 
+            // rdbTongTien
+            // 
+            this.rdbTongTien.AutoSize = true;
+            this.rdbTongTien.CheckedState.BorderColor = System.Drawing.Color.Red;
+            this.rdbTongTien.CheckedState.BorderThickness = 0;
+            this.rdbTongTien.CheckedState.FillColor = System.Drawing.Color.Lime;
+            this.rdbTongTien.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbTongTien.CheckedState.InnerOffset = -4;
+            this.rdbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.rdbTongTien.Location = new System.Drawing.Point(140, 259);
+            this.rdbTongTien.Name = "rdbTongTien";
+            this.rdbTongTien.Size = new System.Drawing.Size(102, 24);
+            this.rdbTongTien.TabIndex = 1;
+            this.rdbTongTien.Text = "Tổng tiền";
+            this.rdbTongTien.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rdbTongTien.UncheckedState.BorderThickness = 2;
+            this.rdbTongTien.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbTongTien.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // cbbTotal
+            // 
+            this.cbbTotal.BackColor = System.Drawing.Color.Transparent;
+            this.cbbTotal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTotal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTotal.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTotal.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbTotal.ItemHeight = 30;
+            this.cbbTotal.Items.AddRange(new object[] {
+            "< 500.000đ",
+            "500.000đ - 1.000.000đ",
+            "1.000.000đ - 5.000.000đ",
+            "> 5.000.000đ"});
+            this.cbbTotal.Location = new System.Drawing.Point(251, 247);
+            this.cbbTotal.Name = "cbbTotal";
+            this.cbbTotal.Size = new System.Drawing.Size(218, 36);
+            this.cbbTotal.TabIndex = 4;
+            // 
+            // reportViewerTongTien
+            // 
+            this.reportViewerTongTien.Location = new System.Drawing.Point(2, 302);
+            this.reportViewerTongTien.Name = "reportViewerTongTien";
+            this.reportViewerTongTien.ServerReport.BearerToken = null;
+            this.reportViewerTongTien.Size = new System.Drawing.Size(960, 454);
+            this.reportViewerTongTien.TabIndex = 9;
+            // 
             // FormReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 756);
+            this.Controls.Add(this.reportViewerTongTien);
             this.Controls.Add(this.reportViewerLoaiSanPham);
             this.Controls.Add(this.reportViewerSanPham);
             this.Controls.Add(this.reportViewerNgay);
             this.Controls.Add(this.dtp_HD);
             this.Controls.Add(this.cbbLoaiSP);
             this.Controls.Add(this.cbbSanPham);
+            this.Controls.Add(this.cbbTotal);
             this.Controls.Add(this.cbbNV);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rdbLoaiSP);
             this.Controls.Add(this.rdbNgay);
             this.Controls.Add(this.rdbSP);
+            this.Controls.Add(this.rdbTongTien);
             this.Controls.Add(this.rdbNV);
             this.Controls.Add(this.reportViewerNhanVien);
             this.MaximumSize = new System.Drawing.Size(981, 795);
@@ -284,5 +337,8 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerNgay;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerSanPham;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerLoaiSanPham;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbTongTien;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbTotal;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerTongTien;
     }
 }
